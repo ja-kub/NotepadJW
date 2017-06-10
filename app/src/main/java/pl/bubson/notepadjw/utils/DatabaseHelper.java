@@ -57,7 +57,7 @@ public class DatabaseHelper extends SQLiteAssetHelper {
     public void installDbFromAssetsIfNeeded() {
         Log.v(TAG, "installDbFromAssetsIfNeeded() executed");
 //        this.getReadableDatabase().close(); // this would copy db from assets if it's not in place
-        // experiment - will below line improve performance? This would also copy db from assets if it's not in place (as above line)
+        // experiment - will below line improve performance? This would also copy db from assets if it's not in place (as above line).
         this.getFile(Language.en, "1001060420-split133.xhtml"); // example chapter, Psalm 133:1
         Log.v(TAG, "installDbFromAssetsIfNeeded() finished");
     }
@@ -114,7 +114,7 @@ public class DatabaseHelper extends SQLiteAssetHelper {
         try {
             FileFilter fileFilter = new RegexFileFilter(fileRegexMap.get(language));
             File[] fileList = folder.listFiles(fileFilter);
-            String xhtml = "";
+            String xhtml;
 
             SQLiteDatabase db = getWritableDatabase();
             SQLiteStatement insStmt = db.compileStatement("INSERT INTO " + TABLE_NAME + " " +
