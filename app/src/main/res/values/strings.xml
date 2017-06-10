@@ -1,0 +1,194 @@
+<resources>
+    <string name="app_name" translatable="false">Notepad JW</string>
+    <string name="editor_name" translatable="false">EditorNotepadJW</string>
+    <string name="show_size_key" translatable="false">show_size</string>
+    <string name="show_date_key" translatable="false">show_date</string>
+    <string name="item_icon" translatable="false" />
+    <string name="title_activity_test" translatable="false">testActivity</string>
+    <string name="verse_font_size_key" translatable="false">verse_font_size</string>
+    <string name="note_font_size_key" translatable="false">note_font_size</string>
+    <string name="font_size_small" translatable="false">14</string>
+    <string name="font_size_medium" translatable="false">18</string>
+    <string name="font_size_large" translatable="false">22</string>
+    <string name="font_size_xlarge" translatable="false">28</string>
+    <string name="verse_font_color_key" translatable="false">verse_font_color</string>
+    <string name="sort_by_date_key" translatable="false">sort_by_date</string>
+    <string name="verse_language_key" translatable="false">verseLanguage</string>
+    <string name="polish_language" translatable="false">pl</string>
+    <string name="hungarian_language" translatable="false">hu</string>
+    <string name="english_language" translatable="false">en</string>
+    <string name="spanish_language" translatable="false">es</string>
+    <string name="tagalog_language" translatable="false">tl</string>
+    <string name="romanian_language" translatable="false">ro</string>
+    <string name="russian_language" translatable="false">ru</string>
+    <string name="german_language" translatable="false">de</string>
+    <string name="portuguese_language" translatable="false">pt</string>
+    <string name="verse_position_key" translatable="false">versePosition</string>
+    <string name="verse_position_top" translatable="false">top</string>
+    <string name="verse_position_right" translatable="false">right</string>
+    <string name="verse_area_size_key" translatable="false">verseAreaSize</string>
+    <string name="verse_area_size_auto" translatable="false">auto</string>
+    <string name="verse_area_size_changeable" translatable="false">changeable</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Enter a text</string>
+    <string name="button_save">Import</string>
+    <string name="button_open">Open</string>
+    <string name="verse_preview">Verse preview</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="create_new_note_dialog_title">Enter note name</string>
+    <string name="note_name">Note name</string>
+    <string name="creation_of_new_note_cancelled">New note wasn\'t created</string>
+    <string name="file_name_exists">Item under this name already exists, change name</string>
+    <string name="name_cannot_be_empty">Name cannot be empty</string>
+    <string name="creation_failed">Creation failed</string>
+    <string name="creation_of_new_note_succesful">New note created</string>
+    <string name="button_rename">Rename selected note</string>
+    <string name="button_remove">Remove selected note(s)</string>
+    <string name="button_share">Share selected note(s)</string>
+    <string name="not_matching">not matching to</string>
+    <string name="wrong_verse">- wrong verse number</string>
+    <string name="button_switch_view">Switch view</string>
+    <string name="button_switch_edit">Edit button</string>
+    <string name="not_one_file_selected">Not one note selected</string>
+    <string name="removed">Removed</string>
+    <string name="rename_file">Rename item</string>
+    <string name="file_renamed">Item renamed</string>
+    <string name="file_rename_failed">Rename failed</string>
+    <string name="on_remove_dialog_title">Remove selected item(s)?</string>
+    <string name="remove">Remove</string>
+    <string name="files_removed_successfully">Item(s) removed</string>
+    <string name="files_not_removed_successfully">Some notes were not removed</string>
+    <string name="button_new_folder">Create new folder</string>
+    <string name="create_new_folder_dialog_title">Create new folder</string>
+    <string name="folder_name">Folder name</string>
+    <string name="folder_name_exists">Folder under this name already exists, change name</string>
+    <string name="creation_of_new_folder_succesful">New folder created</string>
+    <string name="permission_storage_not_granted">Access to external storage not granted</string>
+    <string name="storage_not_writable">Storage not writable</string>
+    <string name="temporary_file">temporary file</string>
+    <string name="cannot_save_temp">Cannot save temporary file</string>
+    <string name="error_while_saving">Error while saving the file</string>
+    <string name="file_saved">File saved</string>
+    <string name="create_new_note_from_this_file_dialog_title">Create new note from this file?</string>
+    <string name="file_will_be_created_in">Note will be created in folder: NotepadJW/</string>
+    <string name="downloads_folder_name">Downloads</string>
+    <string name="file_is_too_big">File is too big!</string>
+    <string name="language_na">this language is not supported yet</string>
+    <string name="wrong_book">Wrong book name</string>
+    <string name="wrong_chapter">Wrong chapter</string>
+    <string name="wrong_verse_order">- wrong verse order</string>
+    <string name="help_title">Help</string>
+    <string name="items">Items</string>
+    <string name="bytes">Bytes</string>
+    <string name="uri_null">Parsed URI is null</string>
+    <string name="cannot_open">Cannot open the file or content</string>
+    <string name="uri_not_supported">Uri type not supported</string>
+    <string name="not_text_file">Not a text file</string>
+    <string name="changes_not_saved">Changes not saved</string>
+    <string name="current_dir_is_null">Current directory is null</string>
+    <string name="show_size">Showing size</string>
+    <string name="show_size_summ">Show size of notes and folders</string>
+    <string name="pref_file_manager_title">Notes Manager</string>
+    <string name="show_date">Showing date</string>
+    <string name="show_date_summ">Show modification date of notes and folders</string>
+    <string name="parent_directory">Parent directory</string>
+    <string name="pref_notepad_editor_title">Notepad Editor</string>
+    <string name="verse_font_size">Verse font</string>
+    <string name="note_font_size">Note font size</string>
+    <string name="verse_font_size_summ">Change font size of shown verse</string>
+    <string name="note_font_size_summ">Change note font size</string>
+    <string name="verse_font_color">Verse color</string>
+    <string name="verse_font_color_summ">Choose font color of shown verse</string>
+    <string name="button_cut">Cut</string>
+    <string name="button_copy">Copy</string>
+    <string name="button_paste">Paste</string>
+    <string name="cut_to_clipboard">Cut to clipboard</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="pasted_from_clipboard">Pasted from clipboard</string>
+    <string name="not_all_elements_pasted">Not all elements pasted</string>
+    <string name="unexpected_exception">Unexpected exception</string>
+    <string name="button_sort_files">Change sorting</string>
+    <string name="files_sorted_by_date">Notes sorted by date</string>
+    <string name="files_sorted_alphabetically">Notes sorted alphabetically</string>
+    <string name="whats_new">What\'s new?</string>
+    <string name="verse_language_title">Verse Language</string>
+    <string name="verse_language_summ">Change Verse Language</string>
+    <string name="verse_language_dialog_title">Verse Language</string>
+    <string name="verse_position_title">Verse Position</string>
+    <string name="verse_position_summ">Reopen note to see changes</string>
+    <string name="verse_position_dialog_title">Verse Position</string>
+    <string name="missing_language_dialog_title">Missing language</string>
+    <string name="missing_language_message">Download and install Bible in this language now?</string>
+    <string name="download_description">Download Bible in new language for Notepad JW</string>
+    <string name="download_language">Downloading Bible in language</string>
+    <string name="install_language">Installation Bible in language</string>
+    <string name="in_progress">In progress</string>
+    <string name="finished">Finished</string>
+    <string name="unsuccessful">Unsuccessful</string>
+    <string name="permission_explanation_dialog_title">External storage permission</string>
+    <string name="button_undo">Undo</string>
+    <string name="button_redo">Redo</string>
+    <string name="button_bold">Bold</string>
+    <string name="button_italic">Italic</string>
+    <string name="button_underline">Underline</string>
+    <string name="button_bullet">Bullet</string>
+    <string name="verse_area_size_title">Verse Area Size</string>
+    <string name="verse_area_size_dialog_title">Verse Area Size</string>
+    <string name="sent_by_notepadjw">
+    <![CDATA[
+    <p>Notes sent from <B>Notepad JW</B> - notes manager and editor with live view of entered verses.</p>
+    <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
+        ]]>
+    </string>
+    <string name="help_text_html">
+    <![CDATA[
+<h3>Information</h3>
+<p>Text of all verses are from New World Translation of the Holy Scriptures
+(Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
+<h3>Why use NotepadJW?</h3>
+<p>This application was created, because no other app was found, which would be able to show
+verses in the real time while editing some note. So it is useful for making notes during
+meetings and congresses - you don\'t need anymore to switch applications or search paper Bible
+to see the verse text, it is displayed in the same window as editor. As this application is able to
+show all verses under links in view mode, it could be also used for speeches at the podium and other
+tasks during meetings. This app also has sharing option, so you can also use it for making notes
+during ministry and send them to other preachers.</p>
+<h3>Abilities</h3>
+<p>This application consists of two activities:
+<br><b>Notes Manager</b> and <b>Notepad Editor</b>.
+<br>In <b>Notes Manager</b> you can create new notes, open them and create new folders.
+<br>You can select items by long-click and then: rename, delete or send (cut, copy and paste options will be added soon).
+<br>In <b>Notepad Editor</b> you can switch between <i>Edit Mode</i> and <i>View Mode</i>. In the first one,
+last entered verse will be displayed and in the second one you can click on links created from verses
+to see selected one.
+<br><b>Notes</b> are saved in external storage under txt files in location: Documents/NotepadJW.
+You can access them from our PC. It means that you can rename them, delete, move or add new txt files
+from your computer. You can also open txt files from other app on your device, like from file explorers,
+email attachments, bluetooth files etc. You can import them to NotepadJW workspace by clicking Save
+button (they will be copied to Downloads folder).</p>
+<h3>Author</h3>
+<p>Jakub Tomala (coding, layouts).
+<br>Questions, bugs, improvements? Write an email to: tomala.kuba@gmail.com
+    ]]>
+    </string>
+    <string name="permission_explanation_dialog_message">
+        In the next screen you will be asked about access to external storage. If you Allow,
+        Notepad JW will save notes to external storage (in folder Documents -> NotepadJW).
+        Thereby you would have access to these notes from other apps and from PC for your
+        convenience (Notepad JW app does not read or modify any files outside of
+        NotepadJW folder).
+        If you Deny, Notepad JW will save notes to internal storage, to which other apps and your PC
+        don\'t have access.
+    </string>
+    <string name="whats_new_message_previous">
+    - Added Hungarian translation of the Bible \n\n
+    - Translation of the application into Hungarian \n\n
+    </string>
+    <string name="whats_new_message_last">
+    - Added Tagalog translation of the Bible \n\n
+    - Performance improvements
+    </string>
+</resources>

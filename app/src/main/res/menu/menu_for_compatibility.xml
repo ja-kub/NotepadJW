@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.NotepadEditorActivity">
+
+    <item
+        android:id="@+id/action_text_bold"
+        android:icon="@drawable/ic_format_bold_white_48dp"
+        android:title="@string/button_bold"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/action_text_italic"
+        android:icon="@drawable/ic_format_italic_white_48dp"
+        android:title="@string/button_italic"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/action_text_underline"
+        android:icon="@drawable/ic_format_underlined_white_48dp"
+        android:title="@string/button_underline"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

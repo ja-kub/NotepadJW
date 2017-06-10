@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Ustawienia</string>
+    <string name="button_new_folder">Utwórz nowy folder</string>
+    <string name="button_open">Otwórz</string>
+    <string name="button_rename">Zmień nazwę</string>
+    <string name="button_remove">Usuń zaznaczone elementy</string>
+    <string name="button_save">Zaimportuj</string>
+    <string name="button_share">Wyślij zaznaczone notatki</string>
+    <string name="button_switch_edit">Edytuj</string>
+    <string name="button_switch_view">Zmień widok</string>
+    <string name="bytes">Bajtów</string>
+    <string name="cancel">Anuluj</string>
+    <string name="cannot_open">Nie można otworzyć pliku lub zawartości</string>
+    <string name="cannot_save_temp">Nie można zapisać tymczasowego pliku</string>
+    <string name="changes_not_saved">Zmiany nie zapisane</string>
+    <string name="create_new_folder_dialog_title">Utwórz nowy folder</string>
+    <string name="create_new_note_dialog_title">Utwórz nową notatkę</string>
+    <string name="create_new_note_from_this_file_dialog_title">Czy zaimportować ten plik do notatek NotepadJW?</string>
+    <string name="creation_failed">Utworzenie nie powiodło się</string>
+    <string name="creation_of_new_folder_succesful">Folder utworzony</string>
+    <string name="creation_of_new_note_cancelled">Notatka nie została utworzona</string>
+    <string name="creation_of_new_note_succesful">Notatka utworzona</string>
+    <string name="downloads_folder_name">Pobrane</string>
+    <string name="edit_message">Wpisz tekst</string>
+    <string name="error_while_saving">Błąd podczas zapisu pliku</string>
+    <string name="file_is_too_big">Plik za duży!</string>
+    <string name="file_name_exists">Notatka o tej nazwie już istnieje, podaj inną nazwę</string>
+    <string name="file_rename_failed">Zmiana nazwy nie powiodła się</string>
+    <string name="file_renamed">Nazwa została zmieniona</string>
+    <string name="file_saved">Zapisano</string>
+    <string name="file_will_be_created_in">Notatka będzie utworzona w folderze: NotepadJW/</string>
+    <string name="files_not_removed_successfully">Niektóre elementy nie zostały usunięte</string>
+    <string name="files_removed_successfully">Usunięto zaznaczone elementy</string>
+    <string name="folder_name">Nazwa folderu</string>
+    <string name="folder_name_exists">Folder o tej nazwie już istnieje, podaj inną nazwę</string>
+    <string name="help_title">Pomoc</string>
+    <string name="items">Elementy</string>
+    <string name="language_na">Ten język jeszcze nie jest wspierany</string>
+    <string name="name_cannot_be_empty">Nazwa nie może być pusta</string>
+    <string name="no">Nie</string>
+    <string name="not_matching">nie pasuje do</string>
+    <string name="not_one_file_selected">Zostało wybranych więcej niż jeden element</string>
+    <string name="not_text_file">To nie jest plik tekstowy</string>
+    <string name="note_name">Nazwa notatki</string>
+    <string name="ok">OK</string>
+    <string name="on_remove_dialog_title">Usunąć zaznaczone elementy?</string>
+    <string name="permission_storage_not_granted">Brak dostępu do pamięci zewnętrznej</string>
+    <string name="remove">Usuń</string>
+    <string name="removed">Usunięto</string>
+    <string name="rename_file">Zmień nazwę</string>
+    <string name="sent_by_notepadjw">
+        <![CDATA[
+        <html><body>
+    <p>Wysłano z aplikacji <b>Notepad JW</b> - edytora notatek z podglądem treści wersetów na bieżąco.</p>
+    <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
+    <\body><\html>
+        ]]>
+    </string>
+    <string name="storage_not_writable">Pamięć nie jest zapisywalna</string>
+    <string name="temporary_file">tymczasowy plik</string>
+    <string name="uri_not_supported">Niewspierany typ URI</string>
+    <string name="uri_null">URI jest puste</string>
+    <string name="verse_preview">Podgląd wersetu</string>
+    <string name="wrong_book">Nieprawidłowa nazwa księgi</string>
+    <string name="wrong_chapter">Nieprawidłowy rozdział</string>
+    <string name="wrong_verse">- nieprawidłowy werset</string>
+    <string name="wrong_verse_order">- nieprawidłowa kolejność wersetów</string>
+    <string name="yes">Tak</string>
+    <string name="help_text_html">
+    <![CDATA[
+<h3>Informacje</h3>
+<p>Tekst wszystkich wersetów pochodzi z Pisma Świętego w Przekładzie Nowego Świata
+(Prawa autorskie: Towarzystwo Strażnica)</p>
+<h3>Do czego służy aplikacja NotepadJW?</h3>
+<p><b>- Do notowania na zebraniach lub zgromadzeniach.</b> Nie trzeba wówczas przełączać się na inne aplikacje lub otwierać
+papierowej Biblii, aby śledzić treść odczytywanego z mównicy wersetu, ponieważ jest on od razu
+wyświetlany u góry w trakcie pisania notatek.
+<br><b>- Do przedstawiania przemówień i innych punktów na zebraniu.</b> Po przełączeniu na tryb podglądu, każdy wpisany werset
+staje się odnośnikiem, który można kliknąć, aby wyświetlić jego treść.
+<br><b>- Do sporządzania notatek podczas służby.</b> Dzięki możliwości wysyłania notatek
+z poziomu aplikacji, można je od razu wysyłać innym braciom.</p>
+<h3>Możliwości</h3>
+<p>Aby poznać większość funkcji tej aplikacji, zachęcam do obejrzenia filmiku: https://www.youtube.com/watch?v=NDm3OqG__ag
+<p><b>Rozpoznawanie wersetów</b> - aplikacja w nazwach ksiąg toleruje skróty, małe litery, brak polskich znaków, nieistotne
+są również kropki. Rozdziały od wersetów można oddzielać dwukropkiem lub przecinkiem. Można podawać
+wiele wersetów z jednego rozdziału. Przykłady, które zostaną poprawnie obsłużone: Mat. 24:14,15; wyjscia 4,12;
+Powt pr 2:2, 3, 6-8, 11.
+<br><b>Notatki</b> są zapisywane jako pliki txt na karcie twojego urządzenia w folderze: Documents/NotepadJW.
+Masz do nich dostęp po podłączeniu swojego urządzenia do komputera. Oznacza to, że możesz je wówczas
+kasować, przenosić, czy dodawać nowe pliki txt z komputera na swoje urządzenie. Pliki tekstowe możesz
+również otwierać w Edytorze NotepadJW z innych aplikacji na swoim urządzeniu, np. z innych menedżerów
+plików, bezpośrednio z załączników mailowych czy też z plików przesłanych bluetoothem. Po otwarciu ich
+w edytorze NotepadJW, możesz je zaimportować do NotepadJW klikając przycisk Zapisz (zostaną
+wówczas umieszczone w folderze Pobrane).</p>
+<h3>Autor aplikacji</h3>
+<p>Jakub Tomala (programowanie, układ graficzny).
+<br>Masz pytanie, znalazłeś błąd lub masz propozycję jak poprawić tę aplikację? Napisz do mnie: tomala.kuba@gmail.com
+<br>Specjalne podziękowania za zaprojektowanie ikonki startowej dla Bartka Szurmy :)</p>
+    ]]>
+    </string>
+    <string name="current_dir_is_null">Folder nie istnieje</string>
+    <string name="show_size">Wyświetlanie rozmiaru</string>
+    <string name="show_size_summ">Pokazuj rozmiar notatek i katalogów</string>
+    <string name="show_date">Wyświetlanie daty</string>
+    <string name="show_date_summ">Pokazuj datę modyfikacji notatek i katalogów</string>
+    <string name="pref_file_manager_title">Menedżer Notatek</string>
+    <string name="parent_directory">Wróć</string>
+    <string name="pref_notepad_editor_title">Edytor Notatek</string>
+    <string name="verse_font_size">Rozmiar czcionki wersetu</string>
+    <string name="note_font_size">Rozmiar czcionki notatki</string>
+    <string name="verse_font_size_summ">Zmień rozmiar czcionki wyświetlanego wersetu</string>
+    <string name="note_font_size_summ">Zmień rozmiar czcionki notatki</string>
+    <string name="verse_font_color">Kolor wersetu</string>
+    <string name="verse_font_color_summ">Wybierz kolor wyświetlonego wersetu</string>
+    <string name="button_cut">Wytnij</string>
+    <string name="button_copy">Kopiuj</string>
+    <string name="button_paste">Wklej</string>
+    <string name="cut_to_clipboard">Elementy wycięte</string>
+    <string name="copied_to_clipboard">Elementy skopiowane</string>
+    <string name="pasted_from_clipboard">Wklejono ze schowka</string>
+    <string name="not_all_elements_pasted">Nie wszystkie elementy wklejono</string>
+    <string name="unexpected_exception">Nieoczekiwany wyjątek</string>
+    <string name="button_sort_files">Zmień sortowanie</string>
+    <string name="files_sorted_by_date">Notatki posortowano po dacie</string>
+    <string name="files_sorted_alphabetically">Notatki posortowano alfabetycznie</string>
+    <string name="whats_new">Co nowego?</string>
+    <string name="verse_language_title">Język wersetów</string>
+    <string name="verse_language_summ">Zmień wersję językową Biblii</string>
+    <string name="verse_language_dialog_title">Język wersetów</string>
+    <string name="verse_position_title">Pozycja wersetu</string>
+    <string name="verse_position_summ">Aby zobaczyć zmiany otwórz notatkę ponownie</string>
+    <string name="verse_position_dialog_title">Pozycja wersetu</string>
+    <string name="missing_language_dialog_title">Brak Biblii w tym języku</string>
+    <string name="missing_language_message">Czy ściągnąć i zainstalować tę Biblię?</string>
+    <string name="download_description">Notepad JW - pobieranie Biblii w nowym języku</string>
+    <string name="download_language">Pobieranie Biblii w języku</string>
+    <string name="install_language">Instalowanie Biblii w języku</string>
+    <string name="in_progress">W trakcie</string>
+    <string name="finished">Zakończono</string>
+    <string name="unsuccessful">Niepowodzenie</string>
+    <string name="permission_explanation_dialog_title">Dostęp do pamięci urządzenia</string>
+    <string name="permission_explanation_dialog_message">
+        Zostaniesz teraz zapytany o dostęp do pamięci urządzenia.
+        Jeśli się zgodzisz, Notepad JW będzie zapisywał notatki w tzw. pamięci zewnętrznej
+        (w folderze Documents -> NotepadJW). Dzięki temu uzyskasz dostęp do
+        nich z innych aplikacji oraz z komputera (Notepad JW nie przegląda ani nie modyfikuje
+        żadnych plików poza wymienionym folderem).
+        Jeśli się nie zgodzisz, Notepad JW będzie zapisywał notatki w tzw. pamięci wewnętrznej,
+        do której nie będziesz miał dostępu z innych aplikacji ani z komputera.
+    </string>
+    <string name="button_undo">Cofnij</string>
+    <string name="button_redo">Powtórz</string>
+    <string name="button_bold">Pogrubienie</string>
+    <string name="button_italic">Kursywa</string>
+    <string name="button_underline">Podkreślenie</string>
+    <string name="button_bullet">Wypunktowanie</string>
+    <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
+    <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
+    <string name="whats_new_message_previous">
+    - Węgierski przekład Biblii \n\n
+    - Tłumaczenie aplikacji na język węgierski \n\n
+    </string>
+    <string name="whats_new_message_last">
+    - Tagalski przekład Biblii \n\n
+    - Poprawki wydajności aplikacji
+    </string>
+</resources>

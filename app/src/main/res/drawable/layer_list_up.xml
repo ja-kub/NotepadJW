@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/dark_green"/>
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_arrow_upward_white_48dp"
+        android:bottom="@dimen/item_layer_padding"
+        android:left="@dimen/item_layer_padding"
+        android:right="@dimen/item_layer_padding"
+        android:top="@dimen/item_layer_padding"/>
+</layer-list>

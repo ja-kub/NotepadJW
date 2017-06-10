@@ -1,0 +1,33 @@
+//noinspection GradleCompatible
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "pl.bubson.notepadjw"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 25
+        versionName "1.21"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:23.4.0'
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'com.thebluealliance:spectrum:0.4.2'
+    compile 'commons-io:commons-io:2.5'
+    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+    compile 'org.apache.commons:commons-collections4:4.1'
+    compile 'com.github.mthli:Knife:v1.1'
+}

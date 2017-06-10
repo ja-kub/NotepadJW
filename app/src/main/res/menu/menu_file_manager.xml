@@ -1,0 +1,61 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.FileManagerActivity">
+
+    <item
+        android:id="@+id/action_rename"
+        android:icon="@drawable/ic_rename"
+        android:title="@string/button_rename"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_cut"
+        android:icon="@drawable/ic_content_cut_white_48dp"
+        android:title="@string/button_cut"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_copy"
+        android:icon="@drawable/ic_content_copy_white_48dp"
+        android:title="@string/button_copy"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_paste"
+        android:icon="@drawable/ic_content_paste_white_48dp"
+        android:title="@string/button_paste"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_remove"
+        android:icon="@drawable/ic_delete_white_48dp"
+        android:title="@string/button_remove"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_share"
+        android:title="@string/button_share"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_share_white_48dp"/>
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort_white_48dp"
+        android:title="@string/button_sort_files"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_new_folder"
+        android:icon="@drawable/ic_create_new_folder_white_48dp"
+        android:title="@string/button_new_folder"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="100"
+        android:title="@string/help_title"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+</menu>

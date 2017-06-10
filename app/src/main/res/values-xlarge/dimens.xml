@@ -1,0 +1,7 @@
+<resources>
+    <!-- This would include 7" - 10" devices. -->
+    <dimen name="item_icon_size">60dp</dimen>
+    <dimen name="item_text_top_margin">10dp</dimen>
+    <dimen name="bullet_radius">4dp</dimen>
+    <dimen name="bullet_gap_width">10dp</dimen>
+</resources>
