@@ -85,16 +85,21 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
 
         public void afterTextChanged(Editable s) {
-            String text = s.toString();
-            int length = text.length();
-            if (!text.endsWith(lastCharsOfNote)) { // performance improvement - to not check verse correctness and show it again if text is modified in the middle or at the start;
-                // only if it is changed at the end, e.g. user add or modifies just added verse
-                if (Verse.isTextContainingVerseAtTheEnd(text, versesLanguage)) {
-                    versePreviewTextInEditMode.setText(Html.fromHtml(Verse.getTextOfLastVerse(getApplicationContext(), text, versesLanguage)));
-                    versePreviewTextInEditMode.scrollTo(0, 0);
+            try {
+                String text = s.toString();
+                int length = text.length();
+                if (!text.endsWith(lastCharsOfNote)) { // performance improvement - to not check verse correctness and show it again if text is modified in the middle or at the start;
+                    // only if it is changed at the end, e.g. user add or modifies just added verse
+                    if (Verse.isTextContainingVerseAtTheEnd(text, versesLanguage)) {
+                        versePreviewTextInEditMode.setText(Html.fromHtml(Verse.getTextOfLastVerse(getApplicationContext(), text, versesLanguage)));
+                        versePreviewTextInEditMode.scrollTo(0, 0);
+                    }
                 }
+                if (length > CHARS_AT_THE_END_TO_CHECK)
+                    lastCharsOfNote = text.substring(length - CHARS_AT_THE_END_TO_CHECK);
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
             }
-            if (length > CHARS_AT_THE_END_TO_CHECK) lastCharsOfNote = text.substring(length - CHARS_AT_THE_END_TO_CHECK);
         }
     };
     private HyperlinkVerseTextView noteTextView;
@@ -197,20 +202,24 @@ public class NotepadEditorActivity extends AppCompatActivity {
         noteEditText.addOnSelectionChangedListener(new RichSelectableEditText.OnSelectionChangedListener() {
             @Override
             public void onSelectionChanged(int selStart, int selEnd) {
-                if (noteEditText.hasSelection()) {
-                    boldTextButton.setVisible(true);
-                    italicTextButton.setVisible(true);
-                    underlineTextButton.setVisible(true);
-                    bulletTextButton.setVisible(false);
-                    undoButton.setVisible(false);
-                    redoButton.setVisible(false);
-                } else {
-                    boldTextButton.setVisible(false);
-                    italicTextButton.setVisible(false);
-                    underlineTextButton.setVisible(false);
-                    bulletTextButton.setVisible(true);
-                    undoButton.setVisible(true);
-                    redoButton.setVisible(true);
+                try {
+                    if (noteEditText.hasSelection()) {
+                        boldTextButton.setVisible(true);
+                        italicTextButton.setVisible(true);
+                        underlineTextButton.setVisible(true);
+                        bulletTextButton.setVisible(false);
+                        undoButton.setVisible(false);
+                        redoButton.setVisible(false);
+                    } else {
+                        boldTextButton.setVisible(false);
+                        italicTextButton.setVisible(false);
+                        underlineTextButton.setVisible(false);
+                        bulletTextButton.setVisible(true);
+                        undoButton.setVisible(true);
+                        redoButton.setVisible(true);
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -495,13 +504,17 @@ public class NotepadEditorActivity extends AppCompatActivity {
                         finish();
                     }
                 } catch (Exception exception) {
-                    if (exception.getCause().toString().contains("Permission denied")) {
-                        Log.v(TAG, exception.getCause().toString());
-                        FileManagerActivity.askForPermissionsIfNotGranted(this);
-                    } else {
-                        exception.printStackTrace();
-                        Toast.makeText(this, R.string.cannot_open, Toast.LENGTH_LONG).show();
-                        finish();
+                    try {
+                        if (exception.getCause().toString().contains("Permission denied")) {
+                            Log.v(TAG, exception.getCause().toString());
+                            FileManagerActivity.askForPermissionsIfNotGranted(this);
+                        } else {
+                            exception.printStackTrace();
+                            Toast.makeText(this, R.string.cannot_open, Toast.LENGTH_LONG).show();
+                            finish();
+                        }
+                    } catch (Exception ex2) {
+                        Toast.makeText(this, R.string.unexpected_exception, Toast.LENGTH_LONG).show();
                     }
                 }
                 Log.v(TAG, "openFileFromIntent - text in String Builder");
@@ -696,16 +709,20 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
         @Override
         public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.action_text_bold:
-                    noteEditText.bold(!noteEditText.contains(KnifeText.FORMAT_BOLD));
-                    return true;
-                case R.id.action_text_italic:
-                    noteEditText.italic(!noteEditText.contains(KnifeText.FORMAT_ITALIC));
-                    return true;
-                case R.id.action_text_underline:
-                    noteEditText.underline(!noteEditText.contains(KnifeText.FORMAT_UNDERLINED));
-                    return true;
+            try {
+                switch (item.getItemId()) {
+                    case R.id.action_text_bold:
+                        noteEditText.bold(!noteEditText.contains(KnifeText.FORMAT_BOLD));
+                        return true;
+                    case R.id.action_text_italic:
+                        noteEditText.italic(!noteEditText.contains(KnifeText.FORMAT_ITALIC));
+                        return true;
+                    case R.id.action_text_underline:
+                        noteEditText.underline(!noteEditText.contains(KnifeText.FORMAT_UNDERLINED));
+                        return true;
+                }
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
             }
             return false;
         }

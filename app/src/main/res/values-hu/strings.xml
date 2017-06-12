@@ -79,7 +79,7 @@
     <string name="copied_to_clipboard">Vágólapra másolva</string>
     <string name="pasted_from_clipboard">Vágólapról beillesztve</string>
     <string name="not_all_elements_pasted">Nem sikerült minden elemet beilleszteni</string>
-    <string name="unexpected_exception">Váratlan hiba történt</string>
+    <string name="unexpected_exception">Váratlan hiba történt - Kérem, küldjön egy emailt róla</string>
     <string name="button_sort_files">Sorrend</string>
     <string name="files_sorted_by_date">Dátum szerinti sorrend</string>
     <string name="files_sorted_alphabetically">Név szerinti sorrrend</string>
@@ -139,11 +139,10 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Magyar nyelvű Biblia \n\n
-    - Az alkalmazás már magyar nyelven is elérhető \n\n
+    - Tagalog nyelvű Biblia \n\n
+    - Javított alkalmazás teljesítményét \n\n
     </string>
     <string name="whats_new_message_last">
-    - Tagalog nyelvű Biblia \n\n
-    - Javított alkalmazás teljesítményét
+    - Hibajavítások
     </string>
 </resources>

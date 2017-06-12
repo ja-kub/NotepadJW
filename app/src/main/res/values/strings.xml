@@ -109,7 +109,7 @@
     <string name="copied_to_clipboard">Copied to clipboard</string>
     <string name="pasted_from_clipboard">Pasted from clipboard</string>
     <string name="not_all_elements_pasted">Not all elements pasted</string>
-    <string name="unexpected_exception">Unexpected exception</string>
+    <string name="unexpected_exception">Unexpected exception - please send me an email describing it</string>
     <string name="button_sort_files">Change sorting</string>
     <string name="files_sorted_by_date">Notes sorted by date</string>
     <string name="files_sorted_alphabetically">Notes sorted alphabetically</string>
@@ -184,11 +184,10 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Added Hungarian translation of the Bible \n\n
-    - Translation of the application into Hungarian \n\n
+    - Added Tagalog translation of the Bible \n\n
+    - Performance improvements \n\n
     </string>
     <string name="whats_new_message_last">
-    - Added Tagalog translation of the Bible \n\n
-    - Performance improvements
+    - Bug fixes
     </string>
 </resources>

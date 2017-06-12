@@ -80,7 +80,7 @@
     <string name="copied_to_clipboard">Copiado en el portapapeles</string>
     <string name="pasted_from_clipboard">Pegado desde el portapapeles</string>
     <string name="not_all_elements_pasted">No todos los elementos pegados</string>
-    <string name="unexpected_exception">Excepción inesperada</string>
+    <string name="unexpected_exception">Excepción inesperada - Por favor envíeme un correo electrónico describiéndolo</string>
     <string name="button_sort_files">Cambiar ordenación</string>
     <string name="files_sorted_by_date">Notas clasificadas por fecha</string>
     <string name="files_sorted_alphabetically">Notas ordenadas alfabéticamente</string>
@@ -152,11 +152,10 @@
     ]]>
     </string>
     <string name="whats_new_message_previous">
-    - Traducción húngara de la Biblia \n\n
-    - Traducción de la solicitud en húngaro \n\n
+    - Traducción tagalo de la Biblia \n\n
+    - La mejora de rendimiento de las aplicaciones \n\n
     </string>
     <string name="whats_new_message_last">
-    - Traducción tagalo de la Biblia \n\n
-    - La mejora de rendimiento de las aplicaciones
+    - Correcciones de errores
     </string>
 </resources>

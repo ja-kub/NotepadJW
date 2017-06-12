@@ -9,6 +9,11 @@
 
 # Add any project specific keep options here:
 
+# Allow obfuscation of android.support.v7.internal.view.menu.**
+# to avoid problem on Samsung 4.2.2 devices with appcompat v21
+# see https://code.google.com/p/android/issues/detail?id=78377
+-keep class !android.support.v7.internal.view.menu.**,android.support.** {*;}
+
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
