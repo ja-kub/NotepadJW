@@ -158,10 +158,9 @@ wówczas umieszczone w folderze Pobrane).</p>
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-    - Tagalski przekład Biblii \n\n
-    - Poprawki wydajności aplikacji \n\n
+    - Poprawki błędów \n\n
     </string>
     <string name="whats_new_message_last">
-    - Poprawki błędów
+    - Tłumaczenie aplikacji na rosyjski
     </string>
 </resources>

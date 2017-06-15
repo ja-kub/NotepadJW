@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="font_size_entries">
+        <item>маленький</item>
+        <item>средний</item>
+        <item>большой</item>
+        <item>очень большой</item>
+    </string-array>
+    <string-array name="font_size_values">
+        <item>@string/font_size_small</item>
+        <item>@string/font_size_medium</item>
+        <item>@string/font_size_large</item>
+        <item>@string/font_size_xlarge</item>
+    </string-array>
+
+    <string-array name="verse_position_entries">
+        <item>в верхней</item>
+        <item>С правой</item>
+    </string-array>
+    <string-array name="verse_position_values">
+        <item>@string/verse_position_top</item>
+        <item>@string/verse_position_right</item>
+    </string-array>
+
+    <string-array name="verse_language_entries">
+        <item>английский</item>
+        <item>испанский</item>
+        <item>немецкий</item>
+        <item>полировать</item>
+        <item>португальский</item>
+        <item>русский</item>
+        <item>румынский</item>
+        <item>тагальского</item>
+        <item>венгерский</item>
+    </string-array>
+    <string-array name="verse_language_values">
+        <item>@string/english_language</item>
+        <item>@string/spanish_language</item>
+        <item>@string/german_language</item>
+        <item>@string/polish_language</item>
+        <item>@string/portuguese_language</item>
+        <item>@string/russian_language</item>
+        <item>@string/romanian_language</item>
+        <item>@string/tagalog_language</item>
+        <item>@string/hungarian_language</item>
+    </string-array>
+
+    <string-array name="verse_area_size_entries">
+        <item>Автоподстройка</item>
+        <item>Перемещение нижнего края</item>
+    </string-array>
+    <string-array name="verse_area_size_values">
+        <item>@string/verse_area_size_auto</item>
+        <item>@string/verse_area_size_changeable</item>
+    </string-array>
+</resources>

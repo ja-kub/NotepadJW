@@ -184,10 +184,9 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Added Tagalog translation of the Bible \n\n
-    - Performance improvements \n\n
+    - Bug fixes \n\n
     </string>
     <string name="whats_new_message_last">
-    - Bug fixes
+    - Russian translation of app
     </string>
 </resources>
