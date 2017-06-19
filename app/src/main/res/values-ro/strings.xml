@@ -1,0 +1,162 @@
+<resources>
+    <string name="action_settings">Setari</string>
+    <string name="edit_message">Introduceti un text</string>
+    <string name="button_save">Importa</string>
+    <string name="button_open">Deschide</string>
+    <string name="verse_preview">Previzualizare verset</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Anuleaza</string>
+    <string name="no">Nu</string>
+    <string name="yes">Da</string>
+    <string name="create_new_note_dialog_title">Introduceti titlul notei</string>
+    <string name="note_name">Titlul notei</string>
+    <string name="creation_of_new_note_cancelled">Noua nonta a/nu a fost creata</string>
+    <string name="file_name_exists">Exista deja o tema cu acest titlu, introduceti alt titlu</string>
+    <string name="name_cannot_be_empty">Numele nu poate lipsi</string>
+    <string name="creation_failed">Creare nereusita</string>
+    <string name="creation_of_new_note_succesful">Noua nota a fost creata</string>
+    <string name="button_rename">Redenumeste nota selectata</string>
+    <string name="button_remove">Elimina nota/ele</string>
+    <string name="button_share">Impartaseste nota/ele</string>
+    <string name="not_matching">nu se potriveste cu</string>
+    <string name="wrong_verse">- numarul versetului este gresit</string>
+    <string name="button_switch_view">Schimba vizualizarea</string>
+    <string name="button_switch_edit">Butonul de editare</string>
+    <string name="not_one_file_selected">Nu a fost selectata nici o nota</string>
+    <string name="removed">Eliminat</string>
+    <string name="rename_file">Redenumeste nota</string>
+    <string name="file_renamed">Nota a fost redenumita</string>
+    <string name="file_rename_failed">Redenumire nereusita</string>
+    <string name="on_remove_dialog_title">Elimina elementul(ele) selectate?</string>
+    <string name="remove">Elimina</string>
+    <string name="files_removed_successfully">Nota a fost eliminata cu succes </string>
+    <string name="files_not_removed_successfully">Unele note nu au fost eliminate</string>
+    <string name="button_new_folder">Creaza un dosar nou</string>
+    <string name="create_new_folder_dialog_title">Creaza un dosar nou</string>
+    <string name="folder_name">dosar name</string>
+    <string name="folder_name_exists">Un dosar cu acest nume exista deja, schimbati numele</string>
+    <string name="creation_of_new_folder_succesful">Noul dosar a fost creat </string>
+    <string name="permission_storage_not_granted">Accesul pentru a accesa dosarele externe a fost oferit </string>
+    <string name="storage_not_writable">Spatiul de stocare nu poate fi folosit</string>
+    <string name="temporary_file">Fisiere temporare</string>
+    <string name="cannot_save_temp">Nu poate salva fisierele temporare</string>
+    <string name="error_while_saving">Eroare in a salva fisierele</string>
+    <string name="file_saved">Fisierele au fost salvate</string>
+    <string name="create_new_note_from_this_file_dialog_title">Creaza o noua nota di acest fisier?</string>
+    <string name="file_will_be_created_in">Notele vor fi create in dosarul: NotepadJW/</string>
+    <string name="downloads_folder_name">Descarcari</string>
+    <string name="file_is_too_big">Fisierul este prea mare!</string>
+    <string name="language_na">aceasta limba nu este inca disponibila</string>
+    <string name="wrong_book">Numele cartii este incorect</string>
+    <string name="wrong_chapter">Numele capitolului este incorect</string>
+    <string name="wrong_verse_order">- ordinea versetelor este incorecta</string>
+    <string name="help_title">Ajutor</string>
+    <string name="items">Obiecte</string>
+    <string name="bytes">Byti</string>
+    <string name="uri_null">Parsed URI is null</string>
+    <string name="cannot_open">Nu poate deschide fisierul sau continutul</string>
+    <string name="uri_not_supported">Uri type not supported</string>
+    <string name="not_text_file">Nu este un fisier tip text</string>
+    <string name="changes_not_saved">Modificarile nu au fost salvate</string>
+    <string name="current_dir_is_null">Dosarul curent este invalid</string>
+    <string name="show_size">Arata marimea</string>
+    <string name="show_size_summ">Arata marimea notelor sau a dosarului</string>
+    <string name="pref_file_manager_title">Managerul notelor</string>
+    <string name="show_date">Arata data</string>
+    <string name="show_date_summ">arata cand au fost modificate notele sau dosarele</string>
+    <string name="parent_directory">Fisierul principal</string>
+    <string name="pref_notepad_editor_title">Editorul notelor</string>
+    <string name="verse_font_size">Caracterul de scris al versetelor</string>
+    <string name="note_font_size">Marimea scrisului in note</string>
+    <string name="verse_font_size_summ">Schimba marimea scrisului pentru versetele aratate</string>
+    <string name="note_font_size_summ">Schimba amrimea textului notelor</string>
+    <string name="verse_font_color">Culoarea versetelor</string>
+    <string name="verse_font_color_summ">Alege culoarea versetelor vizualizate</string>
+    <string name="button_cut">Decupeaza</string>
+    <string name="button_copy">Copiaza</string>
+    <string name="button_paste">Lipeste</string>
+    <string name="cut_to_clipboard">Decupeaza in memorie</string>
+    <string name="copied_to_clipboard">Copiat in memorie</string>
+    <string name="pasted_from_clipboard">Lipit in memorie</string>
+    <string name="not_all_elements_pasted">Nu toate elementele au fost lipite</string>
+    <string name="unexpected_exception">Eroare neasteptata - va rog sa imi trimiteti un email cu descrierea erorii</string>
+    <string name="button_sort_files">Schimba ordinea</string>
+    <string name="files_sorted_by_date">Notele aranjate dupa data</string>
+    <string name="files_sorted_alphabetically">Notele aranjate in mod alfabetic</string>
+    <string name="whats_new">Ce este nou?</string>
+    <string name="verse_language_title">Limba versetului</string>
+    <string name="verse_language_summ">Schimba Limba versetului</string>
+    <string name="verse_language_dialog_title">Limba versetului</string>
+    <string name="verse_position_title">Pozitia versetului</string>
+    <string name="verse_position_summ">Redeschide nota pentru a vedea modificarile</string>
+    <string name="verse_position_dialog_title">Pozitia versetului</string>
+    <string name="missing_language_dialog_title">Limba indisponibila</string>
+    <string name="missing_language_message">Descarca si instaleaza Biblia in aceasta limba acum?</string>
+    <string name="download_description">Descarca Biblia pentru Notepad JW</string>
+    <string name="download_language">Descarca Biblia in limba </string>
+    <string name="install_language">Instaleaza Biblia in limba</string>
+    <string name="in_progress">In desfasurare</string>
+    <string name="finished">Finalizat</string>
+    <string name="unsuccessful">Nereusit</string>
+    <string name="permission_explanation_dialog_title">E nevoie de permisiune pentru a accesa dosarul extern</string>
+    <string name="button_undo">Inapoi</string>
+    <string name="button_redo">Reia</string>
+    <string name="button_bold">Ingrosat</string>
+    <string name="button_italic">Italic</string>
+    <string name="button_underline">Subliniat</string>
+    <string name="button_bullet">Bullet</string>
+    <string name="verse_area_size_title">Marimea zonei versetelor</string>
+    <string name="verse_area_size_dialog_title">Marimea zonei versetelor</string>
+    <string name="sent_by_notepadjw">
+    <![CDATA[
+    <p>Notes sent from <B>Notepad JW</B> - notes manager and editor with live view of entered verses.</p>
+    <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
+        ]]>
+    </string>
+    <string name="help_text_html">
+    <![CDATA[
+<h3>Information</h3>
+<p>Text of all verses are from New World Translation of the Holy Scriptures
+(Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
+<h3>Why use NotepadJW?</h3>
+<p>This application was created, because no other app was found, which would be able to show
+verses in the real time while editing some note. So it is useful for making notes during
+meetings and congresses - you don\'t need anymore to switch applications or search paper Bible
+to see the verse text, it is displayed in the same window as editor. As this application is able to
+show all verses under links in view mode, it could be also used for speeches at the podium and other
+tasks during meetings. This app also has sharing option, so you can also use it for making notes
+during ministry and send them to other preachers.</p>
+<h3>Abilities</h3>
+<p>This application consists of two activities:
+<br><b>Notes Manager</b> and <b>Notepad Editor</b>.
+<br>In <b>Notes Manager</b> you can create new notes, open them and create new folders.
+<br>You can select items by long-click and then: rename, delete or send (cut, copy and paste options will be added soon).
+<br>In <b>Notepad Editor</b> you can switch between <i>Edit Mode</i> and <i>View Mode</i>. In the first one,
+last entered verse will be displayed and in the second one you can click on links created from verses
+to see selected one.
+<br><b>Notes</b> are saved in external storage under txt files in location: Documents/NotepadJW.
+You can access them from our PC. It means that you can rename them, delete, move or add new txt files
+from your computer. You can also open txt files from other app on your device, like from file explorers,
+email attachments, bluetooth files etc. You can import them to NotepadJW workspace by clicking Save
+button (they will be copied to Downloads folder).</p>
+<h3>Author</h3>
+<p>Jakub Tomala (coding, layouts).
+<br>Questions, bugs, improvements? Write an email to: tomala.kuba@gmail.com
+    ]]>
+    </string>
+    <string name="permission_explanation_dialog_message">
+        In the next screen you will be asked about access to external storage. If you Allow,
+        Notepad JW will save notes to external storage (in folder Documents -> NotepadJW).
+        Thereby you would have access to these notes from other apps and from PC for your
+        convenience (Notepad JW app does not read or modify any files outside of
+        NotepadJW folder).
+        If you Deny, Notepad JW will save notes to internal storage, to which other apps and your PC
+        don\'t have access.
+    </string>
+    <string name="whats_new_message_previous">
+    - Russian translation of app \n\n
+    </string>
+    <string name="whats_new_message_last">
+    - Romanian translation of app
+    </string>
+</resources>

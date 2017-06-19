@@ -58,15 +58,15 @@ import pl.bubson.notepadjw.utils.SpanToHtmlConverter;
 
 public class NotepadEditorActivity extends AppCompatActivity {
 
-    private static final int MAX_FILE_SIZE_IN_BYTES = 100000;
-    private static final String TAG = "NotepadEditorActivity";
-    private static final String VERSE_AREA_SIZE_EDIT_MODE_KEY = "verseAreaSizeEditMode";
-    private static final String VERSE_AREA_SIZE_VIEW_MODE_KEY = "verseAreaSizeViewMode";
     public static final double MINIMUM_VERSE_HEIGHT_PROPORTION = 0.05;
     public static final double MAXIMUM_VERSE_HEIGHT_PROPORTION = 0.45;
     public static final int TOLERANCE_TO_DRAG_VERSE_AREA_EDGE_IN_PX = 100;
     public static final int MAX_VERSE_LINES_IN_AUTO_FIT = 10;
     public static final int CHARS_AT_THE_END_TO_CHECK = 10;
+    private static final int MAX_FILE_SIZE_IN_BYTES = 100000;
+    private static final String TAG = "NotepadEditorActivity";
+    private static final String VERSE_AREA_SIZE_EDIT_MODE_KEY = "verseAreaSizeEditMode";
+    private static final String VERSE_AREA_SIZE_VIEW_MODE_KEY = "verseAreaSizeViewMode";
     private static int screenHeight;
     private String lastCharsOfNote = "";
     private Language versesLanguage;
@@ -190,10 +190,10 @@ public class NotepadEditorActivity extends AppCompatActivity {
             Log.v(TAG, "savedVerseSizeInEditMode = " + savedVerseSizeInEditMode);
             Log.v(TAG, "screenHeight = " + screenHeight);
             Log.v(TAG, "MAXIMUM_VERSE_HEIGHT_PROPORTION * screenHeight = " + MAXIMUM_VERSE_HEIGHT_PROPORTION * screenHeight);
-            if (savedVerseSizeInEditMode>0 && savedVerseSizeInEditMode <= MAXIMUM_VERSE_HEIGHT_PROPORTION * screenHeight)
+            if (savedVerseSizeInEditMode > 0 && savedVerseSizeInEditMode <= MAXIMUM_VERSE_HEIGHT_PROPORTION * screenHeight)
                 versePreviewTextInEditMode.getLayoutParams().height = savedVerseSizeInEditMode;
             int savedVerseSizeInViewMode = sharedPref.getInt(VERSE_AREA_SIZE_VIEW_MODE_KEY, 0);
-            if (savedVerseSizeInViewMode>0 && savedVerseSizeInEditMode <= MAXIMUM_VERSE_HEIGHT_PROPORTION * screenHeight)
+            if (savedVerseSizeInViewMode > 0 && savedVerseSizeInEditMode <= MAXIMUM_VERSE_HEIGHT_PROPORTION * screenHeight)
                 versePreviewTextInViewMode.getLayoutParams().height = savedVerseSizeInViewMode;
         }
     }
@@ -477,34 +477,35 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
     private void openFileFromIntent() {
         Log.v(TAG, "openFileFromIntent - started");
-        Intent intent = getIntent();
-        String action = intent.getAction();
-        String type = intent.getType();
+        try {
 
-        if ((action.equals(Intent.ACTION_EDIT) || action.equals(Intent.ACTION_VIEW))
-                && (type.equals("text/plain") || type.equals("text/html"))) {
-            Uri uri = intent.getData();
-            if (uri != null && (uri.getScheme().equals(ContentResolver.SCHEME_FILE) ||
-                    uri.getScheme().equals(ContentResolver.SCHEME_ANDROID_RESOURCE) ||
-                    uri.getScheme().equals(ContentResolver.SCHEME_CONTENT))) {
-                StringBuilder text = new StringBuilder();
-                try {
-                    InputStream is = getContentResolver().openInputStream(uri);
-                    if ((is != null) && is.available() <= MAX_FILE_SIZE_IN_BYTES) {
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-                        String line;
-                        String lineEnding = "";
-                        while ((line = reader.readLine()) != null) {
-                            text.append(lineEnding).append(line);
-                            lineEnding = "<BR>";
-                        }
-                        is.close();
-                    } else {
-                        Toast.makeText(this, R.string.file_is_too_big, Toast.LENGTH_LONG).show();
-                        finish();
-                    }
-                } catch (Exception exception) {
+            Intent intent = getIntent();
+            String action = intent.getAction();
+            String type = intent.getType();
+
+            if ((action.equals(Intent.ACTION_EDIT) || action.equals(Intent.ACTION_VIEW))
+                    && (type.equals("text/plain") || type.equals("text/html"))) {
+                Uri uri = intent.getData();
+                if (uri != null && (uri.getScheme().equals(ContentResolver.SCHEME_FILE) ||
+                        uri.getScheme().equals(ContentResolver.SCHEME_ANDROID_RESOURCE) ||
+                        uri.getScheme().equals(ContentResolver.SCHEME_CONTENT))) {
+                    StringBuilder text = new StringBuilder();
                     try {
+                        InputStream is = getContentResolver().openInputStream(uri);
+                        if ((is != null) && is.available() <= MAX_FILE_SIZE_IN_BYTES) {
+                            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                            String line;
+                            String lineEnding = "";
+                            while ((line = reader.readLine()) != null) {
+                                text.append(lineEnding).append(line);
+                                lineEnding = "<BR>";
+                            }
+                            is.close();
+                        } else {
+                            Toast.makeText(this, R.string.file_is_too_big, Toast.LENGTH_LONG).show();
+                            finish();
+                        }
+                    } catch (Exception exception) {
                         if (exception.getCause().toString().contains("Permission denied")) {
                             Log.v(TAG, exception.getCause().toString());
                             FileManagerActivity.askForPermissionsIfNotGranted(this);
@@ -513,38 +514,39 @@ public class NotepadEditorActivity extends AppCompatActivity {
                             Toast.makeText(this, R.string.cannot_open, Toast.LENGTH_LONG).show();
                             finish();
                         }
-                    } catch (Exception ex2) {
-                        Toast.makeText(this, R.string.unexpected_exception, Toast.LENGTH_LONG).show();
                     }
-                }
-                Log.v(TAG, "openFileFromIntent - text in String Builder");
-                Log.v(TAG, "openFileFromIntent - text:\n" + text);
+                    Log.v(TAG, "openFileFromIntent - text in String Builder");
+                    Log.v(TAG, "openFileFromIntent - text:\n" + text);
 
-                noteEditText.fromHtml(text.toString());
-                htmlTextInFile = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
-                Log.v(TAG, "openFileFromIntent - text in noteEditText");
-                if (action.equals(Intent.ACTION_EDIT)) {
-                    switchToEditableMode(true);
-                } else {
-                    switchToEditableMode(false);
-                }
+                    noteEditText.fromHtml(text.toString());
+                    htmlTextInFile = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
+                    Log.v(TAG, "openFileFromIntent - text in noteEditText");
+                    if (action.equals(Intent.ACTION_EDIT)) {
+                        switchToEditableMode(true);
+                    } else {
+                        switchToEditableMode(false);
+                    }
 
-                Log.v(TAG, "openFileFromIntent - mode switched");
-                if (uri.getScheme().equals(ContentResolver.SCHEME_FILE)) {
-                    currentFile = new File(uri.getPath());
-                    setTitle(FileManagerActivity.fileWithoutExtension(uri.getLastPathSegment()));
+                    Log.v(TAG, "openFileFromIntent - mode switched");
+                    if (uri.getScheme().equals(ContentResolver.SCHEME_FILE)) {
+                        currentFile = new File(uri.getPath());
+                        setTitle(FileManagerActivity.fileWithoutExtension(uri.getLastPathSegment()));
+                    } else {
+                        currentFile = null;
+                        setTitle(R.string.temporary_file);
+                    }
+                    Log.v(TAG, "openFileFromIntent - finished");
                 } else {
-                    currentFile = null;
-                    setTitle(R.string.temporary_file);
+                    Toast.makeText(this, R.string.uri_not_supported, Toast.LENGTH_LONG).show();
+                    finish();
                 }
-                Log.v(TAG, "openFileFromIntent - finished");
             } else {
-                Toast.makeText(this, R.string.uri_not_supported, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.not_text_file, Toast.LENGTH_LONG).show();
                 finish();
             }
-        } else {
-            Toast.makeText(this, R.string.not_text_file, Toast.LENGTH_LONG).show();
-            finish();
+        } catch (Exception unexpectedException) {
+            // All exceptions should be caught before this catch...
+            Toast.makeText(this, R.string.unexpected_exception, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -687,16 +689,16 @@ public class NotepadEditorActivity extends AppCompatActivity {
             menu.findItem(R.id.action_text_bold).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
             menu.findItem(R.id.action_text_italic).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
             menu.findItem(R.id.action_text_underline).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-            if (menu.findItem(android.R.id.selectAll)!=null) {
+            if (menu.findItem(android.R.id.selectAll) != null) {
                 menu.findItem(android.R.id.selectAll).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
             }
-            if (menu.findItem(android.R.id.cut)!=null) {
+            if (menu.findItem(android.R.id.cut) != null) {
                 menu.findItem(android.R.id.cut).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
             }
-            if (menu.findItem(android.R.id.copy)!=null) {
+            if (menu.findItem(android.R.id.copy) != null) {
                 menu.findItem(android.R.id.copy).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
             }
-            if (menu.findItem(android.R.id.paste)!=null) {
+            if (menu.findItem(android.R.id.paste) != null) {
                 menu.findItem(android.R.id.paste).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
             }
             return true;

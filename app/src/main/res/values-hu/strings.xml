@@ -139,9 +139,9 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Hibajavítások \n\n
+    - Orosz fordítás alkalmazások \n\n
     </string>
     <string name="whats_new_message_last">
-    - Orosz fordítás alkalmazások
+    - Román fordítás alkalmazások
     </string>
 </resources>

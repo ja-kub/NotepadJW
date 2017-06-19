@@ -356,8 +356,12 @@ public class FileManagerActivity extends AppCompatActivity {
             adapter = new FileListAdapter(FileManagerActivity.this, directories);
             RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
             if (mRecyclerView != null) {
-                mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-                mRecyclerView.setAdapter(adapter);
+                try {
+                    mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+                    mRecyclerView.setAdapter(adapter);
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
+                }
             }
         } else {
             Toast.makeText(this, R.string.current_dir_is_null, Toast.LENGTH_SHORT).show();
