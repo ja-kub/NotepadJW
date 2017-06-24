@@ -62,7 +62,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     public static final double MAXIMUM_VERSE_HEIGHT_PROPORTION = 0.45;
     public static final int TOLERANCE_TO_DRAG_VERSE_AREA_EDGE_IN_PX = 100;
     public static final int MAX_VERSE_LINES_IN_AUTO_FIT = 10;
-    public static final int CHARS_AT_THE_END_TO_CHECK = 10;
+    public static final int CHARS_AT_THE_END_TO_CHECK = 50;
     private static final int MAX_FILE_SIZE_IN_BYTES = 100000;
     private static final String TAG = "NotepadEditorActivity";
     private static final String VERSE_AREA_SIZE_EDIT_MODE_KEY = "verseAreaSizeEditMode";
@@ -88,7 +88,8 @@ public class NotepadEditorActivity extends AppCompatActivity {
             try {
                 String text = s.toString();
                 int length = text.length();
-                if (!text.endsWith(lastCharsOfNote)) { // performance improvement - to not check verse correctness and show it again if text is modified in the middle or at the start;
+                if (!text.endsWith(lastCharsOfNote) || length <= CHARS_AT_THE_END_TO_CHECK) {
+                    // performance improvement - to not check verse correctness and show it again if text is modified in the middle or at the start
                     // only if it is changed at the end, e.g. user add or modifies just added verse
                     if (Verse.isTextContainingVerseAtTheEnd(text, versesLanguage)) {
                         versePreviewTextInEditMode.setText(Html.fromHtml(Verse.getTextOfLastVerse(getApplicationContext(), text, versesLanguage)));
@@ -265,8 +266,6 @@ public class NotepadEditorActivity extends AppCompatActivity {
         setFontSizes();
         setFontColors();
         setVersesLanguage();
-//        switchToEditableMode(currentModeIsEditable); // to refresh verses language
-//        noteTextView.setTextWithVerses(noteEditText.getText().toString(), versesLanguage); // to refresh verses language
         noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage); // to refresh verses language
     }
 
@@ -411,10 +410,10 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.action_switch_to_view:
-                switchToEditableMode(false);
+                switchToEditableMode(false, true);
                 return true;
             case R.id.action_switch_to_edit:
-                switchToEditableMode(true);
+                switchToEditableMode(true, false);
                 return true;
             case R.id.action_undo:
                 noteEditText.undo();
@@ -522,9 +521,9 @@ public class NotepadEditorActivity extends AppCompatActivity {
                     htmlTextInFile = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
                     Log.v(TAG, "openFileFromIntent - text in noteEditText");
                     if (action.equals(Intent.ACTION_EDIT)) {
-                        switchToEditableMode(true);
+                        switchToEditableMode(true, false);
                     } else {
-                        switchToEditableMode(false);
+                        switchToEditableMode(false, false);
                     }
 
                     Log.v(TAG, "openFileFromIntent - mode switched");
@@ -550,12 +549,17 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
     }
 
-    private void switchToEditableMode(boolean toEditable) {
+    /**
+     * @param toEditable choose target mode
+     * @param setVerses verses will be set in onResume(), so to not double executing setTextWithVerses()
+     *                  (for example when file is opened from Intent), use setVerses = false
+     */
+    private void switchToEditableMode(boolean toEditable, boolean setVerses) {
         if (currentModeIsEditable != toEditable) {
             if (!toEditable) {
                 noteEditText.clearComposingText();
                 hideSoftKeyboard(this);
-                noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage);
+                if (setVerses) noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage);
             }
             viewFlipper.showNext();
             currentModeIsEditable = toEditable;

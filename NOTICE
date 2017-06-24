@@ -1,0 +1,11 @@
+Notepad JW
+Copyright 2017 Jakub Tomala.
+
+This product includes following libraries:
+'com.android.support:design:23.4.0'                     
+'org.jsoup:jsoup:1.8.3'                                 
+'com.thebluealliance:spectrum:0.4.2'                    
+'commons-io:commons-io:2.5'                             
+'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+'org.apache.commons:commons-collections4:4.1'           
+'com.github.mthli:Knife:v1.1'                           

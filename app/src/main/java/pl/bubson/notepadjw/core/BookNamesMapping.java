@@ -2404,36 +2404,36 @@ public class BookNamesMapping {
     public String unifyBookName(String book) {
         switch (language) {
             case pl:
-                return book.toLowerCase().replace(".", "").replace(" ", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
                            .replace("ą", "a").replace("ć", "c").replace("ę", "e")
                            .replace("ł", "l").replace("ń", "n").replace("ó", "o")
                            .replace("ś", "s").replace("ż", "z").replace("ź", "z");
             case es:
-                return book.toLowerCase().replace(".", "").replace(" ", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
                            .replace("ó", "o").replace("á", "a").replace("ç", "c")
                            .replace("é", "e").replace("í", "i").replace("ú", "u").replace("ñ", "n");
             case ro:
-                return book.toLowerCase().replace(".", "").replace(" ", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
                            .replace("ă", "a").replace("â", "a").replace("î", "i")
                            .replace("ș", "s").replace("ț", "i");
             case de:
-                return book.toLowerCase().replace(".", "").replace(" ", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
                            .replace("ä", "a").replace("ö", "o").replace("ü", "u");
             case pt:
-                return book.toLowerCase().replace(".", "").replace(" ", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
                         .replace("á", "a").replace("à", "a").replace("ã", "a")
                         .replace("ç", "c").replace("é", "e").replace("è", "e")
                         .replace("ê", "e").replace("í", "i").replace("ì", "i")
                         .replace("ó", "o").replace("ò", "o").replace("ô", "o")
                         .replace("õ", "o").replace("ú", "u").replace("û", "u");
             case hu:
-                return book.toLowerCase().replace(".", "").replace(" ", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
                         .replace("á", "a").replace("é", "e").replace("í", "i")
                         .replace("ó", "o").replace("ö", "o").replace("ő", "o")
                         .replace("ú", "u").replace("ü", "u").replace("ű", "u");
             case tl:
-            default:
-                return book.toLowerCase().replace(".", "").replace(" ", ""); // en
+            default: // en
+                return book.toLowerCase().replace(".", "").replaceAll("\\s", ""); 
         }
     }
 }

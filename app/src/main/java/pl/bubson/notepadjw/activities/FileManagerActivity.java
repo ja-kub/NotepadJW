@@ -65,7 +65,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private MenuItem newFolder, removeFiles, shareFiles, renameFile, cutFiles, copyFiles, pasteFiles, sortFilesMenuItem;
     private File currentDirectory;
     private File[] currentFilesAndDirectories;
-    private List<Item> selectedItemList = new ArrayList<Item>();
+    private List<Item> selectedItemList = new ArrayList<>();
     private List<Item> clipboardItemList = new ArrayList<Item>();
     private boolean isClipboardToCopy, isCurrentSortingByDate;
     private RecyclerView recyclerView;
@@ -527,7 +527,8 @@ public class FileManagerActivity extends AppCompatActivity {
 
             final EditText input = new EditText(this);
             input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
-            input.setText(fileWithoutExtension(selectedItemList.get(0).getName()));
+//            input.setText(fileWithoutExtension(selectedItemList.get(0).getName()));
+            input.setText(selectedItemList.get(0).getName());
             input.setSelectAllOnFocus(true);
             input.requestFocus();
             builder.setView(input);
@@ -552,7 +553,7 @@ public class FileManagerActivity extends AppCompatActivity {
                     } else {
                         newFileName = input.getText().toString() + "." + NOTE_FILE_EXTENSION;
                     }
-                    if (newFileName.equals("")) {
+                    if (input.getText().toString().equals("")) {
                         isFileNameCorrect = false;
                         Toast.makeText(activityContext, R.string.name_cannot_be_empty, Toast.LENGTH_SHORT).show();
                     } else {
