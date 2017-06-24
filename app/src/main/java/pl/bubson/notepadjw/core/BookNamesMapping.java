@@ -2189,9 +2189,9 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("1hari", "12");
                 multipleChapterBooksMap.put("1har", "12");
                 multipleChapterBooksMap.put("1ha", "12");
-                multipleChapterBooksMap.put("1hari", "13");
-                multipleChapterBooksMap.put("1har", "13");
-                multipleChapterBooksMap.put("1ha", "13");
+                multipleChapterBooksMap.put("2hari", "13");
+                multipleChapterBooksMap.put("2har", "13");
+                multipleChapterBooksMap.put("2ha", "13");
                 multipleChapterBooksMap.put("1cronica", "14");
                 multipleChapterBooksMap.put("1cron", "14");
                 multipleChapterBooksMap.put("1cro", "14");
@@ -2355,6 +2355,256 @@ public class BookNamesMapping {
                 multiplePartNameBookWithoutLastWordPattern = "[Aa]wit\\s*[Nn]i\\s*";
                 break;
 
+            case fr:
+                multipleChapterBooksMap.put("genese", "02");
+                multipleChapterBooksMap.put("gen", "02");
+                multipleChapterBooksMap.put("gn", "02");
+                multipleChapterBooksMap.put("exode", "03");
+                multipleChapterBooksMap.put("exo", "03");
+                multipleChapterBooksMap.put("ex", "03");
+                multipleChapterBooksMap.put("levitique", "04");
+                multipleChapterBooksMap.put("levit", "04");
+                multipleChapterBooksMap.put("lev", "04");
+                multipleChapterBooksMap.put("lv", "04");
+                multipleChapterBooksMap.put("nombres", "05");
+                multipleChapterBooksMap.put("nomb", "05");
+                multipleChapterBooksMap.put("nom", "05");
+                multipleChapterBooksMap.put("nb", "05");
+                multipleChapterBooksMap.put("deuteronome", "06");
+                multipleChapterBooksMap.put("deuter", "06");
+                multipleChapterBooksMap.put("deu", "06");
+                multipleChapterBooksMap.put("dt", "06");
+                multipleChapterBooksMap.put("josue", "07");
+                multipleChapterBooksMap.put("jos", "07");
+                multipleChapterBooksMap.put("juges", "08");
+                multipleChapterBooksMap.put("jug", "08");
+                multipleChapterBooksMap.put("jg", "08");
+                multipleChapterBooksMap.put("ruth", "09");
+                multipleChapterBooksMap.put("rut", "09");
+                multipleChapterBooksMap.put("ru", "09");
+                multipleChapterBooksMap.put("1samuel", "10");
+                multipleChapterBooksMap.put("1sam", "10");
+                multipleChapterBooksMap.put("1sa", "10");
+                multipleChapterBooksMap.put("1s", "10");
+                multipleChapterBooksMap.put("2samuel", "11");
+                multipleChapterBooksMap.put("2sam", "11");
+                multipleChapterBooksMap.put("2sa", "11");
+                multipleChapterBooksMap.put("2s", "11");
+                multipleChapterBooksMap.put("1rois", "12");
+                multipleChapterBooksMap.put("1ro", "12");
+                multipleChapterBooksMap.put("1r", "12");
+                multipleChapterBooksMap.put("2rois", "13");
+                multipleChapterBooksMap.put("2ro", "13");
+                multipleChapterBooksMap.put("2r", "13");
+                multipleChapterBooksMap.put("1chroniques", "14");
+                multipleChapterBooksMap.put("1chron", "14");
+                multipleChapterBooksMap.put("1chr", "14");
+                multipleChapterBooksMap.put("1ch", "14");
+                multipleChapterBooksMap.put("2chroniques", "15");
+                multipleChapterBooksMap.put("2chron", "15");
+                multipleChapterBooksMap.put("2chr", "15");
+                multipleChapterBooksMap.put("2ch", "15");
+                multipleChapterBooksMap.put("ezra", "16");
+                multipleChapterBooksMap.put("ezr", "16");
+                multipleChapterBooksMap.put("nehemia", "17");
+                multipleChapterBooksMap.put("nehem", "17");
+                multipleChapterBooksMap.put("neh", "17");
+                multipleChapterBooksMap.put("ne", "17");
+                multipleChapterBooksMap.put("esther", "18");
+                multipleChapterBooksMap.put("esth", "18");
+                multipleChapterBooksMap.put("est", "18");
+                multipleChapterBooksMap.put("es", "18");
+                multipleChapterBooksMap.put("job", "19");
+                multipleChapterBooksMap.put("jb", "19");
+                multipleChapterBooksMap.put("psaumes", "20");
+                multipleChapterBooksMap.put("psaum", "20");
+                multipleChapterBooksMap.put("ps", "20");
+                multipleChapterBooksMap.put("proverbes", "21");
+                multipleChapterBooksMap.put("proverb", "21");
+                multipleChapterBooksMap.put("prov", "21");
+                multipleChapterBooksMap.put("pro", "21");
+                multipleChapterBooksMap.put("pr", "21");
+                multipleChapterBooksMap.put("ecclesiaste", "22");
+                multipleChapterBooksMap.put("eccles", "22");
+                multipleChapterBooksMap.put("eccl", "22");
+                multipleChapterBooksMap.put("ec", "22");
+                multipleChapterBooksMap.put("chantdesalomon", "23");
+                multipleChapterBooksMap.put("chantdesalo", "23");
+                multipleChapterBooksMap.put("chantdes", "23");
+                multipleChapterBooksMap.put("chant", "23");
+                multipleChapterBooksMap.put("cantiques", "23");
+                multipleChapterBooksMap.put("cantiq", "23");
+                multipleChapterBooksMap.put("cant", "23");
+                multipleChapterBooksMap.put("can", "23");
+                multipleChapterBooksMap.put("ct", "23");
+                multipleChapterBooksMap.put("isaie", "24");
+                multipleChapterBooksMap.put("isa", "24");
+                multipleChapterBooksMap.put("is", "24");
+                multipleChapterBooksMap.put("jeremie", "25");
+                multipleChapterBooksMap.put("jerem", "25");
+                multipleChapterBooksMap.put("jer", "25");
+                multipleChapterBooksMap.put("jr", "25");
+                multipleChapterBooksMap.put("lamentations", "26");
+                multipleChapterBooksMap.put("lamentat", "26");
+                multipleChapterBooksMap.put("lam", "26");
+                multipleChapterBooksMap.put("lm", "26");
+                multipleChapterBooksMap.put("ezekiel", "27");
+                multipleChapterBooksMap.put("ezek", "27");
+                multipleChapterBooksMap.put("eze", "27");
+                multipleChapterBooksMap.put("ez", "27");
+                multipleChapterBooksMap.put("daniel", "28");
+                multipleChapterBooksMap.put("dan", "28");
+                multipleChapterBooksMap.put("dn", "28");
+                multipleChapterBooksMap.put("hoshea", "29");
+                multipleChapterBooksMap.put("hosh", "29");
+                multipleChapterBooksMap.put("hos", "29");
+                multipleChapterBooksMap.put("ho", "29");
+                multipleChapterBooksMap.put("yoel", "30");
+                multipleChapterBooksMap.put("yoe", "30");
+                multipleChapterBooksMap.put("yl", "30");
+                multipleChapterBooksMap.put("amos", "31");
+                multipleChapterBooksMap.put("am", "31");
+                multipleChapterBooksMap.put("yona", "33");
+                multipleChapterBooksMap.put("yon", "33");
+                multipleChapterBooksMap.put("mika", "34");
+                multipleChapterBooksMap.put("mik", "34");
+                multipleChapterBooksMap.put("mi", "34");
+                multipleChapterBooksMap.put("nahoum", "35");
+                multipleChapterBooksMap.put("nah", "35");
+                multipleChapterBooksMap.put("na", "35");
+                multipleChapterBooksMap.put("habaqouq", "36");
+                multipleChapterBooksMap.put("habaq", "36");
+                multipleChapterBooksMap.put("hab", "36");
+                multipleChapterBooksMap.put("tsephania", "37");
+                multipleChapterBooksMap.put("tseph", "37");
+                multipleChapterBooksMap.put("tsep", "37");
+                multipleChapterBooksMap.put("tse", "37");
+                multipleChapterBooksMap.put("haggai", "38");
+                multipleChapterBooksMap.put("hagg", "38");
+                multipleChapterBooksMap.put("hag", "38");
+                multipleChapterBooksMap.put("zakaria", "39");
+                multipleChapterBooksMap.put("zak", "39");
+                multipleChapterBooksMap.put("za", "39");
+                multipleChapterBooksMap.put("malaki", "40");
+                multipleChapterBooksMap.put("malak", "40");
+                multipleChapterBooksMap.put("mal", "40");
+                multipleChapterBooksMap.put("ml", "40");
+                multipleChapterBooksMap.put("matthieu", "41");
+                multipleChapterBooksMap.put("matth", "41");
+                multipleChapterBooksMap.put("matt", "41");
+                multipleChapterBooksMap.put("mat", "41");
+                multipleChapterBooksMap.put("mt", "41");
+                multipleChapterBooksMap.put("marc", "42");
+                multipleChapterBooksMap.put("mar", "42");
+                multipleChapterBooksMap.put("mc", "42");
+                multipleChapterBooksMap.put("luc", "43");
+                multipleChapterBooksMap.put("lc", "43");
+                multipleChapterBooksMap.put("jean", "44");
+                multipleChapterBooksMap.put("jn", "44");
+                multipleChapterBooksMap.put("actes", "45");
+                multipleChapterBooksMap.put("act", "45");
+                multipleChapterBooksMap.put("ac", "45");
+                multipleChapterBooksMap.put("romains", "46");
+                multipleChapterBooksMap.put("roma", "46");
+                multipleChapterBooksMap.put("rom", "46");
+                multipleChapterBooksMap.put("rm", "46");
+                multipleChapterBooksMap.put("1corinthiens", "47");
+                multipleChapterBooksMap.put("1corinth", "47");
+                multipleChapterBooksMap.put("1corint", "47");
+                multipleChapterBooksMap.put("1cor", "47");
+                multipleChapterBooksMap.put("1co", "47");
+                multipleChapterBooksMap.put("2corinthiens", "48");
+                multipleChapterBooksMap.put("2corinth", "48");
+                multipleChapterBooksMap.put("2corint", "48");
+                multipleChapterBooksMap.put("2cor", "48");
+                multipleChapterBooksMap.put("2co", "48");
+                multipleChapterBooksMap.put("galates", "49");
+                multipleChapterBooksMap.put("galat", "49");
+                multipleChapterBooksMap.put("gal", "49");
+                multipleChapterBooksMap.put("ga", "49");
+                multipleChapterBooksMap.put("ephesiens", "50");
+                multipleChapterBooksMap.put("ephes", "50");
+                multipleChapterBooksMap.put("eph", "50");
+                multipleChapterBooksMap.put("ep", "50");
+                multipleChapterBooksMap.put("philippiens", "51");
+                multipleChapterBooksMap.put("philipp", "51");
+                multipleChapterBooksMap.put("philip", "51");
+                multipleChapterBooksMap.put("ph", "51");
+                multipleChapterBooksMap.put("colossiens", "52");
+                multipleChapterBooksMap.put("coloss", "52");
+                multipleChapterBooksMap.put("colos", "52");
+                multipleChapterBooksMap.put("col", "52");
+                multipleChapterBooksMap.put("1thessaloniciens", "53");
+                multipleChapterBooksMap.put("1thessalon", "53");
+                multipleChapterBooksMap.put("1thess", "53");
+                multipleChapterBooksMap.put("1thes", "53");
+                multipleChapterBooksMap.put("1the", "53");
+                multipleChapterBooksMap.put("1th", "53");
+                multipleChapterBooksMap.put("2thessaloniciens", "54");
+                multipleChapterBooksMap.put("2thessalon", "54");
+                multipleChapterBooksMap.put("2thess", "54");
+                multipleChapterBooksMap.put("2thes", "54");
+                multipleChapterBooksMap.put("2the", "54");
+                multipleChapterBooksMap.put("2th", "54");
+                multipleChapterBooksMap.put("1timothee", "55");
+                multipleChapterBooksMap.put("1timot", "55");
+                multipleChapterBooksMap.put("1tim", "55");
+                multipleChapterBooksMap.put("1tm", "55");
+                multipleChapterBooksMap.put("2timothee", "56");
+                multipleChapterBooksMap.put("2timot", "56");
+                multipleChapterBooksMap.put("2tim", "56");
+                multipleChapterBooksMap.put("2tm", "56");
+                multipleChapterBooksMap.put("tite", "57");
+                multipleChapterBooksMap.put("tit", "57");
+                multipleChapterBooksMap.put("tt", "57");
+                multipleChapterBooksMap.put("hebreux", "59");
+                multipleChapterBooksMap.put("hebr", "59");
+                multipleChapterBooksMap.put("heb", "59");
+                multipleChapterBooksMap.put("he", "59");
+                multipleChapterBooksMap.put("jacques", "60");
+                multipleChapterBooksMap.put("jacq", "60");
+                multipleChapterBooksMap.put("jac", "60");
+                multipleChapterBooksMap.put("ja", "60");
+                multipleChapterBooksMap.put("jc", "60");
+                multipleChapterBooksMap.put("1pierre", "61");
+                multipleChapterBooksMap.put("1pier", "61");
+                multipleChapterBooksMap.put("1pi", "61");
+                multipleChapterBooksMap.put("1p", "61");
+                multipleChapterBooksMap.put("2pierre", "62");
+                multipleChapterBooksMap.put("2pier", "62");
+                multipleChapterBooksMap.put("2pi", "62");
+                multipleChapterBooksMap.put("2p", "62");
+                multipleChapterBooksMap.put("1jean", "63");
+                multipleChapterBooksMap.put("1jn", "63");
+                multipleChapterBooksMap.put("revelation", "67");
+                multipleChapterBooksMap.put("revelat", "67");
+                multipleChapterBooksMap.put("revel", "67");
+                multipleChapterBooksMap.put("rev", "67");
+                multipleChapterBooksMap.put("re", "67");
+
+                singleChapterBooksMap.put("obadia", "32");
+                singleChapterBooksMap.put("obad", "32");
+                singleChapterBooksMap.put("oba", "32");
+                singleChapterBooksMap.put("ob", "32");
+                singleChapterBooksMap.put("philemon", "58");
+                singleChapterBooksMap.put("philem", "58");
+                singleChapterBooksMap.put("phm", "58");
+                singleChapterBooksMap.put("2jean", "64");
+                singleChapterBooksMap.put("2jn", "64");
+                singleChapterBooksMap.put("3jean", "65");
+                singleChapterBooksMap.put("3jn", "65");
+                singleChapterBooksMap.put("jude", "66");
+                singleChapterBooksMap.put("jud", "66");
+
+                allBooksMap.putAll(singleChapterBooksMap);
+                allBooksMap.putAll(multipleChapterBooksMap);
+
+                // matches "Abdiasza", "abd.", "flm", "Filem.", "2 jn", "3 Jan.", "3 jana", "jd", "Jud.", "Judy"
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hilem\\w*\\.?|[23]\\s*[Jj]n\\.?|[Jj]ean|[Jj]ud\\.?|[Jj]ude";
+
+                // matches: "Chant de"
+                multiplePartNameBookWithoutLastWordPattern = "[Cc]hant\\s*[Dd]e\\s*";
+                break;
         }
     }
 
@@ -2370,6 +2620,7 @@ public class BookNamesMapping {
             put(Language.hu, "https://download-a.akamaihd.net/files/media_bible/16/bi12_H.epub");
             put(Language.tl, "https://download-a.akamaihd.net/files/media_bible/72/bi12_TG.epub");
             put(Language.nl, "https://download-a.akamaihd.net/files/media_bible/06/bi12_O.epub");
+            put(Language.fr, "https://download-a.akamaihd.net/files/media_bible/16/bi12_F.epub");
         }
     };
 
@@ -2384,6 +2635,7 @@ public class BookNamesMapping {
             put(Language.ru, "10010604");
             put(Language.hu, "10010604");
             put(Language.tl, "10010604");
+            put(Language.fr, "10010604");
         }
     };
 
@@ -2398,6 +2650,7 @@ public class BookNamesMapping {
             put(Language.ru, "^10010604(0[2-9]|[1-5][0-9]|6[0-7])(-split\\d+\\.|\\.)xhtml$");
             put(Language.hu, "^10010604(0[2-9]|[1-5][0-9]|6[0-7])(-split\\d+\\.|\\.)xhtml$");
             put(Language.tl, "^10010604(0[2-9]|[1-5][0-9]|6[0-7])(-split\\d+\\.|\\.)xhtml$");
+            put(Language.fr, "^10010604(0[2-9]|[1-5][0-9]|6[0-7])(-split\\d+\\.|\\.)xhtml$");
         }
     };
 
@@ -2431,6 +2684,13 @@ public class BookNamesMapping {
                         .replace("á", "a").replace("é", "e").replace("í", "i")
                         .replace("ó", "o").replace("ö", "o").replace("ő", "o")
                         .replace("ú", "u").replace("ü", "u").replace("ű", "u");
+            case fr:
+                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
+                        .replace("à", "a").replace("â", "a").replace("ç", "c")
+                        .replace("é", "e").replace("è", "e").replace("ê", "e")
+                        .replace("ë", "e").replace("î", "i").replace("ï", "i")
+                        .replace("ô", "o").replace("û", "u").replace("ù", "u")
+                        .replace("ü", "u").replace("ÿ", "y");
             case tl:
             default: // en
                 return book.toLowerCase().replace(".", "").replaceAll("\\s", ""); 

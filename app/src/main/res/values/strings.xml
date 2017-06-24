@@ -17,6 +17,7 @@
     <string name="polish_language" translatable="false">pl</string>
     <string name="hungarian_language" translatable="false">hu</string>
     <string name="english_language" translatable="false">en</string>
+    <string name="french_language" translatable="false">fr</string>
     <string name="spanish_language" translatable="false">es</string>
     <string name="tagalog_language" translatable="false">tl</string>
     <string name="romanian_language" translatable="false">ro</string>
@@ -184,9 +185,10 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Russian translation of the app \n\n
+    - Romanian translation of the app \n\n
     </string>
     <string name="whats_new_message_last">
-    - Romanian translation of the app
+    - French Bible translation \n\n
+    - Bug fixes
     </string>
 </resources>

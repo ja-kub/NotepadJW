@@ -25,6 +25,7 @@
 
     <string-array name="verse_language_entries">
         <item>Angielski</item>
+        <item>Francuski</item>
         <item>Hiszpański</item>
         <item>Niemiecki</item>
         <item>Polski</item>
@@ -36,6 +37,7 @@
     </string-array>
     <string-array name="verse_language_values">
         <item>@string/english_language</item>
+        <item>@string/french_language</item>
         <item>@string/spanish_language</item>
         <item>@string/german_language</item>
         <item>@string/polish_language</item>
