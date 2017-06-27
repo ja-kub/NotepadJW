@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.utils.DatabaseHelper;
 import pl.bubson.notepadjw.utils.Language;
+
 import static pl.bubson.notepadjw.core.BookNamesMapping.filePrefixMap;
 
 /**
@@ -89,7 +90,7 @@ public class Verse {
             language = lang;
             mapping = BookNamesMapping.getInstance(lang);
 
-            String BOOK_PATTERN = "((" + mapping.getMultiplePartNameBookWithoutLastWordPattern() + "|[1-5]\\s*)?[\\p{Lu}\\p{Ll}]+\\.?)";
+            String BOOK_PATTERN = "((" + mapping.getMultiplePartNameBookWithoutLastWordPattern() + "|[1-5] *)?[\\p{Lu}\\p{Ll}]+\\.?)";
             String MULTIPLE_CHAPTER_VERSE_PATTERN = BOOK_PATTERN + "\\s+" + CHAPTER_PATTERN + "[:,]\\s*" + VERSE_PATTERN;
             String SINGLE_CHAPTER_VERSE_PATTERN = BOOK_PATTERN + "\\s+" + VERSE_PATTERN;
             MULTIPLE_CHAPTER_LAST_VERSE_PATTERN = MULTIPLE_CHAPTER_VERSE_PATTERN + "\\s*$";
