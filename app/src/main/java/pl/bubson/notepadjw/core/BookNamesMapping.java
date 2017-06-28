@@ -345,10 +345,10 @@ public class BookNamesMapping {
                 allBooksMap.putAll(multipleChapterBooksMap);
 
                 // matches "Abdiasza", "abd.", "flm", "Filem.", "2 jn", "3 Jan.", "3 jana", "jd", "Jud.", "Judy"
-                singleChapterBooksPattern = "[Aa]bd\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\s*[Jj]n\\.?|[23]\\s*[Jj]an[\\.a]?|[Jj]d\\.?|[Jj]ud[\\.y]?";
+                singleChapterBooksPattern = "[Aa]bd\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\h*[Jj]n\\.?|[23]\\h*[Jj]an[\\.a]?|[Jj]d\\.?|[Jj]ud[\\.y]?";
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
-                multiplePartNameBookWithoutLastWordPattern = "[Pp]owt\\.?[\\p{Lu}\\p{Ll}]*\\s*|[Pp]ie[\\p{Lu}\\p{Ll}]*\\s*[Nn]ad\\s*";
+                multiplePartNameBookWithoutLastWordPattern = "[Pp]owt\\.?[\\p{Lu}\\p{Ll}]*\\h*|[Pp]ie[\\p{Lu}\\p{Ll}]*\\h*[Nn]ad\\h*";
                 break;
 
             case en:
@@ -555,8 +555,8 @@ public class BookNamesMapping {
                 allBooksMap.putAll(singleChapterBooksMap);
                 allBooksMap.putAll(multipleChapterBooksMap);
 
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hil\\w*\\.?|[23]\\s*[Jj]o\\.?|[23]\\s*[Jj]oh[\\.n]?|[Jj]ude";
-                multiplePartNameBookWithoutLastWordPattern = "[Ss]ong\\s*[Oo]f\\s*";
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hil\\w*\\.?|[23]\\h*[Jj]o\\.?|[23]\\h*[Jj]oh[\\.n]?|[Jj]ude";
+                multiplePartNameBookWithoutLastWordPattern = "[Ss]ong\\h*[Oo]f\\h*";
                 break;
 
             case es:
@@ -763,8 +763,8 @@ public class BookNamesMapping {
                 allBooksMap.putAll(singleChapterBooksMap);
                 allBooksMap.putAll(multipleChapterBooksMap);
 
-                singleChapterBooksPattern = "[Aa]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\s*[Jj]n\\.?|[23]\\s*[Jj]ua[\\.n]?|[Jj]ud\\.?|[Jj]udas";
-                multiplePartNameBookWithoutLastWordPattern = "[Ee]l\\s*[Cc]antar\\s*de\\s*los\\s*";
+                singleChapterBooksPattern = "[Aa]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\h*[Jj]n\\.?|[23]\\h*[Jj]ua[\\.n]?|[Jj]ud\\.?|[Jj]udas";
+                multiplePartNameBookWithoutLastWordPattern = "[Ee]l\\h*[Cc]antar\\h*de\\h*los\\h*";
                 break;
 
             case ro:
@@ -974,10 +974,10 @@ public class BookNamesMapping {
                 allBooksMap.putAll(multipleChapterBooksMap);
 
                 // matches "Abdiasza", "abd.", "flm", "Filem.", "2 jn", "3 Jan.", "3 jana", "jd", "Jud.", "Judy"
-                singleChapterBooksPattern = "[Oo]bd\\w*\\.?|[Ff]lm\\.?|[Ff]ilim\\w*\\.?|[23]\\s*[Ii]o\\.?|[23]\\s*[Ii]oa[\\.n]?|[Ii]ud\\.?|[Ii]uda";
+                singleChapterBooksPattern = "[Oo]bd\\w*\\.?|[Ff]lm\\.?|[Ff]ilim\\w*\\.?|[23]\\h*[Ii]o\\.?|[23]\\h*[Ii]oa[\\.n]?|[Ii]ud\\.?|[Ii]uda";
 
                 // matches: "Pieśni Nad", "piesn nad"
-                multiplePartNameBookWithoutLastWordPattern = "[Cc][\\p{Lu}\\p{Ll}]n\\.?[a-z]*\\s*";
+                multiplePartNameBookWithoutLastWordPattern = "[Cc][\\p{Lu}\\p{Ll}]n\\.?[a-z]*\\h*";
                 break;
 
             case de:
@@ -1280,8 +1280,8 @@ public class BookNamesMapping {
                 allBooksMap.putAll(singleChapterBooksMap);
                 allBooksMap.putAll(multipleChapterBooksMap);
 
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hilem\\w*\\.?|[23]\\s*[Jj]o\\.?|[23]\\s*[Jj]oh\\w*\\.?|[Jj]ud\\.?|[Jj]udas";
-                multiplePartNameBookWithoutLastWordPattern = "[Dd]as|[Dd]as\\s*[Ll]ied\\s*";
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hilem\\w*\\.?|[23]\\h*[Jj]o\\.?|[23]\\h*[Jj]oh\\w*\\.?|[Jj]ud\\.?|[Jj]udas";
+                multiplePartNameBookWithoutLastWordPattern = "[Dd]as|[Dd]as\\h*[Ll]ied\\h*";
                 break;
 
             case pt:
@@ -1495,8 +1495,8 @@ public class BookNamesMapping {
                 allBooksMap.putAll(singleChapterBooksMap);
                 allBooksMap.putAll(multipleChapterBooksMap);
 
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\s*[Jj]o\\.?|[23]\\s*[Jj]oao|[Jj]u\\w*\\.?";
-                multiplePartNameBookWithoutLastWordPattern = "[Cc]antico\\s*[Dd]e\\s*";
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\h*[Jj]o\\.?|[23]\\h*[Jj]oao|[Jj]u\\w*\\.?";
+                multiplePartNameBookWithoutLastWordPattern = "[Cc]antico\\h*[Dd]e\\h*";
                 break;
 
             case ru:
@@ -1884,10 +1884,10 @@ public class BookNamesMapping {
                 allBooksMap.putAll(multipleChapterBooksMap);
 
                 // matches "Abdiasza", "abd.", "flm", "Filem.", "2 jn", "3 Jan.", "3 jana", "jd", "Jud.", "Judy"
-                singleChapterBooksPattern = "[Аa]Вд\\w*\\.?|[Фф]м\\.?|[Фф]илим\\w*\\.?|[23]\\s*[Ии]н\\.?|[23]\\s*[Ии]иоан\\w*\\.?|[Ии]уд[\\.ы]?";
+                singleChapterBooksPattern = "[Аa]Вд\\w*\\.?|[Фф]м\\.?|[Фф]илим\\w*\\.?|[23]\\h*[Ии]н\\.?|[23]\\h*[Ии]иоан\\w*\\.?|[Ии]уд[\\.ы]?";
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
-                multiplePartNameBookWithoutLastWordPattern = "[Ии]ис\\.?[\\p{Lu}\\p{Ll}]*\\s*|[Пп]ес[\\p{Lu}\\p{Ll}]*\\s*|[Пп]л\\.?[\\p{Lu}\\p{Ll}]*\\s*";
+                multiplePartNameBookWithoutLastWordPattern = "[Ии]ис\\.?[\\p{Lu}\\p{Ll}]*\\h*|[Пп]ес[\\p{Lu}\\p{Ll}]*\\h*|[Пп]л\\.?[\\p{Lu}\\p{Ll}]*\\h*";
                 break;
 
             case hu:
@@ -2152,11 +2152,11 @@ public class BookNamesMapping {
 
                 // matches "Abdiasza", "abd.", "flm", "Filem.", "2 jn", "3 Jan.", "3 jana", "jd", "Jud.", "Judy"
                 singleChapterBooksPattern = "[Aa]bd[\\p{Lu}\\p{Ll}]*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?" +
-                        "|[23]\\s*[Jj]n\\.?|[23]\\s*[Jj][\\p{Lu}\\p{Ll}]n\\.?|[23]\\s*[Jj][\\p{Lu}\\p{Ll}]nos" +
+                        "|[23]\\h*[Jj]n\\.?|[23]\\h*[Jj][\\p{Lu}\\p{Ll}]n\\.?|[23]\\h*[Jj][\\p{Lu}\\p{Ll}]nos" +
                         "|[Jj][\\p{Lu}\\p{Ll}]d\\.?|[Jj][\\p{Lu}\\p{Ll}]d[\\p{Lu}\\p{Ll}]s";
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
-                multiplePartNameBookWithoutLastWordPattern = "[\\p{Lu}\\p{Ll}]nekek\\s*|[\\p{Lu}\\p{Ll}]n\\.?\\s*";
+                multiplePartNameBookWithoutLastWordPattern = "[\\p{Lu}\\p{Ll}]nekek\\h*|[\\p{Lu}\\p{Ll}]n\\.?\\h*";
                 break;
 
             case tl:
@@ -2349,10 +2349,10 @@ public class BookNamesMapping {
                 allBooksMap.putAll(multipleChapterBooksMap);
 
                 // matches "Abdiasza", "abd.", "flm", "Filem.", "2 jn", "3 Jan.", "3 jana", "jd", "Jud.", "Judy"
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\s*[Jj]u\\.?|[Jj]uan|[Jj]ud\\.?|[Jj]udas";
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\h*[Jj]u\\.?|[Jj]uan|[Jj]ud\\.?|[Jj]udas";
 
                 // matches: "Awit ni"
-                multiplePartNameBookWithoutLastWordPattern = "[Aa]wit\\s*[Nn]i\\s*";
+                multiplePartNameBookWithoutLastWordPattern = "[Aa]wit\\h*[Nn]i\\h*";
                 break;
 
             case fr:
@@ -2600,10 +2600,10 @@ public class BookNamesMapping {
                 allBooksMap.putAll(multipleChapterBooksMap);
 
                 // matches "Abdiasza", "abd.", "flm", "Filem.", "2 jn", "3 Jan.", "3 jana", "jd", "Jud.", "Judy"
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hilem\\w*\\.?|[23]\\s*[Jj]n\\.?|[Jj]ean|[Jj]ud\\.?|[Jj]ude";
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hilem\\w*\\.?|[23]\\h*[Jj]n\\.?|[Jj]ean|[Jj]ud\\.?|[Jj]ude";
 
                 // matches: "Chant de"
-                multiplePartNameBookWithoutLastWordPattern = "[Cc]hant\\s*[Dd]e\\s*";
+                multiplePartNameBookWithoutLastWordPattern = "[Cc]hant\\h*[Dd]e\\h*";
                 break;
         }
     }
@@ -2657,35 +2657,35 @@ public class BookNamesMapping {
     public String unifyBookName(String book) {
         switch (language) {
             case pl:
-                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\h", "")
                            .replace("ą", "a").replace("ć", "c").replace("ę", "e")
                            .replace("ł", "l").replace("ń", "n").replace("ó", "o")
                            .replace("ś", "s").replace("ż", "z").replace("ź", "z");
             case es:
-                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\h", "")
                            .replace("ó", "o").replace("á", "a").replace("ç", "c")
                            .replace("é", "e").replace("í", "i").replace("ú", "u").replace("ñ", "n");
             case ro:
-                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\h", "")
                            .replace("ă", "a").replace("â", "a").replace("î", "i")
                            .replace("ș", "s").replace("ț", "i");
             case de:
-                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\h", "")
                            .replace("ä", "a").replace("ö", "o").replace("ü", "u");
             case pt:
-                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\h", "")
                         .replace("á", "a").replace("à", "a").replace("ã", "a")
                         .replace("ç", "c").replace("é", "e").replace("è", "e")
                         .replace("ê", "e").replace("í", "i").replace("ì", "i")
                         .replace("ó", "o").replace("ò", "o").replace("ô", "o")
                         .replace("õ", "o").replace("ú", "u").replace("û", "u");
             case hu:
-                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\h", "")
                         .replace("á", "a").replace("é", "e").replace("í", "i")
                         .replace("ó", "o").replace("ö", "o").replace("ő", "o")
                         .replace("ú", "u").replace("ü", "u").replace("ű", "u");
             case fr:
-                return book.toLowerCase().replace(".", "").replaceAll("\\s", "")
+                return book.toLowerCase().replace(".", "").replaceAll("\\h", "")
                         .replace("à", "a").replace("â", "a").replace("ç", "c")
                         .replace("é", "e").replace("è", "e").replace("ê", "e")
                         .replace("ë", "e").replace("î", "i").replace("ï", "i")
@@ -2693,7 +2693,7 @@ public class BookNamesMapping {
                         .replace("ü", "u").replace("ÿ", "y");
             case tl:
             default: // en
-                return book.toLowerCase().replace(".", "").replaceAll("\\s", ""); 
+                return book.toLowerCase().replace(".", "").replaceAll("\\h", ""); 
         }
     }
 }
