@@ -139,7 +139,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        prepareDatabase(); // with preload example verse
+        prepareDatabase(); // with preload of example verse
         setScreenHeight();
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         setLayout();
@@ -640,14 +640,15 @@ public class NotepadEditorActivity extends AppCompatActivity {
         });
     }
 
-    private boolean saveStringToFile(String string, File file) {
+    private boolean saveStringToFile(String htmlString, File file) {
         try {
             FileOutputStream stream = new FileOutputStream(file);
             try {
-                stream.write(string.getBytes());
+                stream.write(htmlString.getBytes());
             } finally {
                 stream.close();
             }
+            // addFileToSearchTable(htmlString, file); // TODO
             MediaScannerConnection.scanFile(activityContext, new String[]{currentFile.getAbsolutePath()}, null, null);
 //            Toast.makeText(this, R.string.file_saved, Toast.LENGTH_SHORT).show(); // toast switched off
             return true;

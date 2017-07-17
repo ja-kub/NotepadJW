@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +25,7 @@ import pl.bubson.notepadjw.activities.FileManagerActivity;
 public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.CustomViewHolder> {
 
     // an array of selected items (Integer indices)
-    private final ArrayList<Integer> selectedPositions = new ArrayList<>();
+    private final List<Integer> selectedPositions = new ArrayList<>();
     private Context mContext;
     private List<Item> itemList;
     View.OnClickListener clickListener = new View.OnClickListener() {
@@ -38,7 +37,7 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.Custom
             if (item.getType() == Item.Type.FILE) {
                 ((FileManagerActivity) mContext).openFile(new File(item.getPath()));
             } else {
-                ((FileManagerActivity) mContext).fillListWithItems(new File(item.getPath()));
+                ((FileManagerActivity) mContext).fillListWithItemsFromDir(new File(item.getPath()));
             }
         }
     };

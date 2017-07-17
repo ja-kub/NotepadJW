@@ -108,6 +108,7 @@ public class FileManagerActivity extends AppCompatActivity {
         askForPermissionsIfNotYetAnswered(this);
         prepareMainDirectoryAndFillList();
         prepareDatabase(); // with preload example verse
+//        prepareSearchTable(); // TODO
 
         // Show the "What's New" screen once for each new release of the application
         new WhatsNewScreen(this).show();
@@ -157,7 +158,7 @@ public class FileManagerActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        fillListWithItems(currentDirectory); // this is also to reload file bytes after back from editor
+        fillListWithItemsFromDir(currentDirectory); // this is also to reload file bytes after back from editor
     }
 
     @Override
@@ -298,12 +299,12 @@ public class FileManagerActivity extends AppCompatActivity {
         Log.v("Renaming", "rename end");
     }
 
-    public void fillListWithItems(File currentDirectory) {
-        if ((currentDirectory != null) && (currentDirectory.mkdirs() || currentDirectory.isDirectory())) {
+    public void fillListWithItemsFromDir(File directory) {
+        if ((directory != null) && (directory.mkdirs() || directory.isDirectory())) {
             selectedItemList.clear();
             invalidateOptionsMenu();
-            this.currentDirectory = currentDirectory;
-            currentFilesAndDirectories = currentDirectory.listFiles(new FileFilter() {
+            this.currentDirectory = directory;
+            currentFilesAndDirectories = directory.listFiles(new FileFilter() {
                 @Override
                 public boolean accept(File pathname) {
                     return (pathname.isDirectory()
@@ -311,60 +312,70 @@ public class FileManagerActivity extends AppCompatActivity {
                             || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
                 }
             });
+            setTitle(directory.getName());
 
-            setTitle(currentDirectory.getName());
-            List<Item> directories = new ArrayList<Item>();
-            List<Item> files = new ArrayList<Item>();
+            List<Item> items = getItems(currentFilesAndDirectories);
 
-            try {
-                for (File fileOrDir : currentFilesAndDirectories) {
-                    Date lastModDate = new Date(fileOrDir.lastModified());
-                    if (fileOrDir.isDirectory()) {
-                        File[] fbuf = fileOrDir.listFiles(new FileFilter() {
-                            @Override
-                            public boolean accept(File pathname) {
-                                return (pathname.isDirectory()
-                                        || fileExtension(pathname.getName()).equalsIgnoreCase(NOTE_FILE_EXTENSION)
-                                        || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
-                            }
-                        });
-                        int buf = 0;
-                        if (fbuf != null) {
-                            buf = fbuf.length;
-                        }
-                        String numberOfItems = activityContext.getResources().getString(R.string.items) + ": " + String.valueOf(buf);
-                        directories.add(new Item(fileOrDir.getName(), numberOfItems, lastModDate,
-                                fileOrDir.getAbsolutePath(), Item.Type.DIRECTORY));
-                    } else {
-                        String numberOfBytes = activityContext.getResources().getString(R.string.bytes) + ": " + fileOrDir.length();
-                        files.add(new Item(fileWithoutExtension(fileOrDir.getName()), numberOfBytes, lastModDate,
-                                fileOrDir.getAbsolutePath(), Item.Type.FILE));
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            Collections.sort(directories);
-            sortFiles(files);
-            directories.addAll(files);
-
-            if (!currentDirectory.getName().equalsIgnoreCase(mainDirectory.getName())) {
-                directories.add(0, new Item("..", activityContext.getResources().getString(R.string.parent_directory), null, currentDirectory.getParent(), Item.Type.UP));
-            }
-
-            adapter = new FileListAdapter(FileManagerActivity.this, directories);
-            RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-            if (mRecyclerView != null) {
-                try {
-                    mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-                    mRecyclerView.setAdapter(adapter);
-                } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
-                }
-            }
+            prepareFileListAdapter(items);
         } else {
             Toast.makeText(this, R.string.current_dir_is_null, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @NonNull
+    private List<Item> getItems(File[] filesAndDirs) {
+        List<Item> directories = new ArrayList<>();
+        List<Item> files = new ArrayList<>();
+
+        try {
+            for (File fileOrDir : filesAndDirs) {
+                Date lastModDate = new Date(fileOrDir.lastModified());
+                if (fileOrDir.isDirectory()) {
+                    File[] fbuf = fileOrDir.listFiles(new FileFilter() {
+                        @Override
+                        public boolean accept(File pathname) {
+                            return (pathname.isDirectory()
+                                    || fileExtension(pathname.getName()).equalsIgnoreCase(NOTE_FILE_EXTENSION)
+                                    || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
+                        }
+                    });
+                    int buf = 0;
+                    if (fbuf != null) {
+                        buf = fbuf.length;
+                    }
+                    String numberOfItems = activityContext.getResources().getString(R.string.items) + ": " + String.valueOf(buf);
+                    directories.add(new Item(fileOrDir.getName(), numberOfItems, lastModDate,
+                            fileOrDir.getAbsolutePath(), Item.Type.DIRECTORY));
+                } else {
+                    String numberOfBytes = activityContext.getResources().getString(R.string.bytes) + ": " + fileOrDir.length();
+                    files.add(new Item(fileWithoutExtension(fileOrDir.getName()), numberOfBytes, lastModDate,
+                            fileOrDir.getAbsolutePath(), Item.Type.FILE));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Collections.sort(directories);
+        sortFiles(files);
+        directories.addAll(files);
+
+        if (!currentDirectory.getName().equalsIgnoreCase(mainDirectory.getName())) {
+            directories.add(0, new Item("..", activityContext.getResources().getString(R.string.parent_directory), null, currentDirectory.getParent(), Item.Type.UP));
+        }
+        return directories;
+    }
+
+    private void prepareFileListAdapter(List<Item> directories) {
+        adapter = new FileListAdapter(FileManagerActivity.this, directories);
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        if (mRecyclerView != null) {
+            try {
+                mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+                mRecyclerView.setAdapter(adapter);
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -456,7 +467,7 @@ public class FileManagerActivity extends AppCompatActivity {
                         e.printStackTrace();
                         Toast.makeText(activityContext, R.string.creation_failed, Toast.LENGTH_SHORT).show();
                     }
-                    fillListWithItems(currentDirectory);
+                    fillListWithItemsFromDir(currentDirectory);
                     openFile(file);
                     dialog.dismiss();
                 }
@@ -511,7 +522,7 @@ public class FileManagerActivity extends AppCompatActivity {
                     } else {
                         Toast.makeText(activityContext, R.string.creation_failed, Toast.LENGTH_SHORT).show();
                     }
-                    fillListWithItems(currentDirectory);
+                    fillListWithItemsFromDir(currentDirectory);
                     dialog.dismiss();
                 }
             }
@@ -576,7 +587,7 @@ public class FileManagerActivity extends AppCompatActivity {
                             } else {
                                 MediaScannerConnection.scanFile(activityContext, new String[]{file.getAbsolutePath(), newFile.getAbsolutePath()}, null, null);
                             }
-                            fillListWithItems(currentDirectory);
+                            fillListWithItemsFromDir(currentDirectory);
                         } else {
                             Toast.makeText(activityContext, R.string.file_rename_failed, Toast.LENGTH_SHORT).show();
                         }
@@ -629,7 +640,7 @@ public class FileManagerActivity extends AppCompatActivity {
             }
         }
         clipboardItemList.clear();
-        fillListWithItems(currentDirectory);
+        fillListWithItemsFromDir(currentDirectory);
     }
 
     private void removeCurrentlySelectedFiles() {
@@ -655,7 +666,7 @@ public class FileManagerActivity extends AppCompatActivity {
                         Snackbar.make(recyclerView, R.string.files_not_removed_successfully, Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }
-                    fillListWithItems(currentDirectory);
+                    fillListWithItemsFromDir(currentDirectory);
                 }
             });
             builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -736,7 +747,7 @@ public class FileManagerActivity extends AppCompatActivity {
 
     private void moveUpOneLevel() {
         if (!currentDirectory.getName().equalsIgnoreCase(mainDirectory.getName())) {
-            fillListWithItems(new File(currentDirectory.getParent()));
+            fillListWithItemsFromDir(new File(currentDirectory.getParent()));
         } else {
             finish();
         }
@@ -745,7 +756,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private void changeSorting() {
         isCurrentSortingByDate = !isCurrentSortingByDate;
         sharedPref.edit().putBoolean(getString(R.string.sort_by_date_key), isCurrentSortingByDate).apply();
-        fillListWithItems(currentDirectory);
+        fillListWithItemsFromDir(currentDirectory);
         if (isCurrentSortingByDate) {
             Snackbar.make(recyclerView, R.string.files_sorted_by_date, Snackbar.LENGTH_SHORT)
                     .setAction("Action", null).show();

@@ -1,14 +1,14 @@
 package pl.bubson.notepadjw.fileManagerHelpers;
 
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Kuba on 2016-03-26.
  */
-public class Item implements Comparable<Item>{
+public class Item implements Comparable<Item>, Serializable{
 
     private String name, number, path;
     private Date date;
