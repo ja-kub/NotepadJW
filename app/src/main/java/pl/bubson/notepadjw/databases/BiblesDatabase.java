@@ -1,4 +1,4 @@
-package pl.bubson.notepadjw.utils;
+package pl.bubson.notepadjw.databases;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -21,15 +21,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.channels.FileChannel;
 
-import static pl.bubson.notepadjw.core.BookNamesMapping.filePrefixMap;
+import pl.bubson.notepadjw.utils.Language;
+
 import static pl.bubson.notepadjw.core.BookNamesMapping.fileRegexMap;
 
 /**
  * Created by Kuba on 2016-12-11.
+ *
+ * Used to access to database which stores Bibles
  */
-public class DatabaseHelper extends SQLiteAssetHelper {
+public class BiblesDatabase extends SQLiteAssetHelper {
 
-    private static final String TAG = "DatabaseHelper";
+    private static final String TAG = "BiblesDatabase";
     private static final int EXPECTED_CHAPTERS_IN_BIBLE = 1189;
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "Bibles.db";
@@ -44,7 +47,7 @@ public class DatabaseHelper extends SQLiteAssetHelper {
                     KEY_CONTENTS + " TEXT);";
     private Context context;
 
-    public DatabaseHelper(Context context) {
+    public BiblesDatabase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
     }

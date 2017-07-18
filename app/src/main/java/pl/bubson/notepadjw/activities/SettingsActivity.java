@@ -1,6 +1,5 @@
 package pl.bubson.notepadjw.activities;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,8 +17,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import pl.bubson.notepadjw.R;
+import pl.bubson.notepadjw.databases.BiblesDatabase;
 import pl.bubson.notepadjw.services.DownloadLanguageService;
-import pl.bubson.notepadjw.utils.DatabaseHelper;
 import pl.bubson.notepadjw.utils.Language;
 import pl.bubson.notepadjw.utils.Permissions;
 
@@ -99,8 +98,8 @@ public class SettingsActivity extends AppCompatActivity {
                 public boolean onPreferenceChange(final Preference preference, final Object newValue) {
                     try {
                         chosenLanguage = Language.valueOf(newValue.toString());
-                        DatabaseHelper databaseHelper = new DatabaseHelper(getActivity());
-                        if (databaseHelper.isBibleInDatabase(chosenLanguage)) {
+                        BiblesDatabase biblesDatabase = new BiblesDatabase(getActivity());
+                        if (biblesDatabase.isBibleInDatabase(chosenLanguage)) {
                             return true; // setting will be saved
                         } else {
                             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

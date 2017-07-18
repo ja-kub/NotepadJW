@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import pl.bubson.notepadjw.R;
-import pl.bubson.notepadjw.utils.DatabaseHelper;
+import pl.bubson.notepadjw.databases.BiblesDatabase;
 import pl.bubson.notepadjw.utils.Language;
 
 import static pl.bubson.notepadjw.core.BookNamesMapping.filePrefixMap;
@@ -142,10 +142,10 @@ public class Verse {
             int htmlChapterNumber = chapterNumber == 0 ? 1 : chapterNumber;
 
             try {
-                Log.v(TAG, "DatabaseHelper.getFile() - started");
-                DatabaseHelper dbh = new DatabaseHelper(context);
+                Log.v(TAG, "BiblesDatabase.getFile() - started");
+                BiblesDatabase dbh = new BiblesDatabase(context);
                 String xhtml = dbh.getFile(language, getResourceName());
-                Log.v(TAG, "DatabaseHelper.getFile() - finished: " + getResourceName());
+                Log.v(TAG, "BiblesDatabase.getFile() - finished: " + getResourceName());
 
                 if (xhtml != null) {
                     StringBuilder stringBuilder = new StringBuilder();

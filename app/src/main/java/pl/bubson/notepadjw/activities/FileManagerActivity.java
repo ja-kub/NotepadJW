@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
@@ -47,6 +48,7 @@ import java.util.List;
 import java.util.Locale;
 
 import pl.bubson.notepadjw.R;
+import pl.bubson.notepadjw.databases.FilesDatabase;
 import pl.bubson.notepadjw.fileManagerHelpers.FileListAdapter;
 import pl.bubson.notepadjw.fileManagerHelpers.Item;
 import pl.bubson.notepadjw.services.InstallLanguageService;
@@ -58,6 +60,7 @@ public class FileManagerActivity extends AppCompatActivity {
 
     public static final String NOTE_FILE_EXTENSION = "html";
     public static final String OLD_FILE_EXTENSION = "txt";
+    private static final String TAG = "FileManagerActivity";
     private static final String appFolderName = "NotepadJW"; // don't change it, as user have their notes there from some time
     private static File mainDirectory;
     private final Context activityContext = this;
@@ -70,6 +73,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private boolean isClipboardToCopy, isCurrentSortingByDate;
     private RecyclerView recyclerView;
     private SharedPreferences sharedPref;
+    private FilesDatabase filesDatabase;
 
     public static String fileExtension(String name) {
         if (name == null || name.equals("")) {
@@ -99,22 +103,68 @@ public class FileManagerActivity extends AppCompatActivity {
         return mainDirectory;
     }
 
+    public static boolean deleteRecursive(File fileOrDirectory) {
+        if (fileOrDirectory.isDirectory())
+            for (File child : fileOrDirectory.listFiles()) deleteRecursive(child);
+        return fileOrDirectory.delete();
+    }
+
+    public static boolean isStoragePermissionGranted(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        return (permission == PackageManager.PERMISSION_GRANTED);
+    }
+
+    public static void askForPermissionsIfNotGranted(final Activity activity) {
+        if (!isStoragePermissionGranted(activity)) {
+            ActivityCompat.requestPermissions(activity, Permissions.PERMISSIONS, Permissions.MY_REQUEST_PERMISSIONS_CODE);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         preparePreferences();
         prepareViewAndToolbar();
+        prepareBiblesDatabase(); // with preload of example verse
 
         askForPermissionsIfNotYetAnswered(this);
-        prepareMainDirectoryAndFillList();
-        prepareDatabase(); // with preload example verse
-//        prepareSearchTable(); // TODO
+        prepareMainDirectory();
+        updateFilesExtensions(mainDirectory);
+        prepareFilesDatabase(mainDirectory); // to be able to search them
 
         // Show the "What's New" screen once for each new release of the application
         new WhatsNewScreen(this).show();
     }
 
-    private void prepareDatabase() {
+    private void prepareFilesDatabase(File directory) {
+        filesDatabase = new FilesDatabase(this, directory);
+        filesDatabase.refreshData();
+    }
+
+    private void searchTest() {
+        Log.v(TAG, "searchTest start");
+        String query = "gosiar";
+        Cursor c = filesDatabase.getWordMatches(query, null);
+        if (c != null) {
+            int fileColumnIndex = c.getColumnIndex(FilesDatabase.COL_FILE);
+            do {
+                Log.v(TAG, "result: " + c.getString(fileColumnIndex));
+            } while (c.moveToNext());
+            c.close();
+        } else {
+            Log.v(TAG, "cursor is null!");
+        }
+        Log.v(TAG, "searchTest end");
+    }
+
+    private void updateFilesExtensions(File mainDirectory) {
+        Log.v(TAG, "updateFilesExtensions start");
+        updateFilesExtensionsRecursive(mainDirectory);
+        Log.v(TAG, "updateFilesExtensions end");
+    }
+
+    private void prepareBiblesDatabase() {
         Intent installLanguageServiceIntent = new Intent(this, InstallLanguageService.class);
         startService(installLanguageServiceIntent); // Intent without data will pre-install db if needed
     }
@@ -201,6 +251,7 @@ public class FileManagerActivity extends AppCompatActivity {
                 createNewFolder();
                 return true;
             case R.id.action_sort:
+                searchTest(); // TODO - remove it
                 changeSorting();
                 return true;
             case R.id.action_help:
@@ -267,10 +318,10 @@ public class FileManagerActivity extends AppCompatActivity {
         return Environment.MEDIA_MOUNTED.equals(state);
     }
 
-    private void prepareMainDirectoryAndFillList() {
+    private void prepareMainDirectory() {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activityContext);
         int userAnswer = prefs.getInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
-        if (isExternalStorageWritable() && isStoragePermissionGranted(this) && userAnswer==Permissions.ACCEPTED) {
+        if (isExternalStorageWritable() && isStoragePermissionGranted(this) && userAnswer == Permissions.ACCEPTED) {
             File publicDirectory;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 publicDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
@@ -278,7 +329,7 @@ public class FileManagerActivity extends AppCompatActivity {
                 publicDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
             }
             mainDirectory = new File(publicDirectory, appFolderName);
-        } else if (!isStoragePermissionGranted(this) && userAnswer==Permissions.ACCEPTED) {
+        } else if (!isStoragePermissionGranted(this) && userAnswer == Permissions.ACCEPTED) {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
             editor.commit();
@@ -294,9 +345,6 @@ public class FileManagerActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.storage_not_writable, Toast.LENGTH_SHORT).show();
             finish();
         }
-        Log.v("Renaming", "rename start");
-        updateFilesExtensionsRecursive(mainDirectory);
-        Log.v("Renaming", "rename end");
     }
 
     public void fillListWithItemsFromDir(File directory) {
@@ -729,12 +777,6 @@ public class FileManagerActivity extends AppCompatActivity {
         return null;
     }
 
-    public static boolean deleteRecursive(File fileOrDirectory) {
-        if (fileOrDirectory.isDirectory())
-            for (File child : fileOrDirectory.listFiles()) deleteRecursive(child);
-        return fileOrDirectory.delete();
-    }
-
     public void updateFilesExtensionsRecursive(File fileOrDirectory) {
         if (fileOrDirectory.isDirectory()) {
             for (File child : fileOrDirectory.listFiles()) updateFilesExtensionsRecursive(child);
@@ -766,22 +808,10 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
-    public static boolean isStoragePermissionGranted(Activity activity) {
-        // Check if we have write permission
-        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        return (permission == PackageManager.PERMISSION_GRANTED);
-    }
-
-    public static void askForPermissionsIfNotGranted(final Activity activity) {
-        if (!isStoragePermissionGranted(activity)) {
-            ActivityCompat.requestPermissions(activity, Permissions.PERMISSIONS, Permissions.MY_REQUEST_PERMISSIONS_CODE);
-        }
-    }
-
     public void askForPermissionsIfNotYetAnswered(final Activity activity) {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
         int userAnswer = prefs.getInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
-        if (userAnswer==Permissions.NOT_ANSWERED_YET && !isStoragePermissionGranted(this)) {
+        if (userAnswer == Permissions.NOT_ANSWERED_YET && !isStoragePermissionGranted(this)) {
             AlertDialog.Builder builder = new AlertDialog.Builder(activity);
             builder.setMessage(R.string.permission_explanation_dialog_message)
                     .setCancelable(false)
@@ -796,7 +826,7 @@ public class FileManagerActivity extends AppCompatActivity {
                         }
                     });
             builder.create().show();
-        } else if (userAnswer==Permissions.NOT_ANSWERED_YET && isStoragePermissionGranted(this)) {
+        } else if (userAnswer == Permissions.NOT_ANSWERED_YET && isStoragePermissionGranted(this)) {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.ACCEPTED);
             editor.commit();
@@ -817,17 +847,17 @@ public class FileManagerActivity extends AppCompatActivity {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (userAnswer==Permissions.NOT_ANSWERED_YET) {
+                    if (userAnswer == Permissions.NOT_ANSWERED_YET) {
                         editor.putInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.ACCEPTED);
                         editor.commit();
-                        prepareMainDirectoryAndFillList();
+                        prepareMainDirectory();
                     }
                 } else {
                     Toast.makeText(this, R.string.permission_storage_not_granted, Toast.LENGTH_LONG).show();
-                    if (userAnswer==Permissions.NOT_ANSWERED_YET) {
+                    if (userAnswer == Permissions.NOT_ANSWERED_YET) {
                         editor.putInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.DENIED);
                         editor.commit();
-                        prepareMainDirectoryAndFillList();
+                        prepareMainDirectory();
                     }
                 }
             }

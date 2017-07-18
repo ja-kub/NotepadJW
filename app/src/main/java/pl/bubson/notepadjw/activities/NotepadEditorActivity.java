@@ -516,8 +516,9 @@ public class NotepadEditorActivity extends AppCompatActivity {
                     }
                     Log.v(TAG, "openFileFromIntent - text in String Builder");
                     Log.v(TAG, "openFileFromIntent - text:\n" + text);
+                    String content = text.toString();
 
-                    noteEditText.fromHtml(text.toString());
+                    noteEditText.fromHtml(content);
                     htmlTextInFile = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
                     Log.v(TAG, "openFileFromIntent - text in noteEditText");
                     if (action.equals(Intent.ACTION_EDIT)) {

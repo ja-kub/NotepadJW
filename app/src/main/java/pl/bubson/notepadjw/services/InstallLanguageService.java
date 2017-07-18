@@ -21,7 +21,7 @@ import java.util.zip.ZipInputStream;
 
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.activities.FileManagerActivity;
-import pl.bubson.notepadjw.utils.DatabaseHelper;
+import pl.bubson.notepadjw.databases.BiblesDatabase;
 import pl.bubson.notepadjw.utils.Language;
 
 import static pl.bubson.notepadjw.activities.FileManagerActivity.deleteRecursive;
@@ -47,7 +47,7 @@ public class InstallLanguageService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent workIntent) {
-        DatabaseHelper dbh = new DatabaseHelper(this);
+        BiblesDatabase dbh = new BiblesDatabase(this);
         if (workIntent.getData() == null) {
             Log.v("InstallLanguageService", "pre-install start");
             dbh.installDbFromAssetsIfNeeded();
