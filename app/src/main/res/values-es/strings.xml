@@ -158,4 +158,6 @@
     - Traducción Francesa de la Biblia \n\n
     - Corrección de errores
     </string>
+    <string name="search_title">Buscar</string>
+    <string name="search_hint">Buscar</string>
 </resources>

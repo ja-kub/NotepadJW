@@ -164,4 +164,6 @@ wówczas umieszczone w folderze Pobrane).</p>
     - Francuski przekład Biblii \n\n
     - Poprawki błędów
     </string>
+    <string name="search_title">Szukaj</string>
+    <string name="search_hint">Szukaj</string>
 </resources>

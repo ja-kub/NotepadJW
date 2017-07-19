@@ -2,6 +2,7 @@ package pl.bubson.notepadjw.activities;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,6 +20,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -33,6 +35,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import org.apache.commons.io.FileUtils;
@@ -65,15 +68,17 @@ public class FileManagerActivity extends AppCompatActivity {
     private static File mainDirectory;
     private final Context activityContext = this;
     FileListAdapter adapter;
-    private MenuItem newFolder, removeFiles, shareFiles, renameFile, cutFiles, copyFiles, pasteFiles, sortFilesMenuItem;
+    private MenuItem newFolder, removeFiles, shareFiles, renameFile, cutFiles, copyFiles, pasteFiles, sortFilesMenuItem, helpMenuItem, settingsMenuItem, searchMenuItem;
+    private SearchView searchView;
     private File currentDirectory;
     private File[] currentFilesAndDirectories;
     private List<Item> selectedItemList = new ArrayList<>();
     private List<Item> clipboardItemList = new ArrayList<Item>();
-    private boolean isClipboardToCopy, isCurrentSortingByDate;
+    private boolean isClipboardToCopy, isCurrentSortingByDate, isInSearchMode;
     private RecyclerView recyclerView;
     private SharedPreferences sharedPref;
     private FilesDatabase filesDatabase;
+    private FloatingActionButton floatingActionButton;
 
     public static String fileExtension(String name) {
         if (name == null || name.equals("")) {
@@ -137,25 +142,50 @@ public class FileManagerActivity extends AppCompatActivity {
         new WhatsNewScreen(this).show();
     }
 
+    private void prepareSearchView() {
+        SearchManager searchManager =
+                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(false);
+        MenuItemCompat.setOnActionExpandListener(searchMenuItem, new MenuItemCompat.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                buttonsOnStartSearch();
+                isInSearchMode = true;
+                return true;  // Return true to expand action view
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                buttonsOnExitSearch();
+                isInSearchMode = false;
+                searchView.clearFocus();
+                fillListWithItemsFromDir(currentDirectory);
+                return true;  // Return true to collapse action view
+            }
+        });
+    }
+
     private void prepareFilesDatabase(File directory) {
         filesDatabase = new FilesDatabase(this, directory);
         filesDatabase.refreshData();
     }
 
-    private void searchTest() {
-        Log.v(TAG, "searchTest start");
-        String query = "gosiar";
+    private File[] searchFiles(String query) {
+        List<File> files = new ArrayList<>();
         Cursor c = filesDatabase.getWordMatches(query, null);
         if (c != null) {
             int fileColumnIndex = c.getColumnIndex(FilesDatabase.COL_FILE);
             do {
-                Log.v(TAG, "result: " + c.getString(fileColumnIndex));
+                String filePath = c.getString(fileColumnIndex);
+                files.add(new File(filePath));
             } while (c.moveToNext());
             c.close();
         } else {
             Log.v(TAG, "cursor is null!");
         }
-        Log.v(TAG, "searchTest end");
+        return files.toArray(new File[0]);
     }
 
     private void updateFilesExtensions(File mainDirectory) {
@@ -174,9 +204,9 @@ public class FileManagerActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if (fab != null) {
-            fab.setOnClickListener(new View.OnClickListener() {
+        floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+        if (floatingActionButton != null) {
+            floatingActionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     createNewFile();
@@ -208,7 +238,7 @@ public class FileManagerActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        fillListWithItemsFromDir(currentDirectory); // this is also to reload file bytes after back from editor
+        if (!isInSearchMode) fillListWithItemsFromDir(currentDirectory); // this is also to reload file bytes after back from editor
     }
 
     @Override
@@ -222,6 +252,11 @@ public class FileManagerActivity extends AppCompatActivity {
         copyFiles = menu.findItem(R.id.action_copy);
         pasteFiles = menu.findItem(R.id.action_paste);
         sortFilesMenuItem = menu.findItem(R.id.action_sort);
+        helpMenuItem = menu.findItem(R.id.action_help);
+        settingsMenuItem = menu.findItem(R.id.action_settings);
+        searchMenuItem = menu.findItem(R.id.search);
+        searchView = (SearchView) searchMenuItem.getActionView();
+        prepareSearchView();
         return true;
     }
 
@@ -251,7 +286,6 @@ public class FileManagerActivity extends AppCompatActivity {
                 createNewFolder();
                 return true;
             case R.id.action_sort:
-                searchTest(); // TODO - remove it
                 changeSorting();
                 return true;
             case R.id.action_help:
@@ -273,6 +307,7 @@ public class FileManagerActivity extends AppCompatActivity {
             case 0:
                 newFolder.setVisible(true);
                 sortFilesMenuItem.setVisible(true);
+                searchMenuItem.setVisible(true);
                 renameFile.setVisible(false);
                 removeFiles.setVisible(false);
                 shareFiles.setVisible(false);
@@ -283,6 +318,7 @@ public class FileManagerActivity extends AppCompatActivity {
             case 1:
                 newFolder.setVisible(false);
                 sortFilesMenuItem.setVisible(false);
+                searchMenuItem.setVisible(false);
                 renameFile.setVisible(true);
                 removeFiles.setVisible(true);
                 shareFiles.setVisible(true);
@@ -293,6 +329,7 @@ public class FileManagerActivity extends AppCompatActivity {
             default:
                 newFolder.setVisible(false);
                 sortFilesMenuItem.setVisible(false);
+                searchMenuItem.setVisible(false);
                 renameFile.setVisible(false);
                 removeFiles.setVisible(true);
                 shareFiles.setVisible(true);
@@ -306,10 +343,50 @@ public class FileManagerActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            moveUpOneLevel();
+            if (!isInSearchMode) moveUpOneLevel();
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        setIntent(intent);
+        handleIntent(intent);
+    }
+
+    private void handleIntent(Intent intent) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            searchView.setQuery(query, false); // because query is not visible after voice search
+            doSearch(query);
+        }
+    }
+
+    private void buttonsOnStartSearch() {
+        floatingActionButton.setVisibility(View.INVISIBLE);
+        newFolder.setVisible(false);
+        sortFilesMenuItem.setVisible(false);
+        renameFile.setVisible(false);
+        removeFiles.setVisible(false);
+        shareFiles.setVisible(false);
+        cutFiles.setVisible(false);
+        copyFiles.setVisible(false);
+        pasteFiles.setVisible(false);
+        settingsMenuItem.setVisible(false);
+        helpMenuItem.setVisible(false);
+    }
+
+    private void buttonsOnExitSearch() {
+        floatingActionButton.setVisibility(View.VISIBLE);
+        settingsMenuItem.setVisible(true);
+        helpMenuItem.setVisible(true);
+        invalidateOptionsMenu();
+    }
+
+    private void doSearch(String query) {
+        List<Item> items = getItems(searchFiles(query));
+        prepareFileListAdapter(items);
     }
 
     // Checks if external storage is available for read and write
@@ -363,7 +440,6 @@ public class FileManagerActivity extends AppCompatActivity {
             setTitle(directory.getName());
 
             List<Item> items = getItems(currentFilesAndDirectories);
-
             prepareFileListAdapter(items);
         } else {
             Toast.makeText(this, R.string.current_dir_is_null, Toast.LENGTH_SHORT).show();
@@ -414,8 +490,8 @@ public class FileManagerActivity extends AppCompatActivity {
         return directories;
     }
 
-    private void prepareFileListAdapter(List<Item> directories) {
-        adapter = new FileListAdapter(FileManagerActivity.this, directories);
+    private void prepareFileListAdapter(List<Item> items) {
+        adapter = new FileListAdapter(FileManagerActivity.this, items);
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         if (mRecyclerView != null) {
             try {

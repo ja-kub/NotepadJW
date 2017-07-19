@@ -46,6 +46,12 @@
         android:title="@string/button_new_folder"
         app:showAsAction="always" />
 
+    <item android:id="@+id/search"
+        android:title="@string/search_title"
+        android:icon="@drawable/ic_search_white_48dp"
+        app:showAsAction="collapseActionView|always"
+        app:actionViewClass="android.widget.SearchView" />
+
     <item
         android:id="@+id/action_help"
         android:orderInCategory="100"

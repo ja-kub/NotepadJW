@@ -160,4 +160,6 @@ button (they will be copied to Downloads folder).</p>
     - Traducere biblică franceză \n\n
     - Corectarea erorilor
     </string>
+    <string name="search_title">Căutare</string>
+    <string name="search_hint">Căutare</string>
 </resources>

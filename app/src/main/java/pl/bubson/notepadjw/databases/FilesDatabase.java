@@ -42,6 +42,7 @@ public class FilesDatabase {
     private static class DatabaseOpenHelper extends SQLiteOpenHelper {
 
         private final Context mHelperContext;
+
         private final File directoryToSearch;
         private SQLiteDatabase mDatabase;
 

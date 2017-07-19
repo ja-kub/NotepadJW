@@ -150,4 +150,6 @@
     - Французский перевод Библии \n\n
     - Исправление ошибок
    </string>
+    <string name="search_title">Поиск</string>
+    <string name="search_hint">Поиск</string>
 </resources>

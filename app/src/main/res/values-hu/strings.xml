@@ -145,4 +145,6 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
     - Francia Biblia fordítás \n\n
     - Hibajavítások
     </string>
+    <string name="search_title">Keresés</string>
+    <string name="search_hint">Keresés</string>
 </resources>
