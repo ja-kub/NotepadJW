@@ -390,7 +390,12 @@ public class FileManagerActivity extends AppCompatActivity {
 
     private void doSearch(String query) {
         List<Item> items = getItems(searchFiles(query));
-        prepareFileListAdapter(items);
+        List<Item> filteredItems = new ArrayList<>();
+        for (Item item : items) {
+            if (item.getPath().startsWith(currentDirectory.getPath())) filteredItems.add(item);
+        }
+        sortItems(filteredItems, true); // sorting by date descending
+        prepareFileListAdapter(filteredItems);
     }
 
     // Checks if external storage is available for read and write
@@ -485,7 +490,7 @@ public class FileManagerActivity extends AppCompatActivity {
         }
 
         Collections.sort(directories);
-        sortFiles(files);
+        sortItems(files, isCurrentSortingByDate);
         directories.addAll(files);
 
         if (!currentDirectory.getName().equalsIgnoreCase(mainDirectory.getName())) {
@@ -507,8 +512,8 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
-    private void sortFiles(List<Item> files) {
-        if (isCurrentSortingByDate) {
+    private void sortItems(List<Item> files, boolean sortByDate) {
+        if (sortByDate) {
             Collections.sort(files, new Comparator<Item>() {
                 public int compare(Item o1, Item o2) {
                     if (o1.getDate() == null || o2.getDate() == null)
