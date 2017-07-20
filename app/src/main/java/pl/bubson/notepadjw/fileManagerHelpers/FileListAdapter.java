@@ -32,12 +32,16 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.Custom
         @Override
         public void onClick(View view) {
             CustomViewHolder holder = (CustomViewHolder) view.getTag();
-            int position = holder.getAdapterPosition();
-            Item item = itemList.get(position);
-            if (item.getType() == Item.Type.FILE) {
-                ((FileManagerActivity) mContext).openFile(new File(item.getPath()));
+            int adapterPosition = holder.getAdapterPosition();
+            Item item = itemList.get(adapterPosition);
+            if (!selectedPositions.isEmpty()) {
+                selectDeselectItem(view, adapterPosition, item);
             } else {
-                ((FileManagerActivity) mContext).fillListWithItemsFromDir(new File(item.getPath()));
+                if (item.getType() == Item.Type.FILE) {
+                    ((FileManagerActivity) mContext).openFile(new File(item.getPath()));
+                } else {
+                    ((FileManagerActivity) mContext).fillListWithItemsFromDir(new File(item.getPath()));
+                }
             }
         }
     };
@@ -48,14 +52,7 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.Custom
             CustomViewHolder holder = (CustomViewHolder) view.getTag();
             Integer adapterPosition = holder.getAdapterPosition();
             Item item = itemList.get(adapterPosition); // should be adapter or layout..?
-            if (view.isSelected()) {
-                selectedPositions.remove(adapterPosition);
-                ((FileManagerActivity) mContext).deselectItem(item);
-            } else {
-                selectedPositions.add(adapterPosition);
-                ((FileManagerActivity) mContext).selectItem(item);
-            }
-            notifyItemChanged(adapterPosition);
+            selectDeselectItem(view, adapterPosition, item);
             return true;
         }
     };
@@ -63,6 +60,22 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.Custom
     public FileListAdapter(Context context, List<Item> itemList) {
         this.mContext = context;
         this.itemList = itemList;
+    }
+
+    private void selectDeselectItem(View view, Integer adapterPosition, Item item) {
+        if (view.isSelected()) {
+            selectedPositions.remove(adapterPosition);
+            ((FileManagerActivity) mContext).deselectItem(item);
+        } else {
+            selectedPositions.add(adapterPosition);
+            ((FileManagerActivity) mContext).selectItem(item);
+        }
+        notifyItemChanged(adapterPosition);
+    }
+
+    public void deselectAllItems() {
+        selectedPositions.clear();
+        notifyDataSetChanged();
     }
 
     @Override

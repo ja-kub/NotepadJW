@@ -76,7 +76,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private File[] currentFilesAndDirectories;
     private List<Item> selectedItemList = new ArrayList<>();
     private List<Item> clipboardItemList = new ArrayList<Item>();
-    private boolean isClipboardToCopy, isCurrentSortingByDate, isInSearchMode;
+    private boolean isClipboardToCopy, isCurrentSortingByDate, isSearchMenuExpanded, isSearchResultsListed;
     private RecyclerView recyclerView;
     private SharedPreferences sharedPref;
     private FilesDatabase filesDatabase;
@@ -156,16 +156,17 @@ public class FileManagerActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
                 buttonsOnStartSearch();
-                isInSearchMode = true;
+                isSearchMenuExpanded = true;
+                searchView.requestFocus();
                 return true;  // Return true to expand action view
             }
 
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
                 buttonsOnExitSearch();
-                isInSearchMode = false;
+                isSearchMenuExpanded = false;
                 searchView.clearFocus();
-                fillListWithItemsFromDir(currentDirectory);
+                if(isSearchResultsListed) fillListWithItemsFromDir(currentDirectory);
                 return true;  // Return true to collapse action view
             }
         });
@@ -210,7 +211,7 @@ public class FileManagerActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         famCreateNew = (FloatingActionsMenu) findViewById(R.id.fam_create_new);
         fabNewFolder = (com.getbase.floatingactionbutton.FloatingActionButton) findViewById(R.id.fab_new_folder);
-        if (fabNewFolder!=null) fabNewFolder.setOnClickListener(new View.OnClickListener() {
+        if (fabNewFolder != null) fabNewFolder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 famCreateNew.collapse();
@@ -218,7 +219,7 @@ public class FileManagerActivity extends AppCompatActivity {
             }
         });
         fabNewNote = (com.getbase.floatingactionbutton.FloatingActionButton) findViewById(R.id.fab_new_note);
-        if (fabNewNote!=null) fabNewNote.setOnClickListener(new View.OnClickListener() {
+        if (fabNewNote != null) fabNewNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 famCreateNew.collapse();
@@ -250,7 +251,8 @@ public class FileManagerActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (!isInSearchMode) fillListWithItemsFromDir(currentDirectory); // this is also to reload file bytes after back from editor
+        if (!isSearchMenuExpanded)
+            fillListWithItemsFromDir(currentDirectory); // this is also to reload file bytes after back from editor
     }
 
     @Override
@@ -313,14 +315,13 @@ public class FileManagerActivity extends AppCompatActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         switch (selectedItemList.size()) {
             case 0:
-                sortFilesMenuItem.setVisible(true);
-                searchMenuItem.setVisible(true);
-                renameFile.setVisible(false);
-                removeFiles.setVisible(false);
-                shareFiles.setVisible(false);
-                cutFiles.setVisible(false);
-                copyFiles.setVisible(false);
-                pasteFiles.setVisible(!clipboardItemList.isEmpty());
+                if (isSearchMenuExpanded) {
+                    searchMenuItem.expandActionView();
+                    buttonsOnStartSearch();
+                    searchView.clearFocus();
+                } else {
+                    buttonsOnExitSearch();
+                }
                 break;
             case 1:
                 sortFilesMenuItem.setVisible(false);
@@ -348,7 +349,15 @@ public class FileManagerActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (!isInSearchMode) moveUpOneLevel();
+            if (!selectedItemList.isEmpty()) {
+                deselectAllItems();
+            } else {
+                if (isSearchMenuExpanded) {
+                    searchMenuItem.collapseActionView();
+                } else {
+                    moveUpOneLevel();
+                }
+            }
             return true;
         }
         return super.onKeyDown(keyCode, event);
@@ -371,6 +380,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private void buttonsOnStartSearch() {
         famCreateNew.setVisibility(View.INVISIBLE);
         sortFilesMenuItem.setVisible(false);
+//        searchMenuItem.setVisible(true); // TODO - is this needed?
         renameFile.setVisible(false);
         removeFiles.setVisible(false);
         shareFiles.setVisible(false);
@@ -383,9 +393,16 @@ public class FileManagerActivity extends AppCompatActivity {
 
     private void buttonsOnExitSearch() {
         famCreateNew.setVisibility(View.VISIBLE);
+        sortFilesMenuItem.setVisible(true);
+        searchMenuItem.setVisible(true);
+        renameFile.setVisible(false);
+        removeFiles.setVisible(false);
+        shareFiles.setVisible(false);
+        cutFiles.setVisible(false);
+        copyFiles.setVisible(false);
+        pasteFiles.setVisible(!clipboardItemList.isEmpty() && !isSearchResultsListed);
         settingsMenuItem.setVisible(true);
         helpMenuItem.setVisible(true);
-        invalidateOptionsMenu();
     }
 
     private void doSearch(String query) {
@@ -396,6 +413,7 @@ public class FileManagerActivity extends AppCompatActivity {
         }
         sortItems(filteredItems, true); // sorting by date descending
         prepareFileListAdapter(filteredItems);
+        isSearchResultsListed = true;
     }
 
     // Checks if external storage is available for read and write
@@ -450,6 +468,7 @@ public class FileManagerActivity extends AppCompatActivity {
 
             List<Item> items = getItems(currentFilesAndDirectories);
             prepareFileListAdapter(items);
+            isSearchResultsListed = false;
         } else {
             Toast.makeText(this, R.string.current_dir_is_null, Toast.LENGTH_SHORT).show();
         }
@@ -551,6 +570,12 @@ public class FileManagerActivity extends AppCompatActivity {
 
     public void deselectItem(Item item) {
         selectedItemList.remove(item);
+        invalidateOptionsMenu();
+    }
+
+    public void deselectAllItems() {
+        adapter.deselectAllItems();
+        selectedItemList.clear();
         invalidateOptionsMenu();
     }
 
@@ -692,6 +717,7 @@ public class FileManagerActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Boolean isFileNameCorrect = true;
                     String newFileName;
+                    File fileDirectory = file.getParentFile();
                     if (file.isDirectory()) {
                         newFileName = input.getText().toString();
                     } else {
@@ -701,7 +727,7 @@ public class FileManagerActivity extends AppCompatActivity {
                         isFileNameCorrect = false;
                         Toast.makeText(activityContext, R.string.name_cannot_be_empty, Toast.LENGTH_SHORT).show();
                     } else {
-                        for (File file : currentFilesAndDirectories) {
+                        for (File file : fileDirectory.listFiles()) {
                             if (file.getName().equalsIgnoreCase(newFileName)) {
                                 isFileNameCorrect = false;
                                 Toast.makeText(activityContext, R.string.file_name_exists, Toast.LENGTH_SHORT).show();
@@ -710,7 +736,7 @@ public class FileManagerActivity extends AppCompatActivity {
                     }
 
                     if (isFileNameCorrect) {
-                        File newFile = new File(currentDirectory, newFileName);
+                        File newFile = new File(fileDirectory, newFileName);
                         if (file.renameTo(newFile)) {
                             Toast.makeText(activityContext, R.string.file_renamed, Toast.LENGTH_SHORT).show();
                             if (newFile.isDirectory()) {
@@ -737,6 +763,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private void cutCurrentlySelectedFiles() {
         clipboardItemList = new ArrayList<>(selectedItemList);
         isClipboardToCopy = false;
+        deselectAllItems();
         Snackbar.make(recyclerView, R.string.cut_to_clipboard, Snackbar.LENGTH_SHORT)
                 .setAction("Action", null).show();
     }
@@ -744,6 +771,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private void copyCurrentlySelectedFiles() {
         clipboardItemList = new ArrayList<>(selectedItemList);
         isClipboardToCopy = true;
+        deselectAllItems();
         Snackbar.make(recyclerView, R.string.copied_to_clipboard, Snackbar.LENGTH_SHORT)
                 .setAction("Action", null).show();
     }
