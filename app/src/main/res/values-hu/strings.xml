@@ -147,4 +147,6 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
     </string>
     <string name="search_title">Keresés</string>
     <string name="search_hint">Keresés</string>
+    <string name="note">Jegyzet</string>
+    <string name="folder">Mappa</string>
 </resources>

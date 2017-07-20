@@ -30,4 +30,5 @@ dependencies {
     compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
     compile 'org.apache.commons:commons-collections4:4.1'
     compile 'com.github.mthli:Knife:v1.1'
+    compile (name:'getbase-floatingactionbutton', ext:'aar')
 }

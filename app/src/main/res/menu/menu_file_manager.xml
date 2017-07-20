@@ -40,12 +40,6 @@
         android:title="@string/button_sort_files"
         app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_new_folder"
-        android:icon="@drawable/ic_create_new_folder_white_48dp"
-        android:title="@string/button_new_folder"
-        app:showAsAction="always" />
-
     <item android:id="@+id/search"
         android:title="@string/search_title"
         android:icon="@drawable/ic_search_white_48dp"

@@ -166,4 +166,6 @@ wówczas umieszczone w folderze Pobrane).</p>
     </string>
     <string name="search_title">Szukaj</string>
     <string name="search_hint">Szukaj</string>
+    <string name="note">Notatka</string>
+    <string name="folder">Folder</string>
 </resources>

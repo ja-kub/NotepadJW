@@ -38,6 +38,8 @@ import android.widget.EditText;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
+
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -68,7 +70,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private static File mainDirectory;
     private final Context activityContext = this;
     FileListAdapter adapter;
-    private MenuItem newFolder, removeFiles, shareFiles, renameFile, cutFiles, copyFiles, pasteFiles, sortFilesMenuItem, helpMenuItem, settingsMenuItem, searchMenuItem;
+    private MenuItem removeFiles, shareFiles, renameFile, cutFiles, copyFiles, pasteFiles, sortFilesMenuItem, helpMenuItem, settingsMenuItem, searchMenuItem;
     private SearchView searchView;
     private File currentDirectory;
     private File[] currentFilesAndDirectories;
@@ -79,6 +81,8 @@ public class FileManagerActivity extends AppCompatActivity {
     private SharedPreferences sharedPref;
     private FilesDatabase filesDatabase;
     private FloatingActionButton floatingActionButton;
+    private FloatingActionsMenu famCreateNew;
+    private com.getbase.floatingactionbutton.FloatingActionButton fabNewFolder, fabNewNote;
 
     public static String fileExtension(String name) {
         if (name == null || name.equals("")) {
@@ -204,15 +208,23 @@ public class FileManagerActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
-        if (floatingActionButton != null) {
-            floatingActionButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    createNewFile();
-                }
-            });
-        }
+        famCreateNew = (FloatingActionsMenu) findViewById(R.id.fam_create_new);
+        fabNewFolder = (com.getbase.floatingactionbutton.FloatingActionButton) findViewById(R.id.fab_new_folder);
+        if (fabNewFolder!=null) fabNewFolder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                famCreateNew.collapse();
+                createNewFolder();
+            }
+        });
+        fabNewNote = (com.getbase.floatingactionbutton.FloatingActionButton) findViewById(R.id.fab_new_note);
+        if (fabNewNote!=null) fabNewNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                famCreateNew.collapse();
+                createNewFile();
+            }
+        });
     }
 
     private void preparePreferences() {
@@ -244,7 +256,6 @@ public class FileManagerActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_file_manager, menu);
-        newFolder = menu.findItem(R.id.action_new_folder);
         removeFiles = menu.findItem(R.id.action_remove);
         shareFiles = menu.findItem(R.id.action_share);
         renameFile = menu.findItem(R.id.action_rename);
@@ -282,9 +293,6 @@ public class FileManagerActivity extends AppCompatActivity {
             case R.id.action_share:
                 shareCurrentlySelectedFiles();
                 return true;
-            case R.id.action_new_folder:
-                createNewFolder();
-                return true;
             case R.id.action_sort:
                 changeSorting();
                 return true;
@@ -305,7 +313,6 @@ public class FileManagerActivity extends AppCompatActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         switch (selectedItemList.size()) {
             case 0:
-                newFolder.setVisible(true);
                 sortFilesMenuItem.setVisible(true);
                 searchMenuItem.setVisible(true);
                 renameFile.setVisible(false);
@@ -316,7 +323,6 @@ public class FileManagerActivity extends AppCompatActivity {
                 pasteFiles.setVisible(!clipboardItemList.isEmpty());
                 break;
             case 1:
-                newFolder.setVisible(false);
                 sortFilesMenuItem.setVisible(false);
                 searchMenuItem.setVisible(false);
                 renameFile.setVisible(true);
@@ -327,7 +333,6 @@ public class FileManagerActivity extends AppCompatActivity {
                 pasteFiles.setVisible(false);
                 break;
             default:
-                newFolder.setVisible(false);
                 sortFilesMenuItem.setVisible(false);
                 searchMenuItem.setVisible(false);
                 renameFile.setVisible(false);
@@ -364,8 +369,7 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     private void buttonsOnStartSearch() {
-        floatingActionButton.setVisibility(View.INVISIBLE);
-        newFolder.setVisible(false);
+        famCreateNew.setVisibility(View.INVISIBLE);
         sortFilesMenuItem.setVisible(false);
         renameFile.setVisible(false);
         removeFiles.setVisible(false);
@@ -378,7 +382,7 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     private void buttonsOnExitSearch() {
-        floatingActionButton.setVisibility(View.VISIBLE);
+        famCreateNew.setVisibility(View.VISIBLE);
         settingsMenuItem.setVisible(true);
         helpMenuItem.setVisible(true);
         invalidateOptionsMenu();

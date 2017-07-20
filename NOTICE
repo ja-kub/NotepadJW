@@ -8,4 +8,5 @@ This product includes following libraries:
 'commons-io:commons-io:2.5'                             
 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 'org.apache.commons:commons-collections4:4.1'           
-'com.github.mthli:Knife:v1.1'                           
+'com.github.mthli:Knife:v1.1'    
+'com.getbase:floatingactionbutton:1.10.1'                       

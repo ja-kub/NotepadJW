@@ -193,4 +193,6 @@ button (they will be copied to Downloads folder).</p>
     </string>
     <string name="search_title">Search</string>
     <string name="search_hint">Search</string>
+    <string name="note">Note</string>
+    <string name="folder">Folder</string>
 </resources>
