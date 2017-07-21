@@ -570,10 +570,12 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
     private void saveDocumentIfChanged() {
         noteEditText.clearComposingText();
-        noteEditText.correctBullets();
         final String currentHtml = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
         if (currentFile != null && !currentHtml.equals(htmlTextInFile)) {
-            saveStringToFile(currentHtml, currentFile);
+            Log.d(TAG, "htmlTextInFile: " + htmlTextInFile);
+            Log.d(TAG, "currentHtml:    " + currentHtml);
+            noteEditText.correctBullets();
+            saveStringToFile(SpanToHtmlConverter.toHtml(noteEditText.getEditableText()), currentFile);
         }
     }
 

@@ -139,11 +139,13 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Román fordítás alkalmazások \n\n
+    - Francia Biblia fordítás \n\n
     </string>
     <string name="whats_new_message_last">
-    - Francia Biblia fordítás \n\n
-    - Hibajavítások
+    - Hozzáadott keresési funkció: jegyzettömb bejegyzések, jegyzetnevek és mappanevek megkeresése \n\n
+    - Új mappa létrehozása az új lebegőgombra költözött \n\n
+    - Jobb elemek kiválasztása a Notes Managerben \n\n
+    - A verseket mostantól új vonalak választják el (↵)
     </string>
     <string name="search_title">Keresés</string>
     <string name="search_hint">Keresés</string>

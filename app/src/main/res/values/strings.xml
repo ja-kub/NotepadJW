@@ -185,11 +185,13 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Romanian translation of the app \n\n
+    - French Bible translation \n\n
     </string>
     <string name="whats_new_message_last">
-    - French Bible translation \n\n
-    - Bug fixes
+    - Added Search feature: finding by note entries, note names and folder names \n\n
+    - Create New Folder button moved to the new expandable floating button \n\n
+    - Improved selection/deselection of items - long/quick clicks and back button \n\n
+    - Verses can now be separated also by new lines (↵)
     </string>
     <string name="search_title">Search</string>
     <string name="search_hint">Search</string>

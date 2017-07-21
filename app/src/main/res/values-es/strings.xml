@@ -152,11 +152,13 @@
     ]]>
     </string>
     <string name="whats_new_message_previous">
-    - Aplicaciones de traducción rumanos \n\n
+    - Traducción Francesa de la Biblia \n\n
     </string>
     <string name="whats_new_message_last">
-    - Traducción Francesa de la Biblia \n\n
-    - Corrección de errores
+    - Característica de búsqueda añadida: búsqueda por entradas de nota, nombres de nota y nombres de carpeta \n\n
+    - El botón Crear nueva carpeta se ha desplazado al nuevo botón flotante \n\n
+    - Mejor selección de elementos en el Administrador de Notes \n\n
+    - Los versos ahora pueden ser separados también por nuevas líneas (↵)
     </string>
     <string name="search_title">Buscar</string>
     <string name="search_hint">Buscar</string>
