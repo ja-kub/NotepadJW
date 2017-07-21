@@ -79,7 +79,12 @@ public class FileManagerActivity extends AppCompatActivity {
     private boolean isClipboardToCopy, isCurrentSortingByDate, isSearchMenuExpanded, isSearchResultsListed;
     private RecyclerView recyclerView;
     private SharedPreferences sharedPref;
-    private FilesDatabase filesDatabase;
+
+    public static FilesDatabase getFilesDatabase() {
+        return filesDatabase;
+    }
+
+    private static FilesDatabase filesDatabase;
     private FloatingActionButton floatingActionButton;
     private FloatingActionsMenu famCreateNew;
     private com.getbase.floatingactionbutton.FloatingActionButton fabNewFolder, fabNewNote;
@@ -174,21 +179,26 @@ public class FileManagerActivity extends AppCompatActivity {
 
     private void prepareFilesDatabase(File directory) {
         filesDatabase = new FilesDatabase(this, directory);
-        filesDatabase.refreshData();
+        filesDatabase.refreshData(); // to be ready to search
+        // it has to be refresh(), not touch(), in case of user in the meantime modified notes form PC
     }
 
     private File[] searchFiles(String query) {
         List<File> files = new ArrayList<>();
-        Cursor c = filesDatabase.getWordMatches(query, null);
-        if (c != null) {
-            int fileColumnIndex = c.getColumnIndex(FilesDatabase.COL_FILE);
-            do {
-                String filePath = c.getString(fileColumnIndex);
-                files.add(new File(filePath));
-            } while (c.moveToNext());
-            c.close();
-        } else {
-            Log.v(TAG, "cursor is null!");
+        try {
+            Cursor c = filesDatabase.getWordMatches(query, null);
+            if (c != null) {
+                int fileColumnIndex = c.getColumnIndex(FilesDatabase.COL_FILE_PATH);
+                do {
+                    String filePath = c.getString(fileColumnIndex);
+                    files.add(new File(filePath));
+                } while (c.moveToNext());
+                c.close();
+            } else {
+                Log.v(TAG, "cursor is null!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return files.toArray(new File[0]);
     }
@@ -380,7 +390,6 @@ public class FileManagerActivity extends AppCompatActivity {
     private void buttonsOnStartSearch() {
         famCreateNew.setVisibility(View.INVISIBLE);
         sortFilesMenuItem.setVisible(false);
-//        searchMenuItem.setVisible(true); // TODO - is this needed?
         renameFile.setVisible(false);
         removeFiles.setVisible(false);
         shareFiles.setVisible(false);
@@ -620,6 +629,7 @@ public class FileManagerActivity extends AppCompatActivity {
                     File file = new File(currentDirectory, newFileName + "." + NOTE_FILE_EXTENSION);
                     try {
                         file.createNewFile();
+                        filesDatabase.addFileOrDir(file);
                         MediaScannerConnection.scanFile(activityContext, new String[]{file.getAbsolutePath()}, null, null);
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -675,6 +685,7 @@ public class FileManagerActivity extends AppCompatActivity {
                 if (isDirectoryNameCorrect) {
                     File directory = new File(currentDirectory, newDirectoryName);
                     if (directory.mkdir()) {
+                        filesDatabase.addFileOrDir(directory);
                         Snackbar.make(recyclerView, R.string.creation_of_new_folder_succesful, Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     } else {
@@ -746,6 +757,7 @@ public class FileManagerActivity extends AppCompatActivity {
                             } else {
                                 MediaScannerConnection.scanFile(activityContext, new String[]{file.getAbsolutePath(), newFile.getAbsolutePath()}, null, null);
                             }
+                            filesDatabase.renameFileOrDir(file, newFile);
                             fillListWithItemsFromDir(currentDirectory);
                         } else {
                             Toast.makeText(activityContext, R.string.file_rename_failed, Toast.LENGTH_SHORT).show();
@@ -801,6 +813,7 @@ public class FileManagerActivity extends AppCompatActivity {
             }
         }
         clipboardItemList.clear();
+        filesDatabase.refreshData();
         fillListWithItemsFromDir(currentDirectory);
     }
 
@@ -827,6 +840,7 @@ public class FileManagerActivity extends AppCompatActivity {
                         Snackbar.make(recyclerView, R.string.files_not_removed_successfully, Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }
+                    filesDatabase.refreshData();
                     fillListWithItemsFromDir(currentDirectory);
                 }
             });
@@ -973,6 +987,7 @@ public class FileManagerActivity extends AppCompatActivity {
                         prepareMainDirectory();
                     }
                 }
+                prepareFilesDatabase(mainDirectory);
             }
         }
     }

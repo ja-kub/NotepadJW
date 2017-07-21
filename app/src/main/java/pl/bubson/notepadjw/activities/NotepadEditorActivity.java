@@ -649,9 +649,8 @@ public class NotepadEditorActivity extends AppCompatActivity {
             } finally {
                 stream.close();
             }
-            // addFileToSearchTable(htmlString, file); // TODO
+            FileManagerActivity.getFilesDatabase().updateFile(file);
             MediaScannerConnection.scanFile(activityContext, new String[]{currentFile.getAbsolutePath()}, null, null);
-//            Toast.makeText(this, R.string.file_saved, Toast.LENGTH_SHORT).show(); // toast switched off
             return true;
         } catch (Exception e) {
             e.printStackTrace();
