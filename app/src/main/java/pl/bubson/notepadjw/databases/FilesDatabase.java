@@ -102,14 +102,19 @@ public class FilesDatabase {
 
         private void loadFilesRecursive(File fileOrDirectory) {
             if (fileOrDirectory.isDirectory()) {
+                addFile(fileOrDirectory, fileOrDirectory.getName());
                 for (File child : fileOrDirectory.listFiles()) loadFilesRecursive(child);
             } else {
-                String filePath = fileOrDirectory.getAbsolutePath();
                 String content = fileOrDirectory.getName() + " " + openHtmlFile(fileOrDirectory); // include file name within search
-                long id = addFile(filePath, content);
-                if (id < 0) {
-                    Log.e(TAG, "unable to add file: " + filePath);
-                }
+                addFile(fileOrDirectory, content);
+            }
+        }
+
+        private void addFile(File fileOrDirectory, String content) {
+            String filePath = fileOrDirectory.getAbsolutePath();
+            long id = addRecord(filePath, content);
+            if (id < 0) {
+                Log.e(TAG, "unable to add file: " + filePath);
             }
         }
 
@@ -132,7 +137,7 @@ public class FilesDatabase {
             }
         }
 
-        public long addFile(String file, String content) {
+        public long addRecord(String file, String content) {
             ContentValues initialValues = new ContentValues();
             initialValues.put(COL_FILE, file);
             initialValues.put(COL_CONTENT, content);
