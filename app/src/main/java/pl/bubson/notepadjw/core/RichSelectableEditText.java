@@ -2,6 +2,7 @@ package pl.bubson.notepadjw.core;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.style.BulletSpan;
 import android.util.AttributeSet;
@@ -15,6 +16,7 @@ import java.util.List;
 import io.github.mthli.knife.KnifeBulletSpan;
 import io.github.mthli.knife.KnifeText;
 import pl.bubson.notepadjw.R;
+import pl.bubson.notepadjw.utils.SpanToHtmlConverter;
 
 /**
  * Created by Kuba on 2017-03-23.
@@ -103,4 +105,11 @@ public class RichSelectableEditText extends KnifeText {
         void onSelectionChanged(int selStart, int selEnd);
     }
 
+    @Override
+    public void fromHtml(String source) {
+        SpannableStringBuilder builder = new SpannableStringBuilder();
+        builder.append(SpanToHtmlConverter.fromHtml(source));
+        this.switchToKnifeStyle(builder, 0, builder.length());
+        this.setText(builder);
+    }
 }

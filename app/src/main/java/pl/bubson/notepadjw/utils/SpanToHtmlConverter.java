@@ -1,6 +1,7 @@
 package pl.bubson.notepadjw.utils;
 
 import android.graphics.Typeface;
+import android.os.Build;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -21,7 +22,11 @@ import io.github.mthli.knife.KnifeTagHandler;
  */
 public class SpanToHtmlConverter {
     public static Spanned fromHtml(String source) {
-        return Html.fromHtml(source, null, new KnifeTagHandler());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return Html.fromHtml(source, Html.FROM_HTML_MODE_COMPACT, null, new KnifeTagHandler());
+        } else {
+            return Html.fromHtml(source, null, new KnifeTagHandler());
+        }
     }
 
     public static String toHtml(Spanned text) {

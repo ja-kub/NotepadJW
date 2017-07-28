@@ -176,7 +176,12 @@ public class FilesDatabase {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 return Html.fromHtml(htmlContent, Html.FROM_HTML_MODE_COMPACT).toString();
             } else {
-                return Html.fromHtml(htmlContent).toString();
+                try {
+                    return Html.fromHtml(htmlContent).toString();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return "";
+                }
             }
         }
 
@@ -192,7 +197,7 @@ public class FilesDatabase {
             String keywords = getFileKeywords(file);
             ContentValues cv = new ContentValues();
             cv.put(COL_KEYWORDS, keywords);
-            long id = mDatabase.update(FTS_VIRTUAL_TABLE, cv, COL_FILE_PATH + "='" + filePath + "'", null);
+            long id = mDatabase.update(FTS_VIRTUAL_TABLE, cv, COL_FILE_PATH + "=?", new String[]{filePath});
             if (id < 0) {
                 Log.e(TAG, "unable to update file: " + filePath);
             }
@@ -205,7 +210,7 @@ public class FilesDatabase {
             ContentValues cv = new ContentValues();
             cv.put(COL_FILE_PATH, newFilePath);
             cv.put(COL_KEYWORDS, keywords);
-            long id = mDatabase.update(FTS_VIRTUAL_TABLE, cv, COL_FILE_PATH + "='" + oldFilePath + "'", null);
+            long id = mDatabase.update(FTS_VIRTUAL_TABLE, cv, COL_FILE_PATH + "=?", new String[]{oldFilePath});
             if (id < 0) {
                 Log.e(TAG, "unable to update row: " + oldFilePath);
             }

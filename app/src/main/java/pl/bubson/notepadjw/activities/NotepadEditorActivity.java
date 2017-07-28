@@ -514,13 +514,12 @@ public class NotepadEditorActivity extends AppCompatActivity {
                             finish();
                         }
                     }
-                    Log.v(TAG, "openFileFromIntent - text in String Builder");
-                    Log.v(TAG, "openFileFromIntent - text:\n" + text);
                     String content = text.toString();
+                    Log.d(TAG, "openFileFromIntent - content:\n" + content);
 
                     noteEditText.fromHtml(content);
                     htmlTextInFile = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
-                    Log.v(TAG, "openFileFromIntent - text in noteEditText");
+                    Log.d(TAG, "htmlTextInFile: " + htmlTextInFile);
                     if (action.equals(Intent.ACTION_EDIT)) {
                         switchToEditableMode(true, false);
                     } else {
@@ -572,10 +571,9 @@ public class NotepadEditorActivity extends AppCompatActivity {
         noteEditText.clearComposingText();
         final String currentHtml = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
         if (currentFile != null && !currentHtml.equals(htmlTextInFile)) {
-            Log.d(TAG, "htmlTextInFile: " + htmlTextInFile);
-            Log.d(TAG, "currentHtml:    " + currentHtml);
             noteEditText.correctBullets();
             saveStringToFile(SpanToHtmlConverter.toHtml(noteEditText.getEditableText()), currentFile);
+            Log.d(TAG, "saveStringToFile: " + SpanToHtmlConverter.toHtml(noteEditText.getEditableText()));
         }
     }
 
