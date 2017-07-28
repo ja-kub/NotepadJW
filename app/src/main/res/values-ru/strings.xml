@@ -108,6 +108,10 @@
         <string name="button_bullet">Bullet</string>
         <string name="verse_area_size_title">Доп-ая настройка верхнего поля</string>
         <string name="verse_area_size_dialog_title">Верхнее поле</string>
+        <string name="search_title">Поиск</string>
+        <string name="search_hint">Поиск</string>
+        <string name="note">Заметка</string>
+        <string name="folder">Папка</string>
        <string name="sent_by_notepadjw">
    <![CDATA[
    <p>Заметки, отправленные из<B>Notepad JW</B>- менеджер заметок и редактор с живым просмотром введенных стихов.</p>
@@ -144,16 +148,12 @@
         к которым другие приложения и ваш компьютер не имеют доступа.
    </string>
    <string name="whats_new_message_previous">
-    - Французский перевод Библии \n\n
-   </string>
-   <string name="whats_new_message_last">
     - Добавлена функция поиска: поиск записей заметок, имен заметок и имен папок \n\n
     - Кнопка «Создать новую папку» переместилась на новую плавучую кнопку \n\n
     - Улучшенный выбор элементов в Менеджере заметок \n\n
-    - Теперь стихи можно разделить также новыми строками (↵)
+    - Теперь стихи можно разделить также новыми строками (↵) \n\n
    </string>
-    <string name="search_title">Поиск</string>
-    <string name="search_hint">Поиск</string>
-    <string name="note">Заметка</string>
-    <string name="folder">Папка</string>
+   <string name="whats_new_message_last">
+    - Применение Перевод на португальский и немецкий
+   </string>
 </resources>

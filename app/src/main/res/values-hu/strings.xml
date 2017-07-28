@@ -107,6 +107,10 @@
     <string name="button_bullet">Lista</string>
     <string name="verse_area_size_title">Bibliaidézet panel mérete</string>
     <string name="verse_area_size_dialog_title">Bibliaidézet panel mérete</string>
+    <string name="search_title">Keresés</string>
+    <string name="search_hint">Keresés</string>
+    <string name="note">Jegyzet</string>
+    <string name="folder">Mappa</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>A jegyzetek a <B>Notepad JW</B> alkalmazással készültek - ez egy testvéreknek készült jegyzetelő, ami írás közben megjeleníti a szövegben szereplő  bibliaidézeteket.</p>
@@ -139,16 +143,12 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Francia Biblia fordítás \n\n
-    </string>
-    <string name="whats_new_message_last">
     - Hozzáadott keresési funkció: jegyzettömb bejegyzések, jegyzetnevek és mappanevek megkeresése \n\n
     - Új mappa létrehozása az új lebegőgombra költözött \n\n
     - Jobb elemek kiválasztása a Notes Managerben \n\n
-    - A verseket mostantól új vonalak választják el (↵)
+    - A verseket mostantól új vonalak választják el (↵) \n\n
     </string>
-    <string name="search_title">Keresés</string>
-    <string name="search_hint">Keresés</string>
-    <string name="note">Jegyzet</string>
-    <string name="folder">Mappa</string>
+    <string name="whats_new_message_last">
+    - Translation alkalmazás portugál és német
+    </string>
 </resources>

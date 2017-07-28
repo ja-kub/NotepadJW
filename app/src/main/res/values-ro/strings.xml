@@ -107,6 +107,10 @@
     <string name="button_bullet">Bullet</string>
     <string name="verse_area_size_title">Marimea zonei versetelor</string>
     <string name="verse_area_size_dialog_title">Marimea zonei versetelor</string>
+    <string name="search_title">Căutare</string>
+    <string name="search_hint">Căutare</string>
+    <string name="note">Nota</string>
+    <string name="folder">Dosar</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notes sent from <B>Notepad JW</B> - notes manager and editor with live view of entered verses.</p>
@@ -154,16 +158,12 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Traducere biblică franceză \n\n
-    </string>
-    <string name="whats_new_message_last">
     - Funcția de căutare adăugată: găsirea prin intrări în note, nume de note și nume de dosare \n\n
     - Crearea butonului Folder nou a fost mutat la noul buton plutitor \n\n
     - Selecție îmbunătățită a elementelor din managerul de note \n\n
-    - Versetele pot fi acum separate și de noi linii (↵)
+    - Versetele pot fi acum separate și de noi linii (↵) \n\n
     </string>
-    <string name="search_title">Căutare</string>
-    <string name="search_hint">Căutare</string>
-    <string name="note">Nota</string>
-    <string name="folder">Dosar</string>
+    <string name="whats_new_message_last">
+    - Cerere de traducere în portugheză și germană
+    </string>
 </resources>

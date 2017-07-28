@@ -140,6 +140,10 @@ wówczas umieszczone w folderze Pobrane).</p>
     <string name="finished">Zakończono</string>
     <string name="unsuccessful">Niepowodzenie</string>
     <string name="permission_explanation_dialog_title">Dostęp do pamięci urządzenia</string>
+    <string name="search_title">Szukaj</string>
+    <string name="search_hint">Szukaj</string>
+    <string name="note">Notatka</string>
+    <string name="folder">Folder</string>
     <string name="permission_explanation_dialog_message">
         Zostaniesz teraz zapytany o dostęp do pamięci urządzenia.
         Jeśli się zgodzisz, Notepad JW będzie zapisywał notatki w tzw. pamięci zewnętrznej
@@ -158,16 +162,12 @@ wówczas umieszczone w folderze Pobrane).</p>
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-    - Francuski przekład Biblii \n\n
-    </string>
-    <string name="whats_new_message_last">
     - Dodano opcję Szukaj: przeszukiwanie treści i nazw notatek oraz folderów \n\n
     - Tworzenie folderu przeniesiono do ruchomego przycisku \n\n
     - Poprawiono funkcjonalność zaznaczania elementów \n\n
-    - Wersety mogą być już również oddzielane enterami (↵)
+    - Wersety mogą być już również oddzielane enterami (↵) \n\n
     </string>
-    <string name="search_title">Szukaj</string>
-    <string name="search_hint">Szukaj</string>
-    <string name="note">Notatka</string>
-    <string name="folder">Folder</string>
+    <string name="whats_new_message_last">
+    - Tłumaczenie aplikacji na portugalski i niemiecki
+    </string>
 </resources>

@@ -138,6 +138,10 @@
     <string name="button_bullet">Bullet</string>
     <string name="verse_area_size_title">Verse Area Size</string>
     <string name="verse_area_size_dialog_title">Verse Area Size</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search</string>
+    <string name="note">Note</string>
+    <string name="folder">Folder</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notes sent from <B>Notepad JW</B> - notes manager and editor with live view of entered verses.</p>
@@ -185,16 +189,12 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - French Bible translation \n\n
-    </string>
-    <string name="whats_new_message_last">
     - Added Search feature: finding by note entries, note names and folder names \n\n
     - Create New Folder button moved to the new expandable floating button \n\n
     - Improved selection/deselection of items - long/quick clicks and back button \n\n
-    - Verses can now be separated also by new lines (↵)
+    - Verses can now be separated also by new lines (↵) \n\n
     </string>
-    <string name="search_title">Search</string>
-    <string name="search_hint">Search</string>
-    <string name="note">Note</string>
-    <string name="folder">Folder</string>
+    <string name="whats_new_message_last">
+    - Translation of the application into Portuguese and German
+    </string>
 </resources>

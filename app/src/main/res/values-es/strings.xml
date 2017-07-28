@@ -108,6 +108,10 @@
     <string name="button_bullet">Bala</string>
     <string name="verse_area_size_title">Tamaño del área del verso</string>
     <string name="verse_area_size_dialog_title">Tamaño del área del versículo</string>
+    <string name="search_title">Buscar</string>
+    <string name="search_hint">Buscar</string>
+    <string name="note">Nota</string>
+    <string name="folder">Carpeta</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notas enviadas desde <B>Notepad JW</B>- administrador de notas y editor con vista en directo de los versos introducidos.</p>
@@ -152,16 +156,12 @@
     ]]>
     </string>
     <string name="whats_new_message_previous">
-    - Traducción Francesa de la Biblia \n\n
-    </string>
-    <string name="whats_new_message_last">
-    - Característica de búsqueda añadida: búsqueda por entradas de nota, nombres de nota y nombres de carpeta \n\n
+    - Característica de búsqueda añadida: búsqueda por entradas de nota, nombres de nota y nombres de carpeta \n\n
     - El botón Crear nueva carpeta se ha desplazado al nuevo botón flotante \n\n
     - Mejor selección de elementos en el Administrador de Notes \n\n
-    - Los versos ahora pueden ser separados también por nuevas líneas (↵)
+    - Los versos ahora pueden ser separados también por nuevas líneas (↵) \n\n
     </string>
-    <string name="search_title">Buscar</string>
-    <string name="search_hint">Buscar</string>
-    <string name="note">Nota</string>
-    <string name="folder">Carpeta</string>
+    <string name="whats_new_message_last">
+    - Aplicación de traducción al portugués y alemán
+    </string>
 </resources>
