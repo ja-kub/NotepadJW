@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="font_size_entries">
+        <item>Klein</item>
+        <item>Mittel</item>
+        <item>Groß</item>
+        <item>Sehr groß</item>
+    </string-array>
+    <string-array name="font_size_values">
+        <item>@string/font_size_small</item>
+        <item>@string/font_size_medium</item>
+        <item>@string/font_size_large</item>
+        <item>@string/font_size_xlarge</item>
+    </string-array>
+
+    <string-array name="verse_position_entries">
+        <item>Oben drauf</item>
+        <item>Rechts</item>
+    </string-array>
+    <string-array name="verse_position_values">
+        <item>@string/verse_position_top</item>
+        <item>@string/verse_position_right</item>
+    </string-array>
+
+    <string-array name="verse_language_entries">
+        <item>Deutsch</item>
+        <item>Englisch</item>
+        <item>Französisch</item>
+        <item>Polnisch</item>
+        <item>Portugiesisch</item>
+        <item>Rumänisch</item>
+        <item>Russisch</item>
+        <item>Spanisch</item>
+        <item>Tagalog</item>
+        <item>Ungarisch</item>
+    </string-array>
+    <string-array name="verse_language_values">
+        <item>@string/german_language</item>
+        <item>@string/english_language</item>
+        <item>@string/french_language</item>
+        <item>@string/polish_language</item>
+        <item>@string/portuguese_language</item>
+        <item>@string/romanian_language</item>
+        <item>@string/russian_language</item>
+        <item>@string/spanish_language</item>
+        <item>@string/tagalog_language</item>
+        <item>@string/hungarian_language</item>
+    </string-array>
+
+    <string-array name="verse_area_size_entries">
+        <item>Automatische Einstellung</item>
+        <item>Einstellbar durch Bewegen der Unterkante</item>
+    </string-array>
+    <string-array name="verse_area_size_values">
+        <item>@string/verse_area_size_auto</item>
+        <item>@string/verse_area_size_changeable</item>
+    </string-array>
+</resources>

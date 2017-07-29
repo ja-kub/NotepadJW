@@ -1,0 +1,169 @@
+<resources>
+    <string name="action_settings">Einstellungen</string>
+    <string name="edit_message">Geben Sie einen Text</string>
+    <string name="button_save">Importieren</string>
+    <string name="button_open">Öffnen</string>
+    <string name="verse_preview">Verse Vorschau</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="no">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="create_new_note_dialog_title">Notizname eingeben</string>
+    <string name="note_name">Hinweisname</string>
+    <string name="creation_of_new_note_cancelled">Neue Notiz wurde nicht erstellt</string>
+    <string name="file_name_exists">Item unter diesem Namen existiert bereits, ändert den Namen</string>
+    <string name="name_cannot_be_empty">Name darf nicht leer sein</string>
+    <string name="creation_failed">Erstellung fehlgeschlagen</string>
+    <string name="creation_of_new_note_succesful">Neue Notiz erstellt</string>
+    <string name="button_rename">Ausgewählte Note umbenennen</string>
+    <string name="button_remove">Ausgewählte Note entfernen</string>
+    <string name="button_share">Ausgewählte Note (s) freigeben</string>
+    <string name="not_matching">Nicht mit übereinstimmen</string>
+    <string name="wrong_verse">- falsche verse number</string>
+    <string name="button_switch_view">Ansicht wechseln</string>
+    <string name="button_switch_edit">Schaltfläche bearbeiten</string>
+    <string name="not_one_file_selected">Nicht eine Note ausgewählt</string>
+    <string name="removed">Entfernt</string>
+    <string name="rename_file">Element umbenennen</string>
+    <string name="file_renamed">Element umbenannt</string>
+    <string name="file_rename_failed">Umbenennen fehlgeschlagen</string>
+    <string name="on_remove_dialog_title">Ausgewählte Elemente entfernen</string>
+    <string name="remove">Remove</string>
+    <string name="files_removed_successfully">Item (s) entfernt</string>
+    <string name="files_not_removed_successfully">Einige Notizen wurden nicht entfernt</string>
+    <string name="button_new_folder">Neuen Ordner erstellen</string>
+    <string name="create_new_folder_dialog_title">Neuen Ordner erstellen</string>
+    <string name="folder_name">Ordnername</string>
+    <string name="folder_name_exists">Ordner unter diesem Namen existiert bereits, ändert den Namen</string>
+    <string name="creation_of_new_folder_succesful">Neuer Ordner erstellt</string>
+    <string name="permission_storage_not_granted">Zugriff auf externen Speicher nicht gewährt</string>
+    <string name="storage_not_writable">Speicher nicht beschreibbar</string>
+    <string name="temporary_file">Temporäre Datei</string>
+    <string name="cannot_save_temp">Die temporäre Datei</string>kann nicht gespeichert werden
+    <string name="error_while_saving">Fehler beim Speichern der Datei</string>
+    <string name="file_saved">Datei gespeichert</string>
+    <string name="create_new_note_from_this_file_dialog_title">Erstellen Sie eine neue Notiz aus dieser Datei?</string>
+    <string name="file_will_be_created_in">Hinweis wird im Ordner erstellt: NotepadJW /</string>
+    <string name="downloads_folder_name">Downloads</string>
+    <string name="file_is_too_big">Datei ist zu groß!</string>
+    <string name="language_na">Diese sprache wird noch nicht unterstützt</string>
+    <string name="wrong_book">Falscher Buchname</string>
+    <string name="wrong_chapter">Falsches Kapitel</string>
+    <string name="wrong_verse_order">- falsche verse order</string>
+    <string name="help_title">Hilfe</string>
+    <string name="items">Items</string>
+    <string name="bytes">Bytes</string>
+    <string name="uri_null">Parsed URI ist null</string>
+    <string name="cannot_open">Die Datei oder den Inhalt kann nicht geöffnet werden</string>
+    <string name="uri_not_supported">Uri-Typ nicht unterstützt</string>
+    <string name="not_text_file">Nicht eine Textdatei</string>
+    <string name="changes_not_saved">Änderungen nicht gespeichert</string>
+    <string name="current_dir_is_null">aktuelles Verzeichnis ist null</string>
+    <string name="show_size">Größe anzeigen</string>
+    <string name="show_size_summ">Größe der Notizen und Ordner anzeigen</string>
+    <string name="pref_file_manager_title">Notes Manager</string>
+    <string name="show_date">Datum anzeigen</string>
+    <string name="show_date_summ">Änderungsdatum der Notizen und Ordner anzeigen</string>
+    <string name="parent_directory">Übergeordnetes Verzeichnis</string>
+    <string name="pref_notepad_editor_title">Notepad Editor</string>
+    <string name="verse_font_size">Verse font</string>
+    <string name="note_font_size">Schriftgröße schreiben</string>
+    <string name="verse_font_size_summ">Ändere Schriftgröße des angezeigten Verses</string>
+    <string name="note_font_size_summ">Änderungsnotiz Schriftgröße</string>
+    <string name="verse_font_color">Verse color</string>
+    <string name="verse_font_color_summ">Wählen Sie die Schriftfarbe des angezeigten Verses</string>
+    <string name="button_cut">Ausschneiden</string>
+    <string name="button_copy">Kopieren</string>
+    <string name="button_paste">Einfügen</string>
+    <string name="cut_to_clipboard">In die Zwischenablage kopieren</string>
+    <string name="copied_to_clipboard">In die Zwischenablage kopiert</string>
+    <string name="pasted_from_clipboard">Aus Zwischenablage eingefügt</string>
+    <string name="not_all_elements_pasted">Nicht alle Elemente eingefügt</string>
+    <string name="unexpected_exception">Unerwartete Ausnahme - bitte senden Sie mir eine E-Mail, die es beschreibt</string>
+    <string name="button_sort_files">Sortierung ändern</string>
+    <string name="files_sorted_by_date">Notizen nach Datum sortiert</string>
+    <string name="files_sorted_alphabetically">Noten alphabetisch sortiert</string>
+    <string name="whats_new">Was ist neu?</string>
+    <string name="verse_language_title">Verse Language</string>
+    <string name="verse_language_summ">Verse Sprache ändern</string>
+    <string name="verse_language_dialog_title">Verse Language</string>
+    <string name="verse_position_title">Verse Position</string>
+    <string name="verse_position_summ">Wiederholen Sie die Anmerkung, um Änderungen zu sehen</string>
+    <string name="verse_position_dialog_title">Verse Position</string>
+    <string name="missing_language_dialog_title">Fehlende Sprache</string>
+    <string name="missing_language_message">Laden und installieren Sie Bibel in dieser Sprache jetzt?</string>
+    <string name="download_description">Download Bibel in neuer Sprache für Notepad JW</string>
+    <string name="download_language">Bibel in Sprache herunterladen</string>
+    <string name="install_language">Installationsbibel in Sprache</string>
+    <string name="in_progress">In Bearbeitung</string>
+    <string name="finished">Fertig</string>
+    <string name="unsuccessful">Nicht erfolgreich</string>
+    <string name="permission_explanation_dialog_title">Externe Speicherberechtigung</string>
+    <string name="button_undo">Rückgängig machen</string>
+    <string name="button_redo">Wiederherstellen</string>
+    <string name="button_bold">Bold</string>
+    <string name="button_italic">Kursiv</string>
+    <string name="button_underline">Unterstreichen</string>
+    <string name="button_bullet">Bullet</string>
+    <string name="verse_area_size_title">Verse Area Size</string>
+    <string name="verse_area_size_dialog_title">Verse Area Size</string>
+    <string name="search_title">Suchen</string>
+    <string name="search_hint">Suchen</string>
+    <string name="note">Notiz</string>
+    <string name="folder">Ordner</string>
+    <string name="sent_by_notepadjw">
+    <![CDATA[
+    <p>Notizen von <B>Notepad JW</b> - Notizen Manager und Editor mit Live-Ansicht der eingegebenen Verse.</p>
+    <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
+    ]]>
+    </string>
+    <string name="help_text_html">
+    <![CDATA[
+    <h3>Information</h3>
+    <p>Text aller Verse sind aus der Neuen Welt Übersetzung der Heiligen Schriften
+        (Copyright: (Watch Tower Bibel und Tract Society of Pennsylvania)).</p>
+    <h3>Warum NotepadJW verwenden? </h3>
+    <p>Diese Anwendung wurde erstellt, da keine andere App gefunden wurde, die in der Lage sein würde zu zeigen
+        Verse in der Realzeit beim Bearbeiten einer Note. So ist es sinnvoll, Notizen zu machen
+        Treffen und Kongresse - Sie brauchen nicht mehr, um Anwendungen zu wechseln oder Bibel zu durchsuchen
+        Um den Verstext zu sehen, wird er im selben Fenster wie Editor angezeigt. Da diese Anwendung in der Lage ist
+        Zeige alle Verse unter Links im View-Modus, es könnte auch für Reden auf dem Podium und anderen verwendet werden
+        Aufgaben während der Sitzungen. Diese App hat auch Sharing-Option, so können Sie es auch für Notizen machen
+        Während des Ministeriums und schicken sie an andere Prediger.</p>
+    <h3>Fähigkeiten</h3>
+    <p>Diese Anwendung besteht aus zwei Aktivitäten:
+        <br><b>Notes Manager</b> und <b>Notes Editor</b> .
+        <br>In <b>Notes Manager</b> können Sie neue Notizen erstellen, sie öffnen und neue Ordner erstellen.
+        <br>Sie können Artikel per Langklick auswählen und dann umbenennen, löschen oder senden (schneiden, kopieren und Einfügen von Optionen wird in Kürze hinzugefügt).
+        <br>In <b>Notepad Editor</b> können Sie zwischen <i>Edit Mode</i>und <i>View Mode</i>wechseln. In der ersten,
+        Der zuletzt eingegebene Vers wird angezeigt und in der zweiten können Sie auf Links klicken, die aus Versen erstellt wurden
+        Um eine ausgewählte zu sehen.
+        <br><b>Notizen</b> werden im externen Speicher unter txt-Dateien im Ort gespeichert: Dokumente / NotepadJW.
+        Sie können von unserem PC aus auf sie zugreifen. Es bedeutet, dass Sie sie umbenennen, löschen, verschieben oder neue txt-Dateien hinzufügen können
+        von deinem Computer. Sie können auch txt-Dateien von anderen App auf Ihrem Gerät, wie von Datei-Explorer,
+        E-Mail-Anhänge, Bluetooth-Dateien usw. Sie können sie in den NotepadJW-Arbeitsbereich importieren, indem Sie auf Speichern klicken
+        (Sie werden in den Ordner "Downloads" kopiert).</p>
+    <h3>Autor</h3>
+    <p>Jakub Tomala (Codierung, Layouts).
+    <br>Fragen, Bugs, Verbesserungen? Schreiben Sie eine E-Mail an: tomala.kuba@gmail.com
+    ]]>
+    </string>
+    <string name="permission_explanation_dialog_message">
+        Im nächsten Bildschirm werden Sie nach dem Zugriff auf den externen Speicher gefragt. Wenn du erlaubst,
+        Notepad JW speichert Notizen zum externen Speicher (im Ordner Dokumente ->NotepadJW).
+        Dabei hättest du Zugang zu diesen Notizen von anderen Apps und vom PC für dein
+        Bequemlichkeit (Notepad JW App liest oder ändert keine Dateien außerhalb von
+        NotepadJW-Ordner).
+        Wenn Sie verweigern, wird Notepad JW Notizen zum internen Speicher speichern, zu denen andere Apps und Ihr PC
+        Ich habe keinen Zugang.
+    </string>
+    <string name="whats_new_message_previous">
+    - Zusätzliche Suchfunktion: Suche nach Notizeinträgen, Notiznamen und Ordnernamen \n\n
+    - Neuen Ordner erstellen, verschoben auf die neue erweiterbare Floating-Schaltfläche \n\n
+    - Verbesserte Auswahl / Abwahl von Elementen - lange / schnelle Klicks und Zurück-Taste \n\n
+    - Verse können nun auch durch neue Zeilen getrennt werden (↵) \n\n
+    </string>
+    <string name="whats_new_message_last">
+    - Übersetzung der Anmeldung in Portugiesisch und Deutsch
+    </string>
+</resources>
