@@ -111,7 +111,7 @@
    <string name="search_title">Procurar</string>
    <string name="search_hint">Procurar</string>
    <string name="note">Nota</string>
-   <string name="pasta">Pasta</string>
+   <string name="folder">Catálogo</string>
    <string name="sent_by_notepadjw">
    <![CDATA[
     <p>Notas enviadas a partir de<B>Bloco de Notas JW</B>- Notas gerente e editor com exibição ao vivo dos versos introduzidas</p>
@@ -156,12 +156,9 @@
     ]]>
     </string>
     <string name="whats_new_message_previous">
-    - recurso de pesquisa de adição: busca de entradas nota, nota nomes e nomes de pasta \n\n
-    - O botão Criar nova pasta foi movido para o novo botão flutuante \n\n
-    - A melhor seleção de elementos nas notas administrador \n\n
-    - As linhas agora também podem ser separadas por novas linhas (↵) \n\n
+    - Aplicativo de tradução para Português e Alemão \n\n
     </string>
     <string name="whats_new_message_last">
-    - Aplicativo de tradução para Português e Alemão
+    - O último verso introduzido é mostrado, não o último no texto
     </string>
 </resources>

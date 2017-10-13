@@ -158,12 +158,9 @@
         Ich habe keinen Zugang.
     </string>
     <string name="whats_new_message_previous">
-    - Zusätzliche Suchfunktion: Suche nach Notizeinträgen, Notiznamen und Ordnernamen \n\n
-    - Neuen Ordner erstellen, verschoben auf die neue erweiterbare Floating-Schaltfläche \n\n
-    - Verbesserte Auswahl / Abwahl von Elementen - lange / schnelle Klicks und Zurück-Taste \n\n
-    - Verse können nun auch durch neue Zeilen getrennt werden (↵) \n\n
+    - Übersetzung der Anmeldung in Portugiesisch und Deutsch \n\n
     </string>
     <string name="whats_new_message_last">
-    - Übersetzung der Anmeldung in Portugiesisch und Deutsch
+    - Der zuletzt eingegebene Vers wird angezeigt, nicht zuletzt im Text
     </string>
 </resources>

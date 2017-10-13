@@ -189,12 +189,9 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Added Search feature: finding by note entries, note names and folder names \n\n
-    - Create New Folder button moved to the new expandable floating button \n\n
-    - Improved selection/deselection of items - long/quick clicks and back button \n\n
-    - Verses can now be separated also by new lines (↵) \n\n
+    - Translation of the application into Portuguese and German \n\n
     </string>
     <string name="whats_new_message_last">
-    - Translation of the application into Portuguese and German
+    - Now last entered verse is shown, not last in the text
     </string>
 </resources>

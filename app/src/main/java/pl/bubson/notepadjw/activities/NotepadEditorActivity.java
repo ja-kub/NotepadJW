@@ -68,7 +68,6 @@ public class NotepadEditorActivity extends AppCompatActivity {
     private static final String VERSE_AREA_SIZE_EDIT_MODE_KEY = "verseAreaSizeEditMode";
     private static final String VERSE_AREA_SIZE_VIEW_MODE_KEY = "verseAreaSizeViewMode";
     private static int screenHeight;
-    private String lastCharsOfNote = "";
     private Language versesLanguage;
     private Context activityContext = this;
     private RichSelectableEditText noteEditText;
@@ -86,20 +85,25 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
         public void afterTextChanged(Editable s) {
             try {
-                String text = s.toString();
-                int length = text.length();
-                if (!text.endsWith(lastCharsOfNote) || length <= CHARS_AT_THE_END_TO_CHECK) {
-                    // performance improvement - to not check verse correctness and show it again if text is modified in the middle or at the start
-                    // only if it is changed at the end, e.g. user add or modifies just added verse
-                    if (Verse.isTextContainingVerseAtTheEnd(text, versesLanguage)) {
-                        versePreviewTextInEditMode.setText(Html.fromHtml(Verse.getTextOfLastVerse(getApplicationContext(), text, versesLanguage)));
-                        versePreviewTextInEditMode.scrollTo(0, 0);
-                    }
+                String text;
+
+                // performance improvement - verifying last 50 chars before cursor
+                if (noteEditText.getSelectionEnd() >= CHARS_AT_THE_END_TO_CHECK) {
+                    Log.d(TAG, "noteEditText.getSelectionEnd() - CHARS_AT_THE_END_TO_CHECK: " + String.valueOf(noteEditText.getSelectionEnd() - CHARS_AT_THE_END_TO_CHECK));
+                    Log.d(TAG, "noteEditText.getSelectionEnd(): " + String.valueOf(noteEditText.getSelectionEnd()));
+                    text = s.toString().substring(noteEditText.getSelectionEnd() - CHARS_AT_THE_END_TO_CHECK, noteEditText.getSelectionEnd());
+                } else {
+                    text = s.toString().substring(0, noteEditText.getSelectionEnd());
                 }
-                if (length > CHARS_AT_THE_END_TO_CHECK)
-                    lastCharsOfNote = text.substring(length - CHARS_AT_THE_END_TO_CHECK);
+                Log.d(TAG, "text: " + text);
+
+                if (Verse.isTextContainingVerseAtTheEnd(text, versesLanguage)) {
+                    versePreviewTextInEditMode.setText(Html.fromHtml(Verse.getTextOfLastVerse(getApplicationContext(), text, versesLanguage)));
+                    versePreviewTextInEditMode.scrollTo(0, 0);
+                }
             } catch (Exception e) {
                 Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
+                e.printStackTrace();
             }
         }
     };
@@ -551,15 +555,16 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
     /**
      * @param toEditable choose target mode
-     * @param setVerses verses will be set in onResume(), so to not double executing setTextWithVerses()
-     *                  (for example when file is opened from Intent), use setVerses = false
+     * @param setVerses  verses will be set in onResume(), so to not double executing setTextWithVerses()
+     *                   (for example when file is opened from Intent), use setVerses = false
      */
     private void switchToEditableMode(boolean toEditable, boolean setVerses) {
         if (currentModeIsEditable != toEditable) {
             if (!toEditable) {
                 noteEditText.clearComposingText();
                 hideSoftKeyboard(this);
-                if (setVerses) noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage);
+                if (setVerses)
+                    noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage);
             }
             viewFlipper.showNext();
             currentModeIsEditable = toEditable;

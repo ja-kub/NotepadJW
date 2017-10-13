@@ -158,12 +158,9 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Funcția de căutare adăugată: găsirea prin intrări în note, nume de note și nume de dosare \n\n
-    - Crearea butonului Folder nou a fost mutat la noul buton plutitor \n\n
-    - Selecție îmbunătățită a elementelor din managerul de note \n\n
-    - Versetele pot fi acum separate și de noi linii (↵) \n\n
+    - Cerere de traducere în portugheză și germană \n\n
     </string>
     <string name="whats_new_message_last">
-    - Cerere de traducere în portugheză și germană
+    - Este afișat ultimul verset introdus, care nu este ultima în text
     </string>
 </resources>

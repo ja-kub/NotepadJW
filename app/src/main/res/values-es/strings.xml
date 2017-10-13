@@ -156,12 +156,9 @@
     ]]>
     </string>
     <string name="whats_new_message_previous">
-    - Característica de búsqueda añadida: búsqueda por entradas de nota, nombres de nota y nombres de carpeta \n\n
-    - El botón Crear nueva carpeta se ha desplazado al nuevo botón flotante \n\n
-    - Mejor selección de elementos en el Administrador de Notes \n\n
-    - Los versos ahora pueden ser separados también por nuevas líneas (↵) \n\n
+    - Aplicación de traducción al portugués y alemán \n\n
     </string>
     <string name="whats_new_message_last">
-    - Aplicación de traducción al portugués y alemán
+    - Ahora se muestra el último verso, no el último en el texto
     </string>
 </resources>
