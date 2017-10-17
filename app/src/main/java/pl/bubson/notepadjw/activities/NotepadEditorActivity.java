@@ -63,7 +63,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     public static final int TOLERANCE_TO_DRAG_VERSE_AREA_EDGE_IN_PX = 100;
     public static final int MAX_VERSE_LINES_IN_AUTO_FIT = 10;
     public static final int CHARS_AT_THE_END_TO_CHECK = 50;
-    private static final int MAX_FILE_SIZE_IN_BYTES = 100000;
+    private static final int MAX_FILE_SIZE_IN_BYTES = 200000;
     private static final String TAG = "NotepadEditorActivity";
     private static final String VERSE_AREA_SIZE_EDIT_MODE_KEY = "verseAreaSizeEditMode";
     private static final String VERSE_AREA_SIZE_VIEW_MODE_KEY = "verseAreaSizeViewMode";
@@ -89,8 +89,6 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
                 // performance improvement - verifying last 50 chars before cursor
                 if (noteEditText.getSelectionEnd() >= CHARS_AT_THE_END_TO_CHECK) {
-                    Log.d(TAG, "noteEditText.getSelectionEnd() - CHARS_AT_THE_END_TO_CHECK: " + String.valueOf(noteEditText.getSelectionEnd() - CHARS_AT_THE_END_TO_CHECK));
-                    Log.d(TAG, "noteEditText.getSelectionEnd(): " + String.valueOf(noteEditText.getSelectionEnd()));
                     text = s.toString().substring(noteEditText.getSelectionEnd() - CHARS_AT_THE_END_TO_CHECK, noteEditText.getSelectionEnd());
                 } else {
                     text = s.toString().substring(0, noteEditText.getSelectionEnd());
