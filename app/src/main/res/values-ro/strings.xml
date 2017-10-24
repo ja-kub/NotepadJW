@@ -161,6 +161,7 @@ button (they will be copied to Downloads folder).</p>
     - Cerere de traducere în portugheză și germană \n\n
     </string>
     <string name="whats_new_message_last">
-    - Este afișat ultimul verset introdus, care nu este ultima în text
+    - Este afișat ultimul verset introdus, care nu este ultima în text \n\n
+    - Traducerea cererii în limba franceză
     </string>
 </resources>

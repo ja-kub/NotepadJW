@@ -1,6 +1,7 @@
 package pl.bubson.notepadjw.core;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import org.jsoup.Jsoup;
@@ -91,6 +92,7 @@ public class Verse {
             mapping = BookNamesMapping.getInstance(lang);
 
             String BOOK_PATTERN = "((" + mapping.getMultiplePartNameBookWithoutLastWordPattern() + "|[1-5][^\\S\\n]*)?[\\p{Lu}\\p{Ll}]+\\.?)";
+            if (language.equals(Language.de)) BOOK_PATTERN = getGermanBookPattern();
             String MULTIPLE_CHAPTER_VERSE_PATTERN = BOOK_PATTERN + "\\s+" + CHAPTER_PATTERN + "[:,]\\s*" + VERSE_PATTERN;
             String SINGLE_CHAPTER_VERSE_PATTERN = BOOK_PATTERN + "\\s+" + VERSE_PATTERN;
             MULTIPLE_CHAPTER_LAST_VERSE_PATTERN = MULTIPLE_CHAPTER_VERSE_PATTERN + "\\s*$";
@@ -101,6 +103,13 @@ public class Verse {
         } else {
             Log.v(TAG, "setVerseLanguageIfNeeded - not needed");
         }
+    }
+
+    @NonNull
+    private static String getGermanBookPattern() {
+        // Germans use dot after numbers, e.g. "1. Kor. 1:2". But below pattern cannot be used elsewhere, because it produced ambiguity,
+        // e.g. "1. Kor. 1:1. Jana 1:2" will be showing "1. Jana 1:2" instead of "Jana 1:2"
+        return "((" + mapping.getMultiplePartNameBookWithoutLastWordPattern() + "|[1-5]\\.?[^\\S\\n]*)?[\\p{Lu}\\p{Ll}]+\\.?)";
     }
 
     private void parseDescriptor(String verseDescriptorToParse) {

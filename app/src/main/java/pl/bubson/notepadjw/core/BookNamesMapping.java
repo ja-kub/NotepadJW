@@ -1256,6 +1256,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("offenbarung", "70_BI12_.RE");
                 multipleChapterBooksMap.put("offenbar", "70_BI12_.RE");
                 multipleChapterBooksMap.put("offen", "70_BI12_.RE");
+                multipleChapterBooksMap.put("offb", "70_BI12_.RE");
                 multipleChapterBooksMap.put("off", "70_BI12_.RE");
 
                 singleChapterBooksMap.put("obadjas", "35_BI12_.OB");

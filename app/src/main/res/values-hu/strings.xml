@@ -146,6 +146,7 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
     - Translation alkalmazás portugál és német \n\n
     </string>
     <string name="whats_new_message_last">
-    - Most az utoljára beírt vers látható, nem utolsósorban a szövegben
+    - Most az utoljára beírt vers látható, nem utolsósorban a szövegben \n\n
+    - A kérelem francia nyelvre történő fordítása
     </string>
 </resources>

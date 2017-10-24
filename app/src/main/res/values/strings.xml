@@ -192,6 +192,7 @@ button (they will be copied to Downloads folder).</p>
     - Translation of the application into Portuguese and German \n\n
     </string>
     <string name="whats_new_message_last">
-    - Now last entered verse is shown, not last in the text
+    - Now last entered verse is shown, not last in the text \n\n
+    - Translation of the application into French
     </string>
 </resources>
