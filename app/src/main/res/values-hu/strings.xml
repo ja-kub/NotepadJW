@@ -143,10 +143,10 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Translation alkalmazás portugál és német \n\n
+    - Most az utoljára beírt vers látható, nem utolsósorban a szövegben \n\n
+    - A kérelem francia nyelvre történő fordítása \n\n
     </string>
     <string name="whats_new_message_last">
-    - Most az utoljára beírt vers látható, nem utolsósorban a szövegben \n\n
-    - A kérelem francia nyelvre történő fordítása
+    - Módosítások
     </string>
 </resources>

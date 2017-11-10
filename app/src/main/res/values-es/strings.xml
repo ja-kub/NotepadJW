@@ -156,10 +156,10 @@
     ]]>
     </string>
     <string name="whats_new_message_previous">
-    - Aplicación de traducción al portugués y alemán \n\n
+    - Ahora se muestra el último verso, no el último en el texto \n\n
+    - Traducción de la aplicación al francés \n\n
     </string>
     <string name="whats_new_message_last">
-    - Ahora se muestra el último verso, no el último en el texto \n\n
-    - Traducción de la aplicación al francés
+    - Enmiendas
     </string>
 </resources>
