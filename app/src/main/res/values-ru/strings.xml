@@ -1,157 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string name="action_settings">Настройки</string>
-        <string name="edit_message">Введите текст</string>
-        <string name="button_save">Импорт</string>
-        <string name="button_open">Открыть</string>
-        <string name="verse_preview">Просмотр ссылки</string>
-        <string name="ok">OK</string>
-        <string name="cancel">Отменить</string>
-        <string name="no">Нет</string>
-        <string name="yes">Да</string>
-        <string name="create_new_note_dialog_title">Введите название заметки</string>
-        <string name="note_name">Имя примечания</string>
-        <string name="creation_of_new_note_cancelled">Новая заметка не была создана</string>
-        <string name="file_name_exists">Элемент под этим именем уже существует, измените имя</string>
-        <string name="name_cannot_be_empty">Имя не может быть пустым</string>
-        <string name="creation_failed">Ошибка создания</string>
-        <string name="creation_of_new_note_succesful">Создана новая заметка</string>
-        <string name="button_rename">Переименовать выбранную заметку</string>
-        <string name="button_remove">Удалить выбранные заметки</string>
-        <string name="button_share">Поделиться выделенными заметками</string>
-        <string name="not_matching">не соответствует</string>
-        <string name="wrong_verse">- неправильный номер стиха</string>
-        <string name="button_switch_view">Вид переключения</string>
-        <string name="button_switch_edit">Кнопка редактирования</string>
-        <string name="not_one_file_selected">Были отобраны более одного элемента</string>
-        <string name="removed">Удалено</string>
-        <string name="rename_file">Переименовать элемент</string>
-        <string name="file_renamed">Элемент переименован</string>
-        <string name="file_rename_failed">Переименовать не удалось</string>
-        <string name="on_remove_dialog_title">Удалить выбранный элемент (ы)?</string>
-        <string name="remove">Удалить</string>
-        <string name="files_removed_successfully">Компоненты удалены</string>
-        <string name="files_not_removed_successfully">Некоторые заметки не были удалены</string>
-        <string name="button_new_folder">Создать новую папку</string>
-        <string name="create_new_folder_dialog_title">Создать новую папку</string>
-        <string name="folder_name">Имя папки</string>
-        <string name="folder_name_exists">Папка под этим именем уже существует, измените имя</string>
-        <string name="creation_of_new_folder_succesful">Создана новая папка</string>
-        <string name="permission_storage_not_granted">Доступ к внешнему хранилищу не предоставляется</string>
-        <string name="storage_not_writable">Хранение не доступно для записи</string>
-        <string name="temporary_file">временный файл</string>
-        <string name="cannot_save_temp">Не удается сохранить временный файл</string>
-        <string name="error_while_saving">Ошибка при сохранении файла</string>
-        <string name="file_saved">Сохраненный файл</string>
-        <string name="create_new_note_from_this_file_dialog_title">Создать новую заметку из этого файла?</string>
-        <string name="file_will_be_created_in">Примечание будет создано в папке: NotepadJW /</string>
-        <string name="downloads_folder_name">Загрузки</string>
-        <string name="file_is_too_big">Файл слишком большой!</string>
-        <string name="language_na">этот язык еще не поддерживается</string>
-        <string name="wrong_book">Неверное имя книги</string>
-        <string name="wrong_chapter">недопустимый раздел</string>
-        <string name="wrong_verse_order">- неправильная последовательность стихов</string>
-        <string name="help_title">Справка</string>
-        <string name="items">Элементы</string>
-        <string name="bytes">Байты</string>
-        <string name="uri_null">URI пуста</string>
-        <string name="cannot_open">Не удается открыть файл или содержимое</string>
-        <string name="uri_not_supported">Тип Uri не поддерживается</string>
-        <string name="not_text_file">Не текстовый файл</string>
-        <string name="changes_not_saved">Изменения не сохранены</string>
-        <string name="current_dir_is_null">Папка не существует</string>
-        <string name="show_size">Отображение размера</string>
-        <string name="show_size_summ">Показывать размер заметок и папок</string>
-        <string name="pref_file_manager_title">Менеджер заметок</string>
-        <string name="show_date">Показывать дату</string>
-        <string name="show_date_summ">Показать дату изменения заметок и папок</string>
-        <string name="parent_directory">Назад</string>
-        <string name="pref_notepad_editor_title">Блокнот</string>
-        <string name="verse_font_size">Размер шрифта стиха в ссылки</string>
-        <string name="note_font_size">Размер шрифта в тексте примечаний</string>
-        <string name="verse_font_size_summ">Изменить размер шрифта показанного стиха</string>
-        <string name="note_font_size_summ">Изменить размер шрифта заметки</string>
-        <string name="verse_font_color">Цвет ссылки</string>
-        <string name="verse_font_color_summ">Выберите цвет шрифта показанного стиха</string>
-        <string name="button_cut">Вырезать</string>
-        <string name="button_copy">Копировать</string>
-        <string name="button_paste">Вставить</string>
-        <string name="cut_to_clipboard">Вырезать в буфер обмена</string>
-        <string name="copied_to_clipboard">Скопировано в буфер обмена</string>
-        <string name="pasted_from_clipboard">Вставлено из буфера обмена</string>
-        <string name="not_all_elements_pasted">Не все элементы были вставлены</string>
-        <string name="unexpected_exception">Неожиданное исключение - пришлите мне электронное письмо с описанием</string>
-        <string name="button_sort_files">Изменить сортировку</string>
-        <string name="files_sorted_by_date">Заметки, отсортированные по дате</string>
-        <string name="files_sorted_alphabetically">Заметки отсортированы по алфавиту</string>
-        <string name="whats_new">Что нового?</string>
-        <string name="verse_language_title">Язык Библии</string>
-        <string name="verse_language_summ">Изменить язык Библии</string>
-        <string name="verse_language_dialog_title">Язык Библии</string>
-        <string name="verse_position_title">Позиция стиха</string>
-        <string name="verse_position_summ">Повторно открыть заметку, чтобы увидеть изменения</string>
-        <string name="verse_position_dialog_title">Позиция стиха</string>
-        <string name="missing_language_dialog_title">Отсутствующий язык</string>
-        <string name="missing_language_message">Загрузить и установить Библию на этом языке сейчас?</string>
-        <string name="download_description">Загрузить Библию на новом языке для Notepad JW</string>
-        <string name="download_language">Загрузка Библии на языке</string>
-        <string name="install_language">Установка Библии на языке</string>
-        <string name="in_progress">Выполняется</string>
-        <string name="finished">Готово</string>
-        <string name="unsuccessful">Неудачно</string>
-        <string name="permission_explanation_dialog_title">Внешнее хранилище</string>
-        <string name="button_undo">Отменить</string>
-        <string name="button_redo">Повторить</string>
-        <string name="button_bold">Полужирный</string>
-        <string name="button_italic">Курсив</string>
-        <string name="button_underline">Подчёркнутый</string>
-        <string name="button_bullet">Bullet</string>
-        <string name="verse_area_size_title">Доп-ая настройка верхнего поля</string>
-        <string name="verse_area_size_dialog_title">Верхнее поле</string>
-        <string name="search_title">Поиск</string>
-        <string name="search_hint">Поиск</string>
-        <string name="note">Заметка</string>
-        <string name="folder">Папка</string>
-       <string name="sent_by_notepadjw">
-   <![CDATA[
+    <string name="action_settings">Настройки</string>
+    <string name="edit_message">Введите текст</string>
+    <string name="button_save">Импорт</string>
+    <string name="button_open">Открыть</string>
+    <string name="verse_preview">Просмотр ссылки</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Отменить</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="create_new_note_dialog_title">Введите название заметки</string>
+    <string name="note_name">Имя примечания</string>
+    <string name="creation_of_new_note_cancelled">Новая заметка не была создана</string>
+    <string name="file_name_exists">Элемент под этим именем уже существует, измените имя</string>
+    <string name="name_cannot_be_empty">Имя не может быть пустым</string>
+    <string name="creation_failed">Ошибка создания</string>
+    <string name="creation_of_new_note_succesful">Создана новая заметка</string>
+    <string name="button_rename">Переименовать выбранную заметку</string>
+    <string name="button_remove">Удалить выбранные заметки</string>
+    <string name="button_share">Поделиться выделенными заметками</string>
+    <string name="not_matching">не соответствует</string>
+    <string name="wrong_verse">- неправильный номер стиха</string>
+    <string name="button_switch_view">Вид переключения</string>
+    <string name="button_switch_edit">Кнопка редактирования</string>
+    <string name="not_one_file_selected">Были отобраны более одного элемента</string>
+    <string name="removed">Удалено</string>
+    <string name="rename_file">Переименовать элемент</string>
+    <string name="file_renamed">Элемент переименован</string>
+    <string name="file_rename_failed">Переименовать не удалось</string>
+    <string name="on_remove_dialog_title">Удалить выбранный элемент (ы)?</string>
+    <string name="remove">Удалить</string>
+    <string name="files_removed_successfully">Компоненты удалены</string>
+    <string name="files_not_removed_successfully">Некоторые заметки не были удалены</string>
+    <string name="button_new_folder">Создать новую папку</string>
+    <string name="create_new_folder_dialog_title">Создать новую папку</string>
+    <string name="folder_name">Имя папки</string>
+    <string name="folder_name_exists">Папка под этим именем уже существует, измените имя</string>
+    <string name="creation_of_new_folder_succesful">Создана новая папка</string>
+    <string name="permission_storage_not_granted">Доступ к внешнему хранилищу не предоставляется</string>
+    <string name="storage_not_writable">Хранение не доступно для записи</string>
+    <string name="temporary_file">временный файл</string>
+    <string name="cannot_save_temp">Не удается сохранить временный файл</string>
+    <string name="error_while_saving">Ошибка при сохранении файла</string>
+    <string name="file_saved">Сохраненный файл</string>
+    <string name="create_new_note_from_this_file_dialog_title">Создать новую заметку из этого файла?</string>
+    <string name="file_will_be_created_in">Примечание будет создано в папке: NotepadJW /</string>
+    <string name="downloads_folder_name">Загрузки</string>
+    <string name="file_is_too_big">Файл слишком большой!</string>
+    <string name="language_na">этот язык еще не поддерживается</string>
+    <string name="wrong_book">Неверное имя книги</string>
+    <string name="wrong_chapter">недопустимый раздел</string>
+    <string name="wrong_verse_order">- неправильная последовательность стихов</string>
+    <string name="help_title">Справка</string>
+    <string name="items">Элементы</string>
+    <string name="bytes">Байты</string>
+    <string name="uri_null">URI пуста</string>
+    <string name="cannot_open">Не удается открыть файл или содержимое</string>
+    <string name="uri_not_supported">Тип Uri не поддерживается</string>
+    <string name="not_text_file">Не текстовый файл</string>
+    <string name="changes_not_saved">Изменения не сохранены</string>
+    <string name="current_dir_is_null">Папка не существует</string>
+    <string name="show_size">Отображение размера</string>
+    <string name="show_size_summ">Показывать размер заметок и папок</string>
+    <string name="pref_file_manager_title">Менеджер заметок</string>
+    <string name="show_date">Показывать дату</string>
+    <string name="show_date_summ">Показать дату изменения заметок и папок</string>
+    <string name="parent_directory">Назад</string>
+    <string name="pref_notepad_editor_title">Блокнот</string>
+    <string name="verse_font_size">Размер шрифта стиха в ссылки</string>
+    <string name="note_font_size">Размер шрифта в тексте примечаний</string>
+    <string name="verse_font_size_summ">Изменить размер шрифта показанного стиха</string>
+    <string name="note_font_size_summ">Изменить размер шрифта заметки</string>
+    <string name="verse_font_color">Цвет ссылки</string>
+    <string name="verse_font_color_summ">Выберите цвет шрифта показанного стиха</string>
+    <string name="button_cut">Вырезать</string>
+    <string name="button_copy">Копировать</string>
+    <string name="button_paste">Вставить</string>
+    <string name="cut_to_clipboard">Вырезать в буфер обмена</string>
+    <string name="copied_to_clipboard">Скопировано в буфер обмена</string>
+    <string name="pasted_from_clipboard">Вставлено из буфера обмена</string>
+    <string name="not_all_elements_pasted">Не все элементы были вставлены</string>
+    <string name="unexpected_exception">Неожиданное исключение - пришлите мне электронное письмо с описанием</string>
+    <string name="button_sort_files">Изменить сортировку</string>
+    <string name="files_sorted_by_date">Заметки, отсортированные по дате</string>
+    <string name="files_sorted_alphabetically">Заметки отсортированы по алфавиту</string>
+    <string name="whats_new">Что нового?</string>
+    <string name="verse_language_title">Язык Библии</string>
+    <string name="verse_language_summ">Изменить язык Библии</string>
+    <string name="verse_language_dialog_title">Язык Библии</string>
+    <string name="verse_position_title">Позиция стиха</string>
+    <string name="verse_position_summ">Повторно открыть заметку, чтобы увидеть изменения</string>
+    <string name="verse_position_dialog_title">Позиция стиха</string>
+    <string name="missing_language_dialog_title">Отсутствующий язык</string>
+    <string name="missing_language_message">Вы действительно хотите загрузить Библию на этом языке?</string>
+    <string name="download_description">Идёт загрузка Библию на новом языке для Notepad JW</string>
+    <string name="download_language">Загрузка Библии </string>
+    <string name="install_language">Установка Библии </string>
+    <string name="in_progress">Выполняется</string>
+    <string name="finished">Готово</string>
+    <string name="unsuccessful">Неудачно</string>
+    <string name="permission_explanation_dialog_title">Внешнее хранилище</string>
+    <string name="button_undo">Отменить</string>
+    <string name="button_redo">Повторить</string>
+    <string name="button_bold">Полужирный</string>
+    <string name="button_italic">Курсив</string>
+    <string name="button_underline">Подчёркнутый</string>
+    <string name="button_bullet">Bullet</string>
+    <string name="verse_area_size_title">Настройка верхнего поля</string>
+    <string name="verse_area_size_dialog_title">Верхнее поле</string>
+    <string name="search_title">Поиск</string>
+    <string name="search_hint">Поиск</string>
+    <string name="note">Заметка</string>
+    <string name="folder">Папка</string>
+    <string name="sent_by_notepadjw">
+    <![CDATA[
    <p>Заметки, отправленные из<B>Notepad JW</B>- менеджер заметок и редактор с живым просмотром введенных стихов.</p>
    <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
-        ]]>
-   </string>
-   <string name="help_text_html">
-   <![CDATA[
+    ]]>
+  </string>
+    <string name="help_text_html">
+    <![CDATA[
 <H3>Информация</H3>
-<P>Текст всех стихов из Нового Света Перевод Священного Писания
+<P>Библия "Перевод нового мира"
 (Copyright: Общество Сторожевой Башни).</P>
 <H3>Зачем использовать NotepadJW?</H3>
-<P>Написание заметок на собраниях и встречах </P>
+<P>Делать заметки во время встречи, удобно составлять речи </P>
 <H3>Возможности</H3>
-<P>Это приложение состоит из двух видов деятельности:
-<br><b>Менеджер заметок</b>и<b>Блокнот</b>.
-<br>В<b>Менеджере заметок</b>вы можете создавать новые заметки, открывать их и создавать новые папки.
-<br>Вы можете выбрать элементы по длительному щелчку, а затем: переименовать, удалить или отправить, вырезать, скопировать и вставить.
-<br>В<b>Редактор блокнот</b>вы можете переключаться между<i>Режим редактирования</i>и<i>Pежим предпросмотра</i>. В первом:
-Последний введенный стих будет отображаться, а во втором вы можете щелкнуть ссылки, созданные из стихов Для просмотра выбранного.
-<br><b>примечания</b>сохраняются во внешнем хранилище в папке: Documents / NotepadJW.
-Вы можете получить к ним доступ с нашего ПК.</P>
+<b>Пользоваться приложением NotepadJW очень просто. Вы можете легко создать папку и файл. К примеру вы создали папку с названием собрание, в этой папке вы создаёти файл, например с темой речи, затем в нём вы можете писать. Это удобно, тогда вам будет легко находить то что вам нужно. 
+Вы можете переименовать, удалить, скопировать и отправить файл или папку, просто удержав палец на них.
+Когда вы находитесь в самом блокноте, вы можете делать в нём свои заметки. Главный плюс приложения в том, что когда вы пишите название книги Библии, у вас появляется в окне сам стих. А если вы находитесь в просмотре заметки ( чтобы перейти в этот режим нужно нажать на лупу которая находится вверху справа, а если вы вошли в заметку которая была написанная ранее, то режим просмотра будет открыт автоматически ), вы можете с лёгкость нажать на стих который вы написали, он будет выделен синим текстом. Самое главное писать название книги Библии без ошибок, вот пример: Быт 2:3, а если несколько стихов то так: Быт 2:3-5.... 
+Если вы случайно что то удалили, то это можно вернуть нажав на кнопку "Назад".
+Все ваши заметки находятся в папке NotepadJW</b>
+Вы можете получить к ним доступ с вашего ПК.</P>
 <H3>Автор</H3>
 <P>Jakub Tomala.
-<br>Вопросы, ошибки, улучшения? Написать письмо: tomala.kuba@gmail.com
+<br>Вопросы? ошибки? улучшения? Написать письмо: tomala.kuba@gmail.com
     ]]>
+  </string>
+    <string name="permission_explanation_dialog_message">
+    На следующем экране вам будет задан вопрос о доступе к внешнему хранилищу.
+    Если вы разрешите, Notepad JW сохранять заметки на внешнем хранилище (в папке Documents ->NotepadJW).
+    Таким образом, у вас будет доступ к этим заметкам из других приложений.
+    (приложение Notepad JW не читает и не изменяет какие-либо файлы вне папки NotepadJW).
+    Если вы откажетесь, Notepad JW сохранит заметки во внутреннем хранилище,
+    к которым другие приложения и ваш компьютер не имеют доступа.
    </string>
-   <string name="permission_explanation_dialog_message">
-        На следующем экране вам будет задан вопрос о доступе к внешнему хранилищу.
-        Если вы разрешите, Notepad JW сохранит заметки на внешнем хранилище (в папке Documents ->NotepadJW).
-        Таким образом, у вас будет доступ к этим заметкам из других приложений и с ПК для вашего удобства
-        (приложение Notepad JW не читает и не изменяет какие-либо файлы вне папки NotepadJW).
-        Если вы откажетесь, Notepad JW сохранит заметки во внутреннем хранилище,
-        к которым другие приложения и ваш компьютер не имеют доступа.
-   </string>
-   <string name="whats_new_message_previous">
+    <string name="whats_new_message_previous">
     - Теперь последний введенный стих показан, не последний в тексте \n\n
-    - Перевод заявки на французский язык \n\n
+    - Улучшен перевод на французский язык \n\n
    </string>
-   <string name="whats_new_message_last">
+    <string name="whats_new_message_last">
     - Поправки
    </string>
 </resources>
