@@ -143,10 +143,9 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Most az utoljára beírt vers látható, nem utolsósorban a szövegben \n\n
-    - A kérelem francia nyelvre történő fordítása \n\n
+    - Módosítások \n\n
     </string>
     <string name="whats_new_message_last">
-    - Módosítások
+    - Szentírás – Új világ fordítás (2017-es átdolgozás)
     </string>
 </resources>

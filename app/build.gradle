@@ -9,8 +9,8 @@ android {
         applicationId "pl.bubson.notepadjw"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 33
-        versionName "1.29"
+        versionCode 34
+        versionName "1.30"
     }
     buildTypes {
         release {

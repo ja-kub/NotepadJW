@@ -158,8 +158,6 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
          ne pas avoir accès.
    </string>
    <string name="whats_new_message_previous">
-    - Le dernier verset entré est affiché, pas le dernier dans le texte \n\n
-    - Traduction de l\'application en français \n\n
    </string>
    <string name="whats_new_message_last">
     - Amendements
