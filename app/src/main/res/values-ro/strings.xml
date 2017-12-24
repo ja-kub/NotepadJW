@@ -145,21 +145,21 @@ email attachments, bluetooth files etc. You can import them to NotepadJW workspa
 button (they will be copied to Downloads folder).</p>
 <h3>Author</h3>
 <p>Jakub Tomala (coding, layouts).
-<br>Questions, bugs, improvements? Write an email to: tomala.kuba@gmail.com
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
-        In the next screen you will be asked about access to external storage. If you Allow,
-        Notepad JW will save notes to external storage (in folder Documents -> NotepadJW).
-        Thereby you would have access to these notes from other apps and from PC for your
-        convenience (Notepad JW app does not read or modify any files outside of
-        NotepadJW folder).
-        If you Deny, Notepad JW will save notes to internal storage, to which other apps and your PC
-        don\'t have access.
+         În ecranul următor veți fi întrebat despre accesul la spațiul de stocare extern. Dacă permiteți,
+         Notepad JW va salva notițele în memoria externă (în folderul Documents -> NotepadJW).
+         Prin urmare, veți avea acces la aceste note din alte aplicații și din PC pentru dvs
+         comoditate (aplicația Notepad JW nu citește sau modifică niciun fișier în afara
+         Dosarul NotepadJW).
+         Dacă dați, Notepad JW va salva notițele la spațiul de stocare intern, la alte aplicații și PC-ul dvs
+         nu au acces.
     </string>
     <string name="whats_new_message_previous">
+    - Amendamente \n\n
     </string>
     <string name="whats_new_message_last">
-    - Amendamente
+    - Sa adăugat o Biblie italiană și o traducere italiană a cererii
     </string>
 </resources>

@@ -145,7 +145,6 @@ pièces jointes, fichiers bluetooth, etc. Vous pouvez les importer dans l\'espac
 bouton (ils seront copiés dans le dossier Téléchargements).</p>
 <h3>Auteur</h3>
 <p>Jakub Tomala (codage, mises en page).
-<br>Des questions, des bugs, des améliorations? Write an email to: tomala.kuba@gmail.com
     ]]>
    </string>
    <string name="permission_explanation_dialog_message">
@@ -158,8 +157,9 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
          ne pas avoir accès.
    </string>
    <string name="whats_new_message_previous">
+    - Amendements \n\n
    </string>
    <string name="whats_new_message_last">
-    - Amendements
+    - Une Bible en italien et une traduction en italien de l\'application ont été ajoutées
    </string>
 </resources>

@@ -134,7 +134,6 @@ Itt elérheted őket PC-ről is. Tehát átnevezheted, törölheted, mozgathatod
 A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmented a változtatásokat, a txt importálva lesz az alkalamazásba (a fájl a Downloads mappába kerül)</p>
 <h3>Fejlesztő</h3>
 <p>Jakub Tomala (programozás, tervezés).
-<br>Ha kérdésed van, hibát vettél észre, vagy van egy jó ötleted a továbbfejlesztésre, írj a tomala.kuba@gmail.com emial címre :-)
     ]]></string>
     <string name="permission_explanation_dialog_message">
         Nemsokára megjelenik egy ablak, ami engedélyt fog kérni a külső tároló eléréséhez. Ha ezt engedélyezed, a
@@ -143,9 +142,9 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Módosítások \n\n
+    - Szentírás – Új világ fordítás (2017-es átdolgozás) \n\n
     </string>
     <string name="whats_new_message_last">
-    - Szentírás – Új világ fordítás (2017-es átdolgozás)
+    - Egy olasz bibliát és egy olasz fordítást csatoltak a kérelemhez
     </string>
 </resources>

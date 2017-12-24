@@ -152,12 +152,12 @@
     (Se copiarán en la carpeta Descargas).</p>
     <h3>Autor</h3>
     <p>Jakub Tomala (codificación, diseños).
-    <br>Preguntas, errores, mejoras? Escriba un correo electrónico a: tomala.kuba@gmail.com</p>
     ]]>
     </string>
     <string name="whats_new_message_previous">
+    - Enmiendas \n\n
     </string>
     <string name="whats_new_message_last">
-    - Enmiendas
+    - Se ha agregado una Biblia italiana y una traducción al italiano de la aplicación
     </string>
 </resources>

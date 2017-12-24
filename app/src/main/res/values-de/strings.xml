@@ -145,7 +145,6 @@
         (Sie werden in den Ordner "Downloads" kopiert).</p>
     <h3>Autor</h3>
     <p>Jakub Tomala (Codierung, Layouts).
-    <br>Fragen, Bugs, Verbesserungen? Schreiben Sie eine E-Mail an: tomala.kuba@gmail.com
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
@@ -158,8 +157,9 @@
         Ich habe keinen Zugang.
     </string>
     <string name="whats_new_message_previous">
+    - Änderungen \n\n
     </string>
     <string name="whats_new_message_last">
-    - Änderungen
+    - Eine italienische Bibel und eine italienische Übersetzung der Anwendung wurden hinzugefügt
     </string>
 </resources>

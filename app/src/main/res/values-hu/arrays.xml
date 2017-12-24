@@ -29,6 +29,7 @@
         <item>Lengyel</item>
         <item>Magyar</item>
         <item>Német</item>
+        <item>Olasz</item>
         <item>Orosz</item>
         <item>Portugál</item>
         <item>Román</item>
@@ -41,6 +42,7 @@
         <item>@string/polish_language</item>
         <item>@string/hungarian_language</item>
         <item>@string/german_language</item>
+        <item>@string/italian_language</item>
         <item>@string/russian_language</item>
         <item>@string/portuguese_language</item>
         <item>@string/romanian_language</item>

@@ -94,9 +94,7 @@ plików, bezpośrednio z załączników mailowych czy też z plików przesłanyc
 w edytorze NotepadJW, możesz je zaimportować do NotepadJW klikając przycisk Zapisz (zostaną
 wówczas umieszczone w folderze Pobrane).</p>
 <h3>Autor aplikacji</h3>
-<p>Jakub Tomala (programowanie, układ graficzny).
-<br>Masz pytanie, znalazłeś błąd lub masz propozycję jak poprawić tę aplikację? Napisz do mnie: tomala.kuba@gmail.com
-<br>Specjalne podziękowania za zaprojektowanie ikonki startowej dla Bartka Szurmy :)</p>
+<p>Jakub Tomala.
     ]]>
     </string>
     <string name="current_dir_is_null">Folder nie istnieje</string>
@@ -162,9 +160,9 @@ wówczas umieszczone w folderze Pobrane).</p>
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-    - Poprawki w niemieckim tłumaczeniu \n\n
+    - Zrewidowana Biblia w języku węgierskim (2017) \n\n
     </string>
     <string name="whats_new_message_last">
-    - Zrewidowana Biblia w języku węgierskim (2017)
+    - Dodano włoską Biblię i włoskie tłumaczenie aplikacji
     </string>
 </resources>

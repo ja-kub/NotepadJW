@@ -2,10 +2,10 @@
 <resources>
 
     <string-array name="font_size_entries">
-        <item>Petit </item>
-        <item>Moyen</item>
-        <item>Grand</item>
-        <item>Très grand</item>
+        <item>Piccolo</item>
+        <item>Medio</item>
+        <item>Grande</item>
+        <item>Molto Grande</item>
     </string-array>
     <string-array name="font_size_values">
         <item>@string/font_size_small</item>
@@ -15,8 +15,8 @@
     </string-array>
 
     <string-array name="verse_position_entries">
-        <item>En haut</item>
-        <item>Sur la droite</item>
+        <item>In cima</item>
+        <item>Sulla destra</item>
     </string-array>
     <string-array name="verse_position_values">
         <item>@string/verse_position_top</item>
@@ -24,35 +24,35 @@
     </string-array>
 
     <string-array name="verse_language_entries">
-        <item>Allemand</item>
-        <item>Anglais</item>
-        <item>Espanol</item>
-        <item>Français</item>
-        <item>Hongrois</item>
-        <item>Italien</item>
-        <item>Polonais</item>
-        <item>Portugais</item>
-        <item>Roumain</item>
-        <item>Russe</item>
+        <item>Francese</item>
+        <item>Inglese</item>
+        <item>Italiano</item>
+        <item>Polacco</item>
+        <item>Portoghese</item>
+        <item>Rumeno</item>
+        <item>Russo</item>
+        <item>Spagnolo</item>
         <item>Tagalog</item>
+        <item>Tedesco</item>
+        <item>Ungherese</item>
     </string-array>
     <string-array name="verse_language_values">
-        <item>@string/german_language</item>
-        <item>@string/english_language</item>
-        <item>@string/spanish_language</item>
         <item>@string/french_language</item>
-        <item>@string/hungarian_language</item>
+        <item>@string/english_language</item>
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
+        <item>@string/spanish_language</item>
         <item>@string/tagalog_language</item>
+        <item>@string/german_language</item>
+        <item>@string/hungarian_language</item>
     </string-array>
 
     <string-array name="verse_area_size_entries">
-        <item>Ajustement automatique</item>
-        <item>Modifiable en déplaçant le bord inférieur</item>
+        <item>Adattamento automatico</item>
+        <item>Modificabile spostando il bordo inferiore</item>
     </string-array>
     <string-array name="verse_area_size_values">
         <item>@string/verse_area_size_auto</item>

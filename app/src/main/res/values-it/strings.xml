@@ -1,0 +1,165 @@
+<resources>
+    <string name="action_settings">Impostazioni</string>
+    <string name="edit_message">Inserisci un testo</string>
+    <string name="button_save">Importa</string>
+    <string name="button_open">Apri</string>
+    <string name="verse_preview">Anteprima di versi</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="create_new_note_dialog_title">Inserisci il nome della nota</string>
+    <string name="note_name">Nome nota</string>
+    <string name="creation_of_new_note_cancelled">Nuova nota wasn non creata</string>
+    <string name="file_name_exists">L\'elemento con questo nome esiste già, cambia nome</string>
+    <string name="name_cannot_be_empty">Il nome non può essere vuoto</string>
+    <string name="creation_failed">Creazione fallita</string>
+    <string name="creation_of_new_note_succesful">Nuova nota creata</string>
+    <string name="button_rename">Rinomina nota selezionata</string>
+    <string name="button_remove">Rimuovi le note selezionate</string>
+    <string name="button_share">Condividi le note selezionate</string>
+    <string name="not_matching">non corrispondente a</string>
+    <string name="wrong_verse">- numero di versi errato</string>
+    <string name="button_switch_view">Cambia visualizzazione</string>
+    <string name="button_switch_edit">pulsante Modifica</string>
+    <string name="not_one_file_selected">Non una nota selezionata</string>
+    <string name="removed">Removed</string>
+    <string name="rename_file">Rinomina elemento</string>
+    <string name="file_renamed">Elemento rinominato</string>
+    <string name="file_rename_failed">Rinomina fallita</string>
+    <string name="on_remove_dialog_title">Rimuovi elementi selezionati?</string>
+    <string name="remove">Remove</string>
+    <string name="files_removed_successfully">I file sono stati cancellati</string>
+    <string name="files_not_removed_successfully">Alcune note non sono state rimosse</string>
+    <string name="button_new_folder">Crea nuova cartella</string>
+    <string name="create_new_folder_dialog_title">Crea nuova cartella</string>
+    <string name="folder_name">Nome cartella</string>
+    <string name="folder_name_exists">La cartella con questo nome esiste già, cambia nome</string>
+    <string name="creation_of_new_folder_succesful">Nuova cartella creata</string>
+    <string name="permission_storage_not_granted">Accesso a storage esterno non concesso</string>
+    <string name="storage_not_writable">Archiviazione non modificabile</string>
+    <string name="temporary_file">file temporaneo</string>
+    <string name="cannot_save_temp">Impossibile salvare il file temporaneo</string>
+    <string name="error_while_saving">Errore durante il salvataggio del file</string>
+    <string name="file_saved">File salvato</string>
+    <string name="create_new_note_from_this_file_dialog_title">Crea una nuova nota da questo file?</string>
+    <string name="file_will_be_created_in">La nota verrà creata nella cartella: NotepadJW /</string>
+    <string name="downloads_folder_name">download</string>
+    <string name="file_is_too_big">Il file è troppo grande!</string>
+    <string name="language_na">questa lingua non è ancora supportata</string>
+    <string name="wrong_book">Nome del libro errato</string>
+    <string name="wrong_chapter">Capitolo errato</string>
+    <string name="wrong_verse_order">- Ordine dei versi errato</string>
+    <string name="help_title">Guida</string>
+    <string name="items">Items</string>
+    <string name="bytes">byte</string>
+    <string name="uri_null">L\'URI analizzato è null</string>
+    <string name="cannot_open">Impossibile aprire il file o il contenuto</string>
+    <string name="uri_not_supported">tipo Uri non supportato</string>
+    <string name="not_text_file">Non è un file di testo</string>
+    <string name="changes_not_saved">Changes not saved</string>
+    <string name="current_dir_is_null">La directory corrente è null</string>
+    <string name="show_size">dimensioni mostrate</string>
+    <string name="show_size_summ">Mostra la dimensione di note e cartelle</string>
+    <string name="pref_file_manager_title">Notes Manager</string>
+    <string name="show_date">Visualizzazione della data</string>
+    <string name="show_date_summ">Mostra la data di modifica di note e cartelle</string>
+    <string name="parent_directory">directory padre</string>
+    <string name="pref_notepad_editor_title">Notepad Editor</string>
+    <string name="verse_font_size">Verse font</string>
+    <string name="note_font_size">nota dimensione carattere</string>
+    <string name="verse_font_size_summ">Cambia la dimensione del font del verso mostrato</string>
+    <string name="note_font_size_summ">Modifica la dimensione del carattere della nota</string>
+    <string name="verse_font_color">Verse color</string>
+    <string name="verse_font_color_summ">Scegli il colore del font del verso mostrato</string>
+    <string name="button_cut">Taglia</string>
+    <string name="button_copy">Copia</string>
+    <string name="button_paste">Incolla</string>
+    <string name="cut_to_clipboard">Taglia negli appunti</string>
+    <string name="copied_to_clipboard">Copia negli appunti</string>
+    <string name="pasted_from_clipboard">Incollato dagli appunti</string>
+    <string name="not_all_elements_pasted">Non tutti gli elementi incollati</string>
+    <string name="unexpected_exception">Eccezione imprevista: inviami una email descrivendola</string>
+    <string name="button_sort_files">Modifica ordinamento</string>
+    <string name="files_sorted_by_date">Notes ordinati per data</string>
+    <string name="files_sorted_alphabetically">Notes ordinati alfabeticamente</string>
+    <string name="whats_new">Cosa c\'è di nuovo?</string>
+    <string name="verse_language_title">Lingua del verso</string>
+    <string name="verse_language_summ">Change Verse Language</string>
+    <string name="verse_language_dialog_title">Lingua del verso</string>
+    <string name="verse_position_title">Verse Position</string>
+    <string name="verse_position_summ">Riapri nota per vedere le modifiche</string>
+    <string name="verse_position_dialog_title">Verse Position</string>
+    <string name="missing_language_dialog_title">Lingua mancante</string>
+    <string name="missing_language_message">Scarica e installa la Bibbia in questa lingua ora?</string>
+    <string name="download_description">Scarica Bible in new language per Blocco note JW</string>
+    <string name="download_language">Download della Bibbia nella lingua</string>
+    <string name="install_language">Installazione Bible in lingua</string>
+    <string name="in_progress">In corso</string>
+    <string name="finished">Finito</string>
+    <string name="unsuccessful">Unsuccessful</string>
+    <string name="permission_explanation_dialog_title">Autorizzazione di archiviazione esterna</string>
+    <string name="button_undo">Annulla</string>
+    <string name="button_redo">Ripristina</string>
+    <string name="button_bold">Bold</string>
+    <string name="button_italic">Italic</string>
+    <string name="button_underline">Sottolineato</string>
+    <string name="button_bullet">Bullet</string>
+    <string name="verse_area_size_title">Dimensione area verso</string>
+    <string name="verse_area_size_dialog_title">Dimensione area verso</string>
+    <string name="search_title">Cerca</string>
+    <string name="search_hint">Cerca</string>
+    <string name="note">Nota</string>
+    <string name="folder">Folder</string>
+    <string name="sent_by_notepadjw">
+ <![CDATA[
+ <p>Note inviate da <B>Blocco note JW</B>- note gestore ed editor con visualizzazione live dei versetti inseriti.</p>
+ <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
+  ]]>
+   </string>
+    <string name="help_text_html">
+ <![CDATA[
+<h3>Informazioni</h3>
+<p>Il testo di tutti i versi è tratto dalla Traduzione del Nuovo Mondo delle Sacre Scritture
+(Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
+<h3>Perché usare NotepadJW?</h3>
+<p>Questa applicazione è stata creata perché non è stata trovata alcuna altra app che sarebbe stata in grado di mostrare
+versi in tempo reale mentre si modifica una nota. Quindi è utile per prendere appunti durante
+riunioni e congressi - non è più necessario cambiare le applicazioni o cercare la Bibbia di carta
+per vedere il testo in versi, viene visualizzato nella stessa finestra dell\'editor. Come questa applicazione è in grado di
+mostra tutti i versi sotto i link in modalità di visualizzazione, potrebbe essere utilizzato anche per i discorsi sul podio e altri
+compiti durante le riunioni. Questa app ha anche l\'opzione di condivisione, quindi puoi usarla anche per prendere appunti
+durante il ministero e inviarli ad altri predicatori.</p>
+<h3>Abilità</h3>
+<p>Questa applicazione consiste di due attività:
+<br><b>Notes Manager</b>e <b>Editor del blocco note</b>.
+<br>In <b>Notes Manager</b>puoi creare nuove note, aprirle e creare nuove cartelle.
+<br>È possibile selezionare gli elementi facendo clic lungo e quindi: rinomina, elimina o invia (le opzioni di taglio, copia e incolla verranno aggiunte a breve).
+<br>In <b>Editor del blocco note</b>puoi passare da <i>modalità di modifica</i>a <i>modalità di visualizzazione</i>. Nel primo,
+verrà visualizzato l\'ultimo versetto inserito e nel secondo è possibile fare clic sui collegamenti creati dai versi
+per vedere quello selezionato.
+<br><b>Note</b>vengono salvate nella memoria esterna sotto i file txt in posizione: Documenti / NotepadJW.
+Puoi accedervi dal nostro PC. Significa che puoi rinominarli, eliminare, spostare o aggiungere nuovi file txt
+dal tuo computer. Puoi anche aprire i file txt da altre app sul tuo dispositivo, come da esploratori di file,
+allegati e-mail, file bluetooth ecc. È possibile importarli nell\'area di lavoro NotepadJW facendo clic su Salva
+pulsante (saranno copiati nella cartella Download).</p>
+<h3>Autore</h3>
+<p>Jakub Tomala (codifica, layout).
+ ]]>
+   </string>
+    <string name="permission_explanation_dialog_message">
+   Nella schermata successiva ti verrà chiesto l\'accesso alla memoria esterna. Se permetti,
+   Blocco note JW salverà le note su una memoria esterna (nella cartella Documenti -> NotepadJW).
+   In tal modo avresti accesso a queste note da altre app e da PC per il tuo
+   convenienza (l\'app Notepad JW non legge o modifica alcun file al di fuori di esso
+   Cartella NotepadJW).
+   Se neghi, Blocco note JW salverà le note nella memoria interna, a cui altre app e il tuo PC
+   non ho accesso
+   </string>
+    <string name="whats_new_message_previous">
+    - Correzione nella traduzione tedesca \n\n
+   </string>
+    <string name="whats_new_message_last">
+    - Sono stati aggiunti una Bibbia italiana e una traduzione italiana dell\'applicazione
+   </string>
+</resources>

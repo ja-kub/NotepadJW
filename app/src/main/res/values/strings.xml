@@ -24,6 +24,7 @@
     <string name="russian_language" translatable="false">ru</string>
     <string name="german_language" translatable="false">de</string>
     <string name="portuguese_language" translatable="false">pt</string>
+    <string name="italian_language" translatable="false">it</string>
     <string name="verse_position_key" translatable="false">versePosition</string>
     <string name="verse_position_top" translatable="false">top</string>
     <string name="verse_position_right" translatable="false">right</string>
@@ -176,7 +177,6 @@ email attachments, bluetooth files etc. You can import them to NotepadJW workspa
 button (they will be copied to Downloads folder).</p>
 <h3>Author</h3>
 <p>Jakub Tomala (coding, layouts).
-<br>Questions, bugs, improvements? Write an email to: tomala.kuba@gmail.com
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
@@ -189,10 +189,9 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Now last entered verse is shown, not last in the text \n\n
-    - Translation of the application into French \n\n
+    - Revised Hungarian Bible (2017) \n\n
     </string>
     <string name="whats_new_message_last">
-    - Fix in German translation
+    - An Italian Bible and an Italian translation of the application have been added
     </string>
 </resources>
