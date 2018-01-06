@@ -142,9 +142,8 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Szentírás – Új világ fordítás (2017-es átdolgozás) \n\n
+    - Egy olasz bibliát és egy olasz fordítást csatoltak a kérelemhez \n\n
     </string>
     <string name="whats_new_message_last">
-    - Egy olasz bibliát és egy olasz fordítást csatoltak a kérelemhez
     </string>
 </resources>

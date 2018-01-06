@@ -30,7 +30,8 @@
         <item>Hungarian</item>
         <item>Italian</item>
         <item>Polish</item>
-        <item>Portuguese</item>
+        <item>Portuguese (Brazil)</item>
+        <item>Portuguese (Portugal)</item>
         <item>Romanian</item>
         <item>Russian</item>
         <item>Spanish</item>
@@ -44,6 +45,7 @@
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>
+        <item>@string/portuguese_european_language</item>
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
         <item>@string/spanish_language</item>

@@ -29,7 +29,8 @@
         <item>Hiszpański</item>
         <item>Niemiecki</item>
         <item>Polski</item>
-        <item>Portugalski</item>
+        <item>Portugalski (Brazylijski)</item>
+        <item>Portugalski (Portugalski)</item>
         <item>Rosyjski</item>
         <item>Rumuński</item>
         <item>Tagalski</item>
@@ -43,6 +44,7 @@
         <item>@string/german_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>
+        <item>@string/portuguese_european_language</item>
         <item>@string/russian_language</item>
         <item>@string/romanian_language</item>
         <item>@string/tagalog_language</item>

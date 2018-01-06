@@ -24,6 +24,7 @@
     <string name="russian_language" translatable="false">ru</string>
     <string name="german_language" translatable="false">de</string>
     <string name="portuguese_language" translatable="false">pt</string>
+    <string name="portuguese_european_language" translatable="false">pte</string>
     <string name="italian_language" translatable="false">it</string>
     <string name="verse_position_key" translatable="false">versePosition</string>
     <string name="verse_position_top" translatable="false">top</string>
@@ -189,9 +190,9 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - Revised Hungarian Bible (2017) \n\n
+    - An Italian Bible and an Italian translation of the application have been added \n\n
     </string>
     <string name="whats_new_message_last">
-    - An Italian Bible and an Italian translation of the application have been added
+    - Added Portugal-Portugal Bible
     </string>
 </resources>

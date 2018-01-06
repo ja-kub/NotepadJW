@@ -31,7 +31,8 @@
         <item>Inglês</item>
         <item>Italiano</item>
         <item>Polonês</item>
-        <item>Português</item>
+        <item>Português (Brasil)</item>
+        <item>Português (Portugal)</item>
         <item>Romeno</item>
         <item>Russo</item>
         <item>Tagalog</item>
@@ -45,6 +46,7 @@
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>
+        <item>@string/portuguese_european_language</item>
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
         <item>@string/tagalog_language</item>
