@@ -865,7 +865,7 @@ public class FileManagerActivity extends AppCompatActivity {
             // this is to get back here immediately after closing sender activity
             shareIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-            shareIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.sent_by_notepadjw))); // commercial ;)
+            shareIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.sent_by_notepadjw))); // commercial ;) but doesn't work with WhatsApp :(
             shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             if (selectedItemList.size() == 1) {
                 File file = new File(selectedItemList.get(0).getPath());

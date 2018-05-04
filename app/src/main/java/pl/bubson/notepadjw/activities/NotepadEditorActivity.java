@@ -56,6 +56,10 @@ import pl.bubson.notepadjw.utils.Language;
 import pl.bubson.notepadjw.utils.Permissions;
 import pl.bubson.notepadjw.utils.SpanToHtmlConverter;
 
+import static pl.bubson.notepadjw.activities.NotepadEditorActivity.Mode.EDIT;
+import static pl.bubson.notepadjw.activities.NotepadEditorActivity.Mode.UNSET;
+import static pl.bubson.notepadjw.activities.NotepadEditorActivity.Mode.VIEW;
+
 public class NotepadEditorActivity extends AppCompatActivity {
 
     public static final double MINIMUM_VERSE_HEIGHT_PROPORTION = 0.05;
@@ -68,6 +72,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     private static final String VERSE_AREA_SIZE_EDIT_MODE_KEY = "verseAreaSizeEditMode";
     private static final String VERSE_AREA_SIZE_VIEW_MODE_KEY = "verseAreaSizeViewMode";
     private static int screenHeight;
+    private int cursorPosition;
     private Language versesLanguage;
     private Context activityContext = this;
     private RichSelectableEditText noteEditText;
@@ -107,7 +112,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     };
     private HyperlinkVerseTextView noteTextView;
     private ViewFlipper viewFlipper;
-    private boolean currentModeIsEditable;
+    private Mode currentMode, savedMode;
     private File currentFile;
     private String htmlTextInFile;
     private HyperlinkVerseTextView.OnLinkClickListener linkClickListener = new HyperlinkVerseTextView.OnLinkClickListener() {
@@ -131,25 +136,21 @@ public class NotepadEditorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
-
-    private void prepareDatabase() {
-        Intent installLanguageServiceIntent = new Intent(this, InstallLanguageService.class);
-        startService(installLanguageServiceIntent); // Intent without data will pre-install db if needed
+        prepareDatabase(); // with preload of example verse
+        forceVisibilityOfThreeDotsInMenuBar();
+        savedMode = UNSET;
     }
 
     @Override
-    protected void onStart() {
+    protected void onStart() { // executed e.g. on back from Settings or when screen was switched on
         super.onStart();
-        prepareDatabase(); // with preload of example verse
-        setScreenHeight();
+        setScreenHeight(); // might be changed in Settings - should be in onStart
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-        setLayout();
-        forceVisibilityOfThreeDotsInMenuBar();
+        setLayout(); // might be changed in Settings - should be in onStart
 
         // Flipper to change layouts
-        viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
-        currentModeIsEditable = true; // because first view in ViewFlipper contains EditText
+        viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper); // below line is connected with this
+        currentMode = EDIT; // because first view (when ViewFlipper is created) contains EditText
 
         // Edit layout
         noteEditText = (RichSelectableEditText) findViewById(R.id.edit_text);
@@ -172,6 +173,29 @@ public class NotepadEditorActivity extends AppCompatActivity {
         setVerseAreaSizing();
         setVersesLanguage();
         openFileFromIntent();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setFontSizes();
+        setFontColors();
+        noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage); // to refresh verses language
+        if (currentMode.equals(EDIT)) restoreCursorPositionInEditMode();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        cursorPosition = noteEditText.getSelectionStart();
+        savedMode = currentMode;
+        saveDocumentIfChanged();
+        saveVerseAreaSizeIfItsChangeable();
+    }
+
+    private void prepareDatabase() {
+        Intent installLanguageServiceIntent = new Intent(this, InstallLanguageService.class);
+        startService(installLanguageServiceIntent); // Intent without data will pre-install db if needed
     }
 
     private void setScreenHeight() {
@@ -241,13 +265,6 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        saveDocumentIfChanged();
-        saveVerseAreaSizeIfItsChangeable();
-    }
-
     private void saveVerseAreaSizeIfItsChangeable() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(activityContext);
         String sizeKey = activityContext.getResources().getString(R.string.verse_area_size_key);
@@ -261,14 +278,14 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-//        setLayout();
-        setFontSizes();
-        setFontColors();
-        setVersesLanguage();
-        noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage); // to refresh verses language
+    private void restoreCursorPositionInEditMode() {
+        try {
+            noteEditText.requestFocus();
+            noteEditText.setSelection(cursorPosition);
+            noteEditText.showSoftInput();
+        } catch (Exception unexpectedException) {
+            Toast.makeText(this, R.string.unexpected_exception, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void setLayout() {
@@ -371,7 +388,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        if (currentModeIsEditable) {
+        if (currentMode.equals(EDIT)) {
             editModeButton.setVisible(false);
             viewModeButton.setVisible(true);
             boldTextButton.setVisible(false);
@@ -412,10 +429,10 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.action_switch_to_view:
-                switchToEditableMode(false, true);
+                switchToMode(VIEW, true);
                 return true;
             case R.id.action_switch_to_edit:
-                switchToEditableMode(true, false);
+                switchToMode(EDIT, false);
                 return true;
             case R.id.action_undo:
                 noteEditText.undo();
@@ -439,10 +456,12 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 importDocument();
                 return true;
             case R.id.action_settings:
+                hideSoftKeyboard(this);
                 Intent intentSettings = new Intent(this, SettingsActivity.class);
                 startActivity(intentSettings);
                 return true;
             case R.id.action_help:
+                hideSoftKeyboard(this);
                 Intent intent = new Intent(this, HelpActivity.class);
                 startActivity(intent);
                 return true;
@@ -522,13 +541,25 @@ public class NotepadEditorActivity extends AppCompatActivity {
                     noteEditText.fromHtml(content);
                     htmlTextInFile = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
                     Log.d(TAG, "htmlTextInFile: " + htmlTextInFile);
-                    if (action.equals(Intent.ACTION_EDIT)) {
-                        switchToEditableMode(true, false);
-                    } else {
-                        switchToEditableMode(false, false);
-                    }
 
-                    Log.v(TAG, "openFileFromIntent - mode switched");
+                    // below switch has to be here because of getting action from intent
+                    switch (savedMode) {
+                        case UNSET:
+                            if (action.equals(Intent.ACTION_EDIT)) {
+                                switchToMode(EDIT, false);
+                            } else {
+                                switchToMode(VIEW, false);
+                            }
+                            break;
+                        case EDIT:
+                            switchToMode(EDIT, false);
+                            break;
+                        case VIEW:
+                            switchToMode(VIEW, true);
+                            break;
+                    }
+                    Log.v(TAG, "openFileFromIntent - mode switched: " + currentMode);
+
                     if (uri.getScheme().equals(ContentResolver.SCHEME_FILE)) {
                         currentFile = new File(uri.getPath());
                         setTitle(FileManagerActivity.fileWithoutExtension(uri.getLastPathSegment()));
@@ -552,20 +583,20 @@ public class NotepadEditorActivity extends AppCompatActivity {
     }
 
     /**
-     * @param toEditable choose target mode
-     * @param setVerses  verses will be set in onResume(), so to not double executing setTextWithVerses()
-     *                   (for example when file is opened from Intent), use setVerses = false
+     * @param requestedMode choose target mode
+     * @param setVerses     verses will be set in onResume(), so to not double executing setTextWithVerses()
+     *                      (for example when file is opened from Intent), use setVerses = false
      */
-    private void switchToEditableMode(boolean toEditable, boolean setVerses) {
-        if (currentModeIsEditable != toEditable) {
-            if (!toEditable) {
+    private void switchToMode(Mode requestedMode, boolean setVerses) {
+        if (currentMode != requestedMode) {
+            if (requestedMode.equals(VIEW)) {
                 noteEditText.clearComposingText();
                 hideSoftKeyboard(this);
                 if (setVerses)
                     noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage);
             }
             viewFlipper.showNext();
-            currentModeIsEditable = toEditable;
+            currentMode = requestedMode;
             invalidateOptionsMenu();
         }
     }
@@ -686,6 +717,8 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
     }
 
+    enum Mode {EDIT, VIEW, UNSET}
+
     class StyleCallback implements ActionMode.Callback {
         private final String TAG = "StyleCallback";
 
@@ -695,16 +728,16 @@ public class NotepadEditorActivity extends AppCompatActivity {
             MenuInflater inflater = mode.getMenuInflater();
             inflater.inflate(R.menu.menu_for_compatibility, menu);
             menu.findItem(R.id.action_text_bold).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-            menu.findItem(R.id.action_text_italic).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            menu.findItem(R.id.action_text_italic).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
             menu.findItem(R.id.action_text_underline).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-            if (menu.findItem(android.R.id.selectAll) != null) {
-                menu.findItem(android.R.id.selectAll).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-            }
             if (menu.findItem(android.R.id.cut) != null) {
-                menu.findItem(android.R.id.cut).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                menu.findItem(android.R.id.cut).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
             }
             if (menu.findItem(android.R.id.copy) != null) {
-                menu.findItem(android.R.id.copy).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                menu.findItem(android.R.id.copy).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            }
+            if (menu.findItem(android.R.id.selectAll) != null) {
+                menu.findItem(android.R.id.selectAll).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
             }
             if (menu.findItem(android.R.id.paste) != null) {
                 menu.findItem(android.R.id.paste).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
