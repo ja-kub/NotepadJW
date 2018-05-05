@@ -927,7 +927,6 @@ public class FileManagerActivity extends AppCompatActivity {
 
     String readHtmlFiles(List<Uri> uriList) {
         StringBuilder wholeText = new StringBuilder();
-        String separator = "";
         try {
             for (Uri uri : uriList) {
                 StringBuilder fileText = new StringBuilder();
@@ -946,10 +945,8 @@ public class FileManagerActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(this, R.string.file_is_too_big, Toast.LENGTH_LONG).show();
                 }
-                wholeText.append(separator);
                 wholeText.append(fileWithoutExtension(uri.getLastPathSegment())).append(": \n");
-                wholeText.append(SpanToHtmlConverter.fromHtml(fileText.toString()));
-                separator = "\n\n";
+                wholeText.append(SpanToHtmlConverter.fromHtml(fileText.toString())).append("\n\n");
             }
         } catch (Exception exception) {
             if (exception.getCause().toString().contains("Permission denied")) {
@@ -960,7 +957,7 @@ public class FileManagerActivity extends AppCompatActivity {
                 Toast.makeText(this, R.string.cannot_open, Toast.LENGTH_LONG).show();
             }
         }
-        String content = wholeText.toString();
+        String content = wholeText.append(SpanToHtmlConverter.fromHtml(getString(R.string.sent_by_notepadjw))).toString();
         Log.d(TAG, "openFileFromIntent - content:\n" + content);
         return content;
     }
