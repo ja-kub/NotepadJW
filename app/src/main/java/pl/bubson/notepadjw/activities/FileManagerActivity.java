@@ -3,11 +3,14 @@ package pl.bubson.notepadjw.activities;
 import android.Manifest;
 import android.app.Activity;
 import android.app.SearchManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.LabeledIntent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -42,9 +45,12 @@ import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 import org.apache.commons.io.FileUtils;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -59,6 +65,7 @@ import pl.bubson.notepadjw.fileManagerHelpers.Item;
 import pl.bubson.notepadjw.services.InstallLanguageService;
 import pl.bubson.notepadjw.utils.Language;
 import pl.bubson.notepadjw.utils.Permissions;
+import pl.bubson.notepadjw.utils.SpanToHtmlConverter;
 import pl.bubson.notepadjw.utils.WhatsNewScreen;
 
 public class FileManagerActivity extends AppCompatActivity {
@@ -68,6 +75,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private static final String TAG = "FileManagerActivity";
     private static final String appFolderName = "NotepadJW"; // don't change it, as user have their notes there from some time
     private static File mainDirectory;
+    private static FilesDatabase filesDatabase;
     private final Context activityContext = this;
     FileListAdapter adapter;
     private MenuItem removeFiles, shareFiles, renameFile, cutFiles, copyFiles, pasteFiles, sortFilesMenuItem, helpMenuItem, settingsMenuItem, searchMenuItem;
@@ -79,15 +87,13 @@ public class FileManagerActivity extends AppCompatActivity {
     private boolean isClipboardToCopy, isCurrentSortingByDate, isSearchMenuExpanded, isSearchResultsListed;
     private RecyclerView recyclerView;
     private SharedPreferences sharedPref;
+    private FloatingActionButton floatingActionButton;
+    private FloatingActionsMenu famCreateNew;
+    private com.getbase.floatingactionbutton.FloatingActionButton fabNewFolder, fabNewNote;
 
     public static FilesDatabase getFilesDatabase() {
         return filesDatabase;
     }
-
-    private static FilesDatabase filesDatabase;
-    private FloatingActionButton floatingActionButton;
-    private FloatingActionsMenu famCreateNew;
-    private com.getbase.floatingactionbutton.FloatingActionButton fabNewFolder, fabNewNote;
 
     public static String fileExtension(String name) {
         if (name == null || name.equals("")) {
@@ -171,7 +177,7 @@ public class FileManagerActivity extends AppCompatActivity {
                 buttonsOnExitSearch();
                 isSearchMenuExpanded = false;
                 searchView.clearFocus();
-                if(isSearchResultsListed) fillListWithItemsFromDir(currentDirectory);
+                if (isSearchResultsListed) fillListWithItemsFromDir(currentDirectory);
                 return true;  // Return true to collapse action view
             }
         });
@@ -856,50 +862,114 @@ public class FileManagerActivity extends AppCompatActivity {
 
     private void shareCurrentlySelectedFiles() {
         if (selectedItemList.size() > 0) {
-            Intent shareIntent = new Intent();
+            // Preparing data for intents
+            ArrayList<Uri> fileUris = new ArrayList<>();
+            for (Item item : selectedItemList) {
+                File file = new File(item.getPath());
+                fileUris.add(getUri(file));
+            }
+            String text = readHtmlFiles(fileUris);
+            Intent mainIntent;
 
-            // should be "text/plain", but this way is workaround to remove sms, clipboard etc. from
-            // the list of available actions
-            shareIntent.setType("text/html");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { // Android 4.1.2 does not support chooser with no options
+                // Creating chooser with no options
+                Intent emptyIntent = new Intent(Intent.ACTION_SENDTO);
+                mainIntent = Intent.createChooser(emptyIntent, getString(R.string.button_share));
 
-            // this is to get back here immediately after closing sender activity
-            shareIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                // Creating list of apps which can support ACTION_SEND with text/plain
+                Intent sendIntent = new Intent(Intent.ACTION_SEND);
+                sendIntent.setType("text/plain");
+                PackageManager pm = getPackageManager();
+                List<ResolveInfo> resInfo = pm.queryIntentActivities(sendIntent, 0);
+                List<LabeledIntent> intentList = new ArrayList<>();
 
-            shareIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.sent_by_notepadjw))); // commercial ;) but doesn't work with WhatsApp :(
-            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            if (selectedItemList.size() == 1) {
-                File file = new File(selectedItemList.get(0).getPath());
-                shareIntent.putExtra(Intent.EXTRA_STREAM, getUri(file));
-                shareIntent.putExtra(Intent.EXTRA_SUBJECT, selectedItemList.get(0).getName());
-                shareIntent.setAction(Intent.ACTION_SEND);
-            } else {
-                ArrayList<Uri> fileUris = new ArrayList<>();
-                for (Item item : selectedItemList) {
-                    File file = new File(item.getPath());
-                    fileUris.add(getUri(file));
+                // Adding only selected apps to chooser
+                for (ResolveInfo ri : resInfo) {
+                    String packageName = ri.activityInfo.packageName;
+                    Intent intent = new Intent();
+                    intent.setComponent(new ComponentName(packageName, ri.activityInfo.name));
+                    intent.setType("text/html");
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    if (packageName.contains("whatsapp")) { // WhatsApp
+                        intent.setAction(Intent.ACTION_SEND_MULTIPLE);
+                        intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, fileUris); // WhatsApp cannot consume both EXTRA_STREAM and EXTRA_TEXT
+                        intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
+                    } else if (packageName.contains("android.gm") || packageName.contains("android.email") // Email
+                            || (packageName.contains("android.apps.docs") && ri.activityInfo.name.contains("UploadMenuActivity"))) { // Google Drive
+                        intent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.sent_by_notepadjw)));
+                        if (selectedItemList.size() == 1)
+                            intent.putExtra(Intent.EXTRA_SUBJECT, selectedItemList.get(0).getName());
+                        intent.setAction(Intent.ACTION_SEND_MULTIPLE);
+                        intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, fileUris);
+                        intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
+                    } else if (packageName.contains("mms") || packageName.contains("messaging") || packageName.contains("facebook.orca")) { // SMS, MMS and Messenger - apps which cannot send files, only text
+                        intent.setAction(Intent.ACTION_SEND);
+                        intent.setType("text/plain");
+                        intent.putExtra(Intent.EXTRA_TEXT, text);
+                        intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
+                    }
                 }
-                shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
-                shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, fileUris);
+                LabeledIntent[] extraIntents = intentList.toArray(new LabeledIntent[intentList.size()]);
+                mainIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents); // add list of selected apps to chooser
+            } else {
+                mainIntent = new Intent(Intent.ACTION_SEND);
+                mainIntent.setType("text/plain");
+                mainIntent.putExtra(Intent.EXTRA_TEXT, text);
             }
 
             // Verify that the intent will resolve to an activity
-            if (shareIntent.resolveActivity(getPackageManager()) != null) {
-                startActivity(shareIntent);
+            if (mainIntent.resolveActivity(getPackageManager()) != null) {
+                startActivity(mainIntent);
             }
-
         }
+    }
+
+    String readHtmlFiles(List<Uri> uriList) {
+        StringBuilder wholeText = new StringBuilder();
+        String separator = "";
+        try {
+            for (Uri uri : uriList) {
+                StringBuilder fileText = new StringBuilder();
+
+                InputStream is = getContentResolver().openInputStream(uri);
+                int maxFileSizeInBytes = 1000000;
+                if ((is != null) && is.available() <= maxFileSizeInBytes) {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                    String line;
+                    String lineEnding = "";
+                    while ((line = reader.readLine()) != null) {
+                        fileText.append(lineEnding).append(line);
+                        lineEnding = "<BR>";
+                    }
+                    is.close();
+                } else {
+                    Toast.makeText(this, R.string.file_is_too_big, Toast.LENGTH_LONG).show();
+                }
+                wholeText.append(separator);
+                wholeText.append(fileWithoutExtension(uri.getLastPathSegment())).append(": \n");
+                wholeText.append(SpanToHtmlConverter.fromHtml(fileText.toString()));
+                separator = "\n\n";
+            }
+        } catch (Exception exception) {
+            if (exception.getCause().toString().contains("Permission denied")) {
+                Log.v(TAG, exception.getCause().toString());
+                FileManagerActivity.askForPermissionsIfNotGranted(this);
+            } else {
+                exception.printStackTrace();
+                Toast.makeText(this, R.string.cannot_open, Toast.LENGTH_LONG).show();
+            }
+        }
+        String content = wholeText.toString();
+        Log.d(TAG, "openFileFromIntent - content:\n" + content);
+        return content;
     }
 
     private Uri getUri(File file) {
         try {
-            return FileProvider.getUriForFile(
-                    activityContext,
-                    "pl.bubson.notepadjw.fileprovider",
-                    file);
+            return FileProvider.getUriForFile(activityContext, "pl.bubson.notepadjw.fileprovider", file);
         } catch (IllegalArgumentException e) {
-            Log.e("File Selector",
-                    "The selected file can't be shared: " +
-                            file.getName());
+            Log.e("File Selector", "The selected file can't be shared: " + file.getName());
         }
         return null;
     }

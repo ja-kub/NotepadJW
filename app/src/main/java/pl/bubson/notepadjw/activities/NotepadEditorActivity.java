@@ -181,6 +181,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
         setFontSizes();
         setFontColors();
         noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage); // to refresh verses language
+        invalidateOptionsMenu();
         if (currentMode.equals(EDIT)) restoreCursorPositionInEditMode();
     }
 
@@ -509,34 +510,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 if (uri != null && (uri.getScheme().equals(ContentResolver.SCHEME_FILE) ||
                         uri.getScheme().equals(ContentResolver.SCHEME_ANDROID_RESOURCE) ||
                         uri.getScheme().equals(ContentResolver.SCHEME_CONTENT))) {
-                    StringBuilder text = new StringBuilder();
-                    try {
-                        InputStream is = getContentResolver().openInputStream(uri);
-                        if ((is != null) && is.available() <= MAX_FILE_SIZE_IN_BYTES) {
-                            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-                            String line;
-                            String lineEnding = "";
-                            while ((line = reader.readLine()) != null) {
-                                text.append(lineEnding).append(line);
-                                lineEnding = "<BR>";
-                            }
-                            is.close();
-                        } else {
-                            Toast.makeText(this, R.string.file_is_too_big, Toast.LENGTH_LONG).show();
-                            finish();
-                        }
-                    } catch (Exception exception) {
-                        if (exception.getCause().toString().contains("Permission denied")) {
-                            Log.v(TAG, exception.getCause().toString());
-                            FileManagerActivity.askForPermissionsIfNotGranted(this);
-                        } else {
-                            exception.printStackTrace();
-                            Toast.makeText(this, R.string.cannot_open, Toast.LENGTH_LONG).show();
-                            finish();
-                        }
-                    }
-                    String content = text.toString();
-                    Log.d(TAG, "openFileFromIntent - content:\n" + content);
+                    String content = readFile(uri);
 
                     noteEditText.fromHtml(content);
                     htmlTextInFile = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
@@ -580,6 +554,38 @@ public class NotepadEditorActivity extends AppCompatActivity {
             // All exceptions should be caught before this catch...
             Toast.makeText(this, R.string.unexpected_exception, Toast.LENGTH_LONG).show();
         }
+    }
+
+    String readFile(Uri uri) {
+        StringBuilder text = new StringBuilder();
+        try {
+            InputStream is = getContentResolver().openInputStream(uri);
+            if ((is != null) && is.available() <= MAX_FILE_SIZE_IN_BYTES) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                String line;
+                String lineEnding = "";
+                while ((line = reader.readLine()) != null) {
+                    text.append(lineEnding).append(line);
+                    lineEnding = "<BR>";
+                }
+                is.close();
+            } else {
+                Toast.makeText(this, R.string.file_is_too_big, Toast.LENGTH_LONG).show();
+                finish();
+            }
+        } catch (Exception exception) {
+            if (exception.getCause().toString().contains("Permission denied")) {
+                Log.v(TAG, exception.getCause().toString());
+                FileManagerActivity.askForPermissionsIfNotGranted(this);
+            } else {
+                exception.printStackTrace();
+                Toast.makeText(this, R.string.cannot_open, Toast.LENGTH_LONG).show();
+                finish();
+            }
+        }
+        String content = text.toString();
+        Log.d(TAG, "openFileFromIntent - content:\n" + content);
+        return content;
     }
 
     /**
