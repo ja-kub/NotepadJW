@@ -1,6 +1,8 @@
 package pl.bubson.notepadjw.activities;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -115,6 +117,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     private Mode currentMode, savedMode;
     private File currentFile;
     private String htmlTextInFile;
+    private CharSequence savedVersePreview;
     private HyperlinkVerseTextView.OnLinkClickListener linkClickListener = new HyperlinkVerseTextView.OnLinkClickListener() {
 
         @Override
@@ -141,6 +144,22 @@ public class NotepadEditorActivity extends AppCompatActivity {
         savedMode = UNSET;
     }
 
+    View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View view) {
+            try {
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                String textToCopy = ((TextView)view).getText().toString();
+                ClipData clip = ClipData.newPlainText("verse", textToCopy);
+                clipboard.setPrimaryClip(clip);
+                Toast.makeText(getApplicationContext(), R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return true;
+        }
+    };
+
     @Override
     protected void onStart() { // executed e.g. on back from Settings or when screen was switched on
         super.onStart();
@@ -160,6 +179,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
         versePreviewTextInEditMode = (TextView) findViewById(R.id.text_view_in_edit_layout);
         versePreviewTextInEditMode.setMovementMethod(ScrollingMovementMethod.getInstance());
+        versePreviewTextInEditMode.setOnLongClickListener(longClickListener);
 
         // View layout
         noteTextView = (HyperlinkVerseTextView) findViewById(R.id.hyperlink_verse_text_view);
@@ -168,6 +188,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
         versePreviewTextInViewMode = (TextView) findViewById(R.id.text_view_in_view_layout);
         versePreviewTextInViewMode.setMovementMethod(ScrollingMovementMethod.getInstance());
+        versePreviewTextInViewMode.setOnLongClickListener(longClickListener);
 
         setVerseAreaSizeIfItsChangeable();
         setVerseAreaSizing();
@@ -182,14 +203,19 @@ public class NotepadEditorActivity extends AppCompatActivity {
         setFontColors();
         noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage); // to refresh verses language
         invalidateOptionsMenu();
-        if (currentMode.equals(EDIT)) restoreCursorPositionInEditMode();
+        if (currentMode.equals(EDIT)) {
+            restoreCursorPositionAndVerseInEditMode();
+            noteEditText.showSoftInput();
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        hideSoftKeyboard(this);
         cursorPosition = noteEditText.getSelectionStart();
         savedMode = currentMode;
+        savedVersePreview = versePreviewTextInEditMode.getText();
         saveDocumentIfChanged();
         saveVerseAreaSizeIfItsChangeable();
     }
@@ -279,11 +305,11 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
     }
 
-    private void restoreCursorPositionInEditMode() {
+    private void restoreCursorPositionAndVerseInEditMode() {
         try {
             noteEditText.requestFocus();
             noteEditText.setSelection(cursorPosition);
-            noteEditText.showSoftInput();
+            versePreviewTextInEditMode.setText(savedVersePreview);
         } catch (Exception unexpectedException) {
             Toast.makeText(this, R.string.unexpected_exception, Toast.LENGTH_LONG).show();
         }
@@ -600,6 +626,8 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 hideSoftKeyboard(this);
                 if (setVerses)
                     noteTextView.setTextWithVerses(noteEditText.getText(), versesLanguage);
+            } else {
+                noteEditText.showSoftInput();
             }
             viewFlipper.showNext();
             currentMode = requestedMode;

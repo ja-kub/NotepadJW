@@ -76,7 +76,7 @@
     <string name="button_copy">Copia</string>
     <string name="button_paste">Incolla</string>
     <string name="cut_to_clipboard">Taglia negli appunti</string>
-    <string name="copied_to_clipboard">Copia negli appunti</string>
+    <string name="copied_to_clipboard">Copiato negli appunti</string>
     <string name="pasted_from_clipboard">Incolla dagli appunti</string>
     <string name="not_all_elements_pasted">Non tutti gli elementi incollati</string>
     <string name="unexpected_exception">Eccezione imprevista: inviami una email descrivendola</string>

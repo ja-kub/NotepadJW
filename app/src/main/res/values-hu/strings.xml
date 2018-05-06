@@ -76,7 +76,7 @@
     <string name="button_copy">Másolás</string>
     <string name="button_paste">Beillesztés</string>
     <string name="cut_to_clipboard">Vágólapra helyezve</string>
-    <string name="copied_to_clipboard">Vágólapra másolva</string>
+    <string name="copied_to_clipboard">Másolva a vágólapra</string>
     <string name="pasted_from_clipboard">Vágólapról beillesztve</string>
     <string name="not_all_elements_pasted">Nem sikerült minden elemet beilleszteni</string>
     <string name="unexpected_exception">Váratlan hiba történt - Kérem, küldjön egy emailt róla</string>

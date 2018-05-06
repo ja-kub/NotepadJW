@@ -45,6 +45,7 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.Custom
             }
         }
     };
+
     View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
 
         @Override

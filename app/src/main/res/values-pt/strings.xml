@@ -77,7 +77,7 @@
    <string name="button_copy">Copiar</string>
    <string name="button_paste">Colar</string>
    <string name="cut_to_clipboard">Corta para a área de transferência</string>
-   <string name="copied_to_clipboard">Copiar para área de transferência</string>
+   <string name="copied_to_clipboard">Copiado para a área de transferência</string>
    <string name="pasted_from_clipboard">Colar da área de transferência</string>
    <string name="not_all_elements_pasted">Nem todos os elementos colados</string>
    <string name="unexpected_exception">Exceção inesperada - Por favor envie-me descrevendo</string>

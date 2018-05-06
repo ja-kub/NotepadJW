@@ -8,6 +8,7 @@ import android.text.style.BulletSpan;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -101,15 +102,32 @@ public class RichSelectableEditText extends KnifeText {
         sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_TEXT_SELECTION_CHANGED);
     }
 
-    public interface OnSelectionChangedListener {
-        void onSelectionChanged(int selStart, int selEnd);
-    }
-
     @Override
     public void fromHtml(String source) {
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(SpanToHtmlConverter.fromHtml(source));
         this.switchToKnifeStyle(builder, 0, builder.length());
         this.setText(builder);
+    }
+
+    @Override
+    public void showSoftInput() {
+        this.requestFocus();
+        final RichSelectableEditText editText = this;
+        try {
+            this.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    InputMethodManager keyboard = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    keyboard.showSoftInput(editText, InputMethodManager.SHOW_FORCED);
+                }
+            }, 50);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public interface OnSelectionChangedListener {
+        void onSelectionChanged(int selStart, int selEnd);
     }
 }

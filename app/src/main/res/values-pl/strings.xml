@@ -115,7 +115,7 @@ wówczas umieszczone w folderze Pobrane).</p>
     <string name="button_copy">Kopiuj</string>
     <string name="button_paste">Wklej</string>
     <string name="cut_to_clipboard">Elementy wycięte</string>
-    <string name="copied_to_clipboard">Elementy skopiowane</string>
+    <string name="copied_to_clipboard">Skopiowano do schowka</string>
     <string name="pasted_from_clipboard">Wklejono ze schowka</string>
     <string name="not_all_elements_pasted">Nie wszystkie elementy wklejono</string>
     <string name="unexpected_exception">Nieoczekiwany wyjątek - wyślij mi proszę e-maila z opisem problemu</string>

@@ -871,58 +871,56 @@ public class FileManagerActivity extends AppCompatActivity {
             String text = readHtmlFiles(fileUris);
             Intent mainIntent;
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { // Android 4.1.2 does not support chooser with no options
-                // Creating chooser with no options
-                Intent emptyIntent = new Intent(Intent.ACTION_SENDTO);
-                mainIntent = Intent.createChooser(emptyIntent, getString(R.string.button_share));
+            // Android < 6.0.1 does not support chooser with no options, so we start with creating chooser with only one option - gmail, which should be available on all Android devices; and then we will add more options
+            Intent gmailIntent = new Intent();
+            gmailIntent = prepareSendFilesIntent(gmailIntent, fileUris, true);
+            gmailIntent.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmailExternal");
+            mainIntent = Intent.createChooser(gmailIntent, getString(R.string.button_share));
 
-                // Creating list of apps which can support ACTION_SEND with text/plain
-                Intent sendIntent = new Intent(Intent.ACTION_SEND);
-                sendIntent.setType("text/plain");
-                PackageManager pm = getPackageManager();
-                List<ResolveInfo> resInfo = pm.queryIntentActivities(sendIntent, 0);
-                List<LabeledIntent> intentList = new ArrayList<>();
+            // Creating list of all apps which can support ACTION_SEND with text/plain
+            Intent sendIntent = new Intent(Intent.ACTION_SEND);
+            sendIntent.setType("text/plain");
+            PackageManager pm = getPackageManager();
+            List<ResolveInfo> resInfo = pm.queryIntentActivities(sendIntent, 0);
+            List<LabeledIntent> intentList = new ArrayList<>();
 
-                // Adding only selected apps to chooser
-                for (ResolveInfo ri : resInfo) {
-                    String packageName = ri.activityInfo.packageName;
-                    Intent intent = new Intent();
-                    intent.setComponent(new ComponentName(packageName, ri.activityInfo.name));
-                    intent.setType("text/html");
-                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    if (packageName.contains("whatsapp")) { // WhatsApp
-                        intent.setAction(Intent.ACTION_SEND_MULTIPLE);
-                        intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, fileUris); // WhatsApp cannot consume both EXTRA_STREAM and EXTRA_TEXT
-                        intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
-                    } else if (packageName.contains("android.gm") || packageName.contains("android.email") // Email
-                            || (packageName.contains("android.apps.docs") && ri.activityInfo.name.contains("UploadMenuActivity"))) { // Google Drive
-                        intent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.sent_by_notepadjw)));
-                        if (selectedItemList.size() == 1)
-                            intent.putExtra(Intent.EXTRA_SUBJECT, selectedItemList.get(0).getName());
-                        intent.setAction(Intent.ACTION_SEND_MULTIPLE);
-                        intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, fileUris);
-                        intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
-                    } else if (packageName.contains("mms") || packageName.contains("messaging") || packageName.contains("facebook.orca")) { // SMS, MMS and Messenger - apps which cannot send files, only text
-                        intent.setAction(Intent.ACTION_SEND);
-                        intent.setType("text/plain");
-                        intent.putExtra(Intent.EXTRA_TEXT, text);
-                        intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
-                    }
+            // Adding only selected apps to chooser
+            for (ResolveInfo ri : resInfo) {
+                String packageName = ri.activityInfo.packageName;
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName(packageName, ri.activityInfo.name));
+                if (packageName.contains("whatsapp")) { // WhatsApp
+                    intent = prepareSendFilesIntent(intent, fileUris, false); // WhatsApp cannot consume both EXTRA_STREAM and EXTRA_TEXT, so we create Intent without EXTRA_TEXT
+                    intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
+                } else if (packageName.contains("android.email") || (packageName.contains("android.apps.docs") && ri.activityInfo.name.contains("UploadMenuActivity"))) { // Native Email, Google Drive
+                    intent = prepareSendFilesIntent(intent, fileUris, true);
+                    intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
+                } else if (packageName.contains("mms") || packageName.contains("messaging") || packageName.contains("facebook.orca")) { // SMS, MMS and Messenger - apps which cannot send files, only text
+                    intent.setAction(Intent.ACTION_SEND);
+                    intent.setType("text/plain");
+                    intent.putExtra(Intent.EXTRA_TEXT, text);
+                    intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
                 }
-                LabeledIntent[] extraIntents = intentList.toArray(new LabeledIntent[intentList.size()]);
-                mainIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents); // add list of selected apps to chooser
-            } else {
-                mainIntent = new Intent(Intent.ACTION_SEND);
-                mainIntent.setType("text/plain");
-                mainIntent.putExtra(Intent.EXTRA_TEXT, text);
             }
+            LabeledIntent[] extraIntents = intentList.toArray(new LabeledIntent[intentList.size()]);
+            mainIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents); // add list of selected apps to chooser
 
             // Verify that the intent will resolve to an activity
             if (mainIntent.resolveActivity(getPackageManager()) != null) {
                 startActivity(mainIntent);
             }
         }
+    }
+
+    private Intent prepareSendFilesIntent(Intent intent, ArrayList<Uri> fileUris, boolean addExtraText) {
+        intent.setType("text/html");
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (selectedItemList.size() == 1) intent.putExtra(Intent.EXTRA_SUBJECT, selectedItemList.get(0).getName());
+        intent.setAction(Intent.ACTION_SEND_MULTIPLE);
+        intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, fileUris);
+        if (addExtraText) intent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.sent_by_notepadjw)));
+        return intent;
     }
 
     String readHtmlFiles(List<Uri> uriList) {
