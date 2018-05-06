@@ -160,9 +160,13 @@ wówczas umieszczone w folderze Pobrane).</p>
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-    - Dodano włoską Biblię i włoskie tłumaczenie aplikacji \n\n
+• Dodano Biblię w języku portugalskim (europejskim) \n\n
     </string>
     <string name="whats_new_message_last">
-    - Dodano Biblię w języku portugalskim (europejskim)
+• Poprawiono i ulepszono funkcję udostępniania notatek (WhatsApp, Messenger, SMS) \n\n
+• Dodano funkcję kopiowania tekstu wersetu przez jego długie naciśnięcie \n\n
+• Dodano przywracanie sesji, gdy użytkownik powraca do edytora \n\n
+• Poprawiono przyciski tekstowe Wytnij / Kopiuj na tabletach z Androidem starszym niż 6.0 \n\n
+• Naprawiono wiele drobnych błędów
     </string>
 </resources>

@@ -142,8 +142,13 @@ A txt fájlokat a NotepadJW alkalmazással is szerkesztheted. Ha ezután elmente
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-    - Egy olasz bibliát és egy olasz fordítást csatoltak a kérelemhez \n\n
+• Egy olasz bibliát és egy olasz fordítást csatoltak a kérelemhez \n\n
     </string>
     <string name="whats_new_message_last">
+• Megjegyzések megosztása funkció javult (WhatsApp, Messenger, SMS) \n\n
+• A vers szövegének másolásának funkciója a hosszú mûvelet hozzáadásával jött létre \n\n
+• A munkamenet visszaállítása hozzáadódott, amikor a felhasználó visszatér a szerkesztőhöz \n\n
+• A 6.0-nál régebbi Android-táblákon lévő Szöveggombok vágása / másolása javult \n\n
+• Számos kisebb hiba került rögzítésre
     </string>
 </resources>

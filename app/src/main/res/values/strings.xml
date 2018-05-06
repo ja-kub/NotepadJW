@@ -190,9 +190,13 @@ button (they will be copied to Downloads folder).</p>
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-    - An Italian Bible and an Italian translation of the application have been added \n\n
+• Added Portugal-Portugal Bible \n\n
     </string>
     <string name="whats_new_message_last">
-    - Added Portugal-Portugal Bible
+• Corrected and enhanced sharing notes feature (WhatsApp, Messenger, SMS) \n\n
+• Added feature of copy verse text by long press on it \n\n
+• Added session restoring when user backs to editor \n\n
+• Corrected Cut/Copy text buttons on tablets with Android older than 6.0 \n\n
+• A lot of minor bugs were fixed
     </string>
 </resources>

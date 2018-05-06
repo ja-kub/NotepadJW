@@ -155,9 +155,13 @@
     ]]>
     </string>
     <string name="whats_new_message_previous">
-    - Uma Bíblia Italiana e uma tradução Italiana do aplicativo foram adicionadas \n\n
+• Uma Bíblia Portuguesa (Portuguesa) foi adicionada. \n\n
     </string>
     <string name="whats_new_message_last">
-    - Uma Bíblia Portuguesa (Portuguesa) foi adicionada
+• Corrigido e melhorado recurso de compartilhamento de notas (WhatsApp, Messenger, SMS). \n\n
+• Adicionado recurso de texto do verso da cópia, pressione e segure nele. \n\n
+• Adicionado sessão de restauração quando o usuário volta ao editor. \n\n
+• Botões de texto Cortar / Copiar corrigidos em tablets com Android anterior à 6.0. \n\n
+• Muitos pequenos bugs foram corrigidos.
     </string>
 </resources>
