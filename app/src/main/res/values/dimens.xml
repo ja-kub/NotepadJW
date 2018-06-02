@@ -16,4 +16,5 @@
     <dimen name="font_size_xlarge">28sp</dimen>
     <dimen name="bullet_radius">3dp</dimen>
     <dimen name="bullet_gap_width">8dp</dimen>
+    <dimen name="bottom_toolbar_height">44dp</dimen>
 </resources>

@@ -157,13 +157,13 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
          ne pas avoir accès.
    </string>
    <string name="whats_new_message_previous">
-• Une Bible en italien et une traduction en italien de l\'application ont été ajoutées \n\n
-   </string>
-   <string name="whats_new_message_last">
 • Fonction de notes de partage corrigée et améliorée (WhatsApp, Messenger, SMS). \n\n
 • Ajout de la fonctionnalité du texte de vers de copie en appuyant longuement dessus. \n\n
 • Ajout de la restauration de session lorsque l\'utilisateur revient à l\'éditeur. \n\n
 • Correction des boutons de texte Cut / Copy sur les tablettes avec Android antérieures à 6.0. \n\n
-• Beaucoup de bugs mineurs ont été corrigés.
+• Beaucoup de bugs mineurs ont été corrigés. \n\n
+   </string>
+   <string name="whats_new_message_last">
+• Ajouté: couleurs de police et de marqueur, suppression de la mise en forme (après sélection du texte).
    </string>
 </resources>

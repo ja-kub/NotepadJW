@@ -55,6 +55,13 @@
                     app:historyEnable="true"
                     app:historySize="99" />
             </ScrollView>
+
+            <android.support.v7.widget.ActionMenuView
+                android:id="@+id/notepad_bottom_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_toolbar_height"
+                android:background="?attr/colorPrimary"
+                />
         </LinearLayout>
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

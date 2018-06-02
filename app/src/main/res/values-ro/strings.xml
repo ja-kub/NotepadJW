@@ -157,13 +157,13 @@ button (they will be copied to Downloads folder).</p>
          nu au acces.
     </string>
     <string name="whats_new_message_previous">
-• Sa adăugat o Biblie italiană și o traducere italiană a cererii. \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Funcție corectată și îmbunătățită pentru notele de partajare (WhatsApp, Messenger, SMS). \n\n
 • A fost adăugată o caracteristică a textului verse de copiere prin apăsarea lungă pe ea. \n\n
 • Adăugarea unei sesiuni de restaurare atunci când utilizatorul se întoarce la editor. \n\n
 • Butoane corecte Cut / Copy text pe tablete cu Android mai vechi de 6.0. \n\n
-• Au fost rezolvate multe bug-uri minore.
+• Au fost rezolvate multe bug-uri minore. \n\n
+    </string>
+    <string name="whats_new_message_last">
+• Adăugat: culori pentru font și marker, eliminând formatarea (după selectarea textului).
     </string>
 </resources>

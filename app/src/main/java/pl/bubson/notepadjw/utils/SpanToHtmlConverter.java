@@ -5,8 +5,10 @@ import android.os.Build;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.style.BackgroundColorSpan;
 import android.text.style.BulletSpan;
 import android.text.style.CharacterStyle;
+import android.text.style.ForegroundColorSpan;
 import android.text.style.ImageSpan;
 import android.text.style.ParagraphStyle;
 import android.text.style.QuoteSpan;
@@ -168,6 +170,18 @@ public class SpanToHtmlConverter {
                     out.append("<del>");
                 }
 
+                if (spans[j] instanceof ForegroundColorSpan) {
+                    int intColor = ((ForegroundColorSpan) spans[j]).getForegroundColor();
+                    String hexColor = String.format("#%06X", (0xFFFFFF & intColor));
+                    out.append("<font color=\"").append(hexColor).append("\">");
+                }
+
+                if (spans[j] instanceof BackgroundColorSpan) {
+                    int intColor = ((BackgroundColorSpan) spans[j]).getBackgroundColor();
+                    String hexColor = String.format("#%06X", (0xFFFFFF & intColor));
+                    out.append("<span style=\"background-color:").append(hexColor).append("\">");
+                }
+
                 if (spans[j] instanceof URLSpan) {
                     out.append("<a href=\"");
                     out.append(((URLSpan) spans[j]).getURL());
@@ -196,6 +210,14 @@ public class SpanToHtmlConverter {
 
                 if (spans[j] instanceof UnderlineSpan) {
                     out.append("</u>");
+                }
+
+                if (spans[j] instanceof ForegroundColorSpan) {
+                    out.append("</font>");
+                }
+
+                if (spans[j] instanceof BackgroundColorSpan) {
+                    out.append("</span>");
                 }
 
                 if (spans[j] instanceof StyleSpan) {

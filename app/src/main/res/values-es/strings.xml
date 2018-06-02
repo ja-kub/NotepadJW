@@ -155,13 +155,13 @@
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Se ha agregado una Biblia italiana y una traducción al italiano de la aplicación \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Se mejoró y mejoró la función de compartir notas (WhatsApp, Messenger, SMS) \n\n
 • La función de copiar el texto del verso ha sido añadida por su larga operación \n\n
 • Se ha agregado la restauración de la sesión cuando el usuario vuelve al editor \n\n
 • Botones de texto Cortar / Copiar en tabletas Android anteriores a 6.0 han sido mejorados \n\n
-• Se han solucionado muchos errores menores
+• Se han solucionado muchos errores menores \n\n
+    </string>
+    <string name="whats_new_message_last">
+• Agregado: colores de fuente y marcador, eliminación de formato (después de seleccionar el texto).
     </string>
 </resources>

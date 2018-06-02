@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
@@ -18,6 +19,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ActionMenuView;
 import android.text.Editable;
 import android.text.Html;
 import android.text.InputType;
@@ -61,6 +63,10 @@ import pl.bubson.notepadjw.utils.SpanToHtmlConverter;
 import static pl.bubson.notepadjw.activities.NotepadEditorActivity.Mode.EDIT;
 import static pl.bubson.notepadjw.activities.NotepadEditorActivity.Mode.UNSET;
 import static pl.bubson.notepadjw.activities.NotepadEditorActivity.Mode.VIEW;
+import static pl.bubson.notepadjw.core.RichSelectableEditText.COLOR_MARKER_BLUE;
+import static pl.bubson.notepadjw.core.RichSelectableEditText.COLOR_MARKER_GREEN;
+import static pl.bubson.notepadjw.core.RichSelectableEditText.COLOR_MARKER_YELLOW;
+import static pl.bubson.notepadjw.core.RichSelectableEditText.COLOR_TEXT_GREEN;
 
 public class NotepadEditorActivity extends AppCompatActivity {
 
@@ -78,7 +84,8 @@ public class NotepadEditorActivity extends AppCompatActivity {
     private Language versesLanguage;
     private Context activityContext = this;
     private RichSelectableEditText noteEditText;
-    private MenuItem viewModeButton, editModeButton, saveButton, boldTextButton, italicTextButton, underlineTextButton, bulletTextButton, undoButton, redoButton;
+    private MenuItem viewModeButton, editModeButton, saveButton, boldTextButton, italicTextButton, underlineTextButton, bulletTextButton, undoButton, redoButton, formatClearButton;
+    private ActionMenuView bottomBar;
     private TextView versePreviewTextInEditMode, versePreviewTextInViewMode;
     private final TextWatcher mTextEditorWatcher = new TextWatcher() {
 
@@ -261,16 +268,22 @@ public class NotepadEditorActivity extends AppCompatActivity {
                         boldTextButton.setVisible(true);
                         italicTextButton.setVisible(true);
                         underlineTextButton.setVisible(true);
+                        formatClearButton.setVisible(true);
+                        bottomBar.setVisibility(View.VISIBLE);
                         bulletTextButton.setVisible(false);
                         undoButton.setVisible(false);
                         redoButton.setVisible(false);
+                        viewModeButton.setVisible(false);
                     } else {
                         boldTextButton.setVisible(false);
                         italicTextButton.setVisible(false);
                         underlineTextButton.setVisible(false);
+                        formatClearButton.setVisible(false);
+                        bottomBar.setVisibility(View.GONE);
                         bulletTextButton.setVisible(true);
                         undoButton.setVisible(true);
                         redoButton.setVisible(true);
+                        viewModeButton.setVisible(true);
                     }
                 } catch (Exception e) {
                     Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
@@ -401,16 +414,32 @@ public class NotepadEditorActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
+        // Inflate and initialize the bottom menu
+        bottomBar = (ActionMenuView)findViewById(R.id.notepad_bottom_toolbar);
+        Menu bottomMenu = bottomBar.getMenu();
+        bottomMenu.clear();
+        getMenuInflater().inflate(R.menu.menu_notepad_bottom, bottomMenu);
+        for (int i = 0; i < bottomMenu.size(); i++) {
+            bottomMenu.getItem(i).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    return onOptionsItemSelected(item);
+                }
+            });
+        }
+
         viewModeButton = menu.findItem(R.id.action_switch_to_view);
         editModeButton = menu.findItem(R.id.action_switch_to_edit);
         saveButton = menu.findItem(R.id.action_save);
         boldTextButton = menu.findItem(R.id.action_text_bold);
         italicTextButton = menu.findItem(R.id.action_text_italic);
         underlineTextButton = menu.findItem(R.id.action_text_underline);
+        formatClearButton = menu.findItem(R.id.action_text_format_clear);
         bulletTextButton = menu.findItem(R.id.action_text_bullet);
         undoButton = menu.findItem(R.id.action_undo);
         redoButton = menu.findItem(R.id.action_redo);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -421,6 +450,8 @@ public class NotepadEditorActivity extends AppCompatActivity {
             boldTextButton.setVisible(false);
             italicTextButton.setVisible(false);
             underlineTextButton.setVisible(false);
+            formatClearButton.setVisible(false);
+            bottomBar.setVisibility(View.GONE);
             bulletTextButton.setVisible(true);
             undoButton.setVisible(true);
             redoButton.setVisible(true);
@@ -430,6 +461,8 @@ public class NotepadEditorActivity extends AppCompatActivity {
             boldTextButton.setVisible(false);
             italicTextButton.setVisible(false);
             underlineTextButton.setVisible(false);
+            formatClearButton.setVisible(false);
+            bottomBar.setVisibility(View.GONE);
             bulletTextButton.setVisible(false);
             undoButton.setVisible(false);
             redoButton.setVisible(false);
@@ -475,6 +508,27 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 return true;
             case R.id.action_text_underline:
                 noteEditText.underline(!noteEditText.contains(KnifeText.FORMAT_UNDERLINED));
+                return true;
+            case R.id.action_text_format_clear:
+                noteEditText.clearFormats();
+                return true;
+            case R.id.action_text_foreground_color_red:
+                noteEditText.textColor(Color.RED, !noteEditText.contains(RichSelectableEditText.FORMAT_TEXT_COLOR_RED));
+                return true;
+            case R.id.action_text_foreground_color_blue:
+                noteEditText.textColor(Color.BLUE, !noteEditText.contains(RichSelectableEditText.FORMAT_TEXT_COLOR_BLUE));
+                return true;
+            case R.id.action_text_foreground_color_green:
+                noteEditText.textColor(Color.parseColor(COLOR_TEXT_GREEN), !noteEditText.contains(RichSelectableEditText.FORMAT_TEXT_COLOR_GREEN));
+                return true;
+            case R.id.action_text_background_color_yellow:
+                noteEditText.markerColor(Color.parseColor(COLOR_MARKER_YELLOW), !noteEditText.contains(RichSelectableEditText.FORMAT_MARKER_COLOR_YELLOW));
+                return true;
+            case R.id.action_text_background_color_blue:
+                noteEditText.markerColor(Color.parseColor(COLOR_MARKER_BLUE), !noteEditText.contains(RichSelectableEditText.FORMAT_MARKER_COLOR_BLUE));
+                return true;
+            case R.id.action_text_background_color_green:
+                noteEditText.markerColor(Color.parseColor(COLOR_MARKER_GREEN), !noteEditText.contains(RichSelectableEditText.FORMAT_MARKER_COLOR_GREEN));
                 return true;
             case R.id.action_text_bullet:
                 noteEditText.bullet(!noteEditText.contains(KnifeText.FORMAT_BULLET));
