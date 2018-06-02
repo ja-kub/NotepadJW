@@ -1041,11 +1041,11 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("1konig", "15_BI12_.1KI");
                 multipleChapterBooksMap.put("1kon", "15_BI12_.1KI");
                 multipleChapterBooksMap.put("1ko", "15_BI12_.1KI");
-                multipleChapterBooksMap.put("2koniges", "16_BI12_.2KI");
-                multipleChapterBooksMap.put("2konige", "16_BI12_.2KI");
-                multipleChapterBooksMap.put("2konig", "16_BI12_.2KI");
-                multipleChapterBooksMap.put("2kon", "16_BI12_.2KI");
-                multipleChapterBooksMap.put("2ko", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2königes", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2könige", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2könig", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2kön", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2kö", "16_BI12_.2KI");
                 multipleChapterBooksMap.put("1chronikas", "17_BI12_.1CH");
                 multipleChapterBooksMap.put("1chronika", "17_BI12_.1CH");
                 multipleChapterBooksMap.put("1chronik", "17_BI12_.1CH");
@@ -1188,6 +1188,10 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("romer", "49_BI12_.RO");
                 multipleChapterBooksMap.put("rom", "49_BI12_.RO");
                 multipleChapterBooksMap.put("ro", "49_BI12_.RO");
+                multipleChapterBooksMap.put("römers", "49_BI12_.RO");
+                multipleChapterBooksMap.put("römer", "49_BI12_.RO");
+                multipleChapterBooksMap.put("röm", "49_BI12_.RO");
+                multipleChapterBooksMap.put("rö", "49_BI12_.RO");
                 multipleChapterBooksMap.put("1korinthers", "50_BI12_.1CO");
                 multipleChapterBooksMap.put("1korinther", "50_BI12_.1CO");
                 multipleChapterBooksMap.put("1korin", "50_BI12_.1CO");
@@ -3134,7 +3138,7 @@ public class BookNamesMapping {
                            .replace("ș", "s").replace("ț", "i");
             case de:
                 return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", "")
-                           .replace("ä", "a").replace("ö", "o").replace("ü", "u");
+                           .replace("ä", "a").replace("ü", "u");
             case pt:
                 return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", "")
                         .replace("á", "a").replace("à", "a").replace("ã", "a")

@@ -157,13 +157,13 @@
         Ich habe keinen Zugang.
     </string>
     <string name="whats_new_message_previous">
-• Eine italienische Bibel und eine italienische Übersetzung der Anwendung wurden hinzugefügt \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Notes Sharing-Funktion wurde verbessert (WhatsApp, Messenger, SMS) \n\n
 • Die Funktion, den Text des Verses zu kopieren, wurde durch langes Drücken hinzugefügt \n\n
 • Sitzungszurückschreibung hinzugefügt, wenn der Benutzer zum Editor zurückkehrt \n\n
 • Text-Schaltflächen Ausschneiden / Kopieren auf Android-Tablets, die älter als 6.0 sind, wurden verbessert \n\n
-• Viele kleinere Fehler behoben
+• Viele kleinere Fehler behoben \n\n
+    </string>
+    <string name="whats_new_message_last">
+• Unterscheidung zwischen Ko (Korinther) und Kö (Könige) wurde verbessert
     </string>
 </resources>
