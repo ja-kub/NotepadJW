@@ -16,8 +16,8 @@ import pl.bubson.notepadjw.R;
  * Created by Kuba on 2016-09-17.
  */
 public class WhatsNewScreen {
-    private static final String LOG_TAG                 = "WhatsNewScreen";
-    private static final String LAST_VERSION_CODE_KEY   = "last_version_code";
+    private static final String LOG_TAG                = "WhatsNewScreen";
+    public static final String LAST_VERSION_CODE_KEY   = "last_version_code";
 
     private Activity activityContext;
 

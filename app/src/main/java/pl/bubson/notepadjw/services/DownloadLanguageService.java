@@ -8,16 +8,16 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Environment;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import static pl.bubson.notepadjw.core.BookNamesMapping.languageUriMap;
 
 import java.io.File;
 
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.utils.Language;
+
+import static pl.bubson.notepadjw.core.BookNamesMapping.languageUriMap;
 
 /**
  * Created by Kuba on 2016-12-31.
@@ -68,8 +68,8 @@ public class DownloadLanguageService extends Service {
 
     private void downloadLanguage(Language language) {
         Uri uri = Uri.parse(languageUriMap.get(language));
-        File downloadedFile = Environment.getExternalStoragePublicDirectory(APP_TEMP_FOLDER_NAME + "/" + uri.getLastPathSegment());
-        if (downloadedFile.exists()) {
+        File downloadedFile = getExternalFilesDir(APP_TEMP_FOLDER_NAME + "/" + uri.getLastPathSegment());
+        if (downloadedFile != null && downloadedFile.exists()) {
             try {
                 Intent installLanguageServiceIntent = new Intent(this, InstallLanguageService.class);
                 installLanguageServiceIntent.setData(Uri.fromFile(downloadedFile));
@@ -83,7 +83,7 @@ public class DownloadLanguageService extends Service {
             request.setDescription(getString(R.string.download_description));
             request.setTitle(getString(R.string.download_language) + ": " + language.name());
             request.allowScanningByMediaScanner();
-            request.setDestinationInExternalPublicDir(APP_TEMP_FOLDER_NAME, uri.getLastPathSegment());
+            request.setDestinationInExternalFilesDir(getApplicationContext(), APP_TEMP_FOLDER_NAME, uri.getLastPathSegment());
 
             downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
             enqueue = downloadManager.enqueue(request);

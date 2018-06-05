@@ -71,9 +71,12 @@ import pl.bubson.notepadjw.utils.WhatsNewScreen;
 public class FileManagerActivity extends AppCompatActivity {
 
     public static final String NOTE_FILE_EXTENSION = "html";
-    public static final String OLD_FILE_EXTENSION = "txt";
+    public static final String OLD_FILE_EXTENSION = "txt"; // TODO remove it before release
     private static final String TAG = "FileManagerActivity";
     private static final String appFolderName = "NotepadJW"; // don't change it, as user have their notes there from some time
+    public static final int SUCCESSFUL = 1;
+    public static final int FAILED = 0;
+    public static final String MOVED_FILES_KEY = "movedFiles";
     private static File mainDirectory;
     private static FilesDatabase filesDatabase;
     private final Context activityContext = this;
@@ -136,8 +139,10 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     public static void askForPermissionsIfNotGranted(final Activity activity) {
-        if (!isStoragePermissionGranted(activity)) {
-            ActivityCompat.requestPermissions(activity, Permissions.PERMISSIONS, Permissions.MY_REQUEST_PERMISSIONS_CODE);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) { // permissions are not needed in this app from Android 6.0
+            if (!isStoragePermissionGranted(activity)) {
+                ActivityCompat.requestPermissions(activity, Permissions.PERMISSIONS, Permissions.MY_REQUEST_PERMISSIONS_CODE);
+            }
         }
     }
 
@@ -150,8 +155,10 @@ public class FileManagerActivity extends AppCompatActivity {
 
         askForPermissionsIfNotYetAnswered(this);
         prepareMainDirectory();
-        updateFilesExtensions(mainDirectory);
+//        updateFilesExtensions(mainDirectory); // This is probably not needed anymore, txt files are not used. This method was created 18.07.2018 // TODO remove it before release
         prepareFilesDatabase(mainDirectory); // to be able to search them
+
+        moveFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
 
         // Show the "What's New" screen once for each new release of the application
         new WhatsNewScreen(this).show();
@@ -209,6 +216,7 @@ public class FileManagerActivity extends AppCompatActivity {
         return files.toArray(new File[0]);
     }
 
+    // TODO remove it before release
     private void updateFilesExtensions(File mainDirectory) {
         Log.v(TAG, "updateFilesExtensions start");
         updateFilesExtensionsRecursive(mainDirectory);
@@ -440,7 +448,10 @@ public class FileManagerActivity extends AppCompatActivity {
     private void prepareMainDirectory() {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activityContext);
         int userAnswer = prefs.getInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
-        if (isExternalStorageWritable() && isStoragePermissionGranted(this) && userAnswer == Permissions.ACCEPTED) {
+        int filesMoved = prefs.getInt(MOVED_FILES_KEY, SUCCESSFUL);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && filesMoved == SUCCESSFUL) { // AutoBackup works from Android 6.0...
+            mainDirectory = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), appFolderName); // ...and it works only for files in getExternalFilesDir() and getFilesDir(). But that way these files are not accessible from PC
+        } else if (isExternalStorageWritable() && isStoragePermissionGranted(this) && userAnswer == Permissions.ACCEPTED) { // for Androids < 6.0 let's stay with old version with access to files from PC
             File publicDirectory;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 publicDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
@@ -457,6 +468,7 @@ public class FileManagerActivity extends AppCompatActivity {
         } else {
             mainDirectory = new File(getFilesDir(), appFolderName);
         }
+        Log.i(TAG, "mainDirectory = " + mainDirectory);
 
         if (mainDirectory.mkdirs() || mainDirectory.isDirectory()) {
             currentDirectory = mainDirectory;
@@ -475,8 +487,8 @@ public class FileManagerActivity extends AppCompatActivity {
                 @Override
                 public boolean accept(File pathname) {
                     return (pathname.isDirectory()
-                            || fileExtension(pathname.getName()).equalsIgnoreCase(NOTE_FILE_EXTENSION)
-                            || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
+                            || fileExtension(pathname.getName()).equalsIgnoreCase(NOTE_FILE_EXTENSION));
+//                            || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
                 }
             });
             setTitle(directory.getName());
@@ -502,8 +514,8 @@ public class FileManagerActivity extends AppCompatActivity {
                         @Override
                         public boolean accept(File pathname) {
                             return (pathname.isDirectory()
-                                    || fileExtension(pathname.getName()).equalsIgnoreCase(NOTE_FILE_EXTENSION)
-                                    || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
+                                    || fileExtension(pathname.getName()).equalsIgnoreCase(NOTE_FILE_EXTENSION));
+//                                    || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
                         }
                     });
                     int buf = 0;
@@ -969,6 +981,7 @@ public class FileManagerActivity extends AppCompatActivity {
         return null;
     }
 
+    // TODO remove it before release
     public void updateFilesExtensionsRecursive(File fileOrDirectory) {
         if (fileOrDirectory.isDirectory()) {
             for (File child : fileOrDirectory.listFiles()) updateFilesExtensionsRecursive(child);
@@ -976,6 +989,38 @@ public class FileManagerActivity extends AppCompatActivity {
             String newFilePath = fileOrDirectory.getAbsolutePath().replaceFirst(OLD_FILE_EXTENSION + "$", NOTE_FILE_EXTENSION);
             File newFile = new File(newFilePath);
             fileOrDirectory.renameTo(newFile);
+        }
+    }
+
+    // Remove this method some while after version 38 (from 06.06.2018), maybe a year after?
+    public void moveFilesIfNecessary() {
+        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(activityContext).edit();
+        editor.putInt(MOVED_FILES_KEY, SUCCESSFUL);
+        editor.commit();
+
+        final long lastVersionCode = PreferenceManager.getDefaultSharedPreferences(activityContext).getLong(WhatsNewScreen.LAST_VERSION_CODE_KEY, 0);
+//        if (lastVersionCode < 38 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // do it only once, with first update to version => 38 and only for Androids >= 6.0
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // do it only once, with first update to version => 38 and only for Androids >= 6.0
+            Log.i(TAG, "Conditions met, moving files.");
+            List<File> fromDirs = new ArrayList<>();
+            if (isExternalStorageWritable()) fromDirs.add(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName));
+            fromDirs.add(new File(getFilesDir(), appFolderName));
+            for (File fromDir : fromDirs) {
+                if (fromDir.isDirectory()) {
+                    try {
+                        FileUtils.moveToDirectory(fromDir, mainDirectory, true);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Snackbar.make(recyclerView, R.string.not_all_elements_pasted, Snackbar.LENGTH_LONG).setAction("Action", null).show(); // TODO remove this before release
+                        editor.putInt(MOVED_FILES_KEY, FAILED);
+                        editor.commit();
+                    }
+                }
+            }
+            filesDatabase.refreshData();
+            fillListWithItemsFromDir(mainDirectory);
+        } else {
+            Log.i(TAG, "Conditions ARE NOT met, moving files skipped.");
         }
     }
 
@@ -1001,27 +1046,29 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     public void askForPermissionsIfNotYetAnswered(final Activity activity) {
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
-        int userAnswer = prefs.getInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
-        if (userAnswer == Permissions.NOT_ANSWERED_YET && !isStoragePermissionGranted(this)) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-            builder.setMessage(R.string.permission_explanation_dialog_message)
-                    .setCancelable(false)
-                    .setTitle(R.string.permission_explanation_dialog_title)
-                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            ActivityCompat.requestPermissions(
-                                    activity,
-                                    Permissions.PERMISSIONS,
-                                    Permissions.MY_REQUEST_PERMISSIONS_CODE
-                            );
-                        }
-                    });
-            builder.create().show();
-        } else if (userAnswer == Permissions.NOT_ANSWERED_YET && isStoragePermissionGranted(this)) {
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.ACCEPTED);
-            editor.commit();
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) { // permissions are not needed in this app from Android 6.0
+            final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
+            int userAnswer = prefs.getInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
+            if (userAnswer == Permissions.NOT_ANSWERED_YET && !isStoragePermissionGranted(this)) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                builder.setMessage(R.string.permission_explanation_dialog_message)
+                        .setCancelable(false)
+                        .setTitle(R.string.permission_explanation_dialog_title)
+                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                ActivityCompat.requestPermissions(
+                                        activity,
+                                        Permissions.PERMISSIONS,
+                                        Permissions.MY_REQUEST_PERMISSIONS_CODE
+                                );
+                            }
+                        });
+                builder.create().show();
+            } else if (userAnswer == Permissions.NOT_ANSWERED_YET && isStoragePermissionGranted(this)) {
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.ACCEPTED);
+                editor.commit();
+            }
         }
     }
 
