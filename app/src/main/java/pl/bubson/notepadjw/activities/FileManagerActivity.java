@@ -999,11 +999,10 @@ public class FileManagerActivity extends AppCompatActivity {
         editor.commit();
 
         final long lastVersionCode = PreferenceManager.getDefaultSharedPreferences(activityContext).getLong(WhatsNewScreen.LAST_VERSION_CODE_KEY, 0);
-//        if (lastVersionCode < 38 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // do it only once, with first update to version => 38 and only for Androids >= 6.0
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // do it only once, with first update to version => 38 and only for Androids >= 6.0
+        if (lastVersionCode > 0 && lastVersionCode < 38 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // do it only once, with first update to version => 38 and only for Androids >= 6.0
             Log.i(TAG, "Conditions met, moving files.");
             List<File> fromDirs = new ArrayList<>();
-            if (isExternalStorageWritable()) fromDirs.add(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName));
+            if (isExternalStorageWritable() && isStoragePermissionGranted(this)) fromDirs.add(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName));
             fromDirs.add(new File(getFilesDir(), appFolderName));
             for (File fromDir : fromDirs) {
                 if (fromDir.isDirectory()) {

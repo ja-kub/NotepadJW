@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pl.bubson.notepadjw">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="22" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--change above two lines to below two lines when you will be removing method moveFilesIfNecessary()-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="22" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="22" />-->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <supports-screens
