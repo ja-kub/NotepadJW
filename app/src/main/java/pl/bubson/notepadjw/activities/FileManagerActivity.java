@@ -1006,7 +1006,8 @@ public class FileManagerActivity extends AppCompatActivity {
             for (File fromDir : fromDirs) {
                 if (fromDir.isDirectory()) {
                     try {
-                        FileUtils.moveToDirectory(fromDir, getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), true);
+                        FileUtils.copyDirectory(fromDir, getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS));
+                        FileUtils.deleteDirectory(fromDir);
                     } catch (Exception e) {
                         e.printStackTrace();
                         Snackbar.make(recyclerView, R.string.not_all_elements_pasted, Snackbar.LENGTH_LONG).setAction("Action", null).show(); // TODO remove this before release
