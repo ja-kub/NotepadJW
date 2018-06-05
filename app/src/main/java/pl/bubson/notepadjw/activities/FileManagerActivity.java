@@ -994,12 +994,11 @@ public class FileManagerActivity extends AppCompatActivity {
 
     // Remove this method some while after version 38 (from 06.06.2018), maybe a year after?
     public void moveFilesIfNecessary() {
-        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(activityContext).edit();
-        editor.putInt(MOVED_FILES_KEY, SUCCESSFUL);
-        editor.commit();
-
         final long lastVersionCode = PreferenceManager.getDefaultSharedPreferences(activityContext).getLong(WhatsNewScreen.LAST_VERSION_CODE_KEY, 0);
         if (lastVersionCode > 0 && lastVersionCode < 38 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // do it only once, with first update to version => 38 and only for Androids >= 6.0
+            SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(activityContext).edit();
+            editor.putInt(MOVED_FILES_KEY, SUCCESSFUL);
+            editor.commit();
             Log.i(TAG, "Conditions met, moving files.");
             List<File> fromDirs = new ArrayList<>();
             if (isExternalStorageWritable() && isStoragePermissionGranted(this)) fromDirs.add(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName));
@@ -1007,7 +1006,7 @@ public class FileManagerActivity extends AppCompatActivity {
             for (File fromDir : fromDirs) {
                 if (fromDir.isDirectory()) {
                     try {
-                        FileUtils.moveToDirectory(fromDir, mainDirectory, true);
+                        FileUtils.moveToDirectory(fromDir, getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), true);
                     } catch (Exception e) {
                         e.printStackTrace();
                         Snackbar.make(recyclerView, R.string.not_all_elements_pasted, Snackbar.LENGTH_LONG).setAction("Action", null).show(); // TODO remove this before release
