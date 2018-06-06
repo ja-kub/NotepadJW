@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Environment;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -68,8 +69,8 @@ public class DownloadLanguageService extends Service {
 
     private void downloadLanguage(Language language) {
         Uri uri = Uri.parse(languageUriMap.get(language));
-        File downloadedFile = getExternalFilesDir(APP_TEMP_FOLDER_NAME + "/" + uri.getLastPathSegment());
-        if (downloadedFile != null && downloadedFile.exists()) {
+        File downloadedFile = Environment.getExternalStoragePublicDirectory(APP_TEMP_FOLDER_NAME + "/" + uri.getLastPathSegment());
+        if (downloadedFile.exists()) {
             try {
                 Intent installLanguageServiceIntent = new Intent(this, InstallLanguageService.class);
                 installLanguageServiceIntent.setData(Uri.fromFile(downloadedFile));
@@ -83,7 +84,7 @@ public class DownloadLanguageService extends Service {
             request.setDescription(getString(R.string.download_description));
             request.setTitle(getString(R.string.download_language) + ": " + language.name());
             request.allowScanningByMediaScanner();
-            request.setDestinationInExternalFilesDir(getApplicationContext(), APP_TEMP_FOLDER_NAME, uri.getLastPathSegment());
+            request.setDestinationInExternalPublicDir(APP_TEMP_FOLDER_NAME, uri.getLastPathSegment());
 
             downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
             enqueue = downloadManager.enqueue(request);
@@ -96,7 +97,6 @@ public class DownloadLanguageService extends Service {
             public void onReceive(Context context, Intent intent) {
                 String action = intent.getAction();
                 if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)) {
-//                    long downloadId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, 0); // what this is for?
                     DownloadManager.Query query = new DownloadManager.Query();
                     query.setFilterById(enqueue);
                     Cursor cursor = downloadManager.query(query);
