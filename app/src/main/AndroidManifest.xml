@@ -4,9 +4,6 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--change above two lines to below two lines when you will be removing method copyFilesIfNecessary()-->
-    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="22" />-->
-    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="22" />-->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <supports-screens

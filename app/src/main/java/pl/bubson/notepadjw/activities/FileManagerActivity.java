@@ -139,10 +139,8 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     public static void askForPermissionsIfNotGranted(final Activity activity) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) { // permissions are not needed in this app from Android 6.0
-            if (!isStoragePermissionGranted(activity)) {
-                ActivityCompat.requestPermissions(activity, Permissions.PERMISSIONS, Permissions.MY_REQUEST_PERMISSIONS_CODE);
-            }
+        if (!isStoragePermissionGranted(activity)) {
+            ActivityCompat.requestPermissions(activity, Permissions.PERMISSIONS, Permissions.MY_REQUEST_PERMISSIONS_CODE);
         }
     }
 
@@ -488,7 +486,6 @@ public class FileManagerActivity extends AppCompatActivity {
                 public boolean accept(File pathname) {
                     return (pathname.isDirectory()
                             || fileExtension(pathname.getName()).equalsIgnoreCase(NOTE_FILE_EXTENSION));
-//                            || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
                 }
             });
             setTitle(directory.getName());
@@ -515,7 +512,6 @@ public class FileManagerActivity extends AppCompatActivity {
                         public boolean accept(File pathname) {
                             return (pathname.isDirectory()
                                     || fileExtension(pathname.getName()).equalsIgnoreCase(NOTE_FILE_EXTENSION));
-//                                    || fileExtension(pathname.getName()).equalsIgnoreCase(OLD_FILE_EXTENSION));
                         }
                     });
                     int buf = 0;
@@ -928,10 +924,12 @@ public class FileManagerActivity extends AppCompatActivity {
         intent.setType("text/html");
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        if (selectedItemList.size() == 1) intent.putExtra(Intent.EXTRA_SUBJECT, selectedItemList.get(0).getName());
+        if (selectedItemList.size() == 1)
+            intent.putExtra(Intent.EXTRA_SUBJECT, selectedItemList.get(0).getName());
         intent.setAction(Intent.ACTION_SEND_MULTIPLE);
         intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, fileUris);
-        if (addExtraText) intent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.sent_by_notepadjw)));
+        if (addExtraText)
+            intent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.sent_by_notepadjw)));
         return intent;
     }
 
