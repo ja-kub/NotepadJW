@@ -17,17 +17,16 @@ import android.text.style.StyleSpan;
 import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
 
-import io.github.mthli.knife.KnifeTagHandler;
-
 /**
  * Created by Kuba on 2017-03-22.
  */
 public class SpanToHtmlConverter {
     public static Spanned fromHtml(String source) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return Html.fromHtml(source, Html.FROM_HTML_MODE_COMPACT, null, new KnifeTagHandler());
+            return Html.fromHtml(source, Html.FROM_HTML_MODE_COMPACT, null, new CustomTabHandler());
         } else {
-            return Html.fromHtml(source, null, new KnifeTagHandler());
+            source = source.replaceAll("<span style=\"background-color:#([a-fA-F0-9]{6}).*?>(.*?)</span>", "<_$1>$2</_$1>"); // old fromHtml() doesn't support <span> nor eny way to set bgColor
+            return Html.fromHtml(source, null, new CustomTabHandler());
         }
     }
 
