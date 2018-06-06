@@ -52,6 +52,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -871,11 +872,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private void shareCurrentlySelectedFiles() {
         if (selectedItemList.size() > 0) {
             // Preparing data for intents
-            ArrayList<Uri> fileUris = new ArrayList<>();
-            for (Item item : selectedItemList) {
-                File file = new File(item.getPath());
-                fileUris.add(getUri(file));
-            }
+            ArrayList<Uri> fileUris = getUris();
             String text = readHtmlFiles(fileUris);
             Intent mainIntent;
 
@@ -919,6 +916,32 @@ public class FileManagerActivity extends AppCompatActivity {
             }
         }
     }
+
+    @NonNull
+    private ArrayList<Uri> getUris() {
+        ArrayList<Uri> fileUris = new ArrayList<>();
+        List<File> files = new ArrayList<>();
+        for (Item item : selectedItemList) {
+            files.add(new File(item.getPath()));
+        }
+        files = getFilesFromFolders(files);
+        for (File file : files) {
+            fileUris.add(getUri(file));
+        }
+        return fileUris;
+    }
+
+    private List<File> getFilesFromFolders(List<File> fileList) {
+        for (File fileOrDir : fileList) {
+            if (fileOrDir.isDirectory()) {
+                List<File> childFiles = new ArrayList<>(Arrays.asList(fileOrDir.listFiles()));
+                fileList.remove(fileOrDir);
+                fileList.addAll(getFilesFromFolders(childFiles));
+            }
+        }
+        return fileList;
+    }
+
 
     private Intent prepareSendFilesIntent(Intent intent, ArrayList<Uri> fileUris, boolean addExtraText) {
         intent.setType("text/html");
