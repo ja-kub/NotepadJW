@@ -72,11 +72,11 @@ public class FileManagerActivity extends AppCompatActivity {
 
     public static final String NOTE_FILE_EXTENSION = "html";
     public static final String OLD_FILE_EXTENSION = "txt"; // TODO remove it before release
-    private static final String TAG = "FileManagerActivity";
-    private static final String appFolderName = "NotepadJW"; // don't change it, as user have their notes there from some time
     public static final int SUCCESSFUL = 1;
     public static final int FAILED = 0;
     public static final String MOVED_FILES_KEY = "movedFiles";
+    private static final String TAG = "FileManagerActivity";
+    private static final String appFolderName = "NotepadJW"; // don't change it, as user have their notes there from some time
     private static File mainDirectory;
     private static FilesDatabase filesDatabase;
     private final Context activityContext = this;
@@ -158,7 +158,7 @@ public class FileManagerActivity extends AppCompatActivity {
 //        updateFilesExtensions(mainDirectory); // This is probably not needed anymore, txt files are not used. This method was created 18.07.2018 // TODO remove it before release
         prepareFilesDatabase(mainDirectory); // to be able to search them
 
-        moveFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
+        copyFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
 
         // Show the "What's New" screen once for each new release of the application
         new WhatsNewScreen(this).show();
@@ -993,27 +993,29 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     // Remove this method some while after version 38 (from 06.06.2018), maybe a year after?
-    public void moveFilesIfNecessary() {
+    public void copyFilesIfNecessary() {
         final long lastVersionCode = PreferenceManager.getDefaultSharedPreferences(activityContext).getLong(WhatsNewScreen.LAST_VERSION_CODE_KEY, 0);
         if (lastVersionCode > 0 && lastVersionCode < 38 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // do it only once, with first update to version => 38 and only for Androids >= 6.0
-            SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(activityContext).edit();
+            final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activityContext);
+            int userAnswer = prefs.getInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
+            SharedPreferences.Editor editor = prefs.edit();
             editor.putInt(MOVED_FILES_KEY, SUCCESSFUL);
             editor.commit();
             Log.i(TAG, "Conditions met, moving files.");
-            List<File> fromDirs = new ArrayList<>();
-            if (isExternalStorageWritable() && isStoragePermissionGranted(this)) fromDirs.add(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName));
-            fromDirs.add(new File(getFilesDir(), appFolderName));
-            for (File fromDir : fromDirs) {
-                if (fromDir.isDirectory()) {
-                    try {
-                        FileUtils.copyDirectory(fromDir, getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS));
-                        FileUtils.deleteDirectory(fromDir);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        Snackbar.make(recyclerView, R.string.not_all_elements_pasted, Snackbar.LENGTH_LONG).setAction("Action", null).show(); // TODO remove this before release
-                        editor.putInt(MOVED_FILES_KEY, FAILED);
-                        editor.commit();
-                    }
+            File fromDir;
+            if (isExternalStorageWritable() && isStoragePermissionGranted(this) && userAnswer == Permissions.ACCEPTED) {
+                fromDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName);
+            } else {
+                fromDir = new File(getFilesDir(), appFolderName);
+            }
+            if (fromDir.isDirectory()) {
+                try {
+                    FileUtils.copyDirectory(fromDir, getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Snackbar.make(recyclerView, R.string.not_all_elements_pasted, Snackbar.LENGTH_LONG).setAction("Action", null).show(); // TODO remove this before release
+                    editor.putInt(MOVED_FILES_KEY, FAILED);
+                    editor.commit();
                 }
             }
             filesDatabase.refreshData();
