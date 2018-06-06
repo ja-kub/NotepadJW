@@ -932,16 +932,16 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     private List<File> getFilesFromFolders(List<File> fileList) {
+        List<File> newFileList = new ArrayList<>(fileList);
         for (File fileOrDir : fileList) {
             if (fileOrDir.isDirectory()) {
                 List<File> childFiles = new ArrayList<>(Arrays.asList(fileOrDir.listFiles()));
-                fileList.remove(fileOrDir);
-                fileList.addAll(getFilesFromFolders(childFiles));
+                newFileList.remove(fileOrDir);
+                newFileList.addAll(getFilesFromFolders(childFiles));
             }
         }
-        return fileList;
+        return newFileList;
     }
-
 
     private Intent prepareSendFilesIntent(Intent intent, ArrayList<Uri> fileUris, boolean addExtraText) {
         intent.setType("text/html");
