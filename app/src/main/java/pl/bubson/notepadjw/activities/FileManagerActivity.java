@@ -72,7 +72,6 @@ import pl.bubson.notepadjw.utils.WhatsNewScreen;
 public class FileManagerActivity extends AppCompatActivity {
 
     public static final String NOTE_FILE_EXTENSION = "html";
-    public static final String OLD_FILE_EXTENSION = "txt"; // TODO remove it before release
     public static final int SUCCESSFUL = 1;
     public static final int FAILED = 0;
     public static final String MOVED_FILES_KEY = "movedFiles";
@@ -154,7 +153,6 @@ public class FileManagerActivity extends AppCompatActivity {
 
         askForPermissionsIfNotYetAnswered(this);
         prepareMainDirectory();
-//        updateFilesExtensions(mainDirectory); // This is probably not needed anymore, txt files are not used. This method was created 18.07.2018 // TODO remove it before release
         prepareFilesDatabase(mainDirectory); // to be able to search them
 
         copyFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
@@ -213,13 +211,6 @@ public class FileManagerActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return files.toArray(new File[0]);
-    }
-
-    // TODO remove it before release
-    private void updateFilesExtensions(File mainDirectory) {
-        Log.v(TAG, "updateFilesExtensions start");
-        updateFilesExtensionsRecursive(mainDirectory);
-        Log.v(TAG, "updateFilesExtensions end");
     }
 
     private void prepareBiblesDatabase() {
@@ -1002,17 +993,6 @@ public class FileManagerActivity extends AppCompatActivity {
         return null;
     }
 
-    // TODO remove it before release
-    public void updateFilesExtensionsRecursive(File fileOrDirectory) {
-        if (fileOrDirectory.isDirectory()) {
-            for (File child : fileOrDirectory.listFiles()) updateFilesExtensionsRecursive(child);
-        } else {
-            String newFilePath = fileOrDirectory.getAbsolutePath().replaceFirst(OLD_FILE_EXTENSION + "$", NOTE_FILE_EXTENSION);
-            File newFile = new File(newFilePath);
-            fileOrDirectory.renameTo(newFile);
-        }
-    }
-
     // Remove this method some while after version 38 (from 06.06.2018), maybe a year after?
     public void copyFilesIfNecessary() {
         final long lastVersionCode = PreferenceManager.getDefaultSharedPreferences(activityContext).getLong(WhatsNewScreen.LAST_VERSION_CODE_KEY, 0);
@@ -1035,7 +1015,6 @@ public class FileManagerActivity extends AppCompatActivity {
                     FileUtils.deleteDirectory(fromDir);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Snackbar.make(recyclerView, R.string.not_all_elements_pasted, Snackbar.LENGTH_LONG).setAction("Action", null).show(); // TODO remove this before release
                     editor.putInt(MOVED_FILES_KEY, FAILED);
                     editor.commit();
                 }
