@@ -113,37 +113,41 @@
     <string name="folder">Dosar</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
-    <p>Notes sent from <B>Notepad JW</B> - notes manager and editor with live view of entered verses.</p>
+    <p>Notele trimise de la Notepad JW - note manager și editor cu vizualizare live a versurilor introduse.</p>
     <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
         ]]>
     </string>
     <string name="help_text_html">
     <![CDATA[
-<h3>Information</h3>
-<p>Text of all verses are from New World Translation of the Holy Scriptures
-(Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
-<h3>Why use NotepadJW?</h3>
-<p>This application was created, because no other app was found, which would be able to show
-verses in the real time while editing some note. So it is useful for making notes during
-meetings and congresses - you don\'t need anymore to switch applications or search paper Bible
-to see the verse text, it is displayed in the same window as editor. As this application is able to
-show all verses under links in view mode, it could be also used for speeches at the podium and other
-tasks during meetings. This app also has sharing option, so you can also use it for making notes
-during ministry and send them to other preachers.</p>
-<h3>Abilities</h3>
-<p>This application consists of two activities:
-<br><b>Notes Manager</b> and <b>Notepad Editor</b>.
-<br>In <b>Notes Manager</b> you can create new notes, open them and create new folders.
-<br>You can select items by long-click and then: rename, delete or send (cut, copy and paste options will be added soon).
-<br>In <b>Notepad Editor</b> you can switch between <i>Edit Mode</i> and <i>View Mode</i>. In the first one,
-last entered verse will be displayed and in the second one you can click on links created from verses
-to see selected one.
-<br><b>Notes</b> are saved in external storage under txt files in location: Documents/NotepadJW.
-You can access them from our PC. It means that you can rename them, delete, move or add new txt files
-from your computer. You can also open txt files from other app on your device, like from file explorers,
-email attachments, bluetooth files etc. You can import them to NotepadJW workspace by clicking Save
-button (they will be copied to Downloads folder).</p>
-<h3>Author</h3>
+<h3>Informație</h3>
+<p>Textul tuturor versetelor este din Traducerea Lumii Noi din Sfintele Scripturi
+(Copyright: (Watch Tower Biblia și Tract Society din Pennsylvania)).</p>
+<h3> De ce să folosiți NotepadJW? </ h3>
+<p> Această aplicație a fost creată, deoarece nu a fost găsită nicio altă aplicație, care ar putea fi afișată
+versuri în timp real în timp ce editați unele note. Deci, este util pentru a face note în timpul
+întâlniri și congrese - nu mai aveți nevoie să schimbați aplicațiile sau să căutați Biblia pe hârtie
+pentru a vedea textul versurilor, acesta este afișat în aceeași fereastră ca editorul. Deoarece această aplicație este capabilă
+arată toate versurile sub link-uri în modul de vizualizare, ar putea fi folosit și pentru discursurile de pe podium și altele
+sarcinilor în timpul reuniunilor. Această aplicație are, de asemenea, opțiunea de partajare, astfel încât să o puteți folosi și pentru a face note
+în timpul slujirii și trimiteți-le altor predicatori. </ p>
+<H3> Abilități </ h3>
+<p> Această cerere constă în două activități:
+<br> <b> Managerul notelor </ b> și <b> Editorul Notepad </ b>.
+<br> În <b> Manager de note </ b> puteți crea note noi, le puteți deschide și creați dosare noi.
+<br> Puteți selecta elementele prin clic cu buton lung și apoi: redenumiți, ștergeți sau trimiteți (opțiunile de tăiere, copiere și lipire vor fi adăugate în curând).
+<br> În <b> Editorul Notepad </ b> puteți comuta între <i> Modul de editare </ i> și <i> Modul de vizualizare </ i>. În primul,
+ultimul verset introdus va fi afișat, iar în cel de-al doilea poți să dai clic pe link-urile create de versuri
+pentru a vedea unul selectat.
+<h3> De rezervă automată </ h3>
+<b> Dacă aveți Android 6.0 sau mai nou: </ b> notele și setările sunt salvate automat. Se întâmplă
+la miezul nopții numai dacă dispozitivul dvs. se încarcă și se conectează la WiFi în acel moment. Când vă schimbați
+dispozitivul dvs. și reinstalați această aplicație, notele și setările vor fi restaurate automat. Cu toate acestea, notează
+nu sunt încă disponibile din PC sau din alte aplicații (este necesar pentru această caracteristică). Dar tot poți
+trimiteți-le prin e-mailuri, mesageri și salvați-le pe Google Drive.
+<br> <br> <b> Dacă aveți Android mai vechi decât 6.0: </ b> Notele nu sunt copiate automat în siguranță. Sunt
+salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Puteți să le accesați de pe PC-ul nostru.
+Înseamnă că le poți copia pe PC, le poți redenumi, șterge, muta, adăuga altele de pe computer etc.
+<h3>Autor</h3>
 <p>Jakub Tomala (coding, layouts).
     ]]>
     </string>
@@ -164,6 +168,7 @@ button (they will be copied to Downloads folder).</p>
 • Au fost rezolvate multe bug-uri minore. \n\n
     </string>
     <string name="whats_new_message_last">
-• Adăugat: culori pentru font și marker, eliminând formatarea (după selectarea textului).
+• Adăugat: culori pentru font și marker, eliminând formatarea (după selectarea textului). \n\n
+• A fost introdusă copia de rezervă automată a notelor și setărilor - consultați Ajutor.
     </string>
 </resources>

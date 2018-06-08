@@ -127,31 +127,35 @@
     </string>
    <string name="help_text_html">
    <![CDATA[
-    <h3>Informação</h3>
-    <p>O texto de todos os versos vem da Tradução do Novo Mundo das Escrituras Sagradas.</p>
-    <h3>Por que usar NotepadJW?</h3>
-    <p>Esta aplicação foi criada porque não encontraram nenhuma outra aplicação que pode mostrar
-    Versos em tempo real durante a edição de uma nota. Por isso, é útil para tomar notas durante
-    Reuniões e conferências - não precisa mais mudar de aplicações ou procurar papel Bíblia
-    Para ver o texto em verso, mostrado na mesma janela do editor. Uma vez que esta aplicação é capaz de
-    Mostrar todos os versos sob links no modo de visualização, ele também poderia ser usado para discursos no pódio e outros
-    Tarefas durante as reuniões. Esta aplicação também tem a opção de compartilhar, por isso também pode ser usado para fazer anotações
-    Durante o ministério e enviá-los para outros pregadores.</p>
-    <h3>Skills</h3>
-    <p>Esta aplicação consiste em duas atividades:
-    <br><b>Nota Gestor</b>e<b>Editor do Bloco de notas</b>.
-    <br><b>Nota Gestor</b>pode criar novas notas, abertos e criar novas pastas.
-    <br>pode selecionar itens com um clique longo e, em seguida: renomear, apagar ou enviar (opções de cortar, copiar e colar será adicionado em breve).
-    <br><b>Bloco de Notas do Editor</b>pode alternar entre<i>Editar Modo</i>e<i>Modo</i>. Na primeira,
-    O último verso inserido será exibido e no segundo você pode clicar nos versos links criados
-    A vista seleccionada.
-    <br><b>Notas</b>são armazenados no local externo de armazenamento em arquivo txt: Documents / NotepadJW.
-    Você pode acessá-los de nosso PC. Isto significa que você pode renomear, apagar, mover ou adicionar novos arquivos txt
-    do seu computador. Você também pode abrir txt arquivo de outro aplicativo em seu dispositivo, ou a partir de navegadores de arquivos,
-    anexos de e-mail, arquivos bluetooth, etc. Você pode importá-los para o espaço de trabalho clicando em Salvar NotepadJW
-    (Serão copiados para a pasta Downloads).</p>
-    <h3>Autor</h3>
-    <p>Jakub Tomala (codificação, modelos).
+<h3>Informação</h3>
+O texto de todos os versos vem da Tradução do Novo Mundo das Escrituras Sagradas.
+<h3>Por que usar NotepadJW?</h3>
+Esta aplicação foi criada porque não encontraram nenhuma outra aplicação que pode mostrar
+Versos em tempo real durante a edição de uma nota. Por isso, é útil para tomar notas durante
+Reuniões e conferências - não precisa mais mudar de aplicações ou procurar papel Bíblia
+Para ver o texto em verso, mostrado na mesma janela do editor. Uma vez que esta aplicação é capaz de
+Mostrar todos os versos sob links no modo de visualização, ele também poderia ser usado para discursos no pódio e outros
+Tarefas durante as reuniões. Esta aplicação também tem a opção de compartilhar, por isso também pode ser usado para fazer anotações
+Durante o ministério e enviá-los para outros pregadores.
+<h3>Skills</h3>
+Esta aplicação consiste em duas atividades:
+<br>Nota Gestor e Editor do Bloco de notas</b>.
+<br>Nota Gestor pode criar novas notas, abertos e criar novas pastas.
+<br>pode selecionar itens com um clique longo e, em seguida: renomear, apagar ou enviar (opções de cortar, copiar e colar será adicionado em breve).
+<br>Bloco de Notas do Editor pode alternar entre <i>Editar Modo</i> e <i>Modo</i>. Na primeira,
+O último verso inserido será exibido e no segundo você pode clicar nos versos links criados
+A vista seleccionada.
+<h3> Backup automático e localização de anotações </ h3>
+<b> Se você tiver o Android 6.0 ou mais recente:</b> as anotações e as configurações serão automaticamente armazenadas em backup. Acontece
+a cada meia-noite somente se o seu dispositivo estiver carregando e conectado ao WiFi nesse momento. Quando você muda
+seu dispositivo e reinstalar este aplicativo, as anotações e as configurações serão restauradas automaticamente. No entanto notas
+ainda não estão disponíveis no PC ou outros aplicativos (é necessário para esse recurso). Mas você ainda pode
+envie-os por e-mails, mensageiros e salve-os no seu Google Drive.
+<br> <br> <b> Se você tiver Android mais antigo que 6.0: </ b> o backup não será feito automaticamente. Eles são
+salvo em seu dispositivo em local público: Documents / NotepadJW. Você pode acessá-los em nosso PC.
+Isso significa que você pode copiá-los para o PC, renomear, excluir, mover, adicionar novos a partir do seu computador, etc.
+<h3>Autor</h3>
+Jakub Tomala (codificação, modelos).
     ]]>
     </string>
     <string name="whats_new_message_previous">
@@ -162,6 +166,7 @@
 • Muitos pequenos bugs foram corrigidos. \n\n
     </string>
     <string name="whats_new_message_last">
-• Adicionado: cores de fonte e marcador, removendo a formatação (depois de selecionar o texto).
+• Adicionado: cores de fonte e marcador, removendo a formatação (depois de selecionar o texto). \n\n
+• Backup automático de notas e configurações foi introduzido - veja a Ajuda.
     </string>
 </resources>

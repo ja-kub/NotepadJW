@@ -145,11 +145,15 @@
     <br>En <b>Editor de Bloc de notas</b> puede cambiar entre <i>Modo de edición</i> y <i>Modo de visualización</i>. En la primera,
     El último verso introducido será exhibido y en el segundo usted puede chascar encendido los acoplamientos creados de versos
     Para ver seleccionado.
-    <br><b>Notas</b> se guardan en el almacenamiento externo en archivos txt en la ubicación: Documents / NotepadJW.
-    Puede acceder a ellos desde nuestro PC. Esto significa que puede cambiar el nombre, eliminar, mover o agregar nuevos archivos txt
-    desde tu computadora. También puede abrir archivos txt desde otra aplicación en su dispositivo, como desde exploradores de archivos,
-    Archivos adjuntos de correo electrónico, archivos bluetooth, etc. Puede importarlos al espacio de trabajo de NotepadJW haciendo clic en Guardar
-    (Se copiarán en la carpeta Descargas).</p>
+<h3>Ubicación de copia de seguridad automática y notas</h3>
+<b>Si tiene Android 6.0 o versiones posteriores:</b> las notas y la configuración se respaldan automáticamente. Sucede
+cada medianoche solo si su dispositivo se está cargando y está conectado a WiFi en ese momento. Cuando cambias
+su dispositivo y vuelva a instalar esta aplicación. Las notas y la configuración se restaurarán automáticamente. Sin embargo las notas
+no están más disponibles desde PC u otras aplicaciones (se requiere para esta función). Pero todavía puedes
+envíelos por correo electrónico, mensajería y guárdelos en su Google Drive.
+<br><br><b>Si tiene Android anterior a la versión 6.0:</b> las notas no se respaldan automáticamente. Ellos son
+guardado en su dispositivo en una ubicación pública: Documents / NotepadJW. Puede acceder a ellos desde nuestra PC.
+Significa que puede copiarlos a la PC (como una copia de seguridad manual), cambiar el nombre, eliminar, mover, agregar nuevos desde su computadora, etc.</p>
     <h3>Autor</h3>
     <p>Jakub Tomala (codificación, diseños).
     ]]>
@@ -162,6 +166,7 @@
 • Se han solucionado muchos errores menores \n\n
     </string>
     <string name="whats_new_message_last">
-• Agregado: colores de fuente y marcador, eliminación de formato (después de seleccionar el texto).
+• Agregado: colores de fuente y marcador, eliminación de formato (después de seleccionar el texto). \n\n
+• Se ha introducido una copia de seguridad automática de notas y configuraciones - ver Ayuda.
     </string>
 </resources>

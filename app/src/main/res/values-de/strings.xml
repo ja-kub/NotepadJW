@@ -43,7 +43,7 @@
     <string name="error_while_saving">Fehler beim Speichern der Datei</string>
     <string name="file_saved">Datei gespeichert</string>
     <string name="create_new_note_from_this_file_dialog_title">Erstellen Sie eine neue Notiz aus dieser Datei?</string>
-    <string name="file_will_be_created_in">Hinweis wird im Ordner erstellt: NotepadJW /</string>
+    <string name="file_will_be_created_in">Hinweis wird im Ordner erstellt: NotepadJW/</string>
     <string name="downloads_folder_name">Downloads</string>
     <string name="file_is_too_big">Datei ist zu groß!</string>
     <string name="language_na">Diese sprache wird noch nicht unterstützt</string>
@@ -138,11 +138,15 @@
         <br>In <b>Notepad Editor</b> können Sie zwischen <i>Edit Mode</i>und <i>View Mode</i>wechseln. In der ersten,
         Der zuletzt eingegebene Vers wird angezeigt und in der zweiten können Sie auf Links klicken, die aus Versen erstellt wurden
         Um eine ausgewählte zu sehen.
-        <br><b>Notizen</b> werden im externen Speicher unter txt-Dateien im Ort gespeichert: Dokumente / NotepadJW.
-        Sie können von unserem PC aus auf sie zugreifen. Es bedeutet, dass Sie sie umbenennen, löschen, verschieben oder neue txt-Dateien hinzufügen können
-        von deinem Computer. Sie können auch txt-Dateien von anderen App auf Ihrem Gerät, wie von Datei-Explorer,
-        E-Mail-Anhänge, Bluetooth-Dateien usw. Sie können sie in den NotepadJW-Arbeitsbereich importieren, indem Sie auf Speichern klicken
-        (Sie werden in den Ordner "Downloads" kopiert).</p>
+<h3>Automatisches Backup und Speicherort der Notizen</h3>
+<b>Wenn Sie über Android 6.0 oder neuer verfügen:</b> Notizen und Einstellungen werden automatisch gesichert. Es passiert
+nur Mitternacht, wenn Ihr Gerät zu diesem Zeitpunkt geladen und mit dem WiFi verbunden ist. Wenn du dich änderst
+Ihr Gerät und installieren Sie diese App. Notizen und Einstellungen werden automatisch wiederhergestellt. Allerdings Notizen
+sind vom PC oder anderen Apps nicht mehr verfügbar (für diese Funktion ist es erforderlich). Aber du kannst es immer noch
+Sende sie per E-Mail, Boten und speichere sie auf deinem Google Drive.
+<br><br><b>Wenn Sie älter als Android 6.0 sind:</b> Notepad werden nicht automatisch gesichert. Sie sind
+gespeichert auf Ihrem Gerät an einem öffentlichen Ort: Dokumente / NotepadJW. Sie können von unserem PC aus darauf zugreifen.
+Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), umbenennen, löschen, verschieben, neu von Ihrem Computer hinzufügen usw. </p>
     <h3>Autor</h3>
     <p>Jakub Tomala (Codierung, Layouts).
     ]]>
@@ -165,6 +169,7 @@
     </string>
     <string name="whats_new_message_last">
 • Unterscheidung zwischen Ko (Korinther) und Kö (Könige) wurde verbessert \n\n
-• Hinzugefügt: Schrift- und Markierungsfarben, Entfernen der Formatierung (nach Auswahl des Textes).
+• Hinzugefügt: Schrift- und Markierungsfarben, Entfernen der Formatierung (nach Auswahl des Textes). \n\n
+• Automatische Sicherung von Notizen und Einstellungen wurde eingeführt - siehe Hilfe.
     </string>
 </resources>

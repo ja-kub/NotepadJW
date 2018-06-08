@@ -72,7 +72,7 @@
 <h3>Informacje</h3>
 <p>Tekst wszystkich wersetów pochodzi z Pisma Świętego w Przekładzie Nowego Świata
 (Prawa autorskie: Towarzystwo Strażnica)</p>
-<h3>Do czego służy aplikacja NotepadJW?</h3>
+<h3>Do czego można użyć notatnika Notepad JW?</h3>
 <p><b>- Do notowania na zebraniach lub zgromadzeniach.</b> Nie trzeba wówczas przełączać się na inne aplikacje lub otwierać
 papierowej Biblii, aby śledzić treść odczytywanego z mównicy wersetu, ponieważ jest on od razu
 wyświetlany u góry w trakcie pisania notatek.
@@ -80,19 +80,24 @@ wyświetlany u góry w trakcie pisania notatek.
 staje się odnośnikiem, który można kliknąć, aby wyświetlić jego treść.
 <br><b>- Do sporządzania notatek podczas służby.</b> Dzięki możliwości wysyłania notatek
 z poziomu aplikacji, można je od razu wysyłać innym braciom.</p>
-<h3>Możliwości</h3>
-<p>Aby poznać większość funkcji tej aplikacji, zachęcam do obejrzenia filmiku: https://www.youtube.com/watch?v=NDm3OqG__ag
-<p><b>Rozpoznawanie wersetów</b> - aplikacja w nazwach ksiąg toleruje skróty, małe litery, brak polskich znaków, nieistotne
+<h3>Jak używać tej aplikacji?</h3>
+<p>Aby poznać większość jej funkcji, zachęcam do obejrzenia prezentacji: https://www.youtube.com/watch?v=NDm3OqG__ag
+<h3>Jak wprowadzać odnośniki do wersetów?</h3>
+<p>Aplikacja w nazwach ksiąg toleruje skróty, małe litery, brak polskich znaków, nieistotne
 są również kropki. Rozdziały od wersetów można oddzielać dwukropkiem lub przecinkiem. Można podawać
 wiele wersetów z jednego rozdziału. Przykłady, które zostaną poprawnie obsłużone: Mat. 24:14,15; wyjscia 4,12;
 Powt pr 2:2, 3, 6-8, 11.
-<br><b>Notatki</b> są zapisywane jako pliki txt na karcie twojego urządzenia w folderze: Documents/NotepadJW.
-Masz do nich dostęp po podłączeniu swojego urządzenia do komputera. Oznacza to, że możesz je wówczas
-kasować, przenosić, czy dodawać nowe pliki txt z komputera na swoje urządzenie. Pliki tekstowe możesz
-również otwierać w Edytorze NotepadJW z innych aplikacji na swoim urządzeniu, np. z innych menedżerów
-plików, bezpośrednio z załączników mailowych czy też z plików przesłanych bluetoothem. Po otwarciu ich
-w edytorze NotepadJW, możesz je zaimportować do NotepadJW klikając przycisk Zapisz (zostaną
-wówczas umieszczone w folderze Pobrane).</p>
+<br>Przykład, które nie zostanie poprawnie obsłużony: Fil. 1:2 (niejednoznaczność: chodzi o Filipian czy Filemona?).
+<h3>Kopia zapasowa i lokalizacja notatek</h3>
+<b>Jeżeli twoje urządzenie ma system Android 6.0 lub nowszy:</b> kopia zapasowa notatek i ustawień
+odbywa się codziennie ok. północy - pod warunkiem, że urządzenie jest wtedy podłączone do ładowarki i WiFi.
+Przy zmianie urządzenia lub reinstalacji aplikacji Notepad JW, notatki i ustawienia zostaną automatycznie przywrócone.
+Notatki nie są dostępne dla innych aplikacji ani po podłączeniu urządzenia do komputera (jest to wymóg do działania tej funkcjonalności).
+Oczywiście nadal można korzystać z opcji wysyłania tych plików mailem, komunikatorami bądź przesyłania na swój Dysk Google.
+<br><br><b>Jeżeli twoje urządzenie ma system starszy niż Android 6.0:</b>
+Kopia zapasowa nie jest dokonywana automatycznie. Notatki są zapisywane w ogólnodostępnym folderze: Documents/NotepadJW.
+Masz do nich dostęp po podłączeniu swojego urządzenia do komputera. Można je wówczas skopiować na komputer celem
+dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki itp.
 <h3>Autor aplikacji</h3>
 <p>Jakub Tomala.
     ]]>
@@ -167,6 +172,7 @@ wówczas umieszczone w folderze Pobrane).</p>
 • Naprawiono wiele drobnych błędów \n\n
     </string>
     <string name="whats_new_message_last">
-• Dodano: kolory czcionki i markera, Usuwanie formatowania (po zaznaczeniu tekstu).
+• Dodano: kolory czcionki i markera, Usuwanie formatowania (po zaznaczeniu tekstu). \n\n
+• Wprowadzono automatyczne tworzenie kopii zapasowych notatek i ustawień - patrz: Pomoc.
     </string>
 </resources>

@@ -138,11 +138,15 @@ pendant le ministère et les envoyer à d\'autres prédicateurs.</p>
 <br>Dans<b>l\'éditeur de bloc-notes</b>, vous pouvez basculer entre<i>Mode Édition</i>et<i>Mode Vue</i>. Dans le premier,
 le dernier verset entré sera affiché et dans le second vous pouvez cliquer sur les liens créés à partir des versets
 pour en voir un sélectionné.
-<br><b>Les notes</b>sont sauvegardées dans le stockage externe sous les fichiers txt à l\'emplacement: Documents / NotepadJW.
-Vous pouvez y accéder depuis notre PC. Cela signifie que vous pouvez les renommer, supprimer, déplacer ou ajouter de nouveaux fichiers txt
-depuis votre ordinateur. Vous pouvez également ouvrir des fichiers txt à partir d\'une autre application sur votre appareil, comme des explorateurs de fichiers,
-pièces jointes, fichiers bluetooth, etc. Vous pouvez les importer dans l\'espace de travail NotepadJW en cliquant sur Enregistrer
-bouton (ils seront copiés dans le dossier Téléchargements).</p>
+<h3>Sauvegarde automatique et emplacement des notes</h3>
+<b>Si vous avez Android 6.0 ou plus récent:</b> les notes et les paramètres sont automatiquement sauvegardés. Ça arrive
+tous les minuit seulement si votre appareil est en charge et connecté au WiFi à ce moment-là. Lorsque vous changez
+votre appareil et réinstallez cette application. Les notes et les paramètres seront automatiquement restaurés. Cependant des notes
+ne sont plus disponibles sur PC ou autres applications (il est requis pour cette fonctionnalité). Mais vous pouvez toujours
+envoyez-les par courrier électronique, par courrier et enregistrez-les sur votre Google Drive.
+<br><br><b>Si vous avez plus d\'Android que 6.0:</b> Les notes ne sont pas automatiquement sauvegardées. Ils sont
+enregistré sur votre appareil dans un lieu public: Documents / NotepadJW. Vous pouvez y accéder depuis notre PC.
+Cela signifie que vous pouvez les copier sur PC (en tant que sauvegarde manuelle), renommer, supprimer, déplacer, ajouter de nouvelles à partir de votre ordinateur, etc.</p>
 <h3>Auteur</h3>
 <p>Jakub Tomala (codage, mises en page).
     ]]>
@@ -164,6 +168,7 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
 • Beaucoup de bugs mineurs ont été corrigés. \n\n
    </string>
    <string name="whats_new_message_last">
-• Ajouté: couleurs de police et de marqueur, suppression de la mise en forme (après sélection du texte).
+• Ajouté: couleurs de police et de marqueur, suppression de la mise en forme (après sélection du texte). \n\n
+• Sauvegarde automatique des notes et des paramètres a été introduite - voir Aide.
    </string>
 </resources>

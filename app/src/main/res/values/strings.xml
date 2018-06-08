@@ -174,13 +174,17 @@ during ministry and send them to other preachers.</p>
 <br>In <b>Notepad Editor</b> you can switch between <i>Edit Mode</i> and <i>View Mode</i>. In the first one,
 last entered verse will be displayed and in the second one you can click on links created from verses
 to see selected one.
-<br><b>Notes</b> are saved in external storage under txt files in location: Documents/NotepadJW.
-You can access them from our PC. It means that you can rename them, delete, move or add new txt files
-from your computer. You can also open txt files from other app on your device, like from file explorers,
-email attachments, bluetooth files etc. You can import them to NotepadJW workspace by clicking Save
-button (they will be copied to Downloads folder).</p>
-<h3>Author</h3>
-<p>Jakub Tomala (coding, layouts).
+<h3>Auto backup and notes location</h3>
+<b>If you have Android 6.0 or newer:</b> notes and settings are automatically backed up. It happens
+every midnight only if your device is charging and connected to WiFi at that time. When you change
+your device and reinstall this app, notes and settings will be automatically restored. However notes
+are not further available from PC or other apps (it is required for this feature). But you still can
+send them by emails, messengers and save them on your Google Drive.
+<br><br><b>If you have older Android than 6.0:</b> notes are not automatically backed up. They are
+saved on your device in public location: Documents/NotepadJW. You can access them from our PC.
+It means that you can copy them to PC (as a manual backup), rename, delete, move, add new from your computer etc.
+<h3>App author</h3>
+<p>Jakub Tomala.
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
@@ -200,6 +204,7 @@ button (they will be copied to Downloads folder).</p>
 • A lot of minor bugs were fixed \n\n
     </string>
     <string name="whats_new_message_last">
-• Added: Font and highlight colors + Clear formatting (of selecting text).
+• Added: Font and highlight colors + Clear formatting (of selecting text). \n\n
+• Automatic backup of notes and settings has been introduced - see Help.
     </string>
 </resources>
