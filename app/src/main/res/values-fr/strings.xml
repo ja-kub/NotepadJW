@@ -139,11 +139,18 @@ pendant le ministère et les envoyer à d\'autres prédicateurs.</p>
 le dernier verset entré sera affiché et dans le second vous pouvez cliquer sur les liens créés à partir des versets
 pour en voir un sélectionné.
 <h3>Sauvegarde automatique et emplacement des notes</h3>
-<b>Si vous avez Android 6.0 ou plus récent:</b> les notes et les paramètres sont automatiquement sauvegardés. Ça arrive
-tous les minuit seulement si votre appareil est en charge et connecté au WiFi à ce moment-là. Lorsque vous changez
-votre appareil et réinstallez cette application. Les notes et les paramètres seront automatiquement restaurés. Cependant des notes
-ne sont plus disponibles sur PC ou autres applications (il est requis pour cette fonctionnalité). Mais vous pouvez toujours
-envoyez-les par courrier électronique, par courrier et enregistrez-les sur votre Google Drive.
+<b> Si votre appareil est équipé d\'Android 6.0 ou d\'une version plus récente: </ b> Sauvegardez vos notes et vos paramètres
+il est effectué quand:
+<br> - Vous avez activé l\'option de sauvegarde sur votre appareil dans Paramètres -> Sauvegarde
+<br> - Ça a été min. 24 heures après la dernière sauvegarde
+<br> - L\'appareil est inactif et en charge
+<br> - L\'appareil est connecté à un réseau Wi-Fi.
+<br> Lorsque le périphérique est modifié ou que l\'application Bloc-notes JW est réinstallée, les notes et les paramètres sont automatiquement restaurés.
+Les notes ne sont pas disponibles pour d\'autres applications ou après la connexion de l\'appareil à un ordinateur (il s\'agit d\'une condition préalable au fonctionnement de cette fonctionnalité).
+Bien sûr, vous pouvez toujours utiliser l\'option d\'envoi de ces fichiers par courrier électronique, messagerie instantanée ou téléchargement sur votre Google Drive.
+Pour vérifier si la sauvegarde a été effectuée, ouvrez Google Drive -> Menu -> Sauvegardes -> dernière copie -> Données de l\'application -> trouver Notepad JW. Si un tel
+article n\'existe pas et que les conditions ci-dessus sont remplies, vous pouvez supprimer et rajouter votre compte Google à vos risques et périls (Remarque: cela nettoiera
+les sauvegardes actuelles, correctes et incorrectes): Paramètres -> Comptes - > Google -> Supprimer le compte, puis Ajouter un compte -> Google.
 <br><br><b>Si vous avez plus d\'Android que 6.0:</b> Les notes ne sont pas automatiquement sauvegardées. Ils sont
 enregistré sur votre appareil dans un lieu public: Documents / NotepadJW. Vous pouvez y accéder depuis notre PC.
 Cela signifie que vous pouvez les copier sur PC (en tant que sauvegarde manuelle), renommer, supprimer, déplacer, ajouter de nouvelles à partir de votre ordinateur, etc.</p>

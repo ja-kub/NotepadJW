@@ -65,10 +65,11 @@ public class CustomTabHandler implements Html.TagHandler {
         final Object span = getLast(output, format.getClass());
         final int where = output.getSpanStart(span);
 
-        output.removeSpan(span);
-
-        if (where != length)
-            output.setSpan(format, where, length, flags);
+        if (span != null) {
+            output.removeSpan(span);
+            if (where != length)
+                output.setSpan(format, where, length, flags);
+        }
     }
 
     private void start(Editable output, Object mark) {

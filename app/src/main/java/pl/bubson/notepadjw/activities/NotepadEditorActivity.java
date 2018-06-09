@@ -417,16 +417,18 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
         // Inflate and initialize the bottom menu
         bottomBar = (ActionMenuView)findViewById(R.id.notepad_bottom_toolbar);
-        Menu bottomMenu = bottomBar.getMenu();
-        bottomMenu.clear();
-        getMenuInflater().inflate(R.menu.menu_notepad_bottom, bottomMenu);
-        for (int i = 0; i < bottomMenu.size(); i++) {
-            bottomMenu.getItem(i).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    return onOptionsItemSelected(item);
-                }
-            });
+        if (bottomBar != null) {
+            Menu bottomMenu = bottomBar.getMenu();
+            bottomMenu.clear();
+            getMenuInflater().inflate(R.menu.menu_notepad_bottom, bottomMenu);
+            for (int i = 0; i < bottomMenu.size(); i++) {
+                bottomMenu.getItem(i).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        return onOptionsItemSelected(item);
+                    }
+                });
+            }
         }
 
         viewModeButton = menu.findItem(R.id.action_switch_to_view);

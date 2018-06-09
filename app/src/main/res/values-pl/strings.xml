@@ -90,10 +90,18 @@ Powt pr 2:2, 3, 6-8, 11.
 <br>Przykład, które nie zostanie poprawnie obsłużony: Fil. 1:2 (niejednoznaczność: chodzi o Filipian czy Filemona?).
 <h3>Kopia zapasowa i lokalizacja notatek</h3>
 <b>Jeżeli twoje urządzenie ma system Android 6.0 lub nowszy:</b> kopia zapasowa notatek i ustawień
-odbywa się codziennie ok. północy - pod warunkiem, że urządzenie jest wtedy podłączone do ładowarki i WiFi.
-Przy zmianie urządzenia lub reinstalacji aplikacji Notepad JW, notatki i ustawienia zostaną automatycznie przywrócone.
+jest dokonywana, gdy:
+<br>- Masz włączoną opcję tworzenia kopii zapasowej na urządzeniu w Ustawienia -> Kopia zapasowa
+<br>- Minęły min. 24 godziny od ostatniej kopii zapasowej
+<br>- Urządzenie jest bezczynne i ładuje się
+<br>- Urządzenie jest połączone z siecią Wi-Fi
+<br>Przy zmianie urządzenia lub reinstalacji aplikacji Notepad JW, notatki i ustawienia zostaną automatycznie przywrócone.
 Notatki nie są dostępne dla innych aplikacji ani po podłączeniu urządzenia do komputera (jest to wymóg do działania tej funkcjonalności).
 Oczywiście nadal można korzystać z opcji wysyłania tych plików mailem, komunikatorami bądź przesyłania na swój Dysk Google.
+Aby sprawdzić czy kopia zapasowa została wykonana otwórz Dysk Google -> Menu -> Kopie zapasowe -> ostatnia kopia
+-> Dane aplikacji -> znajdź Notepad JW. Jeżeli nie ma takiej pozycji, a powyższe warunki były spełnione, możesz na własną odpowiedzialność
+usunąć i dodać ponownie konto Google (Uwaga! Wyczyści to bieżące kopie zapasowe zarówno poprawne i niepoprawne):
+Ustawienia -> Konta -> Google -> Usuń konto, następnie Dodaj konto -> Google.
 <br><br><b>Jeżeli twoje urządzenie ma system starszy niż Android 6.0:</b>
 Kopia zapasowa nie jest dokonywana automatycznie. Notatki są zapisywane w ogólnodostępnym folderze: Documents/NotepadJW.
 Masz do nich dostęp po podłączeniu swojego urządzenia do komputera. Można je wówczas skopiować na komputer celem

@@ -146,11 +146,18 @@ Esta aplicação consiste em duas atividades:
 O último verso inserido será exibido e no segundo você pode clicar nos versos links criados
 A vista seleccionada.
 <h3> Backup automático e localização de anotações </ h3>
-<b> Se você tiver o Android 6.0 ou mais recente:</b> as anotações e as configurações serão automaticamente armazenadas em backup. Acontece
-a cada meia-noite somente se o seu dispositivo estiver carregando e conectado ao WiFi nesse momento. Quando você muda
-seu dispositivo e reinstalar este aplicativo, as anotações e as configurações serão restauradas automaticamente. No entanto notas
-ainda não estão disponíveis no PC ou outros aplicativos (é necessário para esse recurso). Mas você ainda pode
-envie-os por e-mails, mensageiros e salve-os no seu Google Drive.
+<b> Se o seu dispositivo tiver o Android 6.0 ou posterior: </ b> faça backup de suas anotações e configurações
+é realizado quando:
+<br> - Você ativou a opção de backup em seu dispositivo em Configurações -> Backup
+<br> - Tem sido min. 24 horas a partir do último backup
+<br> - O dispositivo está ocioso e carregando
+<br> - O dispositivo está conectado a uma rede Wi-Fi.
+<br> Quando o dispositivo é alterado ou o aplicativo JW do Bloco de notas é reinstalado, as anotações e as configurações serão restauradas automaticamente.
+As notas não estão disponíveis para outros aplicativos ou depois de conectar o dispositivo a um computador (esse é um requisito para que essa funcionalidade funcione).
+Claro, você ainda pode usar a opção de enviar esses arquivos por e-mail, mensagens instantâneas ou fazer o upload para o seu Google Drive.
+Para verificar se o backup foi feito, abra o Google Drive -> Menu -> Backups -> última cópia -> Dados do aplicativo -> encontre o Notepad JW. Se não houver tal item e as
+condições acima tiverem sido cumpridas, você poderá excluir e adicionar novamente sua Conta do Google por sua conta e risco
+(Observação: isso limpará os backups atuais corretos e incorretos): Configurações -> Contas - > Google -> Excluir conta e Adicionar conta -> Google.
 <br> <br> <b> Se você tiver Android mais antigo que 6.0: </ b> o backup não será feito automaticamente. Eles são
 salvo em seu dispositivo em local público: Documents / NotepadJW. Você pode acessá-los em nosso PC.
 Isso significa que você pode copiá-los para o PC, renomear, excluir, mover, adicionar novos a partir do seu computador, etc.

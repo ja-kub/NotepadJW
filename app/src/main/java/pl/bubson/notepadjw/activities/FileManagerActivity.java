@@ -1012,7 +1012,11 @@ public class FileManagerActivity extends AppCompatActivity {
             if (fromDir.isDirectory()) {
                 try {
                     FileUtils.copyDirectory(fromDir, new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), appFolderName));
-                    FileUtils.deleteDirectory(fromDir);
+                    try {
+                        FileUtils.deleteDirectory(fromDir);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                     editor.putInt(MOVED_FILES_KEY, FAILED);

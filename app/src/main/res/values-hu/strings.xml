@@ -130,11 +130,17 @@
 <br>Hosszú érintéssel több elemet is kijelölhetsz, amiket aztán átnevezhetsz, törölhetsz, vagy elküldhetsz másoknak (Hamarosan a másolás, kivágás, beillesztés funkciók is elérhetők lesznek).
 <br>A <b>Jegyzet Szerkesztő</b>n belül választhatsz a <i>Szerkesztői Mód</i> és a  <i>Megtekintési Mód</i> között. Az szerkesztői módban mindig a legutóbb leírt bibliaverset jeleníti meg, míg a megtekintési módban mindig azt az idézetet olvashatod, amelyikre éppen rákoppintasz a jegyzetben.
 <h3>Automatikus mentés és jegyzetek helye</h3>
-<b>Ha van Android 6.0 vagy újabb:</b> a jegyzetek és a beállítások automatikusan biztonsági mentésre kerülnek. Ez történik
-minden éjfél csak akkor, ha a készülék töltés közben és WiFi-hez csatlakozik. Amikor megváltozik
-a készüléket, és telepítse újra ezt az alkalmazást. A jegyzetek és beállítások automatikusan visszaállnak. Megjegyzések azonban
-nem érhetők el a PC-ről vagy más alkalmazásokról (ez a funkció szükséges). De még mindig tudsz
-küldje el őket e-mailben, hírvivőkön és mentse el őket a Google Drive-on.
+<b> Ha a készülék Android 6.0-s vagy újabb: </ b> A jegyzetek és beállítások biztonsági mentése
+akkor kerül sor, ha:
+<br> - Engedélyezte a mentési lehetőséget az eszközön a Beállítások -> Biztonsági mentés alatt
+<br> - Min. 24 órával az utolsó mentés után
+<br> - A készülék készenléti állapotban van, és töltődik
+<br> - Az eszköz Wi-Fi hálózathoz csatlakozik.
+<br> A készülék cseréje vagy a Notepad JW alkalmazás újratelepítése esetén a jegyzetek és beállítások automatikusan visszaállnak.
+A jegyzetek nem érhetők el más alkalmazásokhoz vagy az eszköz számítógéphez való csatlakoztatását követően (ez a követelmény a működéshez szükséges).
+Természetesen továbbra is használhatja azt a lehetőséget, hogy e fájlokat e-mailben, azonnali üzenetküldőkben vagy feltöltéssel töltse le a Google Drive-ba.
+Ha ellenőrizni akarja a mentést, nyissa meg a Google Drive-ot -> Menü -> Biztonsági mentések -> Utolsó másolat -> Alkalmazásadatok -> Jegyzettömb keresése. Ha nincs ilyen elem, és a fenti feltételek teljesültek, akkor saját felelősségére törölheti és újra hozzáadhatja Google Fiókját
+(Megjegyzés: ez a jelenlegi és a helytelen biztonsági másolatokat megtisztítja): Beállítások -> Fiókok - > Google -> Fiók törlése, majd Fiók hozzáadása -> Google.
 <br><br><b>Ha van régebbi Androidja, mint 6.0:</b> A jegyzeteket nem készítik automatikusan biztonsági mentés. Ők
 mentett eszközön a nyilvános helyen: Documents / NotepadJW. A számítógépről elérheti őket.
 Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként), átnevezheti, törölheti, áthelyezheti, újonnan hozzáadhatja a számítógépről, stb.

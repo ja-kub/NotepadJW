@@ -139,11 +139,18 @@ sarcinilor în timpul reuniunilor. Această aplicație are, de asemenea, opțiun
 ultimul verset introdus va fi afișat, iar în cel de-al doilea poți să dai clic pe link-urile create de versuri
 pentru a vedea unul selectat.
 <h3> De rezervă automată </ h3>
-<b> Dacă aveți Android 6.0 sau mai nou: </ b> notele și setările sunt salvate automat. Se întâmplă
-la miezul nopții numai dacă dispozitivul dvs. se încarcă și se conectează la WiFi în acel moment. Când vă schimbați
-dispozitivul dvs. și reinstalați această aplicație, notele și setările vor fi restaurate automat. Cu toate acestea, notează
-nu sunt încă disponibile din PC sau din alte aplicații (este necesar pentru această caracteristică). Dar tot poți
-trimiteți-le prin e-mailuri, mesageri și salvați-le pe Google Drive.
+<b> Dacă dispozitivul dvs. are versiunea Android 6.0 sau o versiune ulterioară: </ b> Creați copii de rezervă pentru note și setări
+se efectuează atunci când:
+<br> - Ați activat opțiunea de backup pe dispozitiv în Setări -> Copiere de rezervă
+<br> - A fost min. 24 de ore de la ultima copie de rezervă
+<br> - Dispozitivul este inactiv și se încarcă
+<br> - Dispozitivul este conectat la o rețea Wi-Fi.
+<br> Când dispozitivul este schimbat sau aplicația JW Notepad este reinstalată, notele și setările vor fi restabilite automat.
+Notele nu sunt disponibile pentru alte aplicații sau după conectarea dispozitivului la un computer (aceasta este o cerință pentru ca această funcție să funcționeze).
+Desigur, puteți utiliza opțiunea de a trimite aceste fișiere prin e-mail, mesageri instantanee sau încărcarea pe Google Drive.
+Pentru a verifica dacă sa efectuat copierea de rezervă, deschideți Disc Google -> Meniu -> Copii de rezervă -> ultima copie -> Date despre aplicație -> găsiți Notepad JW.
+Dacă nu există un astfel de element și condițiile de mai sus au fost îndeplinite, puteți să ștergeți și să vă adăugați din nou Contul Google pe propriul risc
+(Notă: acest lucru va curăța backup-urile curente atât corect, cât și incorecte): Setări -> Conturi - > Google -> Ștergeți contul, apoi adăugați cont -> Google.
 <br> <br> <b> Dacă aveți Android mai vechi decât 6.0: </ b> Notele nu sunt copiate automat în siguranță. Sunt
 salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Puteți să le accesați de pe PC-ul nostru.
 Înseamnă că le poți copia pe PC, le poți redenumi, șterge, muta, adăuga altele de pe computer etc.

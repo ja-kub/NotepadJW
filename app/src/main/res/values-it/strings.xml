@@ -139,11 +139,18 @@ durante il ministero e inviarli ad altri proclamatori.</p>
 verrà visualizzato l\'ultimo versetto inserito e nella seconda è possibile fare clic sui collegamenti creati dai versetti
 per vedere quello selezionato.
 <h3>Backup automatico e posizione delle note</h3>
-<b>Se hai Android 6.0 o versioni successive:</b> le note e le impostazioni vengono automaticamente sottoposte a backup. Succede
-ogni mezzanotte solo se il dispositivo è in carica e connesso a WiFi in quel momento. Quando cambi
-il tuo dispositivo e reinstallare questa app, le note e le impostazioni verranno ripristinate automaticamente. Tuttavia note
-non sono ancora disponibili dal PC o da altre app (è necessario per questa funzione). Ma puoi ancora
-inviarli via e-mail, messenger e salvarli sul tuo Google Drive.
+<b> Se il tuo dispositivo ha Android 6.0 o versioni successive: </ b> effettua il backup delle tue note e impostazioni
+viene effettuato quando:
+<br> - È stata attivata l\'opzione di backup sul dispositivo in Impostazioni -> Backup
+<br> - È stato min. 24 ore dall\'ultimo backup
+<br> - Il dispositivo è inattivo e in carica
+<br> - Il dispositivo è connesso a una rete Wi-Fi.
+<br> Una volta reinstallato il dispositivo o reinstallata l\'applicazione Blocco note JW, le note e le impostazioni verranno ripristinate automaticamente.
+Le note non sono disponibili per altre applicazioni o dopo aver collegato il dispositivo a un computer (è necessario che questa funzionalità funzioni).
+Naturalmente, puoi comunque utilizzare l\'opzione di inviare questi file tramite e-mail, messaggistica istantanea o caricamento sul tuo Google Drive.
+Per verificare se il backup è stato eseguito, apri Google Drive -> Menu -> Backup -> ultima copia -> Dati applicazione -> trova Blocco note JW. Se non esiste tale articolo e
+le condizioni di cui sopra sono state soddisfatte, è possibile eliminare e riaggiungere il proprio account Google a proprio rischio
+(Nota: questo pulirà i backup correnti sia corretti che errati): Impostazioni -> Account - > Google -> Elimina account, quindi Aggiungi account -> Google.
 <br><br><b>Se hai Android meno di 6.0:</b> le note non vengono automaticamente copiate. Loro sono
 salvato sul dispositivo in un luogo pubblico: Documenti / NotepadJW. Puoi accedervi dal nostro PC.
 Significa che puoi copiarli su PC, rinominare, eliminare, spostare, aggiungere nuovi dal tuo computer, ecc.

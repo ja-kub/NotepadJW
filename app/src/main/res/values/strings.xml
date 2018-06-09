@@ -175,11 +175,18 @@ during ministry and send them to other preachers.</p>
 last entered verse will be displayed and in the second one you can click on links created from verses
 to see selected one.
 <h3>Auto backup and notes location</h3>
-<b>If you have Android 6.0 or newer:</b> notes and settings are automatically backed up. It happens
-every midnight only if your device is charging and connected to WiFi at that time. When you change
-your device and reinstall this app, notes and settings will be automatically restored. However notes
-are not further available from PC or other apps (it is required for this feature). But you still can
-send them by emails, messengers and save them on your Google Drive.
+<b> If your device has Android 6.0 or newer: </ b> Backup your notes and settings
+it is carried out when:
+<br> - You have enabled the backup option on your device in Settings -> Backup
+<br> - It\'s been min. 24 hours from the last backup
+<br> - The device is idle and charging
+<br> - The device is connected to a Wi-Fi network
+<br> When the device is changed or the Notepad JW application is reinstalled, notes and settings will be automatically restored.
+Notes are not available for other applications or after connecting the device to a computer (this is a requirement for this functionality to work).
+Of course, you can still use the option of sending these files by email, instant messengers or uploading to your Google Drive.
+To check if the backup has been done, open Google Drive -> Menu -> Backups -> last copy -> Application data -> find Notepad JW.
+If there is no such item, and the above conditions have been met, you can delete and re-add your Google Account at your own risk
+(Note: this will clean up the current backups both correct and incorrect): Settings -> Accounts -> Google -> Delete account, then Add account -> Google.
 <br><br><b>If you have older Android than 6.0:</b> notes are not automatically backed up. They are
 saved on your device in public location: Documents/NotepadJW. You can access them from our PC.
 It means that you can copy them to PC (as a manual backup), rename, delete, move, add new from your computer etc.

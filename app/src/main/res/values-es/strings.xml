@@ -146,11 +146,18 @@
     El último verso introducido será exhibido y en el segundo usted puede chascar encendido los acoplamientos creados de versos
     Para ver seleccionado.
 <h3>Ubicación de copia de seguridad automática y notas</h3>
-<b>Si tiene Android 6.0 o versiones posteriores:</b> las notas y la configuración se respaldan automáticamente. Sucede
-cada medianoche solo si su dispositivo se está cargando y está conectado a WiFi en ese momento. Cuando cambias
-su dispositivo y vuelva a instalar esta aplicación. Las notas y la configuración se restaurarán automáticamente. Sin embargo las notas
-no están más disponibles desde PC u otras aplicaciones (se requiere para esta función). Pero todavía puedes
-envíelos por correo electrónico, mensajería y guárdelos en su Google Drive.
+<b> Si su dispositivo tiene Android 6.0 o posterior: </ b> haga una copia de seguridad de sus notas y configuraciones
+se lleva a cabo cuando:
+<br> - Ha habilitado la opción de copia de seguridad en su dispositivo en Configuración -> Copia de seguridad
+<br> - Ha sido min. 24 horas desde la última copia de seguridad
+<br> - El dispositivo está inactivo y cargando
+<br> - El dispositivo está conectado a una red Wi-Fi.
+<br> Cuando se cambia el dispositivo o se reinstala la aplicación JW del Bloc de notas, las notas y configuraciones se restaurarán automáticamente.
+Las notas no están disponibles para otras aplicaciones o después de conectar el dispositivo a una computadora (este es un requisito para que esta funcionalidad funcione).
+Por supuesto, aún puede usar la opción de enviar estos archivos por correo electrónico, mensajería instantánea o cargando en su Google Drive.
+Para verificar si la copia de seguridad se ha realizado, abra Google Drive -> Menú -> Copias de seguridad -> última copia -> Datos de la aplicación ->
+busque el JW del Bloc de notas. Si no existe tal artículo, y se cumplen las condiciones anteriores, puede eliminar y volver a agregar su Cuenta de
+Google bajo su responsabilidad (Nota: esto limpiará las copias de seguridad actuales tanto correctas como incorrectas): Configuración -> Cuentas - > Google -> Eliminar cuenta, luego Agregar cuenta -> Google.
 <br><br><b>Si tiene Android anterior a la versión 6.0:</b> las notas no se respaldan automáticamente. Ellos son
 guardado en su dispositivo en una ubicación pública: Documents / NotepadJW. Puede acceder a ellos desde nuestra PC.
 Significa que puede copiarlos a la PC (como una copia de seguridad manual), cambiar el nombre, eliminar, mover, agregar nuevos desde su computadora, etc.</p>
