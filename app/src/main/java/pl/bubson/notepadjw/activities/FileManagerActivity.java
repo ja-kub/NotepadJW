@@ -152,10 +152,9 @@ public class FileManagerActivity extends AppCompatActivity {
         prepareBiblesDatabase(); // with preload of example verse
 
         askForPermissionsIfNotYetAnswered(this);
+        copyFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
         prepareMainDirectory();
         prepareFilesDatabase(mainDirectory); // to be able to search them
-
-        copyFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
 
         // Show the "What's New" screen once for each new release of the application
         new WhatsNewScreen(this).show();
@@ -1011,20 +1010,13 @@ public class FileManagerActivity extends AppCompatActivity {
             }
             if (fromDir.isDirectory()) {
                 try {
-                    FileUtils.copyDirectory(fromDir, new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), appFolderName));
-                    try {
-                        FileUtils.deleteDirectory(fromDir);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    FileUtils.moveToDirectory(fromDir, new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getPath()), true);
                 } catch (Exception e) {
                     e.printStackTrace();
                     editor.putInt(MOVED_FILES_KEY, FAILED);
                     editor.commit();
                 }
             }
-            filesDatabase.refreshData();
-            fillListWithItemsFromDir(mainDirectory);
         } else {
             Log.i(TAG, "Conditions ARE NOT met, moving files skipped.");
         }
