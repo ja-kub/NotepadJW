@@ -902,7 +902,16 @@ public class FileManagerActivity extends AppCompatActivity {
 
             // Verify that the intent will resolve to an activity
             if (mainIntent.resolveActivity(getPackageManager()) != null) {
-                startActivity(mainIntent);
+                try {
+                    startActivity(mainIntent);
+                } catch (Exception e) {
+                    if (e.getMessage().toLowerCase().contains("failure from system")) {
+                        Toast.makeText(this, R.string.file_is_too_big, Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(this, R.string.cannot_open, Toast.LENGTH_LONG).show();
+                    }
+                    e.printStackTrace();
+                }
             }
         }
     }
