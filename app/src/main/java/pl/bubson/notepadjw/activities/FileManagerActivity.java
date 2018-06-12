@@ -923,12 +923,16 @@ public class FileManagerActivity extends AppCompatActivity {
 
     private List<File> getFilesFromFolders(List<File> fileList) {
         List<File> newFileList = new ArrayList<>(fileList);
-        for (File fileOrDir : fileList) {
-            if (fileOrDir.isDirectory()) {
-                List<File> childFiles = new ArrayList<>(Arrays.asList(fileOrDir.listFiles()));
-                newFileList.remove(fileOrDir);
-                newFileList.addAll(getFilesFromFolders(childFiles));
+        try {
+            for (File fileOrDir : fileList) {
+                if (fileOrDir.isDirectory()) {
+                    List<File> childFiles = new ArrayList<>(Arrays.asList(fileOrDir.listFiles()));
+                    newFileList.remove(fileOrDir);
+                    newFileList.addAll(getFilesFromFolders(childFiles));
+                }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return newFileList;
     }
