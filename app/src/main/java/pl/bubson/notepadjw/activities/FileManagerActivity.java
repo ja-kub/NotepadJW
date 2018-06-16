@@ -42,12 +42,15 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
+import com.rtfparserkit.converter.text.StringTextConverter;
+import com.rtfparserkit.parser.RtfStreamSource;
 
 import org.apache.commons.io.FileUtils;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -1053,6 +1056,19 @@ public class FileManagerActivity extends AppCompatActivity {
         } else {
             Snackbar.make(recyclerView, R.string.files_sorted_alphabetically, Snackbar.LENGTH_SHORT)
                     .setAction("Action", null).show();
+        }
+    }
+
+    // TODO - add handling of RTF conventions programs, start is below
+    private void readRTF() {
+        try {
+            InputStream is = new FileInputStream("sth");
+            StringTextConverter converter = new StringTextConverter();
+            converter.convert(new RtfStreamSource(is));
+            String extractedText = converter.getText();
+            System.out.println(extractedText);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
