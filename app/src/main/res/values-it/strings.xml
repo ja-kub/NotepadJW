@@ -168,14 +168,10 @@ Significa che puoi copiarli su PC, rinominare, eliminare, spostare, aggiungere n
    non hanno accesso
    </string>
     <string name="whats_new_message_previous">
-• La funzione di condivisione delle note è stata migliorata (WhatsApp, Messenger, SMS) \n\n
-• Aggiunta funzionalità del testo versetto copia da una lunga pressione su di esso \n\n
-• Il ripristino della sessione è stato aggiunto quando l\'utente torna all\'editor \n\n
-• I pulsanti di testo Taglia / Copia su tablet Android precedenti alla 6.0 sono stati migliorati \n\n
-• Sono stati corretti molti bug minori \n\n
+• Aggiunti: colori di caratteri e pennelli, rimozione della formattazione (dopo aver selezionato il testo). \n\n
+• È stato introdotto il backup automatico di note e impostazioni - consultare la Guida. \n\n
    </string>
     <string name="whats_new_message_last">
-• Aggiunti: colori di caratteri e pennelli, rimozione della formattazione (dopo aver selezionato il testo). \n\n
-• È stato introdotto il backup automatico di note e impostazioni - consultare la Guida.
-   </string>
+• Una correzione in tedesco
+    </string>
 </resources>

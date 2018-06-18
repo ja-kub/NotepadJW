@@ -1036,11 +1036,11 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("2samuel", "14_BI12_.2SA");
                 multipleChapterBooksMap.put("2sam", "14_BI12_.2SA");
                 multipleChapterBooksMap.put("2sa", "14_BI12_.2SA");
-                multipleChapterBooksMap.put("1koniges", "15_BI12_.1KI");
-                multipleChapterBooksMap.put("1konige", "15_BI12_.1KI");
-                multipleChapterBooksMap.put("1konig", "15_BI12_.1KI");
-                multipleChapterBooksMap.put("1kon", "15_BI12_.1KI");
-                multipleChapterBooksMap.put("1ko", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1königes", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1könige", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1könig", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1kön", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1kö", "15_BI12_.1KI");
                 multipleChapterBooksMap.put("2königes", "16_BI12_.2KI");
                 multipleChapterBooksMap.put("2könige", "16_BI12_.2KI");
                 multipleChapterBooksMap.put("2könig", "16_BI12_.2KI");

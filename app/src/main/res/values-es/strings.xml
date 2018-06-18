@@ -166,14 +166,10 @@ Significa que puede copiarlos a la PC (como una copia de seguridad manual), camb
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Se mejoró y mejoró la función de compartir notas (WhatsApp, Messenger, SMS) \n\n
-• La función de copiar el texto del verso ha sido añadida por su larga operación \n\n
-• Se ha agregado la restauración de la sesión cuando el usuario vuelve al editor \n\n
-• Botones de texto Cortar / Copiar en tabletas Android anteriores a 6.0 han sido mejorados \n\n
-• Se han solucionado muchos errores menores \n\n
+• Agregado: colores de fuente y marcador, eliminación de formato (después de seleccionar el texto). \n\n
+• Se ha introducido una copia de seguridad automática de notas y configuraciones - ver Ayuda. \n\n
     </string>
     <string name="whats_new_message_last">
-• Agregado: colores de fuente y marcador, eliminación de formato (después de seleccionar el texto). \n\n
-• Se ha introducido una copia de seguridad automática de notas y configuraciones - ver Ayuda.
+• Una corrección en alemán
     </string>
 </resources>

@@ -166,14 +166,10 @@ Jakub Tomala (codificação, modelos).
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Corrigido e melhorado recurso de compartilhamento de notas (WhatsApp, Messenger, SMS). \n\n
-• Adicionado recurso de texto do verso da cópia, pressione e segure nele. \n\n
-• Adicionado sessão de restauração quando o usuário volta ao editor. \n\n
-• Botões de texto Cortar / Copiar corrigidos em tablets com Android anterior à 6.0. \n\n
-• Muitos pequenos bugs foram corrigidos. \n\n
+• Adicionado: cores de fonte e marcador, removendo a formatação (depois de selecionar o texto). \n\n
+• Backup automático de notas e configurações foi introduzido - veja a Ajuda. \n\n
     </string>
     <string name="whats_new_message_last">
-• Adicionado: cores de fonte e marcador, removendo a formatação (depois de selecionar o texto). \n\n
-• Backup automático de notas e configurações foi introduzido - veja a Ajuda.
+• Uma correção em alemão
     </string>
 </resources>

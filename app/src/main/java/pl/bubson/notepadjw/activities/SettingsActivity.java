@@ -61,6 +61,7 @@ public class SettingsActivity extends AppCompatActivity {
         public void onCreate(final Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             loadPreferences();
+            checkIfSavedBibleIsAvailable(); // in case of restore settings after fresh installation (without downloaded Bibles)
 
             final ListPreference verseSizePreference = (ListPreference)findPreference(getString(R.string.verse_area_size_key));
             final ListPreference versePositionPreference = (ListPreference)findPreference(getString(R.string.verse_position_key));
@@ -69,6 +70,12 @@ public class SettingsActivity extends AppCompatActivity {
             } else {
                 verseSizePreference.setEnabled(false);
             }
+        }
+
+        private void checkIfSavedBibleIsAvailable() {
+            final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            chosenLanguage = Language.valueOf(sharedPreferences.getString(getString(R.string.verse_language_key), getString(R.string.english_language)));
+            downloadBibleIfNeeded();
         }
 
         @Override
@@ -98,32 +105,7 @@ public class SettingsActivity extends AppCompatActivity {
                 public boolean onPreferenceChange(final Preference preference, final Object newValue) {
                     try {
                         chosenLanguage = Language.valueOf(newValue.toString());
-                        BiblesDatabase biblesDatabase = new BiblesDatabase(getActivity());
-                        if (biblesDatabase.isBibleInDatabase(chosenLanguage)) {
-                            return true; // setting will be saved
-                        } else {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                            builder.setTitle(R.string.missing_language_dialog_title);
-                            builder.setMessage(R.string.missing_language_message);
-
-                            builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // User clicked OK button
-                                    FileManagerActivity.askForPermissionsIfNotGranted(getActivity());
-                                    Intent downloadServiceIntent = new Intent(getActivity(), DownloadLanguageService.class);
-                                    downloadServiceIntent.putExtra("Language",  chosenLanguage);
-                                    getActivity().startService(downloadServiceIntent);
-                                }
-                            });
-
-                            builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // User cancelled the dialog
-                                }
-                            });
-
-                            builder.show();
-                        }
+                        if (downloadBibleIfNeeded()) return true; // setting will be saved
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -150,6 +132,37 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
+        }
+
+        private boolean downloadBibleIfNeeded() {
+            BiblesDatabase biblesDatabase = new BiblesDatabase(getActivity());
+            if (biblesDatabase.isBibleInDatabase(chosenLanguage)) {
+                return true;
+            } else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle(R.string.missing_language_dialog_title);
+                builder.setMessage(R.string.missing_language_message);
+
+                builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User clicked OK button
+                        FileManagerActivity.askForPermissionsIfNotGranted(getActivity());
+                        Intent downloadServiceIntent = new Intent(getActivity(), DownloadLanguageService.class);
+                        downloadServiceIntent.putExtra("Language",  chosenLanguage);
+                        getActivity().startService(downloadServiceIntent);
+                    }
+                });
+
+                builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                    }
+                });
+
+                builder.show();
+
+                return false;
+            }
         }
 
         @Override

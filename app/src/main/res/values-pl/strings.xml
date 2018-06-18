@@ -142,7 +142,7 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_position_title">Pozycja wersetu</string>
     <string name="verse_position_summ">Aby zobaczyć zmiany otwórz notatkę ponownie</string>
     <string name="verse_position_dialog_title">Pozycja wersetu</string>
-    <string name="missing_language_dialog_title">Brak Biblii w tym języku</string>
+    <string name="missing_language_dialog_title">Brak Biblii w wybranym języku</string>
     <string name="missing_language_message">Czy ściągnąć i zainstalować tę Biblię?</string>
     <string name="download_description">Notepad JW - pobieranie Biblii w nowym języku</string>
     <string name="download_language">Pobieranie Biblii w języku</string>
@@ -173,14 +173,10 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Poprawiono i ulepszono funkcję udostępniania notatek (WhatsApp, Messenger, SMS) \n\n
-• Dodano funkcję kopiowania tekstu wersetu przez jego długie naciśnięcie \n\n
-• Dodano przywracanie sesji, gdy użytkownik powraca do edytora \n\n
-• Poprawiono przyciski tekstowe Wytnij / Kopiuj na tabletach z Androidem starszym niż 6.0 \n\n
-• Naprawiono wiele drobnych błędów \n\n
+• Dodano: kolory czcionki i markera, Usuwanie formatowania (po zaznaczeniu tekstu). \n\n
+• Wprowadzono automatyczne tworzenie kopii zapasowych notatek i ustawień - patrz: Pomoc. \n\n
     </string>
     <string name="whats_new_message_last">
-• Dodano: kolory czcionki i markera, Usuwanie formatowania (po zaznaczeniu tekstu). \n\n
-• Wprowadzono automatyczne tworzenie kopii zapasowych notatek i ustawień - patrz: Pomoc.
+• Poprawka w języku niemieckim
     </string>
 </resources>

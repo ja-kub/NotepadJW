@@ -168,14 +168,10 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
          nu au acces.
     </string>
     <string name="whats_new_message_previous">
-• Funcție corectată și îmbunătățită pentru notele de partajare (WhatsApp, Messenger, SMS). \n\n
-• A fost adăugată o caracteristică a textului verse de copiere prin apăsarea lungă pe ea. \n\n
-• Adăugarea unei sesiuni de restaurare atunci când utilizatorul se întoarce la editor. \n\n
-• Butoane corecte Cut / Copy text pe tablete cu Android mai vechi de 6.0. \n\n
-• Au fost rezolvate multe bug-uri minore. \n\n
+• Adăugat: culori pentru font și marker, eliminând formatarea (după selectarea textului). \n\n
+• A fost introdusă copia de rezervă automată a notelor și setărilor - consultați Ajutor. \n\n
     </string>
     <string name="whats_new_message_last">
-• Adăugat: culori pentru font și marker, eliminând formatarea (după selectarea textului). \n\n
-• A fost introdusă copia de rezervă automată a notelor și setărilor - consultați Ajutor.
+• O corecție în limba germană
     </string>
 </resources>

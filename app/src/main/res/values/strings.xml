@@ -127,7 +127,7 @@
     <string name="verse_position_summ">Reopen note to see changes</string>
     <string name="verse_position_dialog_title">Verse Position</string>
     <string name="missing_language_dialog_title">Missing language</string>
-    <string name="missing_language_message">Download and install Bible in this language now?</string>
+    <string name="missing_language_message">Download and install Bible in selected language now?</string>
     <string name="download_description">Download Bible in new language for Notepad JW</string>
     <string name="download_language">Downloading Bible in language</string>
     <string name="install_language">Installation Bible in language</string>
@@ -204,14 +204,10 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• Corrected and enhanced sharing notes feature (WhatsApp, Messenger, SMS) \n\n
-• Added feature of copy verse text by long press on it \n\n
-• Added session restoring when user backs to editor \n\n
-• Corrected Cut/Copy text buttons on tablets with Android older than 6.0 \n\n
-• A lot of minor bugs were fixed \n\n
+• Added: Font and highlight colors + Clear formatting (of selecting text). \n\n
+• Automatic backup of notes and settings has been introduced - see Help. \n\n
     </string>
     <string name="whats_new_message_last">
-• Added: Font and highlight colors + Clear formatting (of selecting text). \n\n
-• Automatic backup of notes and settings has been introduced - see Help.
+• A correction in German
     </string>
 </resources>
