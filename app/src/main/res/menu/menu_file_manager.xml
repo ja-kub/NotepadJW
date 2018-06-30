@@ -53,6 +53,12 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/action_conventions"
+        android:orderInCategory="100"
+        android:title="@string/conventions_program"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"

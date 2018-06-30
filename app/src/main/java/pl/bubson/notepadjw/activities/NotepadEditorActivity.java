@@ -85,7 +85,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     private Language versesLanguage;
     private Context activityContext = this;
     private RichSelectableEditText noteEditText;
-    private MenuItem viewModeButton, editModeButton, saveButton, boldTextButton, italicTextButton, underlineTextButton, bulletTextButton, undoButton, redoButton, formatClearButton;
+    private MenuItem viewModeButton, editModeButton, saveButton, boldTextButton, italicTextButton, underlineTextButton, bulletTextButton, undoButton, redoButton, formatClearButton, printButton;
     private ActionMenuView bottomBar;
     private TextView versePreviewTextInEditMode, versePreviewTextInViewMode;
     private final TextWatcher mTextEditorWatcher = new TextWatcher() {
@@ -442,6 +442,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
         bulletTextButton = menu.findItem(R.id.action_text_bullet);
         undoButton = menu.findItem(R.id.action_undo);
         redoButton = menu.findItem(R.id.action_redo);
+        printButton = menu.findItem(R.id.action_print);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -478,6 +479,9 @@ public class NotepadEditorActivity extends AppCompatActivity {
         setOnEditTextTouchListener();
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             noteEditText.setCustomSelectionActionModeCallback(new StyleCallback());
+        }
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+            printButton.setVisible(false);
         }
         return super.onPrepareOptionsMenu(menu);
     }

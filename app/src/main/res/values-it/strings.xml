@@ -113,6 +113,7 @@
     <string name="folder">Cartella</string>
     <string name="action_print">Stampa</string>
     <string name="available_from_android_4_4">Disponibile da Android 4.4</string>
+    <string name="conventions_program">Programma del congresso</string>
     <string name="sent_by_notepadjw">
  <![CDATA[
  <p>Note inviate da <B>Blocco note JW</B>- gestore di note ed editor con visualizzazione immediata dei versetti inseriti.</p>
@@ -173,6 +174,6 @@ Significa che puoi copiarli su PC, rinominare, eliminare, spostare, aggiungere n
 • Una correzione in tedesco. \n\n
    </string>
     <string name="whats_new_message_last">
-• Le note possono essere stampate.
+• Le note possono essere stampate (su Android 4.4 e successivi).
     </string>
 </resources>

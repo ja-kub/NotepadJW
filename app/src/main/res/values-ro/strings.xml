@@ -113,6 +113,7 @@
     <string name="folder">Dosar</string>
     <string name="action_print">Imprimare</string>
     <string name="available_from_android_4_4">Disponibil de pe Android 4.4</string>
+    <string name="conventions_program">Programul congresului</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notele trimise de la Notepad JW - note manager și editor cu vizualizare live a versurilor introduse.</p>
@@ -173,6 +174,6 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
 • O corecție în limba germană. \n\n
     </string>
     <string name="whats_new_message_last">
-• Notele pot fi imprimate.
+• Notele pot fi imprimate (pe Android 4.4 și mai recent).
     </string>
 </resources>

@@ -157,6 +157,7 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="folder">Folder</string>
     <string name="action_print">Drukuj</string>
     <string name="available_from_android_4_4">Funkcja dostępna od Androida 4.4</string>
+    <string name="conventions_program">Program zgromadzeń</string>
     <string name="permission_explanation_dialog_message">
         Zostaniesz teraz zapytany o dostęp do pamięci urządzenia.
         Jeśli się zgodzisz, Notepad JW będzie zapisywał notatki w tzw. pamięci zewnętrznej
@@ -178,6 +179,6 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
 • Poprawka w języku niemieckim. \n\n
     </string>
     <string name="whats_new_message_last">
-• Dodano możliwość wydrukowania notatki.
+• Dodano możliwość wydrukowania notatki (wymagany Android 4.4 lub nowszy).
     </string>
 </resources>

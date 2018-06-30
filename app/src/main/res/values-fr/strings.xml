@@ -113,6 +113,7 @@
     <string name="folder">Dossier</string>
     <string name="action_print">Imprimer</string>
     <string name="available_from_android_4_4">Disponible à partir d\'Android 4.4</string>
+    <string name="conventions_program">Programme de l\'assemblée </string>
     <string name="sent_by_notepadjw">
    <![CDATA[
    <p>Notes envoyées depuis<B>Notepad JW</B>- gestionnaire de notes et éditeur avec vue en direct des versets entrés.</p>
@@ -173,6 +174,6 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
 • Une correction en allemand. \n\n
    </string>
    <string name="whats_new_message_last">
-• Les notes peuvent être imprimées.
+• Les notes peuvent être imprimées (sur Android 4.4 et plus récent).
    </string>
 </resources>

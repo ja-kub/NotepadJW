@@ -114,6 +114,7 @@
     <string name="folder">Carpeta</string>
     <string name="action_print">Imprimir</string>
     <string name="available_from_android_4_4">Disponible desde Android 4.4</string>
+    <string name="conventions_program">Programa de la asamblea </string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notas enviadas desde <B>Notepad JW</B>- administrador de notas y editor con vista en directo de los versos introducidos.</p>
@@ -171,6 +172,6 @@ Significa que puede copiarlos a la PC (como una copia de seguridad manual), camb
 • Una corrección en alemán. \n\n
     </string>
     <string name="whats_new_message_last">
-• Las notas se pueden imprimir.
+• Las notas se pueden imprimir (en Android 4.4 y más reciente).
     </string>
 </resources>

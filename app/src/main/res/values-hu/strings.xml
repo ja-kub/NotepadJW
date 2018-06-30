@@ -113,6 +113,7 @@
     <string name="folder">Mappa</string>
     <string name="action_print">Nyomtat</string>
     <string name="available_from_android_4_4">Elérhető az Android 4.4-ből</string>
+    <string name="conventions_program">Kongresszusi program</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>A jegyzetek a <B>Notepad JW</B> alkalmazással készültek - ez egy testvéreknek készült jegyzetelő, ami írás közben megjeleníti a szövegben szereplő  bibliaidézeteket.</p>
@@ -159,6 +160,6 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
 • Javítás német nyelven. \n\n
     </string>
     <string name="whats_new_message_last">
-• Megjegyzések nyomtathatók.
+• Megjegyzések nyomtathatók (Android 4.4 és újabb verziók esetén).
     </string>
 </resources>
