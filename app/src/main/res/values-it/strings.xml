@@ -111,6 +111,8 @@
     <string name="search_hint">Cerca</string>
     <string name="note">Nota</string>
     <string name="folder">Cartella</string>
+    <string name="action_print">Stampa</string>
+    <string name="available_from_android_4_4">Disponibile da Android 4.4</string>
     <string name="sent_by_notepadjw">
  <![CDATA[
  <p>Note inviate da <B>Blocco note JW</B>- gestore di note ed editor con visualizzazione immediata dei versetti inseriti.</p>
@@ -168,10 +170,9 @@ Significa che puoi copiarli su PC, rinominare, eliminare, spostare, aggiungere n
    non hanno accesso
    </string>
     <string name="whats_new_message_previous">
-• Aggiunti: colori di caratteri e pennelli, rimozione della formattazione (dopo aver selezionato il testo). \n\n
-• È stato introdotto il backup automatico di note e impostazioni - consultare la Guida. \n\n
+• Una correzione in tedesco. \n\n
    </string>
     <string name="whats_new_message_last">
-• Una correzione in tedesco
+• Le note possono essere stampate.
     </string>
 </resources>

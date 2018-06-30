@@ -155,6 +155,8 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="search_hint">Szukaj</string>
     <string name="note">Notatka</string>
     <string name="folder">Folder</string>
+    <string name="action_print">Drukuj</string>
+    <string name="available_from_android_4_4">Funkcja dostępna od Androida 4.4</string>
     <string name="permission_explanation_dialog_message">
         Zostaniesz teraz zapytany o dostęp do pamięci urządzenia.
         Jeśli się zgodzisz, Notepad JW będzie zapisywał notatki w tzw. pamięci zewnętrznej
@@ -173,10 +175,9 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Dodano: kolory czcionki i markera, Usuwanie formatowania (po zaznaczeniu tekstu). \n\n
-• Wprowadzono automatyczne tworzenie kopii zapasowych notatek i ustawień - patrz: Pomoc. \n\n
+• Poprawka w języku niemieckim. \n\n
     </string>
     <string name="whats_new_message_last">
-• Poprawka w języku niemieckim
+• Dodano możliwość wydrukowania notatki.
     </string>
 </resources>

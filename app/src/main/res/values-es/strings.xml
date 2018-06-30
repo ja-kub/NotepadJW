@@ -112,6 +112,8 @@
     <string name="search_hint">Buscar</string>
     <string name="note">Nota</string>
     <string name="folder">Carpeta</string>
+    <string name="action_print">Imprimir</string>
+    <string name="available_from_android_4_4">Disponible desde Android 4.4</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notas enviadas desde <B>Notepad JW</B>- administrador de notas y editor con vista en directo de los versos introducidos.</p>
@@ -166,10 +168,9 @@ Significa que puede copiarlos a la PC (como una copia de seguridad manual), camb
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Agregado: colores de fuente y marcador, eliminación de formato (después de seleccionar el texto). \n\n
-• Se ha introducido una copia de seguridad automática de notas y configuraciones - ver Ayuda. \n\n
+• Una corrección en alemán. \n\n
     </string>
     <string name="whats_new_message_last">
-• Una corrección en alemán
+• Las notas se pueden imprimir.
     </string>
 </resources>

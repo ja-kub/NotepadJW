@@ -112,6 +112,8 @@
     <string name="search_hint">Поиск</string>
     <string name="note">Заметка</string>
     <string name="folder">Папка</string>
+    <string name="action_print">Печать</string>
+    <string name="available_from_android_4_4">Доступно с Android 4.4</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
    <p>Заметки, отправленные из<B>Notepad JW</B>- менеджер заметок и редактор с живым просмотром введенных стихов.</p>
@@ -159,10 +161,9 @@
     к которым другие приложения и ваш компьютер не имеют доступа.
    </string>
     <string name="whats_new_message_previous">
-• Добавлено: цвет шрифта и маркера, удаление форматирования (после выбора текста). \n\n
-• Было введено автоматическое резервное копирование заметок и настроек - см. Справку. \n\n
+• Коррекция на немецком языке \n\n
    </string>
     <string name="whats_new_message_last">
-• Коррекция на немецком языке
+• Коррекция на немецком языкеЗаметки можно распечатать сейчас
    </string>
 </resources>

@@ -111,6 +111,8 @@
     <string name="search_hint">Keresés</string>
     <string name="note">Jegyzet</string>
     <string name="folder">Mappa</string>
+    <string name="action_print">Nyomtat</string>
+    <string name="available_from_android_4_4">Elérhető az Android 4.4-ből</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>A jegyzetek a <B>Notepad JW</B> alkalmazással készültek - ez egy testvéreknek készült jegyzetelő, ami írás közben megjeleníti a szövegben szereplő  bibliaidézeteket.</p>
@@ -154,10 +156,9 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-• Hozzáadott: betűtípus és marker színek, eltávolítva a formázást (a szöveg kiválasztása után). \n\n
-• A jegyzetek és beállítások automatikus mentése be lett vezetve - lásd: Súgó. \n\n
+• Javítás német nyelven. \n\n
     </string>
     <string name="whats_new_message_last">
-• Javítás német nyelven
+• Megjegyzések nyomtathatók.
     </string>
 </resources>

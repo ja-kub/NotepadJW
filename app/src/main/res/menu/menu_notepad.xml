@@ -69,6 +69,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/action_print"
+        android:title="@string/action_print"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
         app:showAsAction="never" />

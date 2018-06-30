@@ -134,6 +134,8 @@
     <string name="in_progress">In progress</string>
     <string name="finished">Finished</string>
     <string name="unsuccessful">Unsuccessful</string>
+    <string name="action_print">Print</string>
+    <string name="available_from_android_4_4">Available from Android 4.4</string>
     <string name="permission_explanation_dialog_title">External storage permission</string>
     <string name="button_undo">Undo</string>
     <string name="button_redo">Redo</string>
@@ -204,10 +206,9 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• Added: Font and highlight colors + Clear formatting (of selecting text). \n\n
-• Automatic backup of notes and settings has been introduced - see Help. \n\n
+• A correction in German \n\n
     </string>
     <string name="whats_new_message_last">
-• A correction in German
+• Notes can be printed now
     </string>
 </resources>

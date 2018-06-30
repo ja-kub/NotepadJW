@@ -111,6 +111,8 @@
     <string name="search_hint">Rechercher</string>
     <string name="note">Note</string>
     <string name="folder">Dossier</string>
+    <string name="action_print">Imprimer</string>
+    <string name="available_from_android_4_4">Disponible à partir d\'Android 4.4</string>
     <string name="sent_by_notepadjw">
    <![CDATA[
    <p>Notes envoyées depuis<B>Notepad JW</B>- gestionnaire de notes et éditeur avec vue en direct des versets entrés.</p>
@@ -168,10 +170,9 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
          ne pas avoir accès.
    </string>
    <string name="whats_new_message_previous">
-• Ajouté: couleurs de police et de marqueur, suppression de la mise en forme (après sélection du texte). \n\n
-• Sauvegarde automatique des notes et des paramètres a été introduite - voir Aide. \n\n
+• Une correction en allemand. \n\n
    </string>
    <string name="whats_new_message_last">
-• Une correction en allemand
+• Les notes peuvent être imprimées.
    </string>
 </resources>

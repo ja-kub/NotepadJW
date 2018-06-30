@@ -1029,8 +1029,10 @@ public class FileManagerActivity extends AppCompatActivity {
                     FileUtils.moveToDirectory(fromDir, new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getPath()), true);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    editor.putInt(MOVED_FILES_KEY, FAILED);
-                    editor.commit();
+                    if (!e.getMessage().contains("Unable to delete directory")) {
+                        editor.putInt(MOVED_FILES_KEY, FAILED);
+                        editor.commit();
+                    }
                 }
             }
         } else {

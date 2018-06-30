@@ -56,6 +56,7 @@ import pl.bubson.notepadjw.core.HyperlinkVerseTextView;
 import pl.bubson.notepadjw.core.RichSelectableEditText;
 import pl.bubson.notepadjw.core.Verse;
 import pl.bubson.notepadjw.services.InstallLanguageService;
+import pl.bubson.notepadjw.utils.HtmlPrinter;
 import pl.bubson.notepadjw.utils.Language;
 import pl.bubson.notepadjw.utils.Permissions;
 import pl.bubson.notepadjw.utils.SpanToHtmlConverter;
@@ -548,6 +549,10 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, HelpActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.action_print:
+                hideSoftKeyboard(this);
+                printCurrentDocument();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -698,6 +703,20 @@ public class NotepadEditorActivity extends AppCompatActivity {
             noteEditText.correctBullets();
             saveStringToFile(SpanToHtmlConverter.toHtml(noteEditText.getEditableText()), currentFile);
             Log.d(TAG, "saveStringToFile: " + SpanToHtmlConverter.toHtml(noteEditText.getEditableText()));
+        }
+    }
+
+    private void printCurrentDocument() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            try {
+                HtmlPrinter hp = new HtmlPrinter(activityContext);
+                hp.print(SpanToHtmlConverter.toHtml(noteEditText.getEditableText()));
+            } catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(activityContext, R.string.unsuccessful, Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(activityContext, R.string.available_from_android_4_4, Toast.LENGTH_SHORT).show();
         }
     }
 

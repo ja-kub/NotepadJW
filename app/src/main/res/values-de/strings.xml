@@ -111,6 +111,8 @@
     <string name="search_hint">Suchen</string>
     <string name="note">Notiz</string>
     <string name="folder">Ordner</string>
+    <string name="action_print">Drucken</string>
+    <string name="available_from_android_4_4">Verfügbar von Android 4.4</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notizen von <B>Notepad JW</b> - Notizen Manager und Editor mit Live-Ansicht der eingegebenen Verse.</p>
@@ -168,10 +170,9 @@ Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), 
         Ich habe keinen Zugang.
     </string>
     <string name="whats_new_message_previous">
-• Hinzugefügt: Schrift- und Markierungsfarben, Entfernen der Formatierung (nach Auswahl des Textes). \n\n
-• Automatische Sicherung von Notizen und Einstellungen wurde eingeführt - siehe Hilfe. \n\n
+• Unterscheidung zwischen Ko (Korinther) und Kö (Könige) wurde verbessert - Änderung. \n\n
     </string>
     <string name="whats_new_message_last">
-• Unterscheidung zwischen Ko (Korinther) und Kö (Könige) wurde verbessert - Änderung
+• Notizen können gedruckt werden.
     </string>
 </resources>

@@ -112,6 +112,8 @@
    <string name="search_hint">Procurar</string>
    <string name="note">Nota</string>
    <string name="folder">Catálogo</string>
+   <string name="action_print">Impressão</string>
+   <string name="available_from_android_4_4">Disponível a partir do Android 4.4</string>
    <string name="sent_by_notepadjw">
    <![CDATA[
     <p>Notas enviadas a partir de<B>Bloco de Notas JW</B>- Notas gerente e editor com exibição ao vivo dos versos introduzidas</p>
@@ -166,10 +168,9 @@ Jakub Tomala (codificação, modelos).
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Adicionado: cores de fonte e marcador, removendo a formatação (depois de selecionar o texto). \n\n
-• Backup automático de notas e configurações foi introduzido - veja a Ajuda. \n\n
+• Uma correção em alemão. \n\n
     </string>
     <string name="whats_new_message_last">
-• Uma correção em alemão
+• Notas podem ser impressas.
     </string>
 </resources>
