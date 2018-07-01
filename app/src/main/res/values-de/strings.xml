@@ -114,6 +114,8 @@
     <string name="action_print">Drucken</string>
     <string name="available_from_android_4_4">Verfügbar von Android 4.4</string>
     <string name="conventions_program">Kongressprogramm</string>
+    <string name="conventions">Kongresse</string>
+    <string name="provide_conventions_program_question">Ordner erstellen mit Kongresse Programme?</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notizen von <B>Notepad JW</b> - Notizen Manager und Editor mit Live-Ansicht der eingegebenen Verse.</p>

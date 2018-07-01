@@ -115,6 +115,8 @@
     <string name="action_print">Печать</string>
     <string name="available_from_android_4_4">Доступно с Android 4.4</string>
     <string name="conventions_program">Программа конгресса</string>
+    <string name="conventions">Conventions</string>
+    <string name="provide_conventions_program_question">Create folder with conventions programs?</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
    <p>Заметки, отправленные из<B>Notepad JW</B>- менеджер заметок и редактор с живым просмотром введенных стихов.</p>

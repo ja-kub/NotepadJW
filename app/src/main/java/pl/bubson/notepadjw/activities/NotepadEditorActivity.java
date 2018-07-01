@@ -48,7 +48,6 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
-import java.util.Locale;
 
 import io.github.mthli.knife.KnifeText;
 import pl.bubson.notepadjw.R;
@@ -68,6 +67,7 @@ import static pl.bubson.notepadjw.core.RichSelectableEditText.COLOR_MARKER_BLUE;
 import static pl.bubson.notepadjw.core.RichSelectableEditText.COLOR_MARKER_GREEN;
 import static pl.bubson.notepadjw.core.RichSelectableEditText.COLOR_MARKER_YELLOW;
 import static pl.bubson.notepadjw.core.RichSelectableEditText.COLOR_TEXT_GREEN;
+import static pl.bubson.notepadjw.utils.LanguageUtils.getCurrentVersesLanguage;
 
 public class NotepadEditorActivity extends AppCompatActivity {
 
@@ -395,17 +395,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     }
 
     private void setVersesLanguage() {
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(activityContext);
-        String langKey = activityContext.getResources().getString(R.string.verse_language_key);
-        String currentDeviceLanguage = Locale.getDefault().getLanguage();
-        try {
-            // if language wasn't previously set, try to set verse language as currentDeviceLanguage
-            versesLanguage = Language.valueOf(sharedPref.getString(langKey, currentDeviceLanguage));
-        } catch (IllegalArgumentException e) {
-            // if currentDeviceLanguage is not on the list of available verse languages, set english
-            Log.v(TAG, currentDeviceLanguage + " is not on the list of available verse languages, versesLanguage set to english");
-            versesLanguage = Language.en;
-        }
+        versesLanguage = getCurrentVersesLanguage(this);
         Log.v(TAG, "Set verseLanguage: " + versesLanguage);
     }
 

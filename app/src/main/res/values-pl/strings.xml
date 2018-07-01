@@ -158,6 +158,8 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="action_print">Drukuj</string>
     <string name="available_from_android_4_4">Funkcja dostępna od Androida 4.4</string>
     <string name="conventions_program">Program zgromadzeń</string>
+    <string name="conventions">Zgromadzenia</string>
+    <string name="provide_conventions_program_question">Czy utworzyć folder z programami zgromadzeń?</string>
     <string name="permission_explanation_dialog_message">
         Zostaniesz teraz zapytany o dostęp do pamięci urządzenia.
         Jeśli się zgodzisz, Notepad JW będzie zapisywał notatki w tzw. pamięci zewnętrznej

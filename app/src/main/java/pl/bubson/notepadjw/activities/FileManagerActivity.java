@@ -42,15 +42,12 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
-import com.rtfparserkit.converter.text.StringTextConverter;
-import com.rtfparserkit.parser.RtfStreamSource;
 
 import org.apache.commons.io.FileUtils;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -67,10 +64,13 @@ import pl.bubson.notepadjw.databases.FilesDatabase;
 import pl.bubson.notepadjw.fileManagerHelpers.FileListAdapter;
 import pl.bubson.notepadjw.fileManagerHelpers.Item;
 import pl.bubson.notepadjw.services.InstallLanguageService;
+import pl.bubson.notepadjw.utils.AssetsFilesCopier;
 import pl.bubson.notepadjw.utils.Language;
 import pl.bubson.notepadjw.utils.Permissions;
 import pl.bubson.notepadjw.utils.SpanToHtmlConverter;
 import pl.bubson.notepadjw.utils.WhatsNewScreen;
+
+import static pl.bubson.notepadjw.utils.LanguageUtils.getCurrentVersesLanguage;
 
 public class FileManagerActivity extends AppCompatActivity {
 
@@ -84,7 +84,7 @@ public class FileManagerActivity extends AppCompatActivity {
     private static FilesDatabase filesDatabase;
     private final Context activityContext = this;
     FileListAdapter adapter;
-    private MenuItem removeFiles, shareFiles, renameFile, cutFiles, copyFiles, pasteFiles, sortFilesMenuItem, helpMenuItem, settingsMenuItem, searchMenuItem;
+    private MenuItem removeFiles, shareFiles, renameFile, cutFiles, copyFiles, pasteFiles, sortFilesMenuItem, helpMenuItem, conventionsMenuItem, settingsMenuItem, searchMenuItem;
     private SearchView searchView;
     private File currentDirectory;
     private File[] currentFilesAndDirectories;
@@ -282,6 +282,7 @@ public class FileManagerActivity extends AppCompatActivity {
         pasteFiles = menu.findItem(R.id.action_paste);
         sortFilesMenuItem = menu.findItem(R.id.action_sort);
         helpMenuItem = menu.findItem(R.id.action_help);
+        conventionsMenuItem = menu.findItem(R.id.action_conventions);
         settingsMenuItem = menu.findItem(R.id.action_settings);
         searchMenuItem = menu.findItem(R.id.search);
         searchView = (SearchView) searchMenuItem.getActionView();
@@ -317,6 +318,9 @@ public class FileManagerActivity extends AppCompatActivity {
             case R.id.action_help:
                 Intent intentHelp = new Intent(this, HelpActivity.class);
                 startActivity(intentHelp);
+                return true;
+            case R.id.action_conventions:
+                provideConventionsProgram();
                 return true;
             case R.id.action_settings:
                 Intent intentSettings = new Intent(this, SettingsActivity.class);
@@ -1061,19 +1065,6 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
-    // TODO - add handling of RTF conventions programs, start is below
-    private void readRTF() {
-        try {
-            InputStream is = new FileInputStream("sth");
-            StringTextConverter converter = new StringTextConverter();
-            converter.convert(new RtfStreamSource(is));
-            String extractedText = converter.getText();
-            System.out.println(extractedText);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void askForPermissionsIfNotYetAnswered(final Activity activity) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) { // permissions are not needed in this app from Android 6.0
             final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
@@ -1131,6 +1122,39 @@ public class FileManagerActivity extends AppCompatActivity {
                 prepareFilesDatabase(mainDirectory);
             }
         }
+    }
+
+    public void provideConventionsProgram() {// TODO: 2018-07-01 Maybe add some check if this option should be visible?
+        AlertDialog.Builder builder = new AlertDialog.Builder(activityContext);
+        builder.setTitle(R.string.conventions_program);
+        builder.setMessage(getString(R.string.provide_conventions_program_question) + " (2017-2018)");// TODO: 2018-07-01 correct translations for 8 languages for these two strings
+
+        builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                copyConventionsProgramFromAssets();
+            }
+        });
+
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+
+        builder.show();
+    }
+
+    private void copyConventionsProgramFromAssets() {
+        Language lang = getCurrentVersesLanguage(this);
+        if (lang==Language.pte) lang = Language.pt;
+        if (lang==Language.tl) lang = Language.en;
+        String pathFrom = "conventions/" + lang.name(); // TODO: 2018-06-30 add 9 x 5 missing programs
+        String pathTo = mainDirectory.getAbsolutePath();
+        AssetsFilesCopier afc = new AssetsFilesCopier(this);
+        afc.copyAssets(pathFrom, pathTo);
+        filesDatabase.refreshData();
+        fillListWithItemsFromDir(currentDirectory);
     }
 
 }

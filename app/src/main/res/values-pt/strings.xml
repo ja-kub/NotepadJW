@@ -114,7 +114,9 @@
    <string name="folder">Catálogo</string>
    <string name="action_print">Impressão</string>
    <string name="available_from_android_4_4">Disponível a partir do Android 4.4</string>
-    <string name="conventions_program">Programa do Congresso</string>
+   <string name="conventions_program">Programa do Congresso</string>
+   <string name="conventions">Conventions</string>
+   <string name="provide_conventions_program_question">Create folder with conventions programs?</string>
    <string name="sent_by_notepadjw">
    <![CDATA[
     <p>Notas enviadas a partir de<B>Bloco de Notas JW</B>- Notas gerente e editor com exibição ao vivo dos versos introduzidas</p>
