@@ -114,8 +114,8 @@
     <string name="action_print">Imprimer</string>
     <string name="available_from_android_4_4">Disponible à partir d\'Android 4.4</string>
     <string name="conventions_program">Programme de l\'assemblée </string>
-    <string name="conventions">Conventions</string>
-    <string name="provide_conventions_program_question">Create folder with conventions programs?</string>
+    <string name="conventions">Assemblées</string>
+    <string name="provide_conventions_program_question">Créer un dossier avec des programmes Assemblages?</string>
     <string name="sent_by_notepadjw">
    <![CDATA[
    <p>Notes envoyées depuis<B>Notepad JW</B>- gestionnaire de notes et éditeur avec vue en direct des versets entrés.</p>

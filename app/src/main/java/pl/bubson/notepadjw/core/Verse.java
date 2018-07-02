@@ -23,7 +23,7 @@ public class Verse {
 
     private static final String TAG = "Verse";
     private static final String CHAPTER_PATTERN = "(\\d{1,3})";
-    private static final String VERSE_PATTERN = "(\\d{1,3}(\\s*[,-]\\s*\\d{1,3})*)";
+    private static final String VERSE_PATTERN = "(\\d{1,3}(\\s*[,\\p{Pd}]\\s*\\d{1,3})*)"; // \\p{Pd} contains all Dash Punctuation, like - or –
     //    private static String language = "polish"; // hardcoded
 //    private static String language = Locale.getDefault().getDisplayLanguage();
     private static Language language;
@@ -159,7 +159,7 @@ public class Verse {
                 if (xhtml != null) {
                     StringBuilder stringBuilder = new StringBuilder();
                     for (String verseGroup : verseNumbers.split("\\s?,\\s?")) {
-                        String[] splittedGroup = verseGroup.split("\\s?-\\s?");
+                        String[] splittedGroup = verseGroup.split("\\s?\\p{Pd}\\s?"); // \\p{Pd} contains all Dash Punctuation, like - or –
                         int startVerse, endVerse;
                         startVerse = Integer.parseInt(splittedGroup[0].trim());
                         if (splittedGroup.length == 1) {
