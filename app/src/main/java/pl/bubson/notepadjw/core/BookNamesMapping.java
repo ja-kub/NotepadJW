@@ -508,9 +508,16 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("1thessalonians", "56");
                 multipleChapterBooksMap.put("1thes", "56");
                 multipleChapterBooksMap.put("1th", "56");
+                multipleChapterBooksMap.put("1tessalonians", "56");
+                multipleChapterBooksMap.put("1tess", "56");
+                multipleChapterBooksMap.put("1tes", "56");
+                multipleChapterBooksMap.put("1ts", "56");
                 multipleChapterBooksMap.put("2thessalonians", "57");
                 multipleChapterBooksMap.put("2thes", "57");
                 multipleChapterBooksMap.put("2th", "57");
+                multipleChapterBooksMap.put("2tessalonians", "57");
+                multipleChapterBooksMap.put("2tess", "57");
+                multipleChapterBooksMap.put("2ts", "57");
                 multipleChapterBooksMap.put("1timothy", "58");
                 multipleChapterBooksMap.put("1tim", "58");
                 multipleChapterBooksMap.put("1ti", "58");
@@ -1437,6 +1444,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("gal", "52");
                 multipleChapterBooksMap.put("efesios", "53");
                 multipleChapterBooksMap.put("efes", "53");
+                multipleChapterBooksMap.put("efe", "53");
                 multipleChapterBooksMap.put("ef", "53");
                 multipleChapterBooksMap.put("filipenses", "54");
                 multipleChapterBooksMap.put("filip", "54");
@@ -2697,6 +2705,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("giobb", "22");
                 multipleChapterBooksMap.put("giob", "22");
                 multipleChapterBooksMap.put("gb", "22");
+                multipleChapterBooksMap.put("salmo", "23");
                 multipleChapterBooksMap.put("salmi", "23");
                 multipleChapterBooksMap.put("salm", "23");
                 multipleChapterBooksMap.put("sal", "23");
@@ -3030,6 +3039,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("gal", "52");
                 multipleChapterBooksMap.put("efesios", "53");
                 multipleChapterBooksMap.put("efes", "53");
+                multipleChapterBooksMap.put("efe", "53");
                 multipleChapterBooksMap.put("ef", "53");
                 multipleChapterBooksMap.put("filipenses", "54");
                 multipleChapterBooksMap.put("filip", "54");

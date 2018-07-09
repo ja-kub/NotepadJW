@@ -33,7 +33,8 @@ public class AssetsFilesCopier {
         try {
             String assets[] = assetManager.list(assetsPath);
             if (assets.length == 0) {
-                if (!new File(destPath).exists()) copyFile(assetsPath, destPath);
+                String destFilePath = targetDirectoryPath + "/" + destPath;
+                if (!new File(destFilePath).exists()) copyFile(assetsPath, destFilePath);
             } else {
                 String fullPath = targetDirectoryPath + destPath;
                 File dir = new File(fullPath);
@@ -55,8 +56,7 @@ public class AssetsFilesCopier {
         OutputStream out = null;
         try {
             in = assetManager.open(assetFilePath);
-            String newFileName = targetDirectoryPath + "/" + destFilePath;
-            out = new FileOutputStream(newFileName);
+            out = new FileOutputStream(destFilePath);
 
             byte[] buffer = new byte[1024];
             int read;

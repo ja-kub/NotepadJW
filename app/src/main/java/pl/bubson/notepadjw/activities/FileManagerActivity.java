@@ -1127,7 +1127,7 @@ public class FileManagerActivity extends AppCompatActivity {
     public void provideConventionsProgram() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activityContext);
         builder.setTitle(R.string.conventions_program);
-        builder.setMessage(getString(R.string.provide_conventions_program_question) + " (2017-2018)");// TODO: 2018-07-01 correct translations for 8 languages for these two strings
+        builder.setMessage(getString(R.string.provide_conventions_program_question));
 
         builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
@@ -1149,7 +1149,7 @@ public class FileManagerActivity extends AppCompatActivity {
         Language lang = getCurrentVersesLanguage(this);
         if (lang==Language.pte) lang = Language.pt;
         if (lang==Language.tl) lang = Language.en;
-        String pathFrom = "conventions/" + lang.name(); // TODO: 2018-06-30 add 9 x 5 missing programs
+        String pathFrom = "conventions/" + lang.name();
         String pathTo = mainDirectory.getAbsolutePath();
         AssetsFilesCopier afc = new AssetsFilesCopier(this);
         afc.copyAssets(pathFrom, pathTo);
