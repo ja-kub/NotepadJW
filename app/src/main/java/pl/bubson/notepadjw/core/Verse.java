@@ -93,7 +93,7 @@ public class Verse {
 
             String BOOK_PATTERN = "((" + mapping.getMultiplePartNameBookWithoutLastWordPattern() + "|[1-5][^\\S\\n]*)?[\\p{Lu}\\p{Ll}]+\\.?)";
             if (language.equals(Language.de)) BOOK_PATTERN = getGermanBookPattern();
-            String MULTIPLE_CHAPTER_VERSE_PATTERN = BOOK_PATTERN + "((\\s*" + CHAPTER_AND_VERSE_PATTERN + "\\s?;\\s?)+|(\\s)+)" + CHAPTER_AND_VERSE_PATTERN;
+            String MULTIPLE_CHAPTER_VERSE_PATTERN = BOOK_PATTERN + "((\\s*" + CHAPTER_AND_VERSE_PATTERN + "\\s*;\\s*)+|(\\s)+)" + CHAPTER_AND_VERSE_PATTERN;
             String SINGLE_CHAPTER_VERSE_PATTERN = "(" + mapping.getSingleChapterBooksPattern() + ")" + "\\s+" + VERSE_PATTERN;
             MULTIPLE_CHAPTER_LAST_VERSE_PATTERN = MULTIPLE_CHAPTER_VERSE_PATTERN + "\\s*$";
             SINGLE_CHAPTER_LAST_VERSE_PATTERN = SINGLE_CHAPTER_VERSE_PATTERN + "\\s*$";
