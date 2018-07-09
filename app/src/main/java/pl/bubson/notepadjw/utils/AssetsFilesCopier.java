@@ -33,7 +33,7 @@ public class AssetsFilesCopier {
         try {
             String assets[] = assetManager.list(assetsPath);
             if (assets.length == 0) {
-                copyFile(assetsPath, destPath);
+                if (!new File(destPath).exists()) copyFile(assetsPath, destPath);
             } else {
                 String fullPath = targetDirectoryPath + destPath;
                 File dir = new File(fullPath);
