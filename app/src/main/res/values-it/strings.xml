@@ -114,8 +114,8 @@
     <string name="action_print">Stampa</string>
     <string name="available_from_android_4_4">Disponibile da Android 4.4</string>
     <string name="conventions_program">Programma del congresso</string>
-    <string name="conventions">Conventions</string>
-    <string name="provide_conventions_program_question">Create folder with conventions programs?</string>
+    <string name="conventions">Assemblee</string>
+    <string name="provide_conventions_program_question">Creare la cartella con i programmi di assemblaggi?</string>
     <string name="sent_by_notepadjw">
  <![CDATA[
  <p>Note inviate da <B>Blocco note JW</B>- gestore di note ed editor con visualizzazione immediata dei versetti inseriti.</p>

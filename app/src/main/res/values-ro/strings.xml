@@ -114,8 +114,8 @@
     <string name="action_print">Imprimare</string>
     <string name="available_from_android_4_4">Disponibil de pe Android 4.4</string>
     <string name="conventions_program">Programul congresului</string>
-    <string name="conventions">Conventions</string>
-    <string name="provide_conventions_program_question">Create folder with conventions programs?</string>
+    <string name="conventions">Congresului</string>
+    <string name="provide_conventions_program_question">Creați dosar cu programe de congresului?</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notele trimise de la Notepad JW - note manager și editor cu vizualizare live a versurilor introduse.</p>
