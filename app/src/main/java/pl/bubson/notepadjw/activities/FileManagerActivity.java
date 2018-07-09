@@ -1124,7 +1124,7 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
-    public void provideConventionsProgram() {// TODO: 2018-07-01 Maybe add some check if this option should be visible?
+    public void provideConventionsProgram() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activityContext);
         builder.setTitle(R.string.conventions_program);
         builder.setMessage(getString(R.string.provide_conventions_program_question) + " (2017-2018)");// TODO: 2018-07-01 correct translations for 8 languages for these two strings
