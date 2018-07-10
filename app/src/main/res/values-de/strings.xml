@@ -176,6 +176,8 @@ Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), 
 • Unterscheidung zwischen Ko (Korinther) und Kö (Könige) wurde verbessert - Änderung. \n\n
     </string>
     <string name="whats_new_message_last">
-• Notizen können gedruckt werden (auf Android 4.4 und neuer).
+• Kapitel können durch Semikolon getrennt werden, z. "Heb. 5:11-14; 6:1". \n\n
+• Die Versammlungsprogramme 2017-2019 sind verfügbar. \n\n
+• Notizen können gedruckt werden (Android 4.4 und neuer erforderlich).
     </string>
 </resources>

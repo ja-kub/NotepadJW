@@ -176,6 +176,8 @@ Significa che puoi copiarli su PC, rinominare, eliminare, spostare, aggiungere n
 • Una correzione in tedesco. \n\n
    </string>
     <string name="whats_new_message_last">
-• Le note possono essere stampate (su Android 4.4 e successivi).
+• I capitoli possono essere separati da punti e virgola, ad es. "Ebr. 5:11-14; 6:1". \n\n.
+• I programmi di assemblaggio 2017-2019 sono disponibili. \n\n
+• È possibile stampare note (è necessario Android 4.4 e versioni più recenti).
     </string>
 </resources>

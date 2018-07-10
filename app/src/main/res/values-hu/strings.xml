@@ -162,6 +162,8 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
 • Javítás német nyelven. \n\n
     </string>
     <string name="whats_new_message_last">
-• Megjegyzések nyomtathatók (Android 4.4 és újabb verziók esetén).
+• A fejezetek pontosvesszővel, pl. "Héb 5:11-14; 6:1". \n\n
+• A 2017-2019-es program összeállítása elérhető. \n\n
+• Megjegyzések nyomtathatók (Android 4.4 és újabb szükséges).
     </string>
 </resources>

@@ -176,6 +176,8 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
 • Une correction en allemand. \n\n
    </string>
    <string name="whats_new_message_last">
-• Les notes peuvent être imprimées (sur Android 4.4 et plus récent).
+• Les chapitres peuvent être séparés par des points-virgules, par ex. "Heb. 5:11-14; 6:1". \n\n
+• Les programmes d\'assemblage 2017-2019 sont disponibles. \n\n
+• Les notes peuvent être imprimées (Android 4.4 et plus récent requis).
    </string>
 </resources>
