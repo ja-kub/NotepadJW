@@ -506,6 +506,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("colos", "55");
                 multipleChapterBooksMap.put("col", "55");
                 multipleChapterBooksMap.put("1thessalonians", "56");
+                multipleChapterBooksMap.put("1thess", "56");
                 multipleChapterBooksMap.put("1thes", "56");
                 multipleChapterBooksMap.put("1th", "56");
                 multipleChapterBooksMap.put("1tessalonians", "56");
@@ -513,6 +514,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("1tes", "56");
                 multipleChapterBooksMap.put("1ts", "56");
                 multipleChapterBooksMap.put("2thessalonians", "57");
+                multipleChapterBooksMap.put("2thess", "57");
                 multipleChapterBooksMap.put("2thes", "57");
                 multipleChapterBooksMap.put("2th", "57");
                 multipleChapterBooksMap.put("2tessalonians", "57");
@@ -827,6 +829,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("est", "18");
                 multipleChapterBooksMap.put("es", "18");
                 multipleChapterBooksMap.put("iov", "19");
+                multipleChapterBooksMap.put("psalmul", "20");
                 multipleChapterBooksMap.put("psalmii", "20");
                 multipleChapterBooksMap.put("psalmi", "20");
                 multipleChapterBooksMap.put("psalm", "20");
@@ -847,7 +850,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("isaia", "24");
                 multipleChapterBooksMap.put("isa", "24");
                 multipleChapterBooksMap.put("is", "24");
-                multipleChapterBooksMap.put("ieramia", "25");
+                multipleChapterBooksMap.put("ieremia", "25");
                 multipleChapterBooksMap.put("ierem", "25");
                 multipleChapterBooksMap.put("ier", "25");
                 multipleChapterBooksMap.put("plangerile", "26");
@@ -1538,6 +1541,7 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("иисуснавин", "07");
                 multipleChapterBooksMap.put("иисуна", "07");
                 multipleChapterBooksMap.put("иисна", "07");
+                multipleChapterBooksMap.put("иисн", "07");
                 multipleChapterBooksMap.put("исн", "07");
                 multipleChapterBooksMap.put("нав", "07");
                 multipleChapterBooksMap.put("нв", "07");
@@ -3174,7 +3178,7 @@ public class BookNamesMapping {
             case ro:
                 return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", "")
                            .replace("ă", "a").replace("â", "a").replace("î", "i")
-                           .replace("ș", "s").replace("ț", "i");
+                           .replace("ș", "s").replace("ț", "t");
             case de:
                 return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", "")
                            .replace("ä", "a").replace("ü", "u");
@@ -3210,6 +3214,7 @@ public class BookNamesMapping {
                         .replace("ó", "o").replace("ò", "o").replace("ô", "o")
                         .replace("õ", "o").replace("ú", "u").replace("û", "u");
             case tl:
+            case ru:
             default: // en
                 return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", ""); 
         }
