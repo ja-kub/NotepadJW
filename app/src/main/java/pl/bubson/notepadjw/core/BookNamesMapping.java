@@ -1511,7 +1511,7 @@ public class BookNamesMapping {
                 allBooksMap.putAll(singleChapterBooksMap);
                 allBooksMap.putAll(multipleChapterBooksMap);
 
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]oao|[Jj]u\\w*\\.?";
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]il[eêé]m\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]o[aã]o|[Jj]u\\w*\\.?";
                 multiplePartNameBookWithoutLastWordPattern = "[Cc]antico[^\\S\\n]*[Dd]e[^\\S\\n]*";
                 break;
 
@@ -3107,7 +3107,7 @@ public class BookNamesMapping {
                 allBooksMap.putAll(singleChapterBooksMap);
                 allBooksMap.putAll(multipleChapterBooksMap);
 
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]oao|[Jj]u\\w*\\.?";
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]il[eêé]m\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]o[aã]o|[Jj]u\\w*\\.?";
                 multiplePartNameBookWithoutLastWordPattern = "[Cc]antico[^\\S\\n]*[Dd]e[^\\S\\n]*";
                 break;
         }
