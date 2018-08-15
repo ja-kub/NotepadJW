@@ -135,6 +135,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
             versePreviewTextInViewMode.scrollTo(0, 0);
         }
     };
+    private boolean verseClosed = false;
 
     private static void hideSoftKeyboard(Activity activity) {
         InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -168,6 +169,26 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
     };
 
+//    // this feature doesn't work well... it closes verse when user scrolls it. So it's disabled for now
+//    View.OnClickListener quickClickListener = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//
+//            try {
+//                if (!verseClosed) {
+//                    view.getLayoutParams().height = (int) (MINIMUM_VERSE_HEIGHT_PROPORTION * screenHeight);
+//                    view.requestLayout();
+//                    verseClosed = true;
+//                } else {
+//                    view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+//                    verseClosed = false;
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    };
+
     @Override
     protected void onStart() { // executed e.g. on back from Settings or when screen was switched on
         super.onStart();
@@ -188,6 +209,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
         versePreviewTextInEditMode = (TextView) findViewById(R.id.text_view_in_edit_layout);
         versePreviewTextInEditMode.setMovementMethod(ScrollingMovementMethod.getInstance());
         versePreviewTextInEditMode.setOnLongClickListener(longClickListener);
+//        versePreviewTextInEditMode.setOnClickListener(quickClickListener);
 
         // View layout
         noteTextView = (HyperlinkVerseTextView) findViewById(R.id.hyperlink_verse_text_view);

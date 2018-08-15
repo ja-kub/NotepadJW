@@ -171,11 +171,11 @@ Jakub Tomala (codificação, modelos).
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Uma correção em alemão. \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Os capítulos podem ser separados por ponto e vírgula, por ex. "Heb. 5:11-14; 6:1". \n\n
 • Programas de montagem 2017-2019 estão disponíveis. \n\n
-• Notas podem ser impressas (Android 4.4 e mais recente é necessário).
+• Notas podem ser impressas (Android 4.4 e mais recente é necessário). \n\n
+    </string>
+    <string name="whats_new_message_last">
+• Novas traduções da Bíblia em polonês e francês (Revisão 2018).
     </string>
 </resources>

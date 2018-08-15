@@ -60,6 +60,7 @@ import java.util.List;
 import java.util.Locale;
 
 import pl.bubson.notepadjw.R;
+import pl.bubson.notepadjw.databases.BiblesDatabase;
 import pl.bubson.notepadjw.databases.FilesDatabase;
 import pl.bubson.notepadjw.fileManagerHelpers.FileListAdapter;
 import pl.bubson.notepadjw.fileManagerHelpers.Item;
@@ -156,6 +157,7 @@ public class FileManagerActivity extends AppCompatActivity {
 
         askForPermissionsIfNotYetAnswered(this);
         copyFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
+        removeOldBiblesIfNecessary(); // Remove this method some while after version 42 (released 15.08.2018), maybe a year after?
         prepareMainDirectory();
         prepareFilesDatabase(mainDirectory); // to be able to search them
 
@@ -1044,6 +1046,19 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
+    // Remove this method some while after version 38 (from 06.06.2018), maybe a year after?
+    public void removeOldBiblesIfNecessary() {
+        BiblesDatabase biblesDatabase = new BiblesDatabase(this);
+        if (biblesDatabase.getFile(Language.pl, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+            Log.i(TAG, "Old Polish Bible found, removing.");
+            biblesDatabase.deleteLanguage(Language.pl);
+        }
+        if (biblesDatabase.getFile(Language.fr, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+            Log.i(TAG, "Old French Bible found, removing.");
+            biblesDatabase.deleteLanguage(Language.fr);
+        }
+    }
+
     private void moveUpOneLevel() {
         if (!currentDirectory.getName().equalsIgnoreCase(mainDirectory.getName())) {
             fillListWithItemsFromDir(new File(currentDirectory.getParent()));
@@ -1147,8 +1162,8 @@ public class FileManagerActivity extends AppCompatActivity {
 
     private void copyConventionsProgramFromAssets() {
         Language lang = getCurrentVersesLanguage(this);
-        if (lang==Language.pte) lang = Language.pt;
-        if (lang==Language.tl) lang = Language.en;
+        if (lang == Language.pte) lang = Language.pt;
+        if (lang == Language.tl) lang = Language.en;
         String pathFrom = "conventions/" + lang.name();
         String pathTo = mainDirectory.getAbsolutePath();
         AssetsFilesCopier afc = new AssetsFilesCopier(this);

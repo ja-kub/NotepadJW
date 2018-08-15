@@ -173,11 +173,11 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
          nu au acces.
     </string>
     <string name="whats_new_message_previous">
-• O corecție în limba germană. \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Capitolele pot fi separate prin punct și virgulă, de ex. "Evr. 5:11-14; 6:1". \n\n
 • Sunt disponibile programe de asamblare 2017-2019. \n\n
-• Note pot fi imprimate (Android 4.4 și mai nou necesar).
+• Note pot fi imprimate (Android 4.4 și mai nou necesar). \n\n
+    </string>
+    <string name="whats_new_message_last">
+• Noi traduceri ale Bibliei în limba polonă și franceză (revizuirea 2018).
     </string>
 </resources>

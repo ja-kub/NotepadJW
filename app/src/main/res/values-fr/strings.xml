@@ -173,11 +173,11 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
          ne pas avoir accès.
    </string>
    <string name="whats_new_message_previous">
-• Une correction en allemand. \n\n
-   </string>
-   <string name="whats_new_message_last">
 • Les chapitres peuvent être séparés par des points-virgules, par ex. "Heb. 5:11-14; 6:1". \n\n
 • Les programmes d\'assemblage 2017-2019 sont disponibles. \n\n
-• Les notes peuvent être imprimées (Android 4.4 et plus récent requis).
+• Les notes peuvent être imprimées (Android 4.4 et plus récent requis). \n\n
+   </string>
+   <string name="whats_new_message_last">
+• Nouvelles traductions en polonais et en français de Bible - 2018 Revision (allez à Setting pour le télécharger).
    </string>
 </resources>
