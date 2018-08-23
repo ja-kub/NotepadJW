@@ -178,11 +178,9 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Programy zgromadzeń 2017-2018 są dostępne. \n\n
-• Rozdziały mogą być oddzielane średnikami, np. "Heb. 5:11-14; 6:1". \n\n
-• Możliwość wydrukowania notatki (wymagany Android 4.4 lub nowszy). \n\n
+• Nowe przekłady Biblii w języku polskim i francuskim - wydanie 2018 (wejdź w Ustawienia aby pobrać). \n\n
     </string>
     <string name="whats_new_message_last">
-• Nowe przekłady Biblii w języku polskim i francuskim - wydanie 2018 (wejdź w Ustawienia aby pobrać).
+• Dwa nowe programy zgromadzeń 2018-2019 są dostępne.
     </string>
 </resources>

@@ -3127,6 +3127,7 @@ public class BookNamesMapping {
             put(Language.fr, "https://download-a.akamaihd.net/files/media_bible/ec/nwt_F.epub");
             put(Language.it, "https://download-a.akamaihd.net/files/media_bible/f3/nwt_I.epub");
             put(Language.pte, "https://download-a.akamaihd.net/files/media_bible/6c/nwt_TPO.epub");
+            put(Language.mg, "https://download-a.akamaihd.net/files/media_bible/b1/bi12_MG.epub");
         }
     };
 
