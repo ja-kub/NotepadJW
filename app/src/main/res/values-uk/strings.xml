@@ -1,0 +1,183 @@
+<resources>
+    <string name="action_settings">Налаштування</string>
+    <string name="edit_message">Введіть текст</string>
+    <string name="button_save">Імпортувати</string>
+    <string name="button_open">Відкрити</string>
+    <string name="verse_preview">Попередній перегляд вірша</string>
+    <string name="ok">Погодитися</string>
+    <string name="cancel">Відмінити</string>
+    <string name="no">Ні</string>
+    <string name="yes">Так</string>
+    <string name="create_new_note_dialog_title">Введіть ім\'я нотатки</string>
+    <string name="note_name">Назва нотатки</string>
+    <string name="creation_of_new_note_cancelled">Нова нотатка не була створена</string>
+    <string name="file_name_exists">Елемент під цим ім\'ям вже існує, змініть назву</string>
+    <string name="name_cannot_be_empty">Назва не може бути порожньою</string>
+    <string name="creation_failed">Не вдалося створити</string>
+    <string name="creation_of_new_note_succesful">Створено нову нотатку</string>
+    <string name="button_rename">Перейменувати вибрану нотатку</string>
+    <string name="button_remove">Видалити вибрану нотатку</string>
+    <string name="button_share">Поділитися вибраною нотаткою</string>
+    <string name="not_matching">Не відповідає</string>
+    <string name="wrong_verse">- неправильний номер вірша</string>
+    <string name="button_switch_view">Змінити перегляд</string>
+    <string name="button_switch_edit">Кнопка редагування</string>
+    <string name="not_one_file_selected">Не вибрано жодного файлу</string>
+    <string name="removed">Вилучено</string>
+    <string name="rename_file">Перейменувати елемент</string>
+    <string name="file_renamed">Елемент перейменований</string>
+    <string name="file_rename_failed">Перейменування не вдалося</string>
+    <string name="on_remove_dialog_title">Видалити вибраний елемент?</string>
+    <string name="remove">Видалити</string>
+    <string name="files_removed_successfully">Елемент видалено</string>
+    <string name="files_not_removed_successfully">Деякі нотатки не були видалені</string>
+    <string name="button_new_folder">Створити нову папку</string>
+    <string name="create_new_folder_dialog_title">Створити нову папку</string>
+    <string name="folder_name">Назва папки</string>
+    <string name="folder_name_exists">Папка під цим ім\'ям вже існує, змініть ім\'я</string>
+    <string name="creation_of_new_folder_succesful">Створено нову папку</string>
+    <string name="permission_storage_not_granted">Доступ до зовнішнього сховища не надано</string>
+    <string name="storage_not_writable">Зберігання недоступне для запису</string>
+    <string name="temporary_file">Тимчасовий файл</string>
+    <string name="cannot_save_temp">Не вдається зберегти тимчасовий файл</string>
+    <string name="error_while_saving">Помилка при збережені файлу</string>
+    <string name="file_saved">Файл збережено</string>
+    <string name="create_new_note_from_this_file_dialog_title">Створити нову нотатку з цього файлу?</string>
+    <string name="file_will_be_created_in">Нотатка буде створена в папці: NotepadJW/</string>
+    <string name="downloads_folder_name">Завантаження</string>
+    <string name="file_is_too_big">Файл завеликий!</string>
+    <string name="language_na">Ця мова ще не підтримується</string>
+    <string name="wrong_book">Невірне ім\'я книги</string>
+    <string name="wrong_chapter">Невірний розділ</string>
+    <string name="wrong_verse_order">- неправильний порядок віршів</string>
+    <string name="help_title">Допомога</string>
+    <string name="items">Елементи</string>
+    <string name="bytes">Байти</string>
+    <string name="uri_null">Проаналізований URI відсутній</string>
+    <string name="cannot_open">Не можливо відкрити файл або вміст</string>
+    <string name="uri_not_supported">Тип uri не підтримується</string>
+    <string name="not_text_file">Не текстовий файл</string>
+    <string name="changes_not_saved">Зміни не збережені</string>
+    <string name="current_dir_is_null">Поточний каталог відстуній</string>
+    <string name="show_size">Показати розмір</string>
+    <string name="show_size_summ">Показати розмір нотаток або папок</string>
+    <string name="pref_file_manager_title">Менеджер Нотаток</string>
+    <string name="show_date">Показати дату</string>
+    <string name="show_date_summ">Показати дату зміни нотаток та папок</string>
+    <string name="parent_directory">Джерело каталогу</string>
+    <string name="pref_notepad_editor_title">Редактор Блокнота</string>
+    <string name="verse_font_size">Шрифт вірша</string>
+    <string name="note_font_size">Розмір шрифту нотаток</string>
+    <string name="verse_font_size_summ">Змінити розмір шрифту у віршах</string>
+    <string name="note_font_size_summ">Змінити розмір шрифту нотаток</string>
+    <string name="verse_font_color">Колір вірша</string>
+    <string name="verse_font_color_summ">Виберіть колір шрифту у вірші</string>
+    <string name="button_cut">Вирізати</string>
+    <string name="button_copy">Копіювати</string>
+    <string name="button_paste">Вставити</string>
+    <string name="cut_to_clipboard">Вирізано в буфер обміну</string>
+    <string name="copied_to_clipboard">Скопійовано в буфер обміну</string>
+    <string name="pasted_from_clipboard">Вставлено з буфера обміну</string>
+    <string name="not_all_elements_pasted">Не всі елементи вставлені</string>
+    <string name="unexpected_exception">Неочікуване виключення - будь ласка, надішліть мені електронний лист, що описує його</string>
+    <string name="button_sort_files">Змінити сортування</string>
+    <string name="files_sorted_by_date">Нотатки відсортовані за датою</string>
+    <string name="files_sorted_alphabetically">Нотатки відсортовані по алфавіту</string>
+    <string name="whats_new">Що нового?</string>
+    <string name="verse_language_title">Мова вірша</string>
+    <string name="verse_language_summ">Змінити мову віршів</string>
+    <string name="verse_language_dialog_title">Мова вірша</string>
+    <string name="verse_position_title">Розташування вірша</string>
+    <string name="verse_position_summ">Знову відкрити нотатку, щоб побачити зміни</string>
+    <string name="verse_position_dialog_title">Розташування вірша</string>
+    <string name="missing_language_dialog_title">Відсутня мова</string>
+    <string name="missing_language_message">Завантажити та встановити Біблію на вибраній мові?</string>
+    <string name="download_description">Завантажити Біблію на новій мові для Notepad JW</string>
+    <string name="download_language">Завантаження Біблії мовою</string>
+    <string name="install_language">Встановлення Біблії мовою</string>
+    <string name="in_progress">В процесі</string>
+    <string name="finished">Готово</string>
+    <string name="unsuccessful">Невдало</string>
+    <string name="action_print">Друк</string>
+    <string name="available_from_android_4_4">Доступно з Android 4.4</string>
+    <string name="permission_explanation_dialog_title">Дозвіл на зовнішнє зберігання</string>
+    <string name="button_undo">Скасувати</string>
+    <string name="button_redo">Повторити</string>
+    <string name="button_bold">Жирний шрифт</string>
+    <string name="button_italic">Курсив</string>
+    <string name="button_underline">Підкреслення</string>
+    <string name="button_bullet">Куля</string>
+    <string name="verse_area_size_title">Розмір зони віршів</string>
+    <string name="verse_area_size_dialog_title">Розмір зони віршів</string>
+    <string name="search_title">Пошук</string>
+    <string name="search_hint">Пошук</string>
+    <string name="note">Нотатка</string>
+    <string name="folder">Папка</string>
+    <string name="conventions_program">Програма конгресів</string>
+    <string name="conventions">Конгреси</string>
+    <string name="provide_conventions_program_question">Стоврити папку з програмою конгерсу?</string>
+    <string name="sent_by_notepadjw">
+    <![CDATA[
+    <p>Notes sent from <B>Notepad JW</B> - notes manager and editor with live view of entered verses.</p>
+    <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
+        ]]>
+    </string>
+    <string name="help_text_html">
+    <![CDATA[
+<h3>Information</h3>
+<p>Text of all verses are from New World Translation of the Holy Scriptures
+(Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
+<h3>Why use NotepadJW?</h3>
+<p>This application was created, because no other app was found, which would be able to show
+verses in the real time while editing some note. So it is useful for making notes during
+meetings and congresses - you don\'t need anymore to switch applications or search paper Bible
+to see the verse text, it is displayed in the same window as editor. As this application is able to
+show all verses under links in view mode, it could be also used for speeches at the podium and other
+tasks during meetings. This app also has sharing option, so you can also use it for making notes
+during ministry and send them to other preachers.</p>
+<h3>Abilities</h3>
+<p>This application consists of two activities:
+<br><b>Notes Manager</b> and <b>Notepad Editor</b>.
+<br>In <b>Notes Manager</b> you can create new notes, open them and create new folders.
+<br>You can select items by long-click and then: rename, delete or send (cut, copy and paste options will be added soon).
+<br>In <b>Notepad Editor</b> you can switch between <i>Edit Mode</i> and <i>View Mode</i>. In the first one,
+last entered verse will be displayed and in the second one you can click on links created from verses
+to see selected one.
+<h3>Auto backup and notes location</h3>
+<b> If your device has Android 6.0 or newer: </ b> Backup your notes and settings
+it is carried out when:
+<br> - You have enabled the backup option on your device in Settings -> Backup
+<br> - It\'s been min. 24 hours from the last backup
+<br> - The device is idle and charging
+<br> - The device is connected to a Wi-Fi network
+<br> When the device is changed or the Notepad JW application is reinstalled, notes and settings will be automatically restored.
+Notes are not available for other applications or after connecting the device to a computer (this is a requirement for this functionality to work).
+Of course, you can still use the option of sending these files by email, instant messengers or uploading to your Google Drive.
+To check if the backup has been done, open Google Drive -> Menu -> Backups -> last copy -> Application data -> find Notepad JW.
+If there is no such item, and the above conditions have been met, you can delete and re-add your Google Account at your own risk
+(Note: this will clean up the current backups both correct and incorrect): Settings -> Accounts -> Google -> Delete account, then Add account -> Google.
+<br><br><b>If you have older Android than 6.0:</b> notes are not automatically backed up. They are
+saved on your device in public location: Documents/NotepadJW. You can access them from our PC.
+It means that you can copy them to PC (as a manual backup), rename, delete, move, add new from your computer etc.
+<h3>App author</h3>
+<p>Jakub Tomala.
+    ]]>
+    </string>
+    <string name="permission_explanation_dialog_message">
+        In the next screen you will be asked about access to external storage. If you Allow,
+        Notepad JW will save notes to external storage (in folder Documents -> NotepadJW).
+        Thereby you would have access to these notes from other apps and from PC for your
+        convenience (Notepad JW app does not read or modify any files outside of
+        NotepadJW folder).
+        If you Deny, Notepad JW will save notes to internal storage, to which other apps and your PC
+        don\'t have access.
+    </string>
+    <string name="whats_new_message_previous">
+• Chapters can be separated by semicolons, e.g. "Heb. 5:11-14; 6:1". \n\n
+• Assembly programs 2017-2019 are available. \n\n
+• Notes can be printed (Android 4.4 and newer required). \n\n
+    </string>
+    <string name="whats_new_message_last">
+• New Polish and French translations of Bible (2018 Revision).
+    </string>
+</resources>

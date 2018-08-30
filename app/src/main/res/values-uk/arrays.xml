@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="font_size_entries">
+        <item>Малий</item>
+        <item>Середній</item>
+        <item>Великий</item>
+        <item>Дуже великий</item>
+    </string-array>
+    <string-array name="font_size_values">
+        <item>@string/font_size_small</item>
+        <item>@string/font_size_medium</item>
+        <item>@string/font_size_large</item>
+        <item>@string/font_size_xlarge</item>
+    </string-array>
+
+    <string-array name="verse_position_entries">
+        <item>Зверху</item>
+        <item>Праворуч</item>
+    </string-array>
+    <string-array name="verse_position_values">
+        <item>@string/verse_position_top</item>
+        <item>@string/verse_position_right</item>
+    </string-array>
+
+    <string-array name="verse_language_entries">
+        <item>English</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Hungarian</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Portuguese (Brazil)</item>
+        <item>Portuguese (Portugal)</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Spanish</item>
+        <item>Tagalog</item>
+    </string-array>
+    <string-array name="verse_language_values">
+        <item>@string/english_language</item>
+        <item>@string/french_language</item>
+        <item>@string/german_language</item>
+        <item>@string/hungarian_language</item>
+        <item>@string/italian_language</item>
+        <item>@string/polish_language</item>
+        <item>@string/portuguese_language</item>
+        <item>@string/portuguese_european_language</item>
+        <item>@string/romanian_language</item>
+        <item>@string/russian_language</item>
+        <item>@string/spanish_language</item>
+        <item>@string/tagalog_language</item>
+    </string-array>
+
+    <string-array name="verse_area_size_entries">
+        <item>Незмінний</item>
+        <item>Відповідно до розміру вибраного уривка</item>
+    </string-array>
+    <string-array name="verse_area_size_values">
+        <item>@string/verse_area_size_auto</item>
+        <item>@string/verse_area_size_changeable</item>
+    </string-array>
+</resources>
