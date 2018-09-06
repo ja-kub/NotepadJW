@@ -35,6 +35,7 @@
         <item>Rumano</item>
         <item>Ruso</item>
         <item>Tagalo</item>
+        <item>Ucranio</item>
     </string-array>
     <string-array name="verse_language_values">
         <item>@string/german_language</item>
@@ -48,6 +49,7 @@
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
         <item>@string/tagalog_language</item>
+        <item>@string/ukrainian_language</item>
     </string-array>
 
     <string-array name="verse_area_size_entries">

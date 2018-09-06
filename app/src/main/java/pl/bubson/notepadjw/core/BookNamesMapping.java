@@ -3110,6 +3110,219 @@ public class BookNamesMapping {
                 singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]il[eêé]m\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]o[aã]o|[Jj]u\\w*\\.?";
                 multiplePartNameBookWithoutLastWordPattern = "[Cc]antico[^\\S\\n]*[Dd]e[^\\S\\n]*";
                 break;
+
+            case uk:
+                multipleChapterBooksMap.put("буття", "05");
+                multipleChapterBooksMap.put("бут", "05");
+                multipleChapterBooksMap.put("бт", "05");
+                multipleChapterBooksMap.put("вихід", "06");
+                multipleChapterBooksMap.put("вих", "06");
+                multipleChapterBooksMap.put("вх", "06");
+                multipleChapterBooksMap.put("левіт", "07");
+                multipleChapterBooksMap.put("лев", "07");
+                multipleChapterBooksMap.put("лв", "07");
+                multipleChapterBooksMap.put("числа", "08");
+                multipleChapterBooksMap.put("чис", "08");
+                multipleChapterBooksMap.put("чс", "08");
+                multipleChapterBooksMap.put("повтореннязакону", "09");
+                multipleChapterBooksMap.put("повтзакону", "09");
+                multipleChapterBooksMap.put("повт", "09");
+                multipleChapterBooksMap.put("пв", "09");
+                multipleChapterBooksMap.put("ісусанави́на", "10");
+                multipleChapterBooksMap.put("існав", "10");
+                multipleChapterBooksMap.put("існ", "10");
+                multipleChapterBooksMap.put("суддів", "11");
+                multipleChapterBooksMap.put("суд", "11");
+                multipleChapterBooksMap.put("сд", "11");
+                multipleChapterBooksMap.put("рут", "12");
+                multipleChapterBooksMap.put("рт", "12");
+                multipleChapterBooksMap.put("1самуїла", "13");
+                multipleChapterBooksMap.put("1сам", "13");
+                multipleChapterBooksMap.put("1см", "13");
+                multipleChapterBooksMap.put("2самуїла", "14");
+                multipleChapterBooksMap.put("2сам", "14");
+                multipleChapterBooksMap.put("2см", "14");
+                multipleChapterBooksMap.put("1царів", "15");
+                multipleChapterBooksMap.put("1цар", "15");
+                multipleChapterBooksMap.put("1цр", "15");
+                multipleChapterBooksMap.put("2царів", "16");
+                multipleChapterBooksMap.put("2цар", "16");
+                multipleChapterBooksMap.put("2цр", "16");
+                multipleChapterBooksMap.put("1хронік", "17");
+                multipleChapterBooksMap.put("1хрон", "17");
+                multipleChapterBooksMap.put("1хр", "17");
+                multipleChapterBooksMap.put("2хронік", "18");
+                multipleChapterBooksMap.put("2хрон", "18");
+                multipleChapterBooksMap.put("2хр", "18");
+                multipleChapterBooksMap.put("ездри", "19");
+                multipleChapterBooksMap.put("езд", "19");
+                multipleChapterBooksMap.put("неемı́ї", "20");
+                multipleChapterBooksMap.put("неем", "20");
+                multipleChapterBooksMap.put("не", "20");
+                multipleChapterBooksMap.put("естер", "21");
+                multipleChapterBooksMap.put("ест", "21");
+                multipleChapterBooksMap.put("ес", "21");
+                multipleChapterBooksMap.put("йова", "22");
+                multipleChapterBooksMap.put("йов", "22");
+                multipleChapterBooksMap.put("йв", "22");
+                multipleChapterBooksMap.put("псалми", "23");
+                multipleChapterBooksMap.put("псалм", "23");
+                multipleChapterBooksMap.put("псал", "23");
+                multipleChapterBooksMap.put("пса", "23");
+                multipleChapterBooksMap.put("пс", "23");
+                multipleChapterBooksMap.put("прислів’я", "24");
+                multipleChapterBooksMap.put("прислівя", "24");
+                multipleChapterBooksMap.put("присл", "24");
+                multipleChapterBooksMap.put("при", "24");
+                multipleChapterBooksMap.put("пр", "24");
+                multipleChapterBooksMap.put("екклезіаста", "25");
+                multipleChapterBooksMap.put("екк", "25");
+                multipleChapterBooksMap.put("ек", "25");
+                multipleChapterBooksMap.put("піснянадпіснями", "26");
+                multipleChapterBooksMap.put("пісн", "26");
+                multipleChapterBooksMap.put("псн", "26");
+                multipleChapterBooksMap.put("ісаї", "27");
+                multipleChapterBooksMap.put("іс", "27");
+                multipleChapterBooksMap.put("єремı́ї", "28");
+                multipleChapterBooksMap.put("єрем", "28");
+                multipleChapterBooksMap.put("єр", "28");
+                multipleChapterBooksMap.put("плачєремı́ї", "29");
+                multipleChapterBooksMap.put("плач", "29");
+                multipleChapterBooksMap.put("пл", "29");
+                multipleChapterBooksMap.put("єзекіїля", "30");
+                multipleChapterBooksMap.put("єзек", "30");
+                multipleChapterBooksMap.put("єз", "30");
+                multipleChapterBooksMap.put("даниїла", "31");
+                multipleChapterBooksMap.put("дани", "31");
+                multipleChapterBooksMap.put("дан", "31");
+                multipleChapterBooksMap.put("дн", "31");
+                multipleChapterBooksMap.put("осı́ї", "32");
+                multipleChapterBooksMap.put("осıї", "32");
+                multipleChapterBooksMap.put("осı́", "32");
+                multipleChapterBooksMap.put("осı", "32");
+                multipleChapterBooksMap.put("ос", "32");
+                multipleChapterBooksMap.put("йоіла", "33");
+                multipleChapterBooksMap.put("йл", "33");
+                multipleChapterBooksMap.put("амо́са", "34");
+                multipleChapterBooksMap.put("амоса", "34");
+                multipleChapterBooksMap.put("амо́с", "34");
+                multipleChapterBooksMap.put("амос", "34");
+                multipleChapterBooksMap.put("ам", "34");
+                multipleChapterBooksMap.put("йони", "36");
+                multipleChapterBooksMap.put("йн", "36");
+                multipleChapterBooksMap.put("михея", "37");
+                multipleChapterBooksMap.put("мих", "37");
+                multipleChapterBooksMap.put("наума", "38");
+                multipleChapterBooksMap.put("на", "38");
+                multipleChapterBooksMap.put("авакума", "39");
+                multipleChapterBooksMap.put("авак", "39");
+                multipleChapterBooksMap.put("ав", "39");
+                multipleChapterBooksMap.put("софонı́ї", "40");
+                multipleChapterBooksMap.put("софон", "40");
+                multipleChapterBooksMap.put("сф", "40");
+                multipleChapterBooksMap.put("огı́я", "41");
+                multipleChapterBooksMap.put("огıя", "41");
+                multipleChapterBooksMap.put("огı́", "41");
+                multipleChapterBooksMap.put("ог", "41");
+                multipleChapterBooksMap.put("заха́рія", "42");
+                multipleChapterBooksMap.put("зах", "42");
+                multipleChapterBooksMap.put("зх", "42");
+                multipleChapterBooksMap.put("малахı́ї", "43");
+                multipleChapterBooksMap.put("мал", "43");
+                multipleChapterBooksMap.put("мл", "43");
+                multipleChapterBooksMap.put("матвія", "44");
+                multipleChapterBooksMap.put("матв", "44");
+                multipleChapterBooksMap.put("мат", "44");
+                multipleChapterBooksMap.put("мт", "44");
+                multipleChapterBooksMap.put("марка", "45");
+                multipleChapterBooksMap.put("марк", "45");
+                multipleChapterBooksMap.put("мар", "45");
+                multipleChapterBooksMap.put("мр", "45");
+                multipleChapterBooksMap.put("луки", "46");
+                multipleChapterBooksMap.put("лук", "46");
+                multipleChapterBooksMap.put("лк", "46");
+                multipleChapterBooksMap.put("івана", "47");
+                multipleChapterBooksMap.put("ів", "47");
+                multipleChapterBooksMap.put("дії", "48");
+                multipleChapterBooksMap.put("ри́млян", "49");
+                multipleChapterBooksMap.put("рим", "49");
+                multipleChapterBooksMap.put("ри́м", "49");
+                multipleChapterBooksMap.put("рм", "49");
+                multipleChapterBooksMap.put("1коринфя́н", "50");
+                multipleChapterBooksMap.put("1коринфян", "50");
+                multipleChapterBooksMap.put("1кор", "50");
+                multipleChapterBooksMap.put("1кр", "50");
+                multipleChapterBooksMap.put("2коринфя́н", "51");
+                multipleChapterBooksMap.put("2коринфян", "51");
+                multipleChapterBooksMap.put("2кор", "51");
+                multipleChapterBooksMap.put("2кр", "51");
+                multipleChapterBooksMap.put("галатів", "52");
+                multipleChapterBooksMap.put("гал", "52");
+                multipleChapterBooksMap.put("гл", "52");
+                multipleChapterBooksMap.put("ефеся́н", "53");
+                multipleChapterBooksMap.put("ефес", "53");
+                multipleChapterBooksMap.put("ефе", "53");
+                multipleChapterBooksMap.put("еф", "53");
+                multipleChapterBooksMap.put("філіппійців", "54");
+                multipleChapterBooksMap.put("флп", "54");
+                multipleChapterBooksMap.put("колосся́н", "55");
+                multipleChapterBooksMap.put("колоссян", "55");
+                multipleChapterBooksMap.put("кол", "55");
+                multipleChapterBooksMap.put("кл", "55");
+                multipleChapterBooksMap.put("1фессалонікійців", "56");
+                multipleChapterBooksMap.put("1фес", "56");
+                multipleChapterBooksMap.put("1фс", "56");
+                multipleChapterBooksMap.put("2фессалонікійців", "57");
+                multipleChapterBooksMap.put("2фес", "57");
+                multipleChapterBooksMap.put("2фс", "57");
+                multipleChapterBooksMap.put("1тимофія", "58");
+                multipleChapterBooksMap.put("1тим", "58");
+                multipleChapterBooksMap.put("1тм", "58");
+                multipleChapterBooksMap.put("2тимофія", "59");
+                multipleChapterBooksMap.put("2тим", "59");
+                multipleChapterBooksMap.put("2тм", "59");
+                multipleChapterBooksMap.put("тита", "60");
+                multipleChapterBooksMap.put("тит", "60");
+                multipleChapterBooksMap.put("євреїв", "62");
+                multipleChapterBooksMap.put("євр", "62");
+                multipleChapterBooksMap.put("єв", "62");
+                multipleChapterBooksMap.put("якова", "63");
+                multipleChapterBooksMap.put("як", "63");
+                multipleChapterBooksMap.put("1петра", "64");
+                multipleChapterBooksMap.put("1пет", "64");
+                multipleChapterBooksMap.put("1пт", "64");
+                multipleChapterBooksMap.put("2петра", "65");
+                multipleChapterBooksMap.put("2пет", "65");
+                multipleChapterBooksMap.put("2пт", "65");
+                multipleChapterBooksMap.put("1івана", "66");
+                multipleChapterBooksMap.put("1ів", "66");
+                multipleChapterBooksMap.put("об’явлення", "70");
+                multipleChapterBooksMap.put("обявлення", "70");
+                multipleChapterBooksMap.put("об’яв", "70");
+                multipleChapterBooksMap.put("обяв", "70");
+                multipleChapterBooksMap.put("об", "70");
+
+                singleChapterBooksMap.put("овдı́я", "35");
+                singleChapterBooksMap.put("овдıя", "35");
+                singleChapterBooksMap.put("ов", "35");
+                singleChapterBooksMap.put("филимона", "61");
+                singleChapterBooksMap.put("флм", "61");
+                singleChapterBooksMap.put("2івана", "67");
+                singleChapterBooksMap.put("2ів", "67");
+                singleChapterBooksMap.put("3івана", "68");
+                singleChapterBooksMap.put("3ів", "68");
+                singleChapterBooksMap.put("юди", "69");
+                singleChapterBooksMap.put("юд", "69");
+
+                allBooksMap.putAll(singleChapterBooksMap);
+                allBooksMap.putAll(multipleChapterBooksMap);
+
+                // matches "Abdiasza", "abd.", "flm", "Filem.", "2 jn", "3 Jan.", "3 jana", "jd", "Jud.", "Judy"
+                singleChapterBooksPattern = "[Оо]в[\\p{Lu}\\p{Ll}]*\\.?|[Фф]лм\\.?|[Фф]илим[\\p{Lu}\\p{Ll}]*\\.?|[23][^\\S\\n]*[Іі]в[\\p{Lu}\\p{Ll}]*\\.?|[Юю]ди?\\.?";
+
+                // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
+                multiplePartNameBookWithoutLastWordPattern = "[Пп]овт\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Іі]с\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Пп]існя над[^\\S\\n]*|[Пп]лач[^\\S\\n]*";
+                break;
         }
     }
 
@@ -3128,6 +3341,7 @@ public class BookNamesMapping {
             put(Language.it, "https://download-a.akamaihd.net/files/media_bible/f3/nwt_I.epub");
             put(Language.pte, "https://download-a.akamaihd.net/files/media_bible/6c/nwt_TPO.epub");
             put(Language.mg, "https://download-a.akamaihd.net/files/media_bible/b1/bi12_MG.epub");
+            put(Language.uk, "https://download-a.akamaihd.net/files/media_bible/9c/nwt_K.epub");
         }
     };
 
@@ -3145,6 +3359,7 @@ public class BookNamesMapping {
             put(Language.fr, "10010611");
             put(Language.it, "10010611");
             put(Language.pte, "10010611");
+            put(Language.uk, "10010611");
         }
     };
 
@@ -3162,6 +3377,7 @@ public class BookNamesMapping {
             put(Language.fr, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.it, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.pte, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
+            put(Language.uk, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
         }
     };
 
@@ -3214,6 +3430,9 @@ public class BookNamesMapping {
                         .replace("ê", "e").replace("í", "i").replace("ì", "i")
                         .replace("ó", "o").replace("ò", "o").replace("ô", "o")
                         .replace("õ", "o").replace("ú", "u").replace("û", "u");
+            case uk:
+                return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", "")
+                        .replace("’", "");
             case tl:
             case ru:
             default: // en

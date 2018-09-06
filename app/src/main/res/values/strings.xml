@@ -26,6 +26,7 @@
     <string name="portuguese_language" translatable="false">pt</string>
     <string name="portuguese_european_language" translatable="false">pte</string>
     <string name="italian_language" translatable="false">it</string>
+    <string name="ukrainian_language" translatable="false">uk</string>
     <string name="verse_position_key" translatable="false">versePosition</string>
     <string name="verse_position_top" translatable="false">top</string>
     <string name="verse_position_right" translatable="false">right</string>

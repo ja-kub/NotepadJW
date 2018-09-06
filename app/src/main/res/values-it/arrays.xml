@@ -34,6 +34,7 @@
         <item>Spagnolo</item>
         <item>Tagalog</item>
         <item>Tedesco</item>
+        <item>Ucraino</item>
         <item>Ungherese</item>
     </string-array>
     <string-array name="verse_language_values">
@@ -47,6 +48,7 @@
         <item>@string/spanish_language</item>
         <item>@string/tagalog_language</item>
         <item>@string/german_language</item>
+        <item>@string/ukrainian_language</item>
         <item>@string/hungarian_language</item>
     </string-array>
 

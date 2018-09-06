@@ -34,6 +34,7 @@
         <item>Rosyjski</item>
         <item>Rumuński</item>
         <item>Tagalski</item>
+        <item>Ukraiński</item>
         <item>Węgierski</item>
         <item>Włoski</item>
     </string-array>
@@ -48,6 +49,7 @@
         <item>@string/russian_language</item>
         <item>@string/romanian_language</item>
         <item>@string/tagalog_language</item>
+        <item>@string/ukrainian_language</item>
         <item>@string/hungarian_language</item>
         <item>@string/italian_language</item>
     </string-array>
