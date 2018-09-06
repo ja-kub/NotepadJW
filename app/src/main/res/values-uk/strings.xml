@@ -173,11 +173,9 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• Chapters can be separated by semicolons, e.g. "Heb. 5:11-14; 6:1". \n\n
-• Assembly programs 2017-2019 are available. \n\n
-• Notes can be printed (Android 4.4 and newer required). \n\n
+• Нові польсько-французькі переклади Біблії (перегляд 2018 року). \n\n
     </string>
     <string name="whats_new_message_last">
-• New Polish and French translations of Bible (2018 Revision).
+• Український переклад заявки та Біблії.
     </string>
 </resources>

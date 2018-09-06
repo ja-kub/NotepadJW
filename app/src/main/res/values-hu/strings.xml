@@ -159,11 +159,9 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-• A fejezetek pontosvesszővel, pl. "Héb 5:11-14; 6:1". \n\n
-• A 2017-2019-es program összeállítása elérhető. \n\n
-• Megjegyzések nyomtathatók (Android 4.4 és újabb szükséges). \n\n
+• A Biblia új lengyel és francia fordításai (2018-as változat). \n\n
     </string>
     <string name="whats_new_message_last">
-• A Biblia új lengyel és francia fordításai (2018-as változat).
+• Az alkalmazás és a Biblia ukrán fordítása.
     </string>
 </resources>
