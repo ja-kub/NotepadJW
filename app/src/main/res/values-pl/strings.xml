@@ -67,6 +67,7 @@
     <string name="wrong_verse">- nieprawidłowy werset</string>
     <string name="wrong_verse_order">- nieprawidłowa kolejność wersetów</string>
     <string name="yes">Tak</string>
+    <string name="main_dir_is_null">Załącz NotepadJW z twoich aplikacji, następnie wróć tutaj, aby móc wykonać tę operację.</string>
     <string name="help_text_html">
     <![CDATA[
 <h3>Informacje</h3>

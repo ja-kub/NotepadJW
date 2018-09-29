@@ -117,6 +117,7 @@
    <string name="conventions_program">Programa do Congresso</string>
    <string name="conventions">Assembléias</string>
    <string name="provide_conventions_program_question">Criar pasta com os programas de assembléias?</string>
+   <string name="main_dir_is_null">Por favor, inicie o NotepadJW a partir de seus aplicativos e, em seguida, retorne a esta operação</string>
    <string name="sent_by_notepadjw">
    <![CDATA[
     <p>Notas enviadas a partir de<B>Bloco de Notas JW</B>- Notas gerente e editor com exibição ao vivo dos versos introduzidas</p>

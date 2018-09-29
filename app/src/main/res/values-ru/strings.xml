@@ -117,6 +117,7 @@
     <string name="conventions_program">Программа конгресса</string>
     <string name="conventions">Конгресс</string>
     <string name="provide_conventions_program_question">Создать папку с программами конгресса?</string>
+    <string name="main_dir_is_null">Запустите NotepadJW из своих приложений, а затем вернитесь к этой операции</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
    <p>Заметки, отправленные из<B>Notepad JW</B>- менеджер заметок и редактор с живым просмотром введенных стихов.</p>

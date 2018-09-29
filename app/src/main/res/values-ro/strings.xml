@@ -116,6 +116,7 @@
     <string name="conventions_program">Programul congresului</string>
     <string name="conventions">Congres</string>
     <string name="provide_conventions_program_question">Creați dosar cu programe de congresului?</string>
+    <string name="main_dir_is_null">Porniți NotepadJW din aplicațiile dvs., apoi reveniți la această operație</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notele trimise de la Notepad JW - note manager și editor cu vizualizare live a versurilor introduse.</p>

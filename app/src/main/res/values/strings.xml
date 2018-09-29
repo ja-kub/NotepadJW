@@ -153,6 +153,7 @@
     <string name="conventions_program">Conventions program</string>
     <string name="conventions">Conventions</string>
     <string name="provide_conventions_program_question">Create folder with conventions programs?</string>
+    <string name="main_dir_is_null">Please launch NotepadJW from your apps, then get back to this operation</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notes sent from <B>Notepad JW</B> - notes manager and editor with live view of entered verses.</p>

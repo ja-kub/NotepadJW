@@ -116,6 +116,7 @@
     <string name="conventions_program">Kongressprogramm</string>
     <string name="conventions">Kongresse</string>
     <string name="provide_conventions_program_question">Ordner erstellen mit Kongresse Programme?</string>
+    <string name="main_dir_is_null">Bitte starten Sie NotepadJW von Ihren Apps und kehren Sie dann zu diesem Vorgang zurück</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>Notizen von <B>Notepad JW</b> - Notizen Manager und Editor mit Live-Ansicht der eingegebenen Verse.</p>

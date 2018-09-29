@@ -116,6 +116,7 @@
     <string name="conventions_program">Programma del congresso</string>
     <string name="conventions">Assemblee</string>
     <string name="provide_conventions_program_question">Creare la cartella con i programmi di assemblaggi?</string>
+    <string name="main_dir_is_null">Avvia NotepadJW dalle tue app, quindi torna a questa operazione</string>
     <string name="sent_by_notepadjw">
  <![CDATA[
  <p>Note inviate da <B>Blocco note JW</B>- gestore di note ed editor con visualizzazione immediata dei versetti inseriti.</p>

@@ -116,6 +116,7 @@
     <string name="conventions_program">Kongresszusi program</string>
     <string name="conventions">Kongresszusok</string>
     <string name="provide_conventions_program_question">Szeretné létrehozni egy mappát kongresszusi programokkal?</string>
+    <string name="main_dir_is_null">Indítsa el a NotepadJW alkalmazásokból, majd térjen vissza erre a műveletre</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
     <p>A jegyzetek a <B>Notepad JW</B> alkalmazással készültek - ez egy testvéreknek készült jegyzetelő, ami írás közben megjeleníti a szövegben szereplő  bibliaidézeteket.</p>

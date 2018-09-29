@@ -81,6 +81,21 @@ public class NotepadEditorActivity extends AppCompatActivity {
     private static final String VERSE_AREA_SIZE_EDIT_MODE_KEY = "verseAreaSizeEditMode";
     private static final String VERSE_AREA_SIZE_VIEW_MODE_KEY = "verseAreaSizeViewMode";
     private static int screenHeight;
+    View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View view) {
+            try {
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                String textToCopy = ((TextView) view).getText().toString();
+                ClipData clip = ClipData.newPlainText("verse", textToCopy);
+                clipboard.setPrimaryClip(clip);
+                Toast.makeText(getApplicationContext(), R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return true;
+        }
+    };
     private int cursorPosition;
     private Language versesLanguage;
     private Context activityContext = this;
@@ -153,41 +168,21 @@ public class NotepadEditorActivity extends AppCompatActivity {
         savedMode = UNSET;
     }
 
-    View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
-        @Override
-        public boolean onLongClick(View view) {
-            try {
-                ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-                String textToCopy = ((TextView)view).getText().toString();
-                ClipData clip = ClipData.newPlainText("verse", textToCopy);
-                clipboard.setPrimaryClip(clip);
-                Toast.makeText(getApplicationContext(), R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show();
-            } catch (Exception e) {
-                e.printStackTrace();
+    // this feature doesn't work well... it closes verse when user scrolls it. So it's disabled for now
+    private void closeVerse(View view) {
+        try {
+            if (!verseClosed) {
+                view.getLayoutParams().height = (int) (MINIMUM_VERSE_HEIGHT_PROPORTION * screenHeight);
+                view.requestLayout();
+                verseClosed = true;
+            } else {
+                view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                verseClosed = false;
             }
-            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    };
-
-//    // this feature doesn't work well... it closes verse when user scrolls it. So it's disabled for now
-//    View.OnClickListener quickClickListener = new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//
-//            try {
-//                if (!verseClosed) {
-//                    view.getLayoutParams().height = (int) (MINIMUM_VERSE_HEIGHT_PROPORTION * screenHeight);
-//                    view.requestLayout();
-//                    verseClosed = true;
-//                } else {
-//                    view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-//                    verseClosed = false;
-//                }
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    };
+    }
 
     @Override
     protected void onStart() { // executed e.g. on back from Settings or when screen was switched on
@@ -429,7 +424,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
 
         // Inflate and initialize the bottom menu
-        bottomBar = (ActionMenuView)findViewById(R.id.notepad_bottom_toolbar);
+        bottomBar = (ActionMenuView) findViewById(R.id.notepad_bottom_toolbar);
         if (bottomBar != null) {
             Menu bottomMenu = bottomBar.getMenu();
             bottomMenu.clear();
@@ -518,6 +513,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 return true;
             case R.id.action_redo:
                 noteEditText.redo();
+//                closeVerse(versePreviewTextInEditMode);
                 return true;
             case R.id.action_text_bold:
                 noteEditText.bold(!noteEditText.contains(KnifeText.FORMAT_BOLD));
@@ -737,6 +733,11 @@ public class NotepadEditorActivity extends AppCompatActivity {
     }
 
     private void importDocument() {
+        final File mainDir = FileManagerActivity.getMainDirectory();
+        if (mainDir==null) {
+            Toast.makeText(activityContext, R.string.main_dir_is_null, Toast.LENGTH_LONG).show();
+            return;
+        }
         final String html = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.create_new_note_from_this_file_dialog_title);
@@ -765,7 +766,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Boolean isFileNameCorrect = true;
                 String newFileName = input.getText().toString();
-                File importsDirectory = new File(FileManagerActivity.getMainDirectory(), activityContext.getResources().getString(R.string.downloads_folder_name));
+                File importsDirectory = new File(mainDir, activityContext.getResources().getString(R.string.downloads_folder_name));
 
                 if (importsDirectory.mkdirs() || importsDirectory.isDirectory()) {
                     if (newFileName.equals("")) {

@@ -116,6 +116,7 @@
     <string name="conventions_program">Programme de l\'assemblée </string>
     <string name="conventions">Assemblées</string>
     <string name="provide_conventions_program_question">Créer un dossier avec des programmes Assemblages?</string>
+    <string name="main_dir_is_null">Veuillez lancer NotepadJW à partir de vos applications, puis revenir à cette opération</string>
     <string name="sent_by_notepadjw">
    <![CDATA[
    <p>Notes envoyées depuis<B>Notepad JW</B>- gestionnaire de notes et éditeur avec vue en direct des versets entrés.</p>
