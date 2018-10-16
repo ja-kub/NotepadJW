@@ -27,7 +27,8 @@
         <item>Итальянский</item>
         <item>Немецкий</item>
         <item>Польский</item>
-        <item>Португальский</item>
+        <item>Португальский (Бразилия)</item>
+        <item>Португальский (Португалия)</item>
         <item>Русский</item>
         <item>Румынский</item>
         <item>Тагальский</item>
@@ -42,6 +43,7 @@
         <item>@string/german_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>
+        <item>@string/portuguese_european_language</item>
         <item>@string/russian_language</item>
         <item>@string/romanian_language</item>
         <item>@string/tagalog_language</item>

@@ -30,7 +30,8 @@
         <item>Italiană</item>
         <item>Maghiară</item>
         <item>Polonez</item>
-        <item>Portugheză</item>
+        <item>Portugheză (Brazilia)</item>
+        <item>Portugheză (Portugalia)</item>
         <item>Română</item>
         <item>Rusă</item>
         <item>Spaniolă</item>
@@ -45,6 +46,7 @@
         <item>@string/hungarian_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>
+        <item>@string/portuguese_european_language</item>
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
         <item>@string/spanish_language</item>

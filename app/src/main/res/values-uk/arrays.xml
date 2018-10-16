@@ -50,6 +50,7 @@
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
         <item>@string/spanish_language</item>
+        <item>@string/tagalog_language</item>
         <item>@string/ukrainian_language</item>
     </string-array>
 

@@ -31,7 +31,8 @@
         <item>Német</item>
         <item>Olasz</item>
         <item>Orosz</item>
-        <item>Portugál</item>
+        <item>Portugál (Brazília)</item>
+        <item>Portugál (Portugália)</item>
         <item>Román</item>
         <item>Spanyol</item>
         <item>Tagalog</item>
@@ -46,6 +47,7 @@
         <item>@string/italian_language</item>
         <item>@string/russian_language</item>
         <item>@string/portuguese_language</item>
+        <item>@string/portuguese_european_language</item>
         <item>@string/romanian_language</item>
         <item>@string/spanish_language</item>
         <item>@string/tagalog_language</item>

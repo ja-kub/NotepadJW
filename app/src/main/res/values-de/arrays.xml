@@ -29,7 +29,8 @@
         <item>Französisch</item>
         <item>Italienisch</item>
         <item>Polnisch</item>
-        <item>Portugiesisch</item>
+        <item>Portugiesisch (Brasilien)</item>
+        <item>Portugiesisch (Portugal)</item>
         <item>Rumänisch</item>
         <item>Russisch</item>
         <item>Spanisch</item>
@@ -44,6 +45,7 @@
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>
+        <item>@string/portuguese_european_language</item>
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
         <item>@string/spanish_language</item>
