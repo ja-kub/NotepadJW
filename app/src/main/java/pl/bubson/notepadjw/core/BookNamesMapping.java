@@ -3418,7 +3418,6 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("job", "22_BI12_.JOB");
                 multipleChapterBooksMap.put("zalmy", "23_BI12_.PS");
                 multipleChapterBooksMap.put("zalmu", "23_BI12_.PS");
-                multipleChapterBooksMap.put("zalmie", "23_BI12_.PS");
                 multipleChapterBooksMap.put("zalm", "23_BI12_.PS");
                 multipleChapterBooksMap.put("zal", "23_BI12_.PS");
                 multipleChapterBooksMap.put("za", "23_BI12_.PS");
