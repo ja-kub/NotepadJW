@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string-array name="font_size_entries">
-        <item>Pequeno</item>
-        <item>Meios</item>
-        <item>Grande</item>
-        <item>Muito grande</item>
+        <item>Malý</item>
+        <item>Střední</item>
+        <item>Velký</item>
+        <item>Největší</item>
     </string-array>
     <string-array name="font_size_values">
         <item>@string/font_size_small</item>
@@ -13,52 +12,49 @@
         <item>@string/font_size_large</item>
         <item>@string/font_size_xlarge</item>
     </string-array>
-
     <string-array name="verse_position_entries">
-        <item>No topo</item>
-        <item>À direita</item>
+        <item>Nahoře</item>
+        <item>Vpravo</item>
     </string-array>
     <string-array name="verse_position_values">
         <item>@string/verse_position_top</item>
         <item>@string/verse_position_right</item>
     </string-array>
-
     <string-array name="verse_language_entries">
-        <item>Alemão</item>
-        <item>Espanhol</item>
-        <item>Francês</item>
-        <item>Húngaro</item>
-        <item>Inglês</item>
-        <item>Italiano</item>
-        <item>Polonês</item>
-        <item>Português (Brasil)</item>
-        <item>Português (Portugal)</item>
-        <item>Romeno</item>
-        <item>Russo</item>
-        <item>Tagalog</item>
-        <item>Tcheca</item>
-        <item>Ucraniano</item>
+        <item>Angličtina</item>
+        <item>Čeština</item>
+        <item>Francouzština</item>
+        <item>Italština</item>
+        <item>Maďarština</item>
+        <item>Němčina</item>
+        <item>Polština</item>
+        <item>Portugalština (Brazilská)</item>
+        <item>Portugalština (Portugalská)</item>
+        <item>Rumunština</item>
+        <item>Ruština</item>
+        <item>Španělština</item>
+        <item>Tagalština</item>
+        <item>Ukrajinština</item>
     </string-array>
     <string-array name="verse_language_values">
-        <item>@string/german_language</item>
-        <item>@string/spanish_language</item>
-        <item>@string/french_language</item>
-        <item>@string/hungarian_language</item>
         <item>@string/english_language</item>
+        <item>@string/czech_language</item>
+        <item>@string/french_language</item>
         <item>@string/italian_language</item>
+        <item>@string/hungarian_language</item>
+        <item>@string/german_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>
         <item>@string/portuguese_european_language</item>
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
+        <item>@string/spanish_language</item>
         <item>@string/tagalog_language</item>
-        <item>@string/czech_language</item>
         <item>@string/ukrainian_language</item>
     </string-array>
-
     <string-array name="verse_area_size_entries">
-        <item>Ajuste automático</item>
-        <item>Mutável para mover o bordo inferior</item>
+        <item>Automatické přizpůsobení</item>
+        <item>Posunem měnitelný dolní okraj</item>
     </string-array>
     <string-array name="verse_area_size_values">
         <item>@string/verse_area_size_auto</item>

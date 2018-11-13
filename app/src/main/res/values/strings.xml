@@ -27,6 +27,7 @@
     <string name="portuguese_european_language" translatable="false">pte</string>
     <string name="italian_language" translatable="false">it</string>
     <string name="ukrainian_language" translatable="false">uk</string>
+    <string name="czech_language" translatable="false">cz</string>
     <string name="verse_position_key" translatable="false">versePosition</string>
     <string name="verse_position_top" translatable="false">top</string>
     <string name="verse_position_right" translatable="false">right</string>
@@ -211,9 +212,9 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• New Polish and French translations of Bible (2018 Revision). \n\n
+• The translation of the application and the Bible in Ukrainian. \n\n
     </string>
     <string name="whats_new_message_last">
-• The translation of the application and the Bible in Ukrainian.
+• The translation of the application and the Bible in Czech.
     </string>
 </resources>

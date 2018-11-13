@@ -34,6 +34,7 @@
         <item>Тагальский</item>
         <item>Венгерский</item>
         <item>Украинец</item>
+        <item>Чешский</item>
     </string-array>
     <string-array name="verse_language_values">
         <item>@string/english_language</item>
@@ -49,6 +50,7 @@
         <item>@string/tagalog_language</item>
         <item>@string/hungarian_language</item>
         <item>@string/ukrainian_language</item>
+        <item>@string/czech_language</item>
     </string-array>
     <string-array name="verse_area_size_entries">
         <item>Автоподстройка</item>

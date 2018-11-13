@@ -160,9 +160,9 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-• A Biblia új lengyel és francia fordításai (2018-as változat). \n\n
+• Az alkalmazás és a Biblia ukrán fordítása. \n\n
     </string>
     <string name="whats_new_message_last">
-• Az alkalmazás és a Biblia ukrán fordítása.
+• Az alkalmazás és a Biblia cseh fordítása.
     </string>
 </resources>

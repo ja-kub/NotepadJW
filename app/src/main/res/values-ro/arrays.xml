@@ -24,6 +24,7 @@
     </string-array>
 
     <string-array name="verse_language_entries">
+        <item>Cehă</item>
         <item>Engleză</item>
         <item>Franceză</item>
         <item>Germană</item>
@@ -39,6 +40,7 @@
         <item>Ucrainean</item>
     </string-array>
     <string-array name="verse_language_values">
+        <item>@string/czech_language</item>
         <item>@string/english_language</item>
         <item>@string/french_language</item>
         <item>@string/german_language</item>

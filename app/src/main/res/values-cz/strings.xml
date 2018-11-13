@@ -1,0 +1,181 @@
+﻿<resources>
+    <string name="action_settings">Nastavení</string>
+    <string name="edit_message">Zadej text</string>
+    <string name="button_save">Import</string>
+    <string name="button_open">Otevřít</string>
+    <string name="verse_preview">Zobrazení veršů</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Zrušit</string>
+    <string name="no">Ne</string>
+    <string name="yes">Ano</string>
+    <string name="create_new_note_dialog_title">Zadej název poznámky</string>
+    <string name="note_name">Název poznámky</string>
+    <string name="creation_of_new_note_cancelled">Nová poznámka nebyla vytvořena</string>
+    <string name="file_name_exists">Položka s tímto názvem již existuje, změň název</string>
+    <string name="name_cannot_be_empty">Název nesmí být prázdný</string>
+    <string name="creation_failed">Vytvoření se nezdařilo</string>
+    <string name="creation_of_new_note_succesful">Nová poznámka byla vytvořena</string>
+    <string name="button_rename">Přejmenovat vybranou poznámku</string>
+    <string name="button_remove">Odstranit vybranou poznámku(y)</string>
+    <string name="button_share">Sdílet vybranou poznámku(y)</string>
+    <string name="not_matching">nevyhovuje</string>
+    <string name="wrong_verse">- nesprávné číslo verše</string>
+    <string name="button_switch_view">Přepnutí zobrazení</string>
+    <string name="button_switch_edit">Upravit</string>
+    <string name="not_one_file_selected">Nebyla vybrána žádná poznámka</string>
+    <string name="removed">Odstraněno</string>
+    <string name="rename_file">Přejmenovat položku</string>
+    <string name="file_renamed">Položka byla přejmenována</string>
+    <string name="file_rename_failed">Přejmenování se nezdařilo</string>
+    <string name="on_remove_dialog_title">Přejmenovat vybranou položku(y)?</string>
+    <string name="remove">Odstranit</string>
+    <string name="files_removed_successfully">Položka(y) odstraněna</string>
+    <string name="files_not_removed_successfully">Některé poznámky nebyly odstraněny</string>
+    <string name="button_new_folder">Vytvořit novou složku</string>
+    <string name="create_new_folder_dialog_title">Vytvořit novou složku</string>
+    <string name="folder_name">Název složky</string>
+    <string name="folder_name_exists">Složka s tímto názvem již existuje, změň název</string>
+    <string name="creation_of_new_folder_succesful">Nová složka byla vytvořena</string>
+    <string name="permission_storage_not_granted">Přístup k externímu úložišti není povolen</string>
+    <string name="storage_not_writable">Na úložiště se nedá zapisovat</string>
+    <string name="temporary_file">dočasný soubor</string>
+    <string name="cannot_save_temp">Dočasný soubor nelze uložit</string>
+    <string name="error_while_saving">Chyba při ukládání souboru</string>
+    <string name="file_saved">Soubor byl uložen</string>
+    <string name="create_new_note_from_this_file_dialog_title">Vytvořit novou poznámku z tohoto souboru?</string>
+    <string name="file_will_be_created_in">Poznámka bude vytvořena ve složce: NotepadJW/</string>
+    <string name="downloads_folder_name">Stáhnout</string>
+    <string name="file_is_too_big">Soubor je příliš velký!</string>
+    <string name="language_na">tento jazyk ještě není podporován</string>
+    <string name="wrong_book">Chybný název knihy</string>
+    <string name="wrong_chapter">Chybná kapitola</string>
+    <string name="wrong_verse_order">- nesprávný verš</string>
+    <string name="help_title">Pomoc</string>
+    <string name="items">Položky</string>
+    <string name="bytes">Bajtů</string>
+    <string name="uri_null">URI je prázdné</string>
+    <string name="cannot_open">Soubor nebo obsah nelze otevřít</string>
+    <string name="uri_not_supported">Typ URI není podporován</string>
+    <string name="not_text_file">Toto není textový soubor</string>
+    <string name="changes_not_saved">Změny nebyly uloženy</string>
+    <string name="current_dir_is_null">Aktuální adresář je prázdný</string>
+    <string name="show_size">Zobrazení velikosti</string>
+    <string name="show_size_summ">Zobrazit velikost poznámek a složek</string>
+    <string name="pref_file_manager_title">Správce poznámek</string>
+    <string name="show_date">Zobrazení data</string>
+    <string name="show_date_summ">Zobrazit datum změny poznámek a složek</string>
+    <string name="parent_directory">Zdrojový adresář</string>
+    <string name="pref_notepad_editor_title">Poznámkový editor</string>
+    <string name="verse_font_size">Velikost písma veršů</string>
+    <string name="note_font_size">Velikost písma poznámek</string>
+    <string name="verse_font_size_summ">Změň velikost písma zobrazeného verše</string>
+    <string name="note_font_size_summ">Změň velikost písma poznámek</string>
+    <string name="verse_font_color">Barva veršů</string>
+    <string name="verse_font_color_summ">Vyber barvu písma zobrazeného verše</string>
+    <string name="button_cut">Vyjmout</string>
+    <string name="button_copy">Kopírovat</string>
+    <string name="button_paste">Vložit</string>
+    <string name="cut_to_clipboard">Vyjmout do schránky</string>
+    <string name="copied_to_clipboard">Kopírovat do schránky</string>
+    <string name="pasted_from_clipboard">Vložit ze schránky</string>
+    <string name="not_all_elements_pasted">Nebylo vloženo vše</string>
+    <string name="unexpected_exception">Neočekávaná výjimka - pošlete mi prosím e-mail s popisem</string>
+    <string name="button_sort_files">Změnit řazení</string>
+    <string name="files_sorted_by_date">Poznámky seřazeny podle data</string>
+    <string name="files_sorted_alphabetically">Poznámky jsou seřazeny abecedně</string>
+    <string name="whats_new">Co je nového?</string>
+    <string name="verse_language_title">Jazyk veršů</string>
+    <string name="verse_language_summ">Změň jazyk veršů</string>
+    <string name="verse_language_dialog_title">Jazyk veršů</string>
+    <string name="verse_position_title">Pozice veršů</string>
+    <string name="verse_position_summ">Chceš-li zobrazit změny, znovu otevři poznámku</string>
+    <string name="verse_position_dialog_title">Pozice veršů</string>
+    <string name="missing_language_dialog_title">Chybí jazyk</string>
+    <string name="missing_language_message">Stáhnout a nainstalovat Bibli ve vybraném jazyce?</string>
+    <string name="download_description">Stáhnout Bibli v novém jazyce pro Notepad JW</string>
+    <string name="download_language">Stahování Bible v jazyce</string>
+    <string name="install_language">Instalování Bible v jazyce</string>
+    <string name="in_progress">Probíhá</string>
+    <string name="finished">Dokončeno</string>
+    <string name="unsuccessful">Neúspěšné</string>
+    <string name="action_print">Tisk</string>
+    <string name="available_from_android_4_4">K dispozici v systému Android 4.4</string>
+    <string name="permission_explanation_dialog_title">Externí úložiště je povolené</string>
+    <string name="button_undo">Zpět</string>
+    <string name="button_redo">Znovu</string>
+    <string name="button_bold">Tučné</string>
+    <string name="button_italic">Kurzíva</string>
+    <string name="button_underline">Podtržené</string>
+    <string name="button_bullet">Odrážky</string>
+    <string name="verse_area_size_title">Velikost oblasti veršů</string>
+    <string name="verse_area_size_dialog_title">Velikost oblasti veršů</string>
+    <string name="search_title">Hledat</string>
+    <string name="search_hint">Hledat</string>
+    <string name="note">Poznámka</string>
+    <string name="folder">Složka</string>
+    <string name="conventions_program">Programy sjezdů</string>
+    <string name="conventions">Sjezdy</string>
+    <string name="provide_conventions_program_question">Vytvořit složku s programy sjezdů?</string>
+    <string name="main_dir_is_null">Spusť NotepadJW ze tvých aplikací a pak se sem vrať pro dokončení této operace.</string>
+    <string name="sent_by_notepadjw">
+    <![CDATA[
+    <p>Poznámka odeslána z <B>Notepad JW</B> - správce a editoru poznámek se zobrazením veršů.</p>
+    <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
+        ]]>
+    </string>
+    <string name="help_text_html">
+    <![CDATA[
+<h3>Informace</h3>
+<p>Text všech veršů pochází ze Svatého Písma - Překladu nového světa
+(Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
+<h3>Proč používat NotepadJW?</h3>
+<p>Tato aplikace byla vytvořena protože nebyla nalezena žádná jiná aplikace, která by se mohla zobrazit
+verše v reálném čase při psaní poznámek. Takže je užitečné pro vytváření poznámek během shromáždění
+a sjezdů - již nebudeš potřebovat přepínat aplikace nebo hledat v Bibli.
+Text verše je zobrazen ve stejném okně jako editor psaní poznámek. Tato aplikace je schopna
+zobrazit všechny verše v režimu zobrazení. To může být užitečné také při proslovech na pódiu a dalších
+úkolech na shromáždění. Tato aplikace má také možnost sdílení, takže ji můžeš použít pro vytváření poznámek
+během kazatelské služby a poslat je ostatním zvěstovatelům.</p>
+<h3>Vlastnosti</h3>
+<p>Tato aplikace se skládá ze dvou částí:
+<br><b>Správce poznámek</b> a <b>Poznámkového editoru</b>.
+<br>Ve <b>Správci poznámek</b> můžeš vytvořit nové poznámky, otevřít je a vytvořit nové složky.
+<br>Položky můžeš vybrat dlouhým kliknutím a poté: přejmenovat, odstranit nebo odeslat (brzy budou přidány volby pro vyjmutí, kopírování a vkládání).
+<br>V <b>Poznámkovém editoru</b> můžeš přepínat mezi <i>Editováním (psaním)</i> a <i>Prohlížením (čtením)</i>. V první případě,
+bude zobrazen naposledy zadaný verš a v druhém případě můžeš kliknout na odkazy vytvořené z veršů
+pro jejich okamžité zobrazení.
+<h3>Automatické zálohování poznámek</h3>
+<b> Pokud má tvoje zařízení Android 6.0 nebo novější: </ b> Zálohute poznámky a nastavení
+když:
+<br> - Je povolená možnost zálohování v zařízení v části Nastavení -> Zálohování
+<br> - Uběhlo min. 24 hodin od poslední zálohy
+<br> - Přístroj je v nečinnosti a nabíjí se
+<br> - Zařízení je připojeno k síti Wi-Fi
+<br> Po změně zařízení nebo po přeinstalaci aplikace Notepad JW se poznámky a nastavení automaticky obnoví.
+Poznámky nejsou dostupné pro jiné aplikace nebo po připojení zařízení k počítači (je to požadavek, aby tato funkce fungovala).
+Samozřejmě můžeš stále používat možnost odesílání těchto souborů e-mailem, chatovacími aplikacemi nebo nahráním do Disku Google.
+Chceš-li zkontrolovat, zda byla záloha provedena, otevři Google Drive -> Menu -> Backups -> poslední kopie -> Application data -> hledej Notepad JW.
+Pokud taková položka neexistuje a výše uvedené podmínky byly splněny, můžeš na vlastní riziko svůj účet Google odebrat a znovu přidat
+(Poznámka: tím se vymažou aktuální a správné zálohy): Settings -> Accounts -> Google -> odeber účet, pak přidej účet -> Google.
+<br><br><b>Pokud máš starší Android než 6.0:</b> poznámky nejsou automaticky zálohovány, ale jsou
+uloženy ve tvém zařízení ve složce: Documents/NotepadJW. Můžeš k nim přistupovat z tvého počítače.
+To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohování), přejmenovat, mazat, přesunout nebo přidat nové z počítače, atd.
+<h3>Autor aplikace</h3>
+<p>Jakub Tomala.
+    ]]>
+    </string>
+    <string name="permission_explanation_dialog_message">
+        Na další obrazovce budeš požádán o povolení pro přístup k externímu úložišti. Pokud tuto možnost
+        povolíš, Notepad JW uloží poznámky do externího úložiště (v adresáři Dokumenty -> NotepadJW).
+        Tímto způsobem budeš mít přístup k poznámkám z jiných aplikací a z počítače
+        (aplikace JW Notepad nečte ani neupravuje žádné soubory mimo adresář NotepadJW).
+        Pokud odmítneš, aplikace Notepad JW uloží poznámky do vnitřní paměti, do které nebudeš mít 
+        přístup z jiných aplikací nebo z počítače.
+    </string>
+    <string name="whats_new_message_previous">
+• Překlad aplikace a Bible v ukrajinštině. \n\n
+    </string>
+    <string name="whats_new_message_last">
+• Překlad aplikace a Bible v český.
+    </string>
+</resources>

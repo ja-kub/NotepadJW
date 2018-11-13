@@ -36,6 +36,7 @@
         <item>Roumain</item>
         <item>Russe</item>
         <item>Tagalog</item>
+        <item>Tchèque</item>
         <item>Ukrainien</item>
     </string-array>
     <string-array name="verse_language_values">
@@ -51,6 +52,7 @@
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
         <item>@string/tagalog_language</item>
+        <item>@string/czech_language</item>
         <item>@string/ukrainian_language</item>
     </string-array>
 

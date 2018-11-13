@@ -348,7 +348,7 @@ public class BookNamesMapping {
                 singleChapterBooksPattern = "[Aa]bd\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23][^\\S\\n]*[Jj]n\\.?|[23][^\\S\\n]*[Jj]an[\\.a]?|[Jj]d\\.?|[Jj]ud[\\.y]?";
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
-                multiplePartNameBookWithoutLastWordPattern = "[Pp]owt\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Pp]ie[\\p{Lu}\\p{Ll}]*[^\\S\\n]*[Nn]ad[^\\S\\n]*";
+                multiplePartNameBookWithoutLastWordPattern = "[Pp]owt\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Pp]ie[\\p{Lu}\\p{Ll}]*[^\\S\\n]*[Nn]ad[^\\S\\n]*|[Dd]z\\.?\\w*[^\\S\\n]*";
                 break;
 
             case en:
@@ -1295,7 +1295,7 @@ public class BookNamesMapping {
                 allBooksMap.putAll(singleChapterBooksMap);
                 allBooksMap.putAll(multipleChapterBooksMap);
 
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hilem\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]oh\\w*\\.?|[Jj]ud\\.?|[Jj]udas";
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hilem\\w*\\.?|[23]\\.?[^\\S\\n]*[Jj]o\\.?|[23]\\.?[^\\S\\n]*[Jj]oh\\w*\\.?|[Jj]ud\\.?|[Jj]udas";
                 multiplePartNameBookWithoutLastWordPattern = "[Dd]as|[Dd]as[^\\S\\n]*[Ll]ied[^\\S\\n]*";
                 break;
 
@@ -3323,6 +3323,270 @@ public class BookNamesMapping {
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
                 multiplePartNameBookWithoutLastWordPattern = "[Пп]овт\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Іі]с\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Пп]існя над[^\\S\\n]*|[Пп]лач[^\\S\\n]*";
                 break;
+
+            case cz:
+                multipleChapterBooksMap.put("1mojzisova", "05_BI12_.GE");
+                multipleChapterBooksMap.put("1mojzis", "05_BI12_.GE");
+                multipleChapterBooksMap.put("1mojz", "05_BI12_.GE");
+                multipleChapterBooksMap.put("1moj", "05_BI12_.GE");
+                multipleChapterBooksMap.put("1mo", "05_BI12_.GE");
+                multipleChapterBooksMap.put("genesis", "05_BI12_.GE");
+                multipleChapterBooksMap.put("genes", "05_BI12_.GE");
+                multipleChapterBooksMap.put("gen", "05_BI12_.GE");
+                multipleChapterBooksMap.put("ge", "05_BI12_.GE");
+                multipleChapterBooksMap.put("2mojzisova", "06_BI12_.EX");
+                multipleChapterBooksMap.put("2mojzis", "06_BI12_.EX");
+                multipleChapterBooksMap.put("2mojz", "06_BI12_.EX");
+                multipleChapterBooksMap.put("2moj", "06_BI12_.EX");
+                multipleChapterBooksMap.put("2mo", "06_BI12_.EX");
+                multipleChapterBooksMap.put("exodus", "06_BI12_.EX");
+                multipleChapterBooksMap.put("exod", "06_BI12_.EX");
+                multipleChapterBooksMap.put("ex", "06_BI12_.EX");
+                multipleChapterBooksMap.put("3mojzisova", "07_BI12_.LE");
+                multipleChapterBooksMap.put("3mojzis", "07_BI12_.LE");
+                multipleChapterBooksMap.put("3mojz", "07_BI12_.LE");
+                multipleChapterBooksMap.put("3moj", "07_BI12_.LE");
+                multipleChapterBooksMap.put("3mo", "07_BI12_.LE");
+                multipleChapterBooksMap.put("leviticus", "07_BI12_.LE");
+                multipleChapterBooksMap.put("lev", "07_BI12_.LE");
+                multipleChapterBooksMap.put("le", "07_BI12_.LE");
+                multipleChapterBooksMap.put("4mojzisova", "08_BI12_.NU");
+                multipleChapterBooksMap.put("4mojzis", "08_BI12_.NU");
+                multipleChapterBooksMap.put("4mojz", "08_BI12_.NU");
+                multipleChapterBooksMap.put("4moj", "08_BI12_.NU");
+                multipleChapterBooksMap.put("4mo", "08_BI12_.NU");
+                multipleChapterBooksMap.put("numeri", "08_BI12_.NU");
+                multipleChapterBooksMap.put("numer", "08_BI12_.NU");
+                multipleChapterBooksMap.put("num", "08_BI12_.NU");
+                multipleChapterBooksMap.put("nu", "08_BI12_.NU");
+                multipleChapterBooksMap.put("5mojzisova", "09_BI12_.DE");
+                multipleChapterBooksMap.put("5mojzis", "09_BI12_.DE");
+                multipleChapterBooksMap.put("5mojz", "09_BI12_.DE");
+                multipleChapterBooksMap.put("5moj", "09_BI12_.DE");
+                multipleChapterBooksMap.put("5mo", "09_BI12_.DE");
+                multipleChapterBooksMap.put("deuteronomium", "09_BI12_.DE");
+                multipleChapterBooksMap.put("deuter", "09_BI12_.DE");
+                multipleChapterBooksMap.put("deut", "09_BI12_.DE");
+                multipleChapterBooksMap.put("de", "09_BI12_.DE");
+                multipleChapterBooksMap.put("dt", "09_BI12_.DE");
+                multipleChapterBooksMap.put("jozue", "10_BI12_.JOS");
+                multipleChapterBooksMap.put("jozu", "10_BI12_.JOS");
+                multipleChapterBooksMap.put("joz", "10_BI12_.JOS");
+                multipleChapterBooksMap.put("soudci", "11_BI12_.JG");
+                multipleChapterBooksMap.put("soud", "11_BI12_.JG");
+                multipleChapterBooksMap.put("sd", "11_BI12_.JG");
+                multipleChapterBooksMap.put("rut", "12_BI12_.RU");
+                multipleChapterBooksMap.put("ru", "12_BI12_.RU");
+                multipleChapterBooksMap.put("1samuelova", "13_BI12_.1SA");
+                multipleChapterBooksMap.put("1samuel", "13_BI12_.1SA");
+                multipleChapterBooksMap.put("1sam", "13_BI12_.1SA");
+                multipleChapterBooksMap.put("1sa", "13_BI12_.1SA");
+                multipleChapterBooksMap.put("2samuelova", "14_BI12_.2SA");
+                multipleChapterBooksMap.put("2samuel", "14_BI12_.2SA");
+                multipleChapterBooksMap.put("2sam", "14_BI12_.2SA");
+                multipleChapterBooksMap.put("2sa", "14_BI12_.2SA");
+                multipleChapterBooksMap.put("1kralovska", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1kralov", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1kral", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1kra", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("1kr", "15_BI12_.1KI");
+                multipleChapterBooksMap.put("2kralovska", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2kralov", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2kral", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2kra", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("2kr", "16_BI12_.2KI");
+                multipleChapterBooksMap.put("1paralipomenon", "17_BI12_.1CH");
+                multipleChapterBooksMap.put("1paralipo", "17_BI12_.1CH");
+                multipleChapterBooksMap.put("1paralip", "17_BI12_.1CH");
+                multipleChapterBooksMap.put("1para", "17_BI12_.1CH");
+                multipleChapterBooksMap.put("1par", "17_BI12_.1CH");
+                multipleChapterBooksMap.put("1pa", "17_BI12_.1CH");
+                multipleChapterBooksMap.put("2paralipomenon", "18_BI12_.2CH");
+                multipleChapterBooksMap.put("2paralipo", "18_BI12_.2CH");
+                multipleChapterBooksMap.put("2paralip", "18_BI12_.2CH");
+                multipleChapterBooksMap.put("2para", "18_BI12_.2CH");
+                multipleChapterBooksMap.put("2par", "18_BI12_.2CH");
+                multipleChapterBooksMap.put("2pa", "18_BI12_.2CH");
+                multipleChapterBooksMap.put("ezra", "19_BI12_.EZR");
+                multipleChapterBooksMap.put("ezr", "19_BI12_.EZR");
+                multipleChapterBooksMap.put("nehemjas", "20_BI12_.NE");
+                multipleChapterBooksMap.put("neh", "20_BI12_.NE");
+                multipleChapterBooksMap.put("ne", "20_BI12_.NE");
+                multipleChapterBooksMap.put("ester", "21_BI12_.ES");
+                multipleChapterBooksMap.put("est", "21_BI12_.ES");
+                multipleChapterBooksMap.put("es", "21_BI12_.ES");
+                multipleChapterBooksMap.put("job", "22_BI12_.JOB");
+                multipleChapterBooksMap.put("zalmy", "23_BI12_.PS");
+                multipleChapterBooksMap.put("zalmu", "23_BI12_.PS");
+                multipleChapterBooksMap.put("zalmie", "23_BI12_.PS");
+                multipleChapterBooksMap.put("zalm", "23_BI12_.PS");
+                multipleChapterBooksMap.put("zal", "23_BI12_.PS");
+                multipleChapterBooksMap.put("za", "23_BI12_.PS");
+                multipleChapterBooksMap.put("prislovi", "24_BI12_.PR");
+                multipleChapterBooksMap.put("pris", "24_BI12_.PR");
+                multipleChapterBooksMap.put("pri", "24_BI12_.PR");
+                multipleChapterBooksMap.put("pr", "24_BI12_.PR");
+                multipleChapterBooksMap.put("kazatel", "25_BI12_.EC");
+                multipleChapterBooksMap.put("kaza", "25_BI12_.EC");
+                multipleChapterBooksMap.put("kaz", "25_BI12_.EC");
+                multipleChapterBooksMap.put("ka", "25_BI12_.EC");
+                multipleChapterBooksMap.put("salomounovapisen", "26_BI12_.CA");
+                multipleChapterBooksMap.put("pisen", "26_BI12_.CA");
+                multipleChapterBooksMap.put("pis", "26_BI12_.CA");
+                multipleChapterBooksMap.put("izajas", "27_BI12_.ISA");
+                multipleChapterBooksMap.put("izaj", "27_BI12_.ISA");
+                multipleChapterBooksMap.put("iza", "27_BI12_.ISA");
+                multipleChapterBooksMap.put("iz", "27_BI12_.ISA");
+                multipleChapterBooksMap.put("jeremjas", "28_BI12_.JER");
+                multipleChapterBooksMap.put("jerem", "28_BI12_.JER");
+                multipleChapterBooksMap.put("jer", "28_BI12_.JER");
+                multipleChapterBooksMap.put("narky", "29_BI12_.LA");
+                multipleChapterBooksMap.put("nar", "29_BI12_.LA");
+                multipleChapterBooksMap.put("ezekiel", "30_BI12_.EZE");
+                multipleChapterBooksMap.put("ezek", "30_BI12_.EZE");
+                multipleChapterBooksMap.put("eze", "30_BI12_.EZE");
+                multipleChapterBooksMap.put("ez", "30_BI12_.EZE");
+                multipleChapterBooksMap.put("daniel", "31_BI12_.DA");
+                multipleChapterBooksMap.put("dan", "31_BI12_.DA");
+                multipleChapterBooksMap.put("da", "31_BI12_.DA");
+                multipleChapterBooksMap.put("ozeas", "32_BI12_.HOS");
+                multipleChapterBooksMap.put("oze", "32_BI12_.HOS");
+                multipleChapterBooksMap.put("oz", "32_BI12_.HOS");
+                multipleChapterBooksMap.put("joel", "33_BI12_.JOE");
+                multipleChapterBooksMap.put("joe", "33_BI12_.JOE");
+                multipleChapterBooksMap.put("amos", "34_BI12_.AM");
+                multipleChapterBooksMap.put("am", "34_BI12_.AM");
+                multipleChapterBooksMap.put("jonas", "36_BI12_.JON");
+                multipleChapterBooksMap.put("jon", "36_BI12_.JON");
+                multipleChapterBooksMap.put("micheas", "37_BI12_.MIC");
+                multipleChapterBooksMap.put("mich", "37_BI12_.MIC");
+                multipleChapterBooksMap.put("mi", "37_BI12_.MIC");
+                multipleChapterBooksMap.put("nahum", "38_BI12_.NAH");
+                multipleChapterBooksMap.put("nah", "38_BI12_.NAH");
+                multipleChapterBooksMap.put("na", "38_BI12_.NAH");
+                multipleChapterBooksMap.put("habakuk", "39_BI12_.HAB");
+                multipleChapterBooksMap.put("hab", "39_BI12_.HAB");
+                multipleChapterBooksMap.put("sefanjas", "40_BI12_.ZEP");
+                multipleChapterBooksMap.put("sefan", "40_BI12_.ZEP");
+                multipleChapterBooksMap.put("sef", "40_BI12_.ZEP");
+                multipleChapterBooksMap.put("ageus", "41_BI12_.HAG");
+                multipleChapterBooksMap.put("ag", "41_BI12_.HAG");
+                multipleChapterBooksMap.put("zecharjas", "42_BI12_.ZEC");
+                multipleChapterBooksMap.put("zechar", "42_BI12_.ZEC");
+                multipleChapterBooksMap.put("zech", "42_BI12_.ZEC");
+                multipleChapterBooksMap.put("ze", "42_BI12_.ZEC");
+                multipleChapterBooksMap.put("malachias", "43_BI12_.MAL");
+                multipleChapterBooksMap.put("malach", "43_BI12_.MAL");
+                multipleChapterBooksMap.put("mal", "43_BI12_.MAL");
+
+                multipleChapterBooksMap.put("matous", "44_BI12_.MT");
+                multipleChapterBooksMap.put("mat", "44_BI12_.MT");
+                multipleChapterBooksMap.put("mt", "44_BI12_.MT");
+                multipleChapterBooksMap.put("marek", "45_BI12_.MR");
+                multipleChapterBooksMap.put("mar", "45_BI12_.MR");
+                multipleChapterBooksMap.put("mr", "45_BI12_.MR");
+                multipleChapterBooksMap.put("lukas", "46_BI12_.LU");
+                multipleChapterBooksMap.put("luk", "46_BI12_.LU");
+                multipleChapterBooksMap.put("lu", "46_BI12_.LU");
+                multipleChapterBooksMap.put("lk", "46_BI12_.LU");
+                multipleChapterBooksMap.put("jana", "47_BI12_.JOH");
+                multipleChapterBooksMap.put("jan", "47_BI12_.JOH");
+                multipleChapterBooksMap.put("jn", "47_BI12_.JOH");
+                multipleChapterBooksMap.put("skutkyapostolu", "48_BI12_.AC");
+                multipleChapterBooksMap.put("skutky", "48_BI12_.AC");
+                multipleChapterBooksMap.put("skut", "48_BI12_.AC");
+                multipleChapterBooksMap.put("sk", "48_BI12_.AC");
+                multipleChapterBooksMap.put("rimanum", "49_BI12_.RO");
+                multipleChapterBooksMap.put("riman", "49_BI12_.RO");
+                multipleChapterBooksMap.put("rim", "49_BI12_.RO");
+                multipleChapterBooksMap.put("ri", "49_BI12_.RO");
+                multipleChapterBooksMap.put("1korintanum", "50_BI12_.1CO");
+                multipleChapterBooksMap.put("1korint", "50_BI12_.1CO");
+                multipleChapterBooksMap.put("1korin", "50_BI12_.1CO");
+                multipleChapterBooksMap.put("1kor", "50_BI12_.1CO");
+                multipleChapterBooksMap.put("1ko", "50_BI12_.1CO");
+                multipleChapterBooksMap.put("2korintanum", "51_BI12_.2CO");
+                multipleChapterBooksMap.put("2korint", "51_BI12_.2CO");
+                multipleChapterBooksMap.put("2korin", "51_BI12_.2CO");
+                multipleChapterBooksMap.put("2kor", "51_BI12_.2CO");
+                multipleChapterBooksMap.put("2ko", "51_BI12_.2CO");
+                multipleChapterBooksMap.put("galatanum", "52_BI12_.GA");
+                multipleChapterBooksMap.put("galat", "52_BI12_.GA");
+                multipleChapterBooksMap.put("gal", "52_BI12_.GA");
+                multipleChapterBooksMap.put("ga", "52_BI12_.GA");
+                multipleChapterBooksMap.put("efezanum", "53_BI12_.EPH");
+                multipleChapterBooksMap.put("efez", "53_BI12_.EPH");
+                multipleChapterBooksMap.put("efe", "53_BI12_.EPH");
+                multipleChapterBooksMap.put("ef", "53_BI12_.EPH");
+                multipleChapterBooksMap.put("filipanum", "54_BI12_.PHP");
+                multipleChapterBooksMap.put("filip", "54_BI12_.PHP");
+                multipleChapterBooksMap.put("fil", "54_BI12_.PHP");
+                multipleChapterBooksMap.put("kolosanum", "55_BI12_.COL");
+                multipleChapterBooksMap.put("kolos", "55_BI12_.COL");
+                multipleChapterBooksMap.put("kol", "55_BI12_.COL");
+                multipleChapterBooksMap.put("1tesalonicanum", "56_BI12_.1TH");
+                multipleChapterBooksMap.put("1tesalon", "56_BI12_.1TH");
+                multipleChapterBooksMap.put("1tesal", "56_BI12_.1TH");
+                multipleChapterBooksMap.put("1tes", "56_BI12_.1TH");
+                multipleChapterBooksMap.put("1te", "56_BI12_.1TH");
+                multipleChapterBooksMap.put("2tesalonicanum", "57_BI12_.2TH");
+                multipleChapterBooksMap.put("2tesalon", "57_BI12_.2TH");
+                multipleChapterBooksMap.put("2tesal", "57_BI12_.2TH");
+                multipleChapterBooksMap.put("2tes", "57_BI12_.2TH");
+                multipleChapterBooksMap.put("2te", "57_BI12_.2TH");
+                multipleChapterBooksMap.put("1timoteovi", "58_BI12_.1TI");
+                multipleChapterBooksMap.put("1tim", "58_BI12_.1TI");
+                multipleChapterBooksMap.put("1ti", "58_BI12_.1TI");
+                multipleChapterBooksMap.put("2timoteovi", "59_BI12_.2TI");
+                multipleChapterBooksMap.put("2tim", "59_BI12_.2TI");
+                multipleChapterBooksMap.put("2ti", "59_BI12_.2TI");
+                multipleChapterBooksMap.put("titovi", "60_BI12_.TIT");
+                multipleChapterBooksMap.put("tit", "60_BI12_.TIT");
+                multipleChapterBooksMap.put("hebrejcum", "62_BI12_.HEB");
+                multipleChapterBooksMap.put("hebr", "62_BI12_.HEB");
+                multipleChapterBooksMap.put("heb", "62_BI12_.HEB");
+                multipleChapterBooksMap.put("jakuba", "63_BI12_.JAS");
+                multipleChapterBooksMap.put("jakub", "63_BI12_.JAS");
+                multipleChapterBooksMap.put("jak", "63_BI12_.JAS");
+                multipleChapterBooksMap.put("jk", "63_BI12_.JAS");
+                multipleChapterBooksMap.put("1petra", "64_BI12_.1PE");
+                multipleChapterBooksMap.put("1petr", "64_BI12_.1PE");
+                multipleChapterBooksMap.put("1pet", "64_BI12_.1PE");
+                multipleChapterBooksMap.put("1pe", "64_BI12_.1PE");
+                multipleChapterBooksMap.put("2petra", "65_BI12_.2PE");
+                multipleChapterBooksMap.put("2petr", "65_BI12_.2PE");
+                multipleChapterBooksMap.put("2pet", "65_BI12_.2PE");
+                multipleChapterBooksMap.put("2pe", "65_BI12_.2PE");
+                multipleChapterBooksMap.put("1jana", "66_BI12_.1JO");
+                multipleChapterBooksMap.put("1jan", "66_BI12_.1JO");
+                multipleChapterBooksMap.put("1ja", "66_BI12_.1JO");
+                multipleChapterBooksMap.put("zjeveni", "70_BI12_.RE");
+                multipleChapterBooksMap.put("zjev", "70_BI12_.RE");
+                multipleChapterBooksMap.put("zje", "70_BI12_.RE");
+                multipleChapterBooksMap.put("zj", "70_BI12_.RE");
+
+                singleChapterBooksMap.put("obadjas", "35_BI12_.OB");
+                singleChapterBooksMap.put("obad", "35_BI12_.OB");
+                singleChapterBooksMap.put("ob", "35_BI12_.OB");
+                singleChapterBooksMap.put("filemonovi", "61_BI12_.PHM");
+                singleChapterBooksMap.put("filemon", "61_BI12_.PHM");
+                singleChapterBooksMap.put("filem", "61_BI12_.PHM");
+                singleChapterBooksMap.put("fm", "61_BI12_.PHM");
+                singleChapterBooksMap.put("2jana", "67_BI12_.2JO");
+                singleChapterBooksMap.put("2jan", "67_BI12_.2JO");
+                singleChapterBooksMap.put("2ja", "67_BI12_.2JO");
+                singleChapterBooksMap.put("3jana", "68_BI12_.3JO");
+                singleChapterBooksMap.put("3jan", "68_BI12_.3JO");
+                singleChapterBooksMap.put("3ja", "68_BI12_.3JO");
+                singleChapterBooksMap.put("juda", "69_BI12_.JUD");
+                singleChapterBooksMap.put("judy", "69_BI12_.JUD");
+
+                allBooksMap.putAll(singleChapterBooksMap);
+                allBooksMap.putAll(multipleChapterBooksMap);
+
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]m\\.?|[Ff]ilem\\w*\\.?|[23]\\.?[^\\S\\n]*[Jj]a\\w*\\.?|[Jj]uda";
+                multiplePartNameBookWithoutLastWordPattern = "[\\p{Lu}\\p{Ll}]al\\w*\\.?[^\\S\\n]*|[Ss]k\\w*\\.?[^\\S\\n]*";
+                break;
         }
     }
 
@@ -3342,6 +3606,7 @@ public class BookNamesMapping {
             put(Language.pte, "https://download-a.akamaihd.net/files/media_bible/6c/nwt_TPO.epub");
             put(Language.mg, "https://download-a.akamaihd.net/files/media_bible/b1/bi12_MG.epub");
             put(Language.uk, "https://download-a.akamaihd.net/files/media_bible/9c/nwt_K.epub");
+            put(Language.cz, "https://download-a.akamaihd.net/files/media_bible/49/bi12_B.epub");
         }
     };
 
@@ -3360,6 +3625,7 @@ public class BookNamesMapping {
             put(Language.it, "10010611");
             put(Language.pte, "10010611");
             put(Language.uk, "10010611");
+            put(Language.cz, "");
         }
     };
 
@@ -3378,6 +3644,7 @@ public class BookNamesMapping {
             put(Language.it, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.pte, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.uk, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
+            put(Language.cz, "^(0[5-9]|[1-6][0-9]|70)_.+xhtml$");
         }
     };
 
@@ -3433,6 +3700,13 @@ public class BookNamesMapping {
             case uk:
                 return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", "")
                         .replace("’", "");
+            case cz:
+                return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", "")
+                        .replace("á", "a").replace("č", "c").replace("ď", "d")
+                        .replace("é", "e").replace("ě", "e").replace("í", "i")
+                        .replace("ň", "n").replace("ó", "o").replace("ř", "r")
+                        .replace("š", "s").replace("ť", "t").replace("ú", "u")
+                        .replace("ů", "u").replace("ý", "y").replace("ž", "z");
             case tl:
             case ru:
             default: // en
