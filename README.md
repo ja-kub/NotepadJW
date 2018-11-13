@@ -14,9 +14,7 @@ Click picture below to start a presentation.
 
 ## Screenshots
 
-<img alt="Notes Editor" src="screenshots/editor.png" width="30%" hspace="5" />
-<img alt="Notes Manager" src="screenshots/manager.png" width="30%" hspace="5" />
-<img alt="Settengs" src="screenshots/lang.png" width="30%" hspace="5" />
+<img alt="Notes Editor" src="screenshots/editor.png" width="30%" hspace="5" /><img alt="Notes Manager" src="screenshots/manager.png" width="30%" hspace="5" /><img alt="Settengs" src="screenshots/lang.png" width="30%" hspace="5" />
 
 ## License
 
