@@ -3591,21 +3591,21 @@ public class BookNamesMapping {
 
     final public static BidiMap<Language, String> languageUriMap = new DualHashBidiMap<Language, String>() {
         {
-            put(Language.pl, "https://download-a.akamaihd.net/files/media_bible/1d/nwt_P.epub");
-            put(Language.en, "https://download-a.akamaihd.net/files/media_bible/7d/nwt_E.epub");
-            put(Language.es, "https://download-a.akamaihd.net/files/media_bible/28/bi12_S.epub");
-            put(Language.ro, "https://download-a.akamaihd.net/files/media_bible/4d/bi12_M.epub");
-            put(Language.de, "https://download-a.akamaihd.net/files/media_bible/d6/bi12_X.epub");
-            put(Language.pt, "https://download-a.akamaihd.net/files/media_bible/b5/nwt_T.epub");
-            put(Language.ru, "https://download-a.akamaihd.net/files/media_bible/68/bi12_U.epub");
-            put(Language.hu, "https://download-a.akamaihd.net/files/media_bible/de/nwt_H.epub");
-            put(Language.tl, "https://download-a.akamaihd.net/files/media_bible/72/bi12_TG.epub");
-            put(Language.fr, "https://download-a.akamaihd.net/files/media_bible/ec/nwt_F.epub");
-            put(Language.it, "https://download-a.akamaihd.net/files/media_bible/f3/nwt_I.epub");
-            put(Language.pte, "https://download-a.akamaihd.net/files/media_bible/6c/nwt_TPO.epub");
-            put(Language.mg, "https://download-a.akamaihd.net/files/media_bible/b1/bi12_MG.epub");
-            put(Language.uk, "https://download-a.akamaihd.net/files/media_bible/9c/nwt_K.epub");
-            put(Language.cz, "https://download-a.akamaihd.net/files/media_bible/49/bi12_B.epub");
+            put(Language.pl, "https://download-a.akamaihd.net/files/media_publication/1d/nwt_P.epub");
+            put(Language.en, "https://download-a.akamaihd.net/files/media_publication/7d/nwt_E.epub");
+            put(Language.es, "https://download-a.akamaihd.net/files/media_publication/28/bi12_S.epub");
+            put(Language.ro, "https://download-a.akamaihd.net/files/media_publication/4d/bi12_M.epub");
+            put(Language.de, "https://download-a.akamaihd.net/files/media_publication/3d/nwt_X.epub");
+            put(Language.pt, "https://download-a.akamaihd.net/files/media_publication/b5/nwt_T.epub");
+            put(Language.ru, "https://download-a.akamaihd.net/files/media_publication/68/bi12_U.epub");
+            put(Language.hu, "https://download-a.akamaihd.net/files/media_publication/de/nwt_H.epub");
+            put(Language.tl, "https://download-a.akamaihd.net/files/media_publication/72/bi12_TG.epub");
+            put(Language.fr, "https://download-a.akamaihd.net/files/media_publication/ec/nwt_F.epub");
+            put(Language.it, "https://download-a.akamaihd.net/files/media_publication/f3/nwt_I.epub");
+            put(Language.pte, "https://download-a.akamaihd.net/files/media_publication/6c/nwt_TPO.epub");
+            put(Language.mg, "https://download-a.akamaihd.net/files/media_publication/b1/bi12_MG.epub");
+            put(Language.uk, "https://download-a.akamaihd.net/files/media_publication/9c/nwt_K.epub");
+            put(Language.cz, "https://download-a.akamaihd.net/files/media_publication/49/bi12_B.epub");
         }
     };
 
@@ -3615,7 +3615,7 @@ public class BookNamesMapping {
             put(Language.en, "10010611");
             put(Language.es, "");
             put(Language.ro, "10010604");
-            put(Language.de, "");
+            put(Language.de, "10010611");
             put(Language.pt, "10010611");
             put(Language.ru, "10010604");
             put(Language.hu, "10010611");
@@ -3634,7 +3634,7 @@ public class BookNamesMapping {
             put(Language.en, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.es, "^(0[5-9]|[1-6][0-9]|70)_.+xhtml$");
             put(Language.ro, "^10010604(0[2-9]|[1-5][0-9]|6[0-7])(-split\\d+\\.|\\.)xhtml$");
-            put(Language.de, "^(0[5-9]|[1-6][0-9]|70)_.+xhtml$");
+            put(Language.de, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.pt, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.ru, "^10010604(0[2-9]|[1-5][0-9]|6[0-7])(-split\\d+\\.|\\.)xhtml$");
             put(Language.hu, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
