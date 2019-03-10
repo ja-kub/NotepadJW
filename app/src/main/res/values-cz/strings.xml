@@ -178,4 +178,6 @@ To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohová
     <string name="whats_new_message_last">
 • Překlad aplikace a Bible v český.
     </string>
+    <string name="import_title">Import notes</string>
+    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
 </resources>

@@ -179,4 +179,6 @@ Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), 
     <string name="whats_new_message_last">
 • Die Übersetzung der Anwendung und der Bibel in Tschechisch.
     </string>
+    <string name="import_title">Import notes</string>
+    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
 </resources>

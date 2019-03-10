@@ -179,4 +179,6 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
     <string name="whats_new_message_last">
 • Traducerea cehă a cererii și a Bibliei.
     </string>
+    <string name="import_title">Import notes</string>
+    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
 </resources>

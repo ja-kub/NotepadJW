@@ -165,4 +165,6 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
     <string name="whats_new_message_last">
 • Az alkalmazás és a Biblia cseh fordítása.
     </string>
+    <string name="import_title">Import notes</string>
+    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
 </resources>

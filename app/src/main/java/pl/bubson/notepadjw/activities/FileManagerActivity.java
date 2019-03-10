@@ -324,6 +324,9 @@ public class FileManagerActivity extends AppCompatActivity {
             case R.id.action_conventions:
                 provideConventionsProgram();
                 return true;
+            case R.id.action_import:
+                importNotesDialog();
+                return true;
             case R.id.action_settings:
                 Intent intentSettings = new Intent(this, SettingsActivity.class);
                 startActivity(intentSettings);
@@ -1080,6 +1083,34 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
+    private void importNotes() {
+        FileManagerActivity.askForPermissionsIfNotGranted(this);
+
+        File fromDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName);
+
+        if (fromDir.isDirectory()) {
+            File[] filesOrDirs = fromDir.listFiles();
+            try {
+                for (File fileOrDir : filesOrDirs) {
+                    if (fileOrDir.isDirectory()) {
+                        FileUtils.copyDirectoryToDirectory(fileOrDir, mainDirectory);
+                    } else {
+                        FileUtils.copyFileToDirectory(fileOrDir, mainDirectory);
+                    }
+                }
+                Snackbar.make(recyclerView, R.string.pasted_from_clipboard, Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Snackbar.make(recyclerView, R.string.not_all_elements_pasted, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+            MediaScannerConnection.scanFile(activityContext, new String[]{fromDir.getAbsolutePath()}, null, null);
+            filesDatabase.refreshData();
+            fillListWithItemsFromDir(currentDirectory);
+        }
+    }
+
     public void askForPermissionsIfNotYetAnswered(final Activity activity) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) { // permissions are not needed in this app from Android 6.0
             final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
@@ -1148,6 +1179,27 @@ public class FileManagerActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button
                 copyConventionsProgramFromAssets();
+            }
+        });
+
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+
+        builder.show();
+    }
+
+    public void importNotesDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activityContext);
+        builder.setTitle(R.string.import_title);
+        builder.setMessage(getString(R.string.import_notes_question));
+
+        builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                importNotes();
             }
         });
 

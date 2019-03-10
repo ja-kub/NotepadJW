@@ -185,4 +185,6 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="whats_new_message_last">
 • Czeskie tłumaczenie aplikacji i Biblia.
     </string>
+    <string name="import_title">Import notatek</string>
+    <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>
 </resources>

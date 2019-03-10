@@ -177,4 +177,6 @@ Jakub Tomala (codificação, modelos).
     <string name="whats_new_message_last">
 • Tradução tcheco do aplicativo e da Bíblia.
     </string>
+    <string name="import_title">Import notes</string>
+   <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
 </resources>

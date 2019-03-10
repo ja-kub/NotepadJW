@@ -177,4 +177,6 @@ Significa que puede copiarlos a la PC (como una copia de seguridad manual), camb
     <string name="whats_new_message_last">
 • La traducción de la aplicación y la Biblia en checo.
     </string>
+    <string name="import_title">Import notes</string>
+    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
 </resources>
