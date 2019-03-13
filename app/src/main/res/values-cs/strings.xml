@@ -27,7 +27,7 @@
     <string name="rename_file">Přejmenovat položku</string>
     <string name="file_renamed">Položka byla přejmenována</string>
     <string name="file_rename_failed">Přejmenování se nezdařilo</string>
-    <string name="on_remove_dialog_title">Přejmenovat vybranou položku(y)?</string>
+    <string name="on_remove_dialog_title">Odstranit vybranou položku(y)?</string>
     <string name="remove">Odstranit</string>
     <string name="files_removed_successfully">Položka(y) odstraněna</string>
     <string name="files_not_removed_successfully">Některé poznámky nebyly odstraněny</string>
@@ -129,12 +129,12 @@
 <p>Text všech veršů pochází ze Svatého Písma - Překladu nového světa
 (Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
 <h3>Proč používat NotepadJW?</h3>
-<p>Tato aplikace byla vytvořena protože nebyla nalezena žádná jiná aplikace, která by se mohla zobrazit
-verše v reálném čase při psaní poznámek. Takže je užitečné pro vytváření poznámek během shromáždění
-a sjezdů - již nebudeš potřebovat přepínat aplikace nebo hledat v Bibli.
+<p>Tato aplikace byla vytvořena protože nebyla nalezena žádná jiná aplikace, která by uměla zobrazit
+verše v reálném čase při psaní poznámek. Takže je užitečná pro vytváření poznámek během shromáždění
+a sjezdů - už nebudeš potřebovat přepínat mezi aplikacemi nebo hledat v Bibli.
 Text verše je zobrazen ve stejném okně jako editor psaní poznámek. Tato aplikace je schopna
 zobrazit všechny verše v režimu zobrazení. To může být užitečné také při proslovech na pódiu a dalších
-úkolech na shromáždění. Tato aplikace má také možnost sdílení, takže ji můžeš použít pro vytváření poznámek
+úkolech na shromáždění. Tato aplikace má možnost sdílení, takže ji můžeš použít také pro vytváření poznámek
 během kazatelské služby a poslat je ostatním zvěstovatelům.</p>
 <h3>Vlastnosti</h3>
 <p>Tato aplikace se skládá ze dvou částí:
