@@ -51,20 +51,20 @@
     <string name="wrong_chapter">Chybná kapitola</string>
     <string name="wrong_verse_order">- nesprávný verš</string>
     <string name="help_title">Pomoc</string>
-    <string name="items">Položky</string>
+    <string name="items">Položek</string>
     <string name="bytes">Bajtů</string>
     <string name="uri_null">URI je prázdné</string>
     <string name="cannot_open">Soubor nebo obsah nelze otevřít</string>
     <string name="uri_not_supported">Typ URI není podporován</string>
     <string name="not_text_file">Toto není textový soubor</string>
     <string name="changes_not_saved">Změny nebyly uloženy</string>
-    <string name="current_dir_is_null">Aktuální adresář je prázdný</string>
+    <string name="current_dir_is_null">Aktuální složka je prázdná</string>
     <string name="show_size">Zobrazení velikosti</string>
     <string name="show_size_summ">Zobrazit velikost poznámek a složek</string>
     <string name="pref_file_manager_title">Správce poznámek</string>
     <string name="show_date">Zobrazení data</string>
     <string name="show_date_summ">Zobrazit datum změny poznámek a složek</string>
-    <string name="parent_directory">Zdrojový adresář</string>
+    <string name="parent_directory">Zdrojová složka</string>
     <string name="pref_notepad_editor_title">Poznámkový editor</string>
     <string name="verse_font_size">Velikost písma veršů</string>
     <string name="note_font_size">Velikost písma poznámek</string>
@@ -82,7 +82,7 @@
     <string name="unexpected_exception">Neočekávaná výjimka - pošlete mi prosím e-mail s popisem</string>
     <string name="button_sort_files">Změnit řazení</string>
     <string name="files_sorted_by_date">Poznámky seřazeny podle data</string>
-    <string name="files_sorted_alphabetically">Poznámky jsou seřazeny abecedně</string>
+    <string name="files_sorted_alphabetically">Poznámky seřazeny podle abecedy</string>
     <string name="whats_new">Co je nového?</string>
     <string name="verse_language_title">Jazyk veršů</string>
     <string name="verse_language_summ">Změň jazyk veršů</string>
@@ -145,7 +145,7 @@ během kazatelské služby a poslat je ostatním zvěstovatelům.</p>
 bude zobrazen naposledy zadaný verš a v druhém případě můžeš kliknout na odkazy vytvořené z veršů
 pro jejich okamžité zobrazení.
 <h3>Automatické zálohování poznámek</h3>
-<b> Pokud má tvoje zařízení Android 6.0 nebo novější: </ b> Zálohute poznámky a nastavení
+<b> Pokud má tvoje zařízení Android 6.0 nebo novější: </ b> Zálohuje poznámky a nastavení
 když:
 <br> - Je povolená možnost zálohování v zařízení v části Nastavení -> Zálohování
 <br> - Uběhlo min. 24 hodin od poslední zálohy
@@ -178,6 +178,6 @@ To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohová
     <string name="whats_new_message_last">
 • Překlad aplikace a Bible v český.
     </string>
-    <string name="import_title">Import notes</string>
-    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="import_title">Import poznámek</string>
+    <string name="import_notes_question">Import poznámek z \\Documents\\NotepadJW folder?</string>
 </resources>

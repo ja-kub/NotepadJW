@@ -5,6 +5,7 @@ import android.content.res.AssetManager;
 import android.util.Log;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,34 +15,45 @@ import java.io.OutputStream;
  * Created by Kuba on 2018-07-01.
  */
 
-public class AssetsFilesCopier {
-    private static final String TAG = "AssetsFilesCopier";
+public class FilesCopier {
+    private static final String TAG = "FilesCopier";
     private Context context;
     private String targetDirectoryPath;
+    private Type type;
+    private AssetManager assetManager;
 
-    public AssetsFilesCopier(Context context) {
+    public enum Type {ASSETS, EXTERNAL_STORAGE}
+
+    public FilesCopier(Context context, Type type) {
         this.context = context;
+        this.type = type;
+        if (type.equals(Type.ASSETS)) assetManager = context.getAssets();
     }
 
-    public void copyAssets(String pathFrom, String pathTo) {
+    public void copyWithoutOverwrite(String pathFrom, String pathTo) {
         targetDirectoryPath = pathTo;
         copyFileOrDir(pathFrom, "");
     }
 
-    private void copyFileOrDir(String assetsPath, String destPath) {
-        AssetManager assetManager = context.getAssets();
+    private void copyFileOrDir(String sourcePath, String destPath) {
         try {
-            String assets[] = assetManager.list(assetsPath);
-            if (assets.length == 0) {
+            String files[];
+            if (type.equals(Type.ASSETS)) {
+                files = assetManager.list(sourcePath);
+            } else {
+                files = new File(sourcePath).list();
+            }
+
+            if (files==null || files.length == 0) { // listing file/asset instead of directory gives null/length = 0
                 String destFilePath = targetDirectoryPath + "/" + destPath;
-                if (!new File(destFilePath).exists()) copyFile(assetsPath, destFilePath);
+                if (!new File(destFilePath).exists()) copyFile(sourcePath, destFilePath);
             } else {
                 String fullPath = targetDirectoryPath + destPath;
                 File dir = new File(fullPath);
                 if (!dir.exists())
                     dir.mkdirs();
-                for (String asset : assets) {
-                    copyFileOrDir(assetsPath + "/" + asset, destPath + "/" + asset);
+                for (String file : files) {
+                    copyFileOrDir(sourcePath + "/" + file, destPath + "/" + file);
                 }
             }
         } catch (IOException ex) {
@@ -49,13 +61,15 @@ public class AssetsFilesCopier {
         }
     }
 
-    private void copyFile(String assetFilePath, String destFilePath) {
-        AssetManager assetManager = context.getAssets();
-
+    private void copyFile(String sourceFilePath, String destFilePath) {
         InputStream in = null;
         OutputStream out = null;
         try {
-            in = assetManager.open(assetFilePath);
+            if (type.equals(Type.ASSETS)) {
+                in = assetManager.open(sourceFilePath);
+            } else {
+                in = new FileInputStream(sourceFilePath);
+            }
             out = new FileOutputStream(destFilePath);
 
             byte[] buffer = new byte[1024];
@@ -71,6 +85,5 @@ public class AssetsFilesCopier {
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
         }
-
     }
 }

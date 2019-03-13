@@ -92,7 +92,7 @@ public class Verse {
             mapping = BookNamesMapping.getInstance(lang);
 
             String BOOK_PATTERN = "((" + mapping.getMultiplePartNameBookWithoutLastWordPattern() + "|[1-5][^\\S\\n]*)?[\\p{Lu}\\p{Ll}]+\\.?)";
-            if (language.equals(Language.de) || language.equals(Language.cz)) BOOK_PATTERN = getBookPatternWithDot();
+            if (language.equals(Language.de) || language.equals(Language.cs)) BOOK_PATTERN = getBookPatternWithDot();
             String MULTIPLE_CHAPTER_VERSE_PATTERN = BOOK_PATTERN + "((\\s*" + CHAPTER_AND_VERSE_PATTERN + "\\s*;\\s*)+|(\\s)+)" + CHAPTER_AND_VERSE_PATTERN;
             String SINGLE_CHAPTER_VERSE_PATTERN = "(" + mapping.getSingleChapterBooksPattern() + ")" + "\\s+" + VERSE_PATTERN;
             MULTIPLE_CHAPTER_LAST_VERSE_PATTERN = MULTIPLE_CHAPTER_VERSE_PATTERN + "\\s*$";

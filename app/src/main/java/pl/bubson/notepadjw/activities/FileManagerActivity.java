@@ -65,7 +65,7 @@ import pl.bubson.notepadjw.databases.FilesDatabase;
 import pl.bubson.notepadjw.fileManagerHelpers.FileListAdapter;
 import pl.bubson.notepadjw.fileManagerHelpers.Item;
 import pl.bubson.notepadjw.services.InstallLanguageService;
-import pl.bubson.notepadjw.utils.AssetsFilesCopier;
+import pl.bubson.notepadjw.utils.FilesCopier;
 import pl.bubson.notepadjw.utils.Language;
 import pl.bubson.notepadjw.utils.Permissions;
 import pl.bubson.notepadjw.utils.SpanToHtmlConverter;
@@ -1089,15 +1089,11 @@ public class FileManagerActivity extends AppCompatActivity {
         File fromDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName);
 
         if (fromDir.isDirectory()) {
-            File[] filesOrDirs = fromDir.listFiles();
             try {
-                for (File fileOrDir : filesOrDirs) {
-                    if (fileOrDir.isDirectory()) {
-                        FileUtils.copyDirectoryToDirectory(fileOrDir, mainDirectory);
-                    } else {
-                        FileUtils.copyFileToDirectory(fileOrDir, mainDirectory);
-                    }
-                }
+                String pathFrom = fromDir.getAbsolutePath();
+                String pathTo = mainDirectory.getAbsolutePath();
+                FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
+                fc.copyWithoutOverwrite(pathFrom, pathTo);
                 Snackbar.make(recyclerView, R.string.pasted_from_clipboard, Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             } catch (Exception e) {
@@ -1218,8 +1214,8 @@ public class FileManagerActivity extends AppCompatActivity {
         if (lang == Language.tl) lang = Language.en;
         String pathFrom = "conventions/" + lang.name();
         String pathTo = mainDirectory.getAbsolutePath();
-        AssetsFilesCopier afc = new AssetsFilesCopier(this);
-        afc.copyAssets(pathFrom, pathTo);
+        FilesCopier afc = new FilesCopier(this, FilesCopier.Type.ASSETS);
+        afc.copyWithoutOverwrite(pathFrom, pathTo);
         filesDatabase.refreshData();
         fillListWithItemsFromDir(currentDirectory);
     }

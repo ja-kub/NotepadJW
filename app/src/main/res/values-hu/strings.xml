@@ -160,10 +160,10 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-• Az alkalmazás és a Biblia ukrán fordítása. \n\n
+• Az alkalmazás és a Biblia cseh fordítása. \n\n
     </string>
     <string name="whats_new_message_last">
-• Az alkalmazás és a Biblia cseh fordítása.
+• Corrections.
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>

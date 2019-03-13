@@ -27,7 +27,7 @@
     <string name="portuguese_european_language" translatable="false">pte</string>
     <string name="italian_language" translatable="false">it</string>
     <string name="ukrainian_language" translatable="false">uk</string>
-    <string name="czech_language" translatable="false">cz</string>
+    <string name="czech_language" translatable="false">cs</string>
     <string name="verse_position_key" translatable="false">versePosition</string>
     <string name="verse_position_top" translatable="false">top</string>
     <string name="verse_position_right" translatable="false">right</string>
@@ -212,10 +212,10 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• The translation of the application and the Bible in Ukrainian. \n\n
+• The translation of the application and the Bible in Czech.\n\n
     </string>
     <string name="whats_new_message_last">
-• The translation of the application and the Bible in Czech.
+• Corrections.
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
