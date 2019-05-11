@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_settings">Настройки</string>
     <string name="edit_message">Введите текст</string>
@@ -67,11 +67,11 @@
     <string name="show_date_summ">Показать дату изменения заметок и папок</string>
     <string name="parent_directory">Назад</string>
     <string name="pref_notepad_editor_title">Блокнот</string>
-    <string name="verse_font_size">Размер шрифта стиха в ссылки</string>
-    <string name="note_font_size">Размер шрифта в тексте примечаний</string>
+    <string name="verse_font_size">Шрифт в окне</string>
+    <string name="note_font_size">Шрифт в редатктируемом поле</string>
     <string name="verse_font_size_summ">Изменить размер шрифта показанного стиха</string>
     <string name="note_font_size_summ">Изменить размер шрифта заметки</string>
-    <string name="verse_font_color">Цвет ссылки</string>
+    <string name="verse_font_color">Цвет шрифта в окне</string>
     <string name="verse_font_color_summ">Выберите цвет шрифта показанного стиха</string>
     <string name="button_cut">Вырезать</string>
     <string name="button_copy">Копировать</string>
@@ -158,7 +158,7 @@
   </string>
     <string name="permission_explanation_dialog_message">
     На следующем экране вам будет задан вопрос о доступе к внешнему хранилищу.
-    Если вы разрешите, Notepad JW сохранять заметки на внешнем хранилище (в папке Documents ->NotepadJW).
+    Если вы разрешите, Notepad JW будет сохранять заметки на внешнем хранилище (в папке Documents ->NotepadJW).
     Таким образом, у вас будет доступ к этим заметкам из других приложений.
     (приложение Notepad JW не читает и не изменяет какие-либо файлы вне папки NotepadJW).
     Если вы откажетесь, Notepad JW сохранит заметки во внутреннем хранилище,
@@ -168,8 +168,8 @@
 • Перевод заявления и Библии на чешский язык.\n\n
    </string>
     <string name="whats_new_message_last">
-• Corrections.
+• Программа регионального конгресса 2019 года.
    </string>
-    <string name="import_title">Import notes</string>
-    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="import_title">Импорт заметок</string>
+    <string name="import_notes_question">Импорт заметок из \\Documents\\NotepadJW folder?</string>
 </resources>
