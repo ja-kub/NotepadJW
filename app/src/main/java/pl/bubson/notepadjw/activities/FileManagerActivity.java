@@ -156,8 +156,8 @@ public class FileManagerActivity extends AppCompatActivity {
         prepareBiblesDatabase(); // with preload of example verse
 
         askForPermissionsIfNotYetAnswered(this);
-        copyFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
-        removeOldBiblesIfNecessary(); // Remove this method some while after version 42 (released 15.08.2018), maybe a year after?
+//        copyFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
+//        removeOldBiblesIfNecessary(); // Remove this method some while after version 42 (released 15.08.2018), maybe a year after?
         prepareMainDirectory();
         prepareFilesDatabase(mainDirectory); // to be able to search them
 
@@ -1017,7 +1017,8 @@ public class FileManagerActivity extends AppCompatActivity {
         return null;
     }
 
-    // Remove this method some while after version 38 (from 06.06.2018), maybe a year after?
+    // Remove this method some while after version 38 (from 06.06.2018), maybe a year after? Deprecated on 24.06.2019
+    @Deprecated
     public void copyFilesIfNecessary() {
         final long lastVersionCode = PreferenceManager.getDefaultSharedPreferences(activityContext).getLong(WhatsNewScreen.LAST_VERSION_CODE_KEY, 0);
         if (lastVersionCode > 0 && lastVersionCode < 38 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // do it only once, with first update to version => 38 and only for Androids >= 6.0
@@ -1049,7 +1050,8 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
-    // Remove this method some while after version 38 (from 06.06.2018), maybe a year after?
+    // This method was needed only just after version 42 (released 15.08.2018), usage in onCreate() was removed on 24.06.2019
+    @Deprecated
     public void removeOldBiblesIfNecessary() {
         BiblesDatabase biblesDatabase = new BiblesDatabase(this);
         if (biblesDatabase.getFile(Language.pl, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
