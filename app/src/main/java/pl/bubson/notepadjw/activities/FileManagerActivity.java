@@ -157,7 +157,7 @@ public class FileManagerActivity extends AppCompatActivity {
 
         askForPermissionsIfNotYetAnswered(this);
 //        copyFilesIfNecessary(); // Remove this method some while after version 38 (released 06.06.2018), maybe a year after?
-//        removeOldBiblesIfNecessary(); // Remove this method some while after version 42 (released 15.08.2018), maybe a year after?
+        removeOldBiblesIfNecessary(); // Use this method when new Bible version is released
         prepareMainDirectory();
         prepareFilesDatabase(mainDirectory); // to be able to search them
 
@@ -1050,17 +1050,19 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
-    // This method was needed only just after version 42 (released 15.08.2018), usage in onCreate() was removed on 24.06.2019
-    @Deprecated
     public void removeOldBiblesIfNecessary() {
         BiblesDatabase biblesDatabase = new BiblesDatabase(this);
-        if (biblesDatabase.getFile(Language.pl, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
-            Log.i(TAG, "Old Polish Bible found, removing.");
-            biblesDatabase.deleteLanguage(Language.pl);
-        }
-        if (biblesDatabase.getFile(Language.fr, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+//        if (biblesDatabase.getFile(Language.pl, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+//            Log.i(TAG, "Old Polish Bible found, removing.");
+//            biblesDatabase.deleteLanguage(Language.pl); // This method was needed only just after version 42 (released 15.08.2018), usage in onCreate() was removed on 24.06.2019
+//        }
+//        if (biblesDatabase.getFile(Language.fr, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+//            Log.i(TAG, "Old French Bible found, removing.");
+//            biblesDatabase.deleteLanguage(Language.fr); // This method was needed only just after version 42 (released 15.08.2018), usage in onCreate() was removed on 24.06.2019
+//        }
+        if (biblesDatabase.getFile(Language.es, "05_BI12_.GE-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
             Log.i(TAG, "Old French Bible found, removing.");
-            biblesDatabase.deleteLanguage(Language.fr);
+            biblesDatabase.deleteLanguage(Language.es); // This method was needed only just after version 42 (released 21.07.2019), you can comment it out after some time
         }
     }
 
