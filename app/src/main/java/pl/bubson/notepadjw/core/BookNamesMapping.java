@@ -756,6 +756,11 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("revel", "70");
                 multipleChapterBooksMap.put("rev", "70");
                 multipleChapterBooksMap.put("re", "70");
+                multipleChapterBooksMap.put("apocalipsis", "70");
+                multipleChapterBooksMap.put("apocal", "70");
+                multipleChapterBooksMap.put("apoc", "70");
+                multipleChapterBooksMap.put("apo", "70");
+                multipleChapterBooksMap.put("ap", "70");
 
                 singleChapterBooksMap.put("abdias", "35");
                 singleChapterBooksMap.put("abd", "35");
