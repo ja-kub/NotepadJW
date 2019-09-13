@@ -1061,8 +1061,12 @@ public class FileManagerActivity extends AppCompatActivity {
 //            biblesDatabase.deleteLanguage(Language.fr); // This method was needed only just after version 42 (released 15.08.2018), usage in onCreate() was removed on 24.06.2019
 //        }
         if (biblesDatabase.getFile(Language.es, "05_BI12_.GE-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
-            Log.i(TAG, "Old French Bible found, removing.");
-            biblesDatabase.deleteLanguage(Language.es); // This method was needed only just after version 42 (released 21.07.2019), you can comment it out after some time
+            Log.i(TAG, "Old Spanish Bible found, removing.");
+            biblesDatabase.deleteLanguage(Language.es); // This method was needed only just after version 52 (released 21.07.2019), you can comment it out after some time
+        }
+        if (biblesDatabase.getFile(Language.cs, "06_BI12_.EX-split21.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+            Log.i(TAG, "Old Czech Bible found, removing.");
+            biblesDatabase.deleteLanguage(Language.cs); // This method was needed only just after version 55 (released 13.09.2019), you can comment it out after some time
         }
     }
 
