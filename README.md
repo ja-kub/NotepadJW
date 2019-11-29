@@ -4,8 +4,9 @@ Notepad JT
 Notes manager and editor with live view of entered verses for Android.
 
 App is available on Play Store:
+
 <a href="https://play.google.com/store/apps/details?id=pl.bubson.notepadjw2" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="100"  height="100"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/320px-Google_Play_Store_badge_EN.svg.png"/>
 </a>
 
 Click picture below to start a presentation.
