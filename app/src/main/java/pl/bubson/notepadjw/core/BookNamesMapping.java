@@ -501,6 +501,8 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("eph", "53");
                 multipleChapterBooksMap.put("philippians", "54");
                 multipleChapterBooksMap.put("philip", "54");
+                multipleChapterBooksMap.put("phili", "54");
+                multipleChapterBooksMap.put("phil", "54");
                 multipleChapterBooksMap.put("php", "54");
                 multipleChapterBooksMap.put("colossians", "55");
                 multipleChapterBooksMap.put("colos", "55");
@@ -551,7 +553,7 @@ public class BookNamesMapping {
                 singleChapterBooksMap.put("obad", "35");
                 singleChapterBooksMap.put("ob", "35");
                 singleChapterBooksMap.put("philemon", "61");
-                singleChapterBooksMap.put("phil", "61");
+//                singleChapterBooksMap.put("phil", "61"); // switched to be philippians association
                 singleChapterBooksMap.put("phm", "61");
                 singleChapterBooksMap.put("2john", "67");
                 singleChapterBooksMap.put("2joh", "67");
@@ -564,7 +566,8 @@ public class BookNamesMapping {
                 allBooksMap.putAll(singleChapterBooksMap);
                 allBooksMap.putAll(multipleChapterBooksMap);
 
-                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hil\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]oh[\\.n]?|[Jj]ude";
+//                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hil\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]oh[\\.n]?|[Jj]ude"; // before switching phil to be philippians association
+                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hile\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]oh[\\.n]?|[Jj]ude";
                 multiplePartNameBookWithoutLastWordPattern = "[Ss]ong[^\\S\\n]*[Oo]f[^\\S\\n]*";
                 break;
 

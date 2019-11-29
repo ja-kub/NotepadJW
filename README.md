@@ -1,16 +1,16 @@
-Notepad JW
+Notepad JT
 ===
 
 Notes manager and editor with live view of entered verses for Android.
 
 App is available on Play Store:
-<a href="https://play.google.com/store/apps/details?id=pl.bubson.notepadjw" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Get_it_on_Google_play.svg"/>
+<a href="https://play.google.com/store/apps/details?id=pl.bubson.notepadjw2" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"/>
 </a>
 
 Click picture below to start a presentation.
 
-[![Notepad JW](http://img.youtube.com/vi/NDm3OqG__ag/0.jpg)](https://youtu.be/NDm3OqG__ag "Notepad JW")
+[![Notepad JW](http://img.youtube.com/vi/NDm3OqG__ag/0.jpg)](https://youtu.be/NDm3OqG__ag "Notepad JT")
 
 ## Screenshots
 
@@ -18,7 +18,7 @@ Click picture below to start a presentation.
 
 ## License
 
-    Copyright 2017-2019 Jakub Tomala
+    Copyright 2017-2025 Jakub Tomala
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
