@@ -327,6 +327,9 @@ public class FileManagerActivity extends AppCompatActivity {
             case R.id.action_import:
                 importNotesDialog();
                 return true;
+            case R.id.action_export:
+                exportNotesDialog();
+                return true;
             case R.id.action_settings:
                 Intent intentSettings = new Intent(this, SettingsActivity.class);
                 startActivity(intentSettings);
@@ -1115,6 +1118,39 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
+    private void exportNotes() {
+        FileManagerActivity.askForPermissionsIfNotGranted(this);
+
+        File toDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName);
+
+        if (!toDir.isDirectory()) {
+            boolean created = false;
+            try {
+                toDir.mkdir();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (!created)
+                Snackbar.make(recyclerView, R.string.creation_failed, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+        }
+
+        try {
+            String pathFrom = mainDirectory.getAbsolutePath();
+            String pathTo = toDir.getAbsolutePath();
+            FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
+            fc.copyWithoutOverwrite(pathFrom, pathTo);
+            Snackbar.make(recyclerView, R.string.creation_of_new_folder_succesful, Snackbar.LENGTH_SHORT)
+                    .setAction("Action", null).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Snackbar.make(recyclerView, R.string.error_while_saving, Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
+        MediaScannerConnection.scanFile(activityContext, new String[]{toDir.getAbsolutePath()}, null, null);
+        filesDatabase.refreshData();
+    }
+
     public void askForPermissionsIfNotYetAnswered(final Activity activity) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) { // permissions are not needed in this app from Android 6.0
             final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
@@ -1204,6 +1240,27 @@ public class FileManagerActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button
                 importNotes();
+            }
+        });
+
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+
+        builder.show();
+    }
+
+    public void exportNotesDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activityContext);
+        builder.setTitle(R.string.export_title);
+        builder.setMessage(getString(R.string.export_notes_question));
+
+        builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                exportNotes();
             }
         });
 

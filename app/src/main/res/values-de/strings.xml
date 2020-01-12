@@ -174,11 +174,13 @@ Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), 
         Ich habe keinen Zugang.
     </string>
     <string name="whats_new_message_previous">
-• Kongressprogramm 2019-2020. \n\n
+• New Czech Bible (2019 Revision). \n\n
     </string>
     <string name="whats_new_message_last">
-• New Czech Bible (2019 Revision).
+• Exportieren von Notizen.
     </string>
-    <string name="import_title">Import notes</string>
-    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="import_title">Importieren von Notizen</string>
+    <string name="import_notes_question">Möchten Sie alle Notizen aus dem Ordner importieren \\Documents\\NotepadJW?</string>
+    <string name="export_title">Exportieren von Notizen</string>
+    <string name="export_notes_question">Möchten Sie alle Notizen-Ordner exportieren \\Documents\\NotepadJW?</string>
 </resources>

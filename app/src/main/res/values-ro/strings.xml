@@ -177,8 +177,10 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
 • Programul congresului. \n\n
     </string>
     <string name="whats_new_message_last">
-• New Czech Bible (2019 Revision).
+• Exportul note.
     </string>
-    <string name="import_title">Import notes</string>
-    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="import_title">Importul note</string>
+    <string name="import_notes_question">Doriți să importați toate notele de la dosar \\Documents\\NotepadJW?</string>
+    <string name="export_title">Exportul note</string>
+    <string name="export_notes_question">Doriți să exportați toate notele în dosar \\Documents\\NotepadJW?</string>
 </resources>

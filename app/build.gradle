@@ -2,15 +2,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
     buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "pl.bubson.notepadjw2"
         minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 56
-        versionName "2.10"
+        targetSdkVersion 28
+        versionCode 58
+        versionName "2.12"
     }
     buildTypes {
         release {
@@ -23,7 +23,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:design:28.0.0'
     implementation 'org.jsoup:jsoup:1.8.3'
     implementation ('com.thebluealliance:spectrum:0.7.1') { exclude group: 'com.android.support' }
     implementation 'commons-io:commons-io:2.5'

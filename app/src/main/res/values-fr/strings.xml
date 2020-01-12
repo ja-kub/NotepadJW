@@ -177,8 +177,10 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
 • Programme de l’assemblée. \n\n
    </string>
    <string name="whats_new_message_last">
-• New Czech Bible (2019 Revision).
+• Exportation des notes.
    </string>
-    <string name="import_title">Import notes</string>
-    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="import_title">Importation des notes</string>
+    <string name="import_notes_question">Voulez-vous importer toutes les notes du dossier \\Documents\\NotepadJW?</string>
+    <string name="export_title">Exportation des notes</string>
+    <string name="export_notes_question">Voulez-vous exporter toutes les notes dans le dossier \\Documents\\NotepadJW?</string>
 </resources>

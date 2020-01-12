@@ -182,8 +182,10 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
 • Programy zgromadzeń 2019-2020..\n\n
     </string>
     <string name="whats_new_message_last">
-• Nowa czeska Biblia (wydanie 2019)
+• Eksport notatek
     </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>
+    <string name="export_title">Eksport notatek</string>
+    <string name="export_notes_question">Chcesz wyeksportować wszystkie notatki do folderu \\Documents\\NotepadJW?</string>
 </resources>

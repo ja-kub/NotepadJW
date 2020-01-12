@@ -168,8 +168,10 @@
 • Программа регионального конгресса.\n\n
    </string>
     <string name="whats_new_message_last">
-• New Czech Bible (2019 Revision).
+• Экспорт заметок.
    </string>
     <string name="import_title">Импорт заметок</string>
-    <string name="import_notes_question">Импорт заметок из \\Documents\\NotepadJW folder?</string>
+    <string name="import_notes_question">Вы хотите импортировать все записи из папки \\Documents\\NotepadJW?</string>
+    <string name="export_title">Экспорт заметок</string>
+    <string name="export_notes_question">Вы хотите, чтобы экспортировать все записи в папку \\Documents\\NotepadJW?</string>
 </resources>

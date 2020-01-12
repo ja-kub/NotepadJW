@@ -163,8 +163,10 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
 • Kongresszusi program. \n\n
     </string>
     <string name="whats_new_message_last">
-• New Czech Bible (2019 Revision).
+• Exportálása jegyzetek.
     </string>
-    <string name="import_title">Import notes</string>
-    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="import_title">Importálása jegyzetek</string>
+    <string name="import_notes_question">Szeretné importálni az összes jegyzeteket a mappát \\Documents\\NotepadJW ?</string>
+    <string name="export_title">Exportálása jegyzetek</string>
+    <string name="export_notes_question">Szeretné az export minden jegyzetek mappát \\Documents\\NotepadJW?</string>
 </resources>

@@ -212,11 +212,13 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• New convention programs.\n\n
+• New Czech Bible (2019 Revision).\n\n
     </string>
     <string name="whats_new_message_last">
-• New Czech Bible (2019 Revision).
+• Export notes.
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="export_title">Export notes</string>
+    <string name="export_notes_question">Would you like to export all notes to \\Documents\\NotepadJW folder?</string>
 </resources>

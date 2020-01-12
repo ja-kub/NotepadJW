@@ -175,8 +175,10 @@ Jakub Tomala (codificação, modelos).
 • Programa do Congresso.\n\n
     </string>
     <string name="whats_new_message_last">
-• New Czech Bible (2019 Revision).
+• Exportando notas.
     </string>
-    <string name="import_title">Import notes</string>
-   <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="import_title">Importação de notas</string>
+   <string name="import_notes_question">Gostaria de importar todas as notas da pasta \\Documents\\NotepadJW?</string>
+    <string name="export_title">Exportando notas</string>
+   <string name="export_notes_question">Gostaria de exportar todas as notas para a pasta \\Documents\\NotepadJW?</string>
 </resources>

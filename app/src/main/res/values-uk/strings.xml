@@ -177,8 +177,10 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
 • Програма конгресу. \n\n
     </string>
     <string name="whats_new_message_last">
-• New Czech Bible (2019 Revision).
+• експорт заміток.
     </string>
-    <string name="import_title">Import notes</string>
-    <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
+    <string name="import_title">імпорт заміток</string>
+    <string name="import_notes_question">Ви хочете імпортувати всі записи з папки \\Documents\\NotepadJW?</string>
+    <string name="export_title">експорт заміток</string>
+    <string name="export_notes_question">Ви хочете, щоб експортувати всі записи в папку \\Documents\\NotepadJW?</string>
 </resources>
