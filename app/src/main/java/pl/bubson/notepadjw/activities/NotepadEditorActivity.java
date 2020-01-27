@@ -35,6 +35,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -199,6 +200,10 @@ public class NotepadEditorActivity extends AppCompatActivity {
         noteEditText = (RichSelectableEditText) findViewById(R.id.edit_text);
         if (noteEditText != null) {
             noteEditText.addTextChangedListener(mTextEditorWatcher);
+            // Trying to avoid "Done" button / fullscreen in landscape mode
+//            noteEditText.setImeOptions(EditorInfo.IME_ACTION_DONE | EditorInfo.IME_FLAG_NO_EXTRACT_UI); // option 1
+//            noteEditText.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI); // option 2
+            noteEditText.setImeOptions(EditorInfo.IME_FLAG_NO_FULLSCREEN); // option 3
         }
 
         versePreviewTextInEditMode = (TextView) findViewById(R.id.text_view_in_edit_layout);

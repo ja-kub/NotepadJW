@@ -215,7 +215,7 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
 • New Czech Bible (2019 Revision).\n\n
     </string>
     <string name="whats_new_message_last">
-• Export notes.
+• Bug fix in landscape mode.
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
