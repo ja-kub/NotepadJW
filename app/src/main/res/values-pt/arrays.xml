@@ -28,6 +28,7 @@
         <item>Espanhol</item>
         <item>Francês</item>
         <item>Húngaro</item>
+        <item>Iloko</item>
         <item>Inglês</item>
         <item>Italiano</item>
         <item>Polonês</item>
@@ -44,6 +45,7 @@
         <item>@string/spanish_language</item>
         <item>@string/french_language</item>
         <item>@string/hungarian_language</item>
+        <item>@string/iloko_language</item>
         <item>@string/english_language</item>
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>

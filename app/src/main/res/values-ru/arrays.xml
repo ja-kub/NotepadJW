@@ -25,6 +25,7 @@
         <item>Французский</item>
         <item>Испанский</item>
         <item>Итальянский</item>
+        <item>Илоканский</item>
         <item>Немецкий</item>
         <item>Польский</item>
         <item>Португальский (Бразилия)</item>
@@ -41,6 +42,7 @@
         <item>@string/french_language</item>
         <item>@string/spanish_language</item>
         <item>@string/italian_language</item>
+        <item>@string/iloko_language</item>
         <item>@string/german_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>

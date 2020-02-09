@@ -28,6 +28,7 @@
         <item>Czeski</item>
         <item>Francuski</item>
         <item>Hiszpański</item>
+        <item>Iloko</item>
         <item>Niemiecki</item>
         <item>Polski</item>
         <item>Portugalski (Brazylia)</item>
@@ -44,6 +45,7 @@
         <item>@string/czech_language</item>
         <item>@string/french_language</item>
         <item>@string/spanish_language</item>
+        <item>@string/iloko_language</item>
         <item>@string/german_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>

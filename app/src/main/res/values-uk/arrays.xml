@@ -28,6 +28,7 @@
         <item>Французька мова</item>
         <item>Німецька</item>
         <item>Угорська мова</item>
+        <item>Iлоканська</item>
         <item>Італійська</item>
         <item>Польський</item>
         <item>Португальська (бразилія)</item>
@@ -44,6 +45,7 @@
         <item>@string/french_language</item>
         <item>@string/german_language</item>
         <item>@string/hungarian_language</item>
+        <item>@string/iloko_language</item>
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>

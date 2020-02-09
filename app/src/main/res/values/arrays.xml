@@ -29,6 +29,7 @@
         <item>French</item>
         <item>German</item>
         <item>Hungarian</item>
+        <item>Iloko</item>
         <item>Italian</item>
         <item>Polish</item>
         <item>Portuguese (Brazil)</item>
@@ -45,6 +46,7 @@
         <item>@string/french_language</item>
         <item>@string/german_language</item>
         <item>@string/hungarian_language</item>
+        <item>@string/iloko_language</item>
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>

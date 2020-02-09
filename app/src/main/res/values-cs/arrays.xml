@@ -24,6 +24,7 @@
         <item>Angličtina</item>
         <item>Čeština</item>
         <item>Francouzština</item>
+        <item>Iloko</item>
         <item>Italština</item>
         <item>Maďarština</item>
         <item>Němčina</item>
@@ -40,6 +41,7 @@
         <item>@string/english_language</item>
         <item>@string/czech_language</item>
         <item>@string/french_language</item>
+        <item>@string/iloko_language</item>
         <item>@string/italian_language</item>
         <item>@string/hungarian_language</item>
         <item>@string/german_language</item>

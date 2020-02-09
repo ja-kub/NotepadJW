@@ -20,6 +20,7 @@
     <string name="french_language" translatable="false">fr</string>
     <string name="spanish_language" translatable="false">es</string>
     <string name="tagalog_language" translatable="false">tl</string>
+    <string name="iloko_language" translatable="false">il</string>
     <string name="romanian_language" translatable="false">ro</string>
     <string name="russian_language" translatable="false">ru</string>
     <string name="german_language" translatable="false">de</string>
@@ -212,10 +213,10 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• New Czech Bible (2019 Revision).\n\n
+• Bug fix in landscape mode.\n\n
     </string>
     <string name="whats_new_message_last">
-• Bug fix in landscape mode.
+• Added Bible in Iloko language.
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
