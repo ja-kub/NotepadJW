@@ -33,6 +33,7 @@
         <item>Portugalština (Portugalská)</item>
         <item>Rumunština</item>
         <item>Ruština</item>
+        <item>Slovinština</item>
         <item>Španělština</item>
         <item>Tagalština</item>
         <item>Ukrajinština</item>
@@ -50,6 +51,7 @@
         <item>@string/portuguese_european_language</item>
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
+        <item>@string/slovenian_language</item>
         <item>@string/spanish_language</item>
         <item>@string/tagalog_language</item>
         <item>@string/ukrainian_language</item>

@@ -1278,6 +1278,7 @@ public class FileManagerActivity extends AppCompatActivity {
         if (lang == Language.pte) lang = Language.pt;
         if (lang == Language.tl) lang = Language.en;
         if (lang == Language.il) lang = Language.en;
+        if (lang == Language.sv) lang = Language.en;
         String pathFrom = "conventions/" + lang.name();
         String pathTo = mainDirectory.getAbsolutePath();
         FilesCopier afc = new FilesCopier(this, FilesCopier.Type.ASSETS);
