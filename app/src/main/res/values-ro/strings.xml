@@ -174,13 +174,16 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
          nu au acces.
     </string>
     <string name="whats_new_message_previous">
-• Programul congresului. \n\n
+• Adăugat Biblia în limba slovenă. \n\n
     </string>
-    <string name="whats_new_message_last">
-• Adăugat Biblia în limba slovenă.
-    </string>
+    <string name="whats_new_message_last">• Opțiune: Cumpără-mi o cafea</string>
     <string name="import_title">Importul note</string>
     <string name="import_notes_question">Doriți să importați toate notele de la dosar \\Documents\\NotepadJW?</string>
     <string name="export_title">Exportul note</string>
     <string name="export_notes_question">Doriți să exportați toate notele în dosar \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Cumpără-mi o cafea</string>
+    <string name="Coffee">Cafea?</string>
+    <string name="Coffee_explaination">Această aplicație este gratuită și fără anunțuri. Dacă apreciați luni de munca grea pe care am petrecut pe el, poți să-mi cumpăr o cafea simbolică ☕</string>
+    <string name="Yes">Da, sigur 🙂</string>
+    <string name="No">Nu, nu vreau să 🙁</string>
 </resources>

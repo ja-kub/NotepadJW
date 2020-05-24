@@ -172,13 +172,16 @@ Significa que puede copiarlos a la PC (como una copia de seguridad manual), camb
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Programa de la asamblea. \n\n
+• Programa de la asamblea del 2020. \n\n
     </string>
-    <string name="whats_new_message_last">
-• Programa de la asamblea del 2020.
-    </string>
+    <string name="whats_new_message_last">• Opción: Comprar mí un café</string>
     <string name="import_title">La importación de notas</string>
     <string name="import_notes_question">¿Le gustaría importar todas las notas de la carpeta \\Documents\\NotepadJW?</string>
     <string name="export_title">Exportación de notas</string>
     <string name="export_notes_question">¿Le gustaría exportar todas las notas a la carpeta \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Comprarme un café</string>
+    <string name="Coffee">¿Café?</string>
+    <string name="Coffee_explaination">Esta aplicación es gratuita y sin anuncios. Si usted aprecia los meses de trabajo duro que pasé en ella, me puedes comprar un café simbólica ☕</string>
+    <string name="Yes">Sí, seguro 🙂</string>
+    <string name="No">No, no quiero 🙁</string>
 </resources>

@@ -71,6 +71,12 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/action_coffee"
+        android:orderInCategory="100"
+        android:title="@string/Buy_me_a_coffee"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"

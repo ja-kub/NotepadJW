@@ -19,7 +19,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
@@ -48,9 +47,13 @@ import org.apache.commons.io.FileUtils;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -79,6 +82,7 @@ public class FileManagerActivity extends AppCompatActivity {
     public static final int SUCCESSFUL = 1;
     public static final int FAILED = 0;
     public static final String MOVED_FILES_KEY = "movedFiles";
+    public static final String SETTINGS_APP_OPENINGS = "settings_app_openings";
     private static final String TAG = "FileManagerActivity";
     private static final String appFolderName = "NotepadJW"; // don't change it, as user have their notes there from some time
     private static File mainDirectory;
@@ -94,9 +98,9 @@ public class FileManagerActivity extends AppCompatActivity {
     private boolean isClipboardToCopy, isCurrentSortingByDate, isSearchMenuExpanded, isSearchResultsListed;
     private RecyclerView recyclerView;
     private SharedPreferences sharedPref;
-    private FloatingActionButton floatingActionButton;
     private FloatingActionsMenu famCreateNew;
     private com.getbase.floatingactionbutton.FloatingActionButton fabNewFolder, fabNewNote;
+    private int appOpenings = 0;
 
     public static FilesDatabase getFilesDatabase() {
         return filesDatabase;
@@ -161,8 +165,17 @@ public class FileManagerActivity extends AppCompatActivity {
         prepareMainDirectory();
         prepareFilesDatabase(mainDirectory); // to be able to search them
 
+        coffeeChecker();
+
         // Show the "What's New" screen once for each new release of the application
         new WhatsNewScreen(this).show();
+    }
+
+    private void coffeeChecker() {
+        loadAppOpenings();
+        appOpenings++;
+        saveAppOpenings();
+        if (appOpenings % 20 == 5) buyMeACoffeeReminder();
     }
 
     private void prepareSearchView() {
@@ -329,6 +342,9 @@ public class FileManagerActivity extends AppCompatActivity {
                 return true;
             case R.id.action_export:
                 exportNotesDialog();
+                return true;
+            case R.id.action_coffee:
+                startCoffeeIntent();
                 return true;
             case R.id.action_settings:
                 Intent intentSettings = new Intent(this, SettingsActivity.class);
@@ -1063,14 +1079,14 @@ public class FileManagerActivity extends AppCompatActivity {
 //            Log.i(TAG, "Old French Bible found, removing.");
 //            biblesDatabase.deleteLanguage(Language.fr); // This method was needed only just after version 42 (released 15.08.2018), usage in onCreate() was removed on 24.06.2019
 //        }
-        if (biblesDatabase.getFile(Language.es, "05_BI12_.GE-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
-            Log.i(TAG, "Old Spanish Bible found, removing.");
-            biblesDatabase.deleteLanguage(Language.es); // This method was needed only just after version 52 (released 21.07.2019), you can comment it out after some time
-        }
-        if (biblesDatabase.getFile(Language.cs, "06_BI12_.EX-split21.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
-            Log.i(TAG, "Old Czech Bible found, removing.");
-            biblesDatabase.deleteLanguage(Language.cs); // This method was needed only just after version 55 (released 13.09.2019), you can comment it out after some time
-        }
+//        if (biblesDatabase.getFile(Language.es, "05_BI12_.GE-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+//            Log.i(TAG, "Old Spanish Bible found, removing.");
+//            biblesDatabase.deleteLanguage(Language.es); // This method was needed only just after version 52 (released 21.07.2019), you can comment it out after some time
+//        }
+//        if (biblesDatabase.getFile(Language.cs, "06_BI12_.EX-split21.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+//            Log.i(TAG, "Old Czech Bible found, removing.");
+//            biblesDatabase.deleteLanguage(Language.cs); // This method was needed only just after version 55 (released 13.09.2019), you can comment it out after some time
+//        }
     }
 
     private void moveUpOneLevel() {
@@ -1285,6 +1301,75 @@ public class FileManagerActivity extends AppCompatActivity {
         afc.copyWithoutOverwrite(pathFrom, pathTo);
         filesDatabase.refreshData();
         fillListWithItemsFromDir(currentDirectory);
+    }
+
+
+    public void buyMeACoffeeReminder() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.Coffee);
+        builder.setMessage(getString(R.string.Coffee_explaination));
+
+        builder.setPositiveButton(R.string.Yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                startCoffeeIntent();
+            }
+        });
+
+        builder.setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+
+        builder.show();
+    }
+
+    private void startCoffeeIntent() {
+        try {
+            String url = "https://www.buymeacoffee.com/bubson";
+            Intent coffeeIntent = new Intent(Intent.ACTION_VIEW);
+            coffeeIntent.setData(Uri.parse(url));
+            startActivity(coffeeIntent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void saveAppOpenings() {
+        writeObjectToFile(SETTINGS_APP_OPENINGS, appOpenings);
+        Log.i("Saved App Openings", String.valueOf(appOpenings));
+    }
+
+    private void loadAppOpenings() {
+        try {
+            Object savedAppOpenings = readObjectFromFile(SETTINGS_APP_OPENINGS);
+            if (savedAppOpenings != null) appOpenings = (int) savedAppOpenings;
+            Log.i("Loaded App Openings", String.valueOf(appOpenings));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeObjectToFile(String filepath, Object object) {
+        try {
+            FileOutputStream fileOut = openFileOutput(filepath, Context.MODE_PRIVATE);
+            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+            objectOut.writeObject(object);
+            objectOut.close();
+            Log.v("Write", "The Object was successfully written to a file: " + filepath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Object readObjectFromFile(String filepath) throws Exception {
+        FileInputStream fileIn = openFileInput(filepath);
+        ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+        Object obj = objectIn.readObject();
+        Log.v("Read", "The Object has been read from the file: " + filepath);
+        objectIn.close();
+        return obj;
     }
 
 }

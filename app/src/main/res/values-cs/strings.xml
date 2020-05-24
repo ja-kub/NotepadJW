@@ -173,13 +173,16 @@ To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohová
         přístup z jiných aplikací nebo z počítače.
     </string>
     <string name="whats_new_message_previous">
-• Bible – Překlad nového světa (2019). \n\n
+• Program sjezdu 2020. \n\n
     </string>
-    <string name="whats_new_message_last">
-• Program sjezdu 2020
-    </string>
+    <string name="whats_new_message_last">• Možnost: Kup mi káva</string>
     <string name="import_title">Import poznámek</string>
     <string name="import_notes_question">Import poznámek z \\Documents\\NotepadJW folder?</string>
     <string name="export_title">Export poznámek</string>
     <string name="export_notes_question">Chtěli byste exportovat všechny poznámky do složky \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Kup mi kávu</string>
+    <string name="Coffee">Káva?</string>
+    <string name="Coffee_explaination">Tato aplikace je zdarma a bez reklam. Máte-li ocenit měsících tvrdé práce, které jsem strávil na to, můžete mi koupit symbolický kávu ☕</string>
+    <string name="Yes">Ano, jistě 🙂</string>
+    <string name="No">Ne, nechci 🙁</string>
 </resources>

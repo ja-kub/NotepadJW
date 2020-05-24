@@ -174,13 +174,16 @@ Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), 
         Ich habe keinen Zugang.
     </string>
     <string name="whats_new_message_previous">
-• New Czech Bible (2019 Revision). \n\n
+• Kongressprogramm 2020. \n\n
     </string>
-    <string name="whats_new_message_last">
-• Kongressprogramm 2020.
-    </string>
+    <string name="whats_new_message_last">• Option: Kaufen Sie mich ein Kaffee</string>
     <string name="import_title">Importieren von Notizen</string>
     <string name="import_notes_question">Möchten Sie alle Notizen aus dem Ordner importieren \\Documents\\NotepadJW?</string>
     <string name="export_title">Exportieren von Notizen</string>
     <string name="export_notes_question">Möchten Sie alle Notizen-Ordner exportieren \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Kaufen Sie mir einen Kaffee</string>
+    <string name="Coffee">Kaffee?</string>
+    <string name="Coffee_explaination">Diese Anwendung ist kostenlos und ohne Werbung. Wenn Sie die Monate harter Arbeit zu schätzen wissen, dass ich dafür ausgegeben, können Sie mir einen symbolischen Kaffee kaufen ☕</string>
+    <string name="Yes">Ja, sicher 🙂</string>
+    <string name="No">Nein, ich will nicht 🙁</string>
 </resources>

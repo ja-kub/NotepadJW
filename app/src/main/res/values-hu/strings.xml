@@ -160,13 +160,16 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-• Kongresszusi program. \n\n
+• Programme de l’assemblée 2020. \n\n
     </string>
-    <string name="whats_new_message_last">
-• 2020-es kongresszusi program.
-    </string>
+    <string name="whats_new_message_last">• Opció: Vásárlás nekem egy kávé</string>
     <string name="import_title">Importálása jegyzetek</string>
     <string name="import_notes_question">Szeretné importálni az összes jegyzeteket a mappát \\Documents\\NotepadJW ?</string>
     <string name="export_title">Exportálása jegyzetek</string>
     <string name="export_notes_question">Szeretné az export minden jegyzetek mappát \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Vegyél meg egy kávét</string>
+    <string name="Coffee">Kávé?</string>
+    <string name="Coffee_explaination">Ez az alkalmazás ingyenes, és hirdetések nélkül. Ha értékelni a több hónapos kemény munka, amit költött rá, akkor vesz nekem egy jelképes kávé ☕</string>
+    <string name="Yes">Igen, biztos 🙂</string>
+    <string name="No">Nem, nem akarom 🙁</string>
 </resources>

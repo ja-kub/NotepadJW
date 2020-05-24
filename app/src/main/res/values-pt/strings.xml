@@ -172,13 +172,16 @@ Jakub Tomala (codificação, modelos).
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Programa do Congresso.\n\n
+• Programa do Congresso de 2020. \n\n
     </string>
-    <string name="whats_new_message_last">
-• Programa do Congresso de 2020.
-    </string>
+    <string name="whats_new_message_last">• Opção: Compre-me um café</string>
     <string name="import_title">Importação de notas</string>
    <string name="import_notes_question">Gostaria de importar todas as notas da pasta \\Documents\\NotepadJW?</string>
     <string name="export_title">Exportando notas</string>
    <string name="export_notes_question">Gostaria de exportar todas as notas para a pasta \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Compre-me um café</string>
+   <string name="Coffee">Café?</string>
+   <string name="Coffee_explaination">Esta aplicação é gratuita e sem anúncios. Se você apreciar os meses de trabalho duro que eu gasto com ela, você pode me comprar um café simbólica ☕</string>
+   <string name="Yes">Sim, com certeza 🙂</string>
+   <string name="No">Não, eu não quero 🙁</string>
 </resources>

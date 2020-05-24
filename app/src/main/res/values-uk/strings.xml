@@ -174,13 +174,16 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• Програма конгресу. \n\n
+• Програма конгресу 2020. \n\n
     </string>
-    <string name="whats_new_message_last">
-• Програма конгресу 2020.
-    </string>
+    <string name="whats_new_message_last">• Опція: купи мені кави</string>
     <string name="import_title">імпорт заміток</string>
     <string name="import_notes_question">Ви хочете імпортувати всі записи з папки \\Documents\\NotepadJW?</string>
     <string name="export_title">експорт заміток</string>
     <string name="export_notes_question">Ви хочете, щоб експортувати всі записи в папку \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Купи мені кави</string>
+    <string name="Coffee">Кава?</string>
+    <string name="Coffee_explaination">Ця програма є безкоштовним і без реклами. Якщо Ви цінуєте місяці напруженої роботи, яку я витратив на нього, ви можете купити мені символічний кави ☕</string>
+    <string name="Yes">Так, звичайно 🙂</string>
+    <string name="No">Ні, я не хочу 🙁</string>
 </resources>

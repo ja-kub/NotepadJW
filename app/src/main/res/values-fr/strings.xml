@@ -174,13 +174,16 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
          ne pas avoir accès.
    </string>
    <string name="whats_new_message_previous">
-• Programme de l’assemblée. \n\n
+• Programme de l’assemblée 2020. \n\n
    </string>
-   <string name="whats_new_message_last">
-• Programme de l’assemblée 2020.
-   </string>
+   <string name="whats_new_message_last">• Option: Achetez-moi un coffe</string>
     <string name="import_title">Importation des notes</string>
     <string name="import_notes_question">Voulez-vous importer toutes les notes du dossier \\Documents\\NotepadJW?</string>
     <string name="export_title">Exportation des notes</string>
     <string name="export_notes_question">Voulez-vous exporter toutes les notes dans le dossier \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Achetez-moi un café</string>
+    <string name="Coffee">Café?</string>
+    <string name="Coffee_explaination">Cette application est gratuite et sans publicité. Si vous appréciez les mois de travail acharné que j\'ai passé là-dessus, vous pouvez me acheter un café symbolique ☕</string>
+    <string name="Yes">Oui, bien sûr 🙂</string>
+    <string name="No">Non, je ne veux pas 🙁</string>
 </resources>

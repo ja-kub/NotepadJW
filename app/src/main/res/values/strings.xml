@@ -214,14 +214,17 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• Added Bible in Iloko language.\n\n
-    </string>
-    <string name="whats_new_message_last">
 • 2020 Convention Program.\n\n
-• Added Bible in Slovenian language.
+• Added Bible in Slovenian language.\n\n
     </string>
+    <string name="whats_new_message_last">• Option: Buy me a coffee</string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
     <string name="export_title">Export notes</string>
     <string name="export_notes_question">Would you like to export all notes to \\Documents\\NotepadJW folder?</string>
+    <string name="Buy_me_a_coffee">Buy me a coffee</string>
+    <string name="Coffee">Coffee?</string>
+    <string name="Coffee_explaination">This application is free and without ads. If you appreciate the months of hard work that I spent on it, you can buy me a symbolic coffee ☕</string>
+    <string name="Yes">Yes, sure 🙂</string>
+    <string name="No">No, I do not want to 🙁</string>
 </resources>

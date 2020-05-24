@@ -179,14 +179,17 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Dodana Biblia w języku Iloko.\n\n
-    </string>
-    <string name="whats_new_message_last">
 • Dodana Biblia w języku Słoweńskim.\n\n
-• Program kongresu w roku 2020.
+• Program kongresu w roku 2020.\n\n
     </string>
+    <string name="whats_new_message_last">• Opcja: Postaw mi kawę</string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>
     <string name="export_title">Eksport notatek</string>
     <string name="export_notes_question">Chcesz wyeksportować wszystkie notatki do folderu \\Documents\\NotepadJW?</string>
+    <string name="Buy_me_a_coffee">Postaw mi kawę</string>
+    <string name="Coffee">Kawa?</string>
+    <string name="Coffee_explaination">Ta aplikacja jest bezpłatna i bez reklam. Jeśli doceniasz miesiące ciężkiej pracy, które na nią poświęciłem, możesz postawić mi symboliczną kawę ☕</string>
+    <string name="Yes">Tak, chętnie 🙂</string>
+    <string name="No">Nie, nie chcę 🙁</string>
 </resources>
