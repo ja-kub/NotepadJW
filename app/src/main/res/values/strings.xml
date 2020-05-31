@@ -19,6 +19,7 @@
     <string name="english_language" translatable="false">en</string>
     <string name="french_language" translatable="false">fr</string>
     <string name="spanish_language" translatable="false">es</string>
+    <string name="swedish_language" translatable="false">se</string>
     <string name="tagalog_language" translatable="false">tl</string>
     <string name="iloko_language" translatable="false">il</string>
     <string name="romanian_language" translatable="false">ro</string>
@@ -217,7 +218,9 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
 • 2020 Convention Program.\n\n
 • Added Bible in Slovenian language.\n\n
     </string>
-    <string name="whats_new_message_last">• Option: Buy me a coffee</string>
+    <string name="whats_new_message_last">
+• Added Bible in Swedish language.\n\n
+    </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
     <string name="export_title">Export notes</string>

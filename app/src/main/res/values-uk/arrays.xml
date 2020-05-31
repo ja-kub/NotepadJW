@@ -37,6 +37,7 @@
         <item>Румунська мова</item>
         <item>Російський</item>
         <item>Іспанська</item>
+        <item>Шведський</item>
         <item>Тагальська мова</item>
         <item>Українська</item>
         <item>Чеська</item>
@@ -55,6 +56,7 @@
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
         <item>@string/spanish_language</item>
+        <item>@string/swedish_language</item>
         <item>@string/tagalog_language</item>
         <item>@string/ukrainian_language</item>
         <item>@string/czech_language</item>

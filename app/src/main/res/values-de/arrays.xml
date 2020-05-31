@@ -36,6 +36,7 @@
         <item>Russisch</item>
         <item>Slowenisch</item>
         <item>Spanisch</item>
+        <item>Schwedisch</item>
         <item>Tagalog</item>
         <item>Tschechisch</item>
         <item>Ukrainisch</item>
@@ -54,6 +55,7 @@
         <item>@string/russian_language</item>
         <item>@string/slovenian_language</item>
         <item>@string/spanish_language</item>
+        <item>@string/swedish_language</item>
         <item>@string/tagalog_language</item>
         <item>@string/czech_language</item>
         <item>@string/ukrainian_language</item>

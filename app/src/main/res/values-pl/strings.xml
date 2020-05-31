@@ -182,7 +182,9 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
 • Dodana Biblia w języku Słoweńskim.\n\n
 • Program kongresu w roku 2020.\n\n
     </string>
-    <string name="whats_new_message_last">• Opcja: Postaw mi kawę</string>
+    <string name="whats_new_message_last">
+• Dodana Biblia w języku Szwedzkim.\n\n
+    </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>
     <string name="export_title">Eksport notatek</string>

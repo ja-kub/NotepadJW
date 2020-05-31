@@ -38,6 +38,7 @@
         <item>Portugués (Portugal)</item>
         <item>Rumano</item>
         <item>Ruso</item>
+        <item>Sueco</item>
         <item>Tagalo</item>
         <item>Ucranio</item>
     </string-array>
@@ -56,6 +57,7 @@
         <item>@string/portuguese_european_language</item>
         <item>@string/romanian_language</item>
         <item>@string/russian_language</item>
+        <item>@string/swedish_language</item>
         <item>@string/tagalog_language</item>
         <item>@string/ukrainian_language</item>
     </string-array>
