@@ -215,11 +215,10 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• 2020 Convention Program.\n\n
-• Added Bible in Slovenian language.\n\n
+• Added Bible in Swedish language.\n\n
     </string>
     <string name="whats_new_message_last">
-• Added Bible in Swedish language.\n\n
+• New translation (2020) of the Bible in Romanian.\n\n
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>

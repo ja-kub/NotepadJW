@@ -176,7 +176,9 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
     <string name="whats_new_message_previous">
 • Adăugat Biblia în limba slovenă. \n\n
     </string>
-    <string name="whats_new_message_last">• Opțiune: Cumpără-mi o cafea</string>
+    <string name="whats_new_message_last">
+• Noua traducere (2020) a Bibliei în limba română.\n\n
+    </string>
     <string name="import_title">Importul note</string>
     <string name="import_notes_question">Doriți să importați toate notele de la dosar \\Documents\\NotepadJW?</string>
     <string name="export_title">Exportul note</string>

@@ -11,13 +11,9 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import java.io.BufferedInputStream;
+import net.lingala.zip4j.ZipFile;
+
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
 
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.activities.FileManagerActivity;
@@ -97,35 +93,52 @@ public class InstallLanguageService extends IntentService {
         String targetDirectoryPath = FileManagerActivity.fileWithoutExtension(downloadedFile.getPath());
         File targetDirectory = new File(targetDirectoryPath);
         targetDirectory.mkdirs();
-        ZipInputStream zis;
         try {
-            zis = new ZipInputStream(new BufferedInputStream(new FileInputStream(downloadedFile)));
-            ZipEntry ze;
-            int count;
-            byte[] buffer = new byte[8192];
-            while ((ze = zis.getNextEntry()) != null) {
-                File file = new File(targetDirectory, ze.getName());
-                File dir = ze.isDirectory() ? file : file.getParentFile();
-                if (!dir.isDirectory() && !dir.mkdirs())
-                    throw new FileNotFoundException("Failed to ensure directory: " +
-                            dir.getAbsolutePath());
-                if (ze.isDirectory())
-                    continue;
-                FileOutputStream fout = new FileOutputStream(file);
-                try {
-                    while ((count = zis.read(buffer)) != -1)
-                        fout.write(buffer, 0, count);
-                } finally {
-                    fout.close();
-                }
-            }
-            zis.close();
+            new ZipFile(downloadedFile).extractAll(targetDirectoryPath);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         Log.v("InstallLanguageService", "unpackFileToFolder end");
         return targetDirectory;
     }
+
+    // old method, can be removed some time after 11.07.2020
+    // produces "java.util.zip.ZipException: only DEFLATED entries can have EXT descriptor" for new Romanian Bible
+//    private static File unpackFileToFolder(File downloadedFile) {
+//        Log.v("InstallLanguageService", "unpackFileToFolder start");
+//        String targetDirectoryPath = FileManagerActivity.fileWithoutExtension(downloadedFile.getPath());
+//        File targetDirectory = new File(targetDirectoryPath);
+//        targetDirectory.mkdirs();
+//        ZipInputStream zis;
+//        try {
+//            zis = new ZipInputStream(new BufferedInputStream(new FileInputStream(downloadedFile)));
+//            ZipEntry ze;
+//            int count;
+//            byte[] buffer = new byte[8192];
+//            while ((ze = zis.getNextEntry()) != null) {
+//                File file = new File(targetDirectory, ze.getName());
+//                File dir = ze.isDirectory() ? file : file.getParentFile();
+//                if (!dir.isDirectory() && !dir.mkdirs())
+//                    throw new FileNotFoundException("Failed to ensure directory: " +
+//                            dir.getAbsolutePath());
+//                if (ze.isDirectory())
+//                    continue;
+//                FileOutputStream fout = new FileOutputStream(file);
+//                try {
+//                    while ((count = zis.read(buffer)) != -1)
+//                        fout.write(buffer, 0, count);
+//                } finally {
+//                    fout.close();
+//                }
+//            }
+//            zis.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        Log.v("InstallLanguageService", "unpackFileToFolder end");
+//        return targetDirectory;
+//    }
 
     private void clean(File unpackedFolder, File downloadedFile) {
         downloadedFile.delete();
