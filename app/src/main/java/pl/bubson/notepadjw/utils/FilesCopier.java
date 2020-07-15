@@ -19,6 +19,7 @@ public class FilesCopier {
     private static final String TAG = "FilesCopier";
     private Context context;
     private String targetDirectoryPath;
+    private boolean override = false;
     private Type type;
     private AssetManager assetManager;
 
@@ -30,8 +31,14 @@ public class FilesCopier {
         if (type.equals(Type.ASSETS)) assetManager = context.getAssets();
     }
 
-    public void copyWithoutOverwrite(String pathFrom, String pathTo) {
+    public void copy(String pathFrom, String pathTo) {
         targetDirectoryPath = pathTo;
+        copyFileOrDir(pathFrom, "");
+    }
+
+    public void copy(String pathFrom, String pathTo, boolean override) {
+        targetDirectoryPath = pathTo;
+        this.override = override;
         copyFileOrDir(pathFrom, "");
     }
 
@@ -46,7 +53,7 @@ public class FilesCopier {
 
             if (files==null || files.length == 0) { // listing file/asset instead of directory gives null/length = 0
                 String destFilePath = targetDirectoryPath + "/" + destPath;
-                if (!new File(destFilePath).exists()) copyFile(sourcePath, destFilePath);
+                if (!new File(destFilePath).exists() || override) copyFile(sourcePath, destFilePath);
             } else {
                 String fullPath = targetDirectoryPath + destPath;
                 File dir = new File(fullPath);

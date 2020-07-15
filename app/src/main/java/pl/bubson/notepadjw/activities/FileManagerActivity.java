@@ -1124,7 +1124,7 @@ public class FileManagerActivity extends AppCompatActivity {
                 String pathFrom = fromDir.getAbsolutePath();
                 String pathTo = mainDirectory.getAbsolutePath();
                 FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
-                fc.copyWithoutOverwrite(pathFrom, pathTo);
+                fc.copy(pathFrom, pathTo);
                 Snackbar.make(recyclerView, R.string.pasted_from_clipboard, Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             } catch (Exception e) {
@@ -1159,7 +1159,7 @@ public class FileManagerActivity extends AppCompatActivity {
             String pathFrom = mainDirectory.getAbsolutePath();
             String pathTo = toDir.getAbsolutePath();
             FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
-            fc.copyWithoutOverwrite(pathFrom, pathTo);
+            fc.copy(pathFrom, pathTo, true);
             Snackbar.make(recyclerView, R.string.creation_of_new_folder_succesful, Snackbar.LENGTH_SHORT)
                     .setAction("Action", null).show();
         } catch (Exception e) {
@@ -1302,7 +1302,7 @@ public class FileManagerActivity extends AppCompatActivity {
         String pathFrom = "conventions/" + lang.name();
         String pathTo = mainDirectory.getAbsolutePath();
         FilesCopier afc = new FilesCopier(this, FilesCopier.Type.ASSETS);
-        afc.copyWithoutOverwrite(pathFrom, pathTo);
+        afc.copy(pathFrom, pathTo);
         filesDatabase.refreshData();
         fillListWithItemsFromDir(currentDirectory);
     }
