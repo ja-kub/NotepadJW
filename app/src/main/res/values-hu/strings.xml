@@ -128,7 +128,14 @@
 <p>Minden bibliaidézet a Szentírás Új Világ fordításából van.
 (Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
 <h3>Miért érdemes használni a NotepadJW alkalmazást?</h3>
-<p>Ez az alkalmazás egyedülálló módon a jegyzeteléssel egyidőben megjeleníti a jegyzetben szereplő bibliaverseket. Emiatt különösen hasznos lehet összejöveteleken, vagy kongresszusokon - nem kell alkalmazások közt ugrálnod, vagy a nyomtatott Bibliából keresgélni az idézeteket, mivel ezek a jegyzeteid mellett, ugyanabban az ablakban jelnnek meg. Mivel az alkalmazás a megtekintési módban az összes nem idézett írásszöveget mutatja, összejöveteli programok tartásánál is jó hasznát lehet venni. A megosztás funkciónak köszönhetően a szántóföldi feljegyzéseidet is elkészítheted benne, majd elküldheted egy másik hírnöknek.</p>
+<p>Ez az alkalmazás egyedülálló módon a jegyzeteléssel egyidőben megjeleníti a jegyzetben szereplő bibliaverseket.
+Emiatt különösen hasznos lehet összejöveteleken, vagy kongresszusokon - nem kell alkalmazások közt ugrálnod,
+vagy a nyomtatott Bibliából keresgélni az idézeteket, mivel ezek a jegyzeteid mellett, ugyanabban az ablakban jelnnek meg.
+Mivel az alkalmazás a megtekintési módban az összes nem idézett írásszöveget mutatja,
+összejöveteli programok tartásánál is jó hasznát lehet venni.
+Ez az alkalmazás is megosztás opciót, így akkor is használhatja azt jegyzetelt
+és elküldi őket a többiek. Vannak még gombok export és import jegyzetek tartani a másolatát jegyzeteket több
+mint egy eszközt, és ahhoz, hogy biztonságos mentési őket.</p>
 <h3>Funkciók</h3>
 <p>Az alkalmazás két részből áll:
 <br><b>Jegyzetkezelő</b> és <b>Jegyzet Szerkesztő</b>.
@@ -172,4 +179,8 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
     <string name="Coffee_explaination">Ez az alkalmazás ingyenes, és hirdetések nélkül. Ha értékelni a több hónapos kemény munka, amit költött rá, akkor vesz nekem egy jelképes kávé ☕</string>
     <string name="Yes">Igen, biztos 🙂</string>
     <string name="No">Nem, nem akarom 🙁</string>
+    <string name="Recommend_to_a_friend">Ajánlja egy barátjának</string>
+    <string name="Share_app">"Szia! Szeretnék ajánlani egy nagyon jó app, ami hasznos, hogy tudomásul veszi során Kongresszusát és Összejövetelek, mert megjeleníti bibliaversekkel után azonnal beírja a referencia. Nézd meg magad: "</string>
+    <string name="Recommend_alternative">Ez rendben van, ne aggódj. Talán szeretne ajánlani ezt az alkalmazást a barátja helyett?</string>
+    <string name="Recommend_explanation">Ajánlaná ezt az alkalmazást egy barát?</string>
 </resources>

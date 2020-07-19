@@ -141,8 +141,9 @@ Versos em tempo real durante a edição de uma nota. Por isso, é útil para tom
 Reuniões e conferências - não precisa mais mudar de aplicações ou procurar papel Bíblia
 Para ver o texto em verso, mostrado na mesma janela do editor. Uma vez que esta aplicação é capaz de
 Mostrar todos os versos sob links no modo de visualização, ele também poderia ser usado para discursos no pódio e outros
-Tarefas durante as reuniões. Esta aplicação também tem a opção de compartilhar, por isso também pode ser usado para fazer anotações
-Durante o ministério e enviá-los para outros pregadores.
+Tarefas durante as reuniões. Este aplicativo também tem opção de partilha, para que você também pode usá-lo para fazer anotações
+e enviá-los para os outros. Também há botões para exportação e importação de notas para manter a sua cópia de notas em mais
+de um dispositivo e de ter backup seguro deles.
 <h3>Skills</h3>
 Esta aplicação consiste em duas atividades:
 <br>Nota Gestor e Editor do Bloco de notas</b>.
@@ -184,4 +185,8 @@ Jakub Tomala (codificação, modelos).
    <string name="Coffee_explaination">Esta aplicação é gratuita e sem anúncios. Se você apreciar os meses de trabalho duro que eu gasto com ela, você pode me comprar um café simbólica ☕</string>
    <string name="Yes">Sim, com certeza 🙂</string>
    <string name="No">Não, eu não quero 🙁</string>
+    <string name="Recommend_to_a_friend">Recomendar a um amigo</string>
+    <string name="Share_app">"Oi! Gostaria de recomendar-lhe um aplicativo muito bom, o que é útil para tomar notas durante assembléias e reuniões, porque ele exibe versículos da Bíblia imediatamente depois de digitar sua referência. Verificá-lo por si mesmo: "</string>
+    <string name="Recommend_alternative">Está tudo bem, não se preocupe. Talvez você gostaria de recomendar este aplicativo para seu amigo em vez disso?</string>
+   <string name="Recommend_explanation">Você recomendaria este aplicativo a um amigo?</string>
 </resources>

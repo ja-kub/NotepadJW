@@ -134,8 +134,9 @@
         Treffen und Kongresse - Sie brauchen nicht mehr, um Anwendungen zu wechseln oder Bibel zu durchsuchen
         Um den Verstext zu sehen, wird er im selben Fenster wie Editor angezeigt. Da diese Anwendung in der Lage ist
         Zeige alle Verse unter Links im View-Modus, es könnte auch für Reden auf dem Podium und anderen verwendet werden
-        Aufgaben während der Sitzungen. Diese App hat auch Sharing-Option, so können Sie es auch für Notizen machen
-        Während des Ministeriums und schicken sie an andere Prediger.</p>
+        Aufgaben während der Sitzungen. Diese App hat auch Option teilen, so dass Sie es auch für die Herstellung von Notizen verwenden können
+und sie an andere Personen senden. Darüber hinaus gibt es Tasten für den Export und Import von Notizen Ihre Kopie von Notizen auf mehr zu halten
+als ein Gerät und sichere Backup von ihnen zu haben.</p>
     <h3>Fähigkeiten</h3>
     <p>Diese Anwendung besteht aus zwei Aktivitäten:
         <br><b>Notes Manager</b> und <b>Notes Editor</b> .
@@ -186,4 +187,8 @@ Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), 
     <string name="Coffee_explaination">Diese Anwendung ist kostenlos und ohne Werbung. Wenn Sie die Monate harter Arbeit zu schätzen wissen, dass ich dafür ausgegeben, können Sie mir einen symbolischen Kaffee kaufen ☕</string>
     <string name="Yes">Ja, sicher 🙂</string>
     <string name="No">Nein, ich will nicht 🙁</string>
+    <string name="Recommend_to_a_friend">Einem Freund empfehlen</string>
+    <string name="Share_app">"Hallo! Ich möchte Ihnen eine sehr gute App empfehlen, was nützlich ist, sich Notizen während Kongress und Zusammenkünfte zu nehmen, weil es Bibel zeigt Verse unmittelbar nach ihrer Referenz eingeben. Prüfen Sie es selbst: "</string>
+    <string name="Recommend_alternative">Es ist okay, mach dir keine Sorgen. Vielleicht möchten Sie diese Anwendung Ihrem Freund empfehlen?</string>
+    <string name="Recommend_explanation">Möchten Sie diese App zu einem Freund empfehlen?</string>
 </resources>

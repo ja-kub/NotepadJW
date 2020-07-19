@@ -134,8 +134,9 @@ verše v reálném čase při psaní poznámek. Takže je užitečná pro vytvá
 a sjezdů - už nebudeš potřebovat přepínat mezi aplikacemi nebo hledat v Bibli.
 Text verše je zobrazen ve stejném okně jako editor psaní poznámek. Tato aplikace je schopna
 zobrazit všechny verše v režimu zobrazení. To může být užitečné také při proslovech na pódiu a dalších
-úkolech na shromáždění. Tato aplikace má možnost sdílení, takže ji můžeš použít také pro vytváření poznámek
-během kazatelské služby a poslat je ostatním zvěstovatelům.</p>
+úkolech na shromáždění. Tato aplikace má také možnost sdílení, takže můžete také použít pro psaní poznámek
+a poslat je ostatním. K dispozici jsou také tlačítka pro export a import poznámek, aby se vaše kopie bankovek na více
+než jednoho zařízení a mít bezpečnou zálohu z nich.</p>
 <h3>Vlastnosti</h3>
 <p>Tato aplikace se skládá ze dvou částí:
 <br><b>Správce poznámek</b> a <b>Poznámkového editoru</b>.
@@ -185,4 +186,8 @@ To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohová
     <string name="Coffee_explaination">Tato aplikace je zdarma a bez reklam. Máte-li ocenit měsících tvrdé práce, které jsem strávil na to, můžete mi koupit symbolický kávu ☕</string>
     <string name="Yes">Ano, jistě 🙂</string>
     <string name="No">Ne, nechci 🙁</string>
+    <string name="Recommend_to_a_friend">Doporučit známému</string>
+    <string name="Share_app">"Ahoj! Chtěl bych vám doporučit velmi dobrou aplikaci, což je užitečné, aby si poznámky během shromáždění a setkání, protože zobrazuje biblické verše okamžitě po zadání jejich reference. Ověřte si to sami: "</string>
+    <string name="Recommend_alternative">To je v pořádku, neboj se. Možná byste chtěli doporučit tuto aplikaci do svého přítele místo?</string>
+    <string name="Recommend_explanation">Doporučili byste tuto aplikaci svým známým?</string>
 </resources>

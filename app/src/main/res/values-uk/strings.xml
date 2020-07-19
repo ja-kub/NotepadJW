@@ -135,7 +135,8 @@ meetings and congresses - you don\'t need anymore to switch applications or sear
 to see the verse text, it is displayed in the same window as editor. As this application is able to
 show all verses under links in view mode, it could be also used for speeches at the podium and other
 tasks during meetings. This app also has sharing option, so you can also use it for making notes
-during ministry and send them to other preachers.</p>
+and send them to others. There are also buttons for Export and Import of notes to keep your copy of notes on more
+than one device and to have safe backup of them.</p>
 <h3>Abilities</h3>
 <p>This application consists of two activities:
 <br><b>Notes Manager</b> and <b>Notepad Editor</b>.
@@ -186,4 +187,8 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
     <string name="Coffee_explaination">Ця програма є безкоштовним і без реклами. Якщо Ви цінуєте місяці напруженої роботи, яку я витратив на нього, ви можете купити мені символічний кави ☕</string>
     <string name="Yes">Так, звичайно 🙂</string>
     <string name="No">Ні, я не хочу 🙁</string>
+    <string name="Recommend_to_a_friend">Рекомендувати другу</string>
+    <string name="Share_app">"Привіт! Я хотів би рекомендувати вам дуже хороший додаток, яке корисне робити нотатки під час зборів і нарад, оскільки він відображає вірші Біблії відразу після введення їх посилання. Перевірте самі: "</string>
+    <string name="Recommend_alternative">Це нормально, не хвилюйтеся. Може бути, ви хотіли б рекомендувати цей додаток до одного замість цього?</string>
+    <string name="Recommend_explanation">Ви б рекомендувати цей додаток до одного?</string>
 </resources>

@@ -67,20 +67,19 @@
     <string name="wrong_verse">- nieprawidłowy werset</string>
     <string name="wrong_verse_order">- nieprawidłowa kolejność wersetów</string>
     <string name="yes">Tak</string>
-    <string name="main_dir_is_null">Załącz NotepadJW z twoich aplikacji, następnie wróć tutaj, aby móc wykonać tę operację.</string>
+    <string name="main_dir_is_null">Załącz NotepadJT z twoich aplikacji, następnie wróć tutaj, aby móc wykonać tę operację.</string>
     <string name="help_text_html">
     <![CDATA[
 <h3>Informacje</h3>
 <p>Tekst wszystkich wersetów pochodzi z Pisma Świętego w Przekładzie Nowego Świata
 (Prawa autorskie: Towarzystwo Strażnica)</p>
 <h3>Do czego można użyć notatnika Notepad JW?</h3>
-<p><b>- Do notowania na zebraniach lub zgromadzeniach.</b> Nie trzeba wówczas przełączać się na inne aplikacje lub otwierać
+<p><b>- Do notowania na zebraniach lub zgromadzeniach.</b> Nie trzeba wówczas przełączać się na JW Library lub otwierać
 papierowej Biblii, aby śledzić treść odczytywanego z mównicy wersetu, ponieważ jest on od razu
 wyświetlany u góry w trakcie pisania notatek.
 <br><b>- Do przedstawiania przemówień i innych punktów na zebraniu.</b> Po przełączeniu na tryb podglądu, każdy wpisany werset
 staje się odnośnikiem, który można kliknąć, aby wyświetlić jego treść.
-<br><b>- Do sporządzania notatek podczas służby.</b> Dzięki możliwości wysyłania notatek
-z poziomu aplikacji, można je od razu wysyłać innym braciom.</p>
+<br><b>- Do prowadzenia dowolnych notatek.</b> Można je łatwo przesyłać innym, a także ręcznie eksportować i importować oraz przenosić między urządzeniami, aby nigdy ich nie stracić.</p>
 <h3>Jak używać tej aplikacji?</h3>
 <p>Aby poznać większość jej funkcji, zachęcam do obejrzenia prezentacji: https://www.youtube.com/watch?v=NDm3OqG__ag
 <h3>Jak wprowadzać odnośniki do wersetów?</h3>
@@ -103,8 +102,10 @@ Aby sprawdzić czy kopia zapasowa została wykonana otwórz Dysk Google -> Menu 
 -> Dane aplikacji -> znajdź Notepad JW. Jeżeli nie ma takiej pozycji, a powyższe warunki były spełnione, możesz na własną odpowiedzialność
 usunąć i dodać ponownie konto Google (Uwaga! Wyczyści to bieżące kopie zapasowe zarówno poprawne i niepoprawne):
 Ustawienia -> Konta -> Google -> Usuń konto, następnie Dodaj konto -> Google.
-<br><br><b>Jeżeli twoje urządzenie ma system starszy niż Android 6.0:</b>
-Kopia zapasowa nie jest dokonywana automatycznie. Notatki są zapisywane w ogólnodostępnym folderze: Documents/NotepadJW.
+<br><br><b>Ręczna kopia zapasowa</b>
+Oprócz powyższego, warto od czasu do czasu ręcznie robić kopię zapasową notatek.
+W tym celu należy wybrać z górnego menu po prawej stronie przycisk Eksport Notatek.
+Wówczas notatki zostaną zapisane w folderze: Documents/NotepadJW na twoim urządzeniu.
 Masz do nich dostęp po podłączeniu swojego urządzenia do komputera. Można je wówczas skopiować na komputer celem
 dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki itp.
 <h3>Autor aplikacji</h3>
@@ -191,7 +192,11 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="export_notes_question">Chcesz wyeksportować wszystkie notatki do folderu \\Documents\\NotepadJW?</string>
     <string name="Buy_me_a_coffee">Postaw mi kawę</string>
     <string name="Coffee">Kawa?</string>
-    <string name="Coffee_explaination">Ta aplikacja jest bezpłatna i bez reklam. Jeśli doceniasz miesiące ciężkiej pracy, które na nią poświęciłem, możesz postawić mi symboliczną kawę ☕</string>
+    <string name="Coffee_explaination">Ta aplikacja jest bezpłatna i bez reklam. Jeśli chciałbyś docenić miesiące pracy, które na nią poświęciłem, możesz postawić mi symboliczną kawę ☕</string>
     <string name="Yes">Tak, chętnie 🙂</string>
-    <string name="No">Nie, nie chcę 🙁</string>
+    <string name="No">Nie, nie chcę</string>
+    <string name="Recommend_to_a_friend">Poleć znajomemu</string>
+    <string name="Share_app">"Cześć! Chciałbym polecić Ci świetną aplikację przydatną do robienia notatek podczas zgromadzeń i zebrań, ponieważ wyświetla wersety natychmiast po wpisaniu ich odnośników. Sprawdź sam: "</string>
+    <string name="Recommend_alternative">To nic, nie martw się. Może za to chciałbyś polecić tę aplikację swojemu znajomemu?</string>
+    <string name="Recommend_explanation">"Czy zechciałbyś polecić tę aplikację znajomemu? "</string>
 </resources>

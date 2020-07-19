@@ -128,24 +128,27 @@
 <h3>Informație</h3>
 <p>Textul tuturor versetelor este din Traducerea Lumii Noi din Sfintele Scripturi
 (Copyright: (Watch Tower Biblia și Tract Society din Pennsylvania)).</p>
-<h3> De ce să folosiți NotepadJW? </ h3>
-<p> Această aplicație a fost creată, deoarece nu a fost găsită nicio altă aplicație, care ar putea fi afișată
+<h3>De ce să folosiți NotepadJW?</h3>
+<p>
+Această aplicație a fost creată, deoarece nu a fost găsită nicio altă aplicație, care ar putea fi afișată
 versuri în timp real în timp ce editați unele note. Deci, este util pentru a face note în timpul
 întâlniri și congrese - nu mai aveți nevoie să schimbați aplicațiile sau să căutați Biblia pe hârtie
 pentru a vedea textul versurilor, acesta este afișat în aceeași fereastră ca editorul. Deoarece această aplicație este capabilă
 arată toate versurile sub link-uri în modul de vizualizare, ar putea fi folosit și pentru discursurile de pe podium și altele
-sarcinilor în timpul reuniunilor. Această aplicație are, de asemenea, opțiunea de partajare, astfel încât să o puteți folosi și pentru a face note
-în timpul slujirii și trimiteți-le altor predicatori. </ p>
-<H3> Abilități </ h3>
+sarcinilor în timpul reuniunilor. Această aplicație, de asemenea, are opțiunea de partajare, astfel încât să puteți utiliza, de asemenea, pentru a face notițe
+și le trimite altor persoane. Există, de asemenea, butoane pentru export și import de note pentru a păstra copia de note pe mai
+mult de un dispozitiv și să aibă de rezervă în siguranță a acestora.
+</p>
+<H3> Abilități </h3>
 <p> Această cerere constă în două activități:
-<br> <b> Managerul notelor </ b> și <b> Editorul Notepad </ b>.
-<br> În <b> Manager de note </ b> puteți crea note noi, le puteți deschide și creați dosare noi.
+<br> <b> Managerul notelor </b> și <b> Editorul Notepad </b>.
+<br> În <b> Manager de note </b> puteți crea note noi, le puteți deschide și creați dosare noi.
 <br> Puteți selecta elementele prin clic cu buton lung și apoi: redenumiți, ștergeți sau trimiteți (opțiunile de tăiere, copiere și lipire vor fi adăugate în curând).
-<br> În <b> Editorul Notepad </ b> puteți comuta între <i> Modul de editare </ i> și <i> Modul de vizualizare </ i>. În primul,
+<br> În <b> Editorul Notepad </b> puteți comuta între <i> Modul de editare </i> și <i> Modul de vizualizare </i>. În primul,
 ultimul verset introdus va fi afișat, iar în cel de-al doilea poți să dai clic pe link-urile create de versuri
 pentru a vedea unul selectat.
-<h3> De rezervă automată </ h3>
-<b> Dacă dispozitivul dvs. are versiunea Android 6.0 sau o versiune ulterioară: </ b> Creați copii de rezervă pentru note și setări
+<h3> De rezervă automată </h3>
+<b> Dacă dispozitivul dvs. are versiunea Android 6.0 sau o versiune ulterioară: </b> Creați copii de rezervă pentru note și setări
 se efectuează atunci când:
 <br> - Ați activat opțiunea de backup pe dispozitiv în Setări -> Copiere de rezervă
 <br> - A fost min. 24 de ore de la ultima copie de rezervă
@@ -188,4 +191,8 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
     <string name="Coffee_explaination">Această aplicație este gratuită și fără anunțuri. Dacă apreciați luni de munca grea pe care am petrecut pe el, poți să-mi cumpăr o cafea simbolică ☕</string>
     <string name="Yes">Da, sigur 🙂</string>
     <string name="No">Nu, nu vreau să 🙁</string>
+    <string name="Recommend_to_a_friend">Spune-i unui prieten</string>
+    <string name="Share_app">"Bună! Aș dori să vă recomand o aplicație foarte bună, ceea ce este util pentru a lua notițe în timpul congresului și întâlnirilor, deoarece afișează versete din Biblie, imediat după introducerea lor de referință. Verificați-l de unul singur: "</string>
+    <string name="Recommend_alternative">E în regulă, nu-ți face griji. Poate v-ar dori să recomande această aplicație pentru prietenul tău în schimb?</string>
+    <string name="Recommend_explanation">Ați recomanda această aplicație unui prieten?</string>
 </resources>

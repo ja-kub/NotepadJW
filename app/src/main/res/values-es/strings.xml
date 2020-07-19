@@ -141,8 +141,9 @@
     Reuniones y congresos - ya no necesitas cambiar aplicaciones o buscar en papel Biblia
     Para ver el texto en verso, se muestra en la misma ventana que el editor. Como esta aplicación es capaz de
     Mostrar todos los versos bajo enlaces en modo de vista, también podría ser utilizado para discursos en el podio y otros
-    Tareas durante las reuniones. Esta aplicación también tiene opción de compartir, por lo que también se puede utilizar para hacer notas
-    Durante el ministerio y enviarlos a otros predicadores.</p>
+    Tareas durante las reuniones. Esta aplicación también ha de compartir opción, por lo que también se puede utilizar para tomar notas
+y enviarlos a otros. También hay botones para exportación e importación de notas para mantener su copia de las notas de más
+de un dispositivo y tener copia de seguridad segura de ellos.</p>
     <h3>Habilidades</h3>
     <p>Esta aplicación consta de dos actividades:
     <br><b>Administrador de notas</b> y <b>Editor de bloc de notas</b>.
@@ -184,4 +185,8 @@ Significa que puede copiarlos a la PC (como una copia de seguridad manual), camb
     <string name="Coffee_explaination">Esta aplicación es gratuita y sin anuncios. Si usted aprecia los meses de trabajo duro que pasé en ella, me puedes comprar un café simbólica ☕</string>
     <string name="Yes">Sí, seguro 🙂</string>
     <string name="No">No, no quiero 🙁</string>
+    <string name="Recommend_to_a_friend">Recomendaría a un amigo</string>
+    <string name="Share_app">"¡Hola! Me gustaría recomendar una muy buena aplicación, que es útil para tomar notas durante las asambleas y reuniones, ya que muestra versículos inmediatamente después de escribir su referencia. Comprobarlo usted mismo: "</string>
+    <string name="Recommend_alternative">Está bien, no se preocupe. Tal vez le gustaría recomendar esta aplicación a su amigo en su lugar?</string>
+    <string name="Recommend_explanation">¿Recomendaría esta aplicación a un amigo?</string>
 </resources>

@@ -135,7 +135,8 @@ réunions et congrès - vous n\'avez plus besoin de changer d\'application ou de
 pour voir le texte du verset, il est affiché dans la même fenêtre que l\'éditeur. Comme cette application est capable de
 montrer tous les versets sous les liens en mode vue, il pourrait également être utilisé pour les discours sur le podium et autres
 tâches pendant les réunions. Cette application a également l\'option de partage, de sorte que vous pouvez également l\'utiliser pour prendre des notes
-pendant le ministère et les envoyer à d\'autres prédicateurs.</p>
+et les envoyer à d\'autres. Il y a aussi des boutons pour l\'exportation et l\'importation des notes pour garder votre copie des notes sur plus
+d\'un appareil et d\'avoir la sauvegarde en toute sécurité d\'entre eux.</p>
 <h3>Capacités</h3>
 <p>Cette application consiste en deux activités:
 <br><b>Gestionnaire de notes</b>et<b>Éditeur de bloc-notes</b>.
@@ -186,4 +187,8 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
     <string name="Coffee_explaination">Cette application est gratuite et sans publicité. Si vous appréciez les mois de travail acharné que j\'ai passé là-dessus, vous pouvez me acheter un café symbolique ☕</string>
     <string name="Yes">Oui, bien sûr 🙂</string>
     <string name="No">Non, je ne veux pas 🙁</string>
+    <string name="Recommend_to_a_friend">Recommander à un ami</string>
+    <string name="Share_app">"Salut! Je voudrais vous recommander une très bonne application, ce qui est utile pour prendre des notes lors des assemblées et des réunions, car il affiche des versets de la Bible immédiatement après avoir tapé leur référence. Vérifiez par vous-même: "</string>
+    <string name="Recommend_alternative">Tout va bien, ne vous inquiétez pas. Peut-être que vous souhaitez recommander cette application à votre ami à la place?</string>
+    <string name="Recommend_explanation">Recommanderiez-vous cette application à un ami?</string>
 </resources>

@@ -176,6 +176,7 @@ public class FileManagerActivity extends AppCompatActivity {
         appOpenings++;
         saveAppOpenings();
         if (appOpenings % 20 == 5) buyMeACoffeeReminder();
+        if (appOpenings % 20 == 10) recommendToFriendReminder();
     }
 
     private void prepareSearchView() {
@@ -345,6 +346,9 @@ public class FileManagerActivity extends AppCompatActivity {
                 return true;
             case R.id.action_coffee:
                 startCoffeeIntent();
+                return true;
+            case R.id.action_recommend:
+                startRecommendIntent();
                 return true;
             case R.id.action_settings:
                 Intent intentSettings = new Intent(this, SettingsActivity.class);
@@ -1307,7 +1311,6 @@ public class FileManagerActivity extends AppCompatActivity {
         fillListWithItemsFromDir(currentDirectory);
     }
 
-
     public void buyMeACoffeeReminder() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.Coffee);
@@ -1317,6 +1320,49 @@ public class FileManagerActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button
                 startCoffeeIntent();
+            }
+        });
+
+        builder.setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+                recommendToFriendAlternative();
+            }
+        });
+
+        builder.show();
+    }
+
+    public void recommendToFriendReminder() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.Recommend_to_a_friend);
+        builder.setMessage(getString(R.string.Recommend_explanation));
+
+        builder.setPositiveButton(R.string.Yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                startRecommendIntent();
+            }
+        });
+
+        builder.setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+
+        builder.show();
+    }
+
+    public void recommendToFriendAlternative() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.Recommend_to_a_friend);
+        builder.setMessage(getString(R.string.Recommend_alternative));
+
+        builder.setPositiveButton(R.string.Yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                startRecommendIntent();
             }
         });
 
@@ -1335,6 +1381,18 @@ public class FileManagerActivity extends AppCompatActivity {
             Intent coffeeIntent = new Intent(Intent.ACTION_VIEW);
             coffeeIntent.setData(Uri.parse(url));
             startActivity(coffeeIntent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void startRecommendIntent() {
+        try {
+            Intent shareIntent = new Intent();
+            shareIntent.setAction(Intent.ACTION_SEND);
+            shareIntent.putExtra(Intent.EXTRA_TEXT, String.format("%s https://play.google.com/store/apps/details?id=pl.bubson.notepadjw2", getString(R.string.Share_app)));
+            shareIntent.setType("text/plain");
+            startActivity(shareIntent);
         } catch (Exception e) {
             e.printStackTrace();
         }

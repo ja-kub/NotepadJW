@@ -134,8 +134,9 @@ versetti in tempo reale mentre si modifica una nota. Quindi è utile per prender
 adunanze e congressi - non è più necessario cambiare le applicazioni o cercare la Bibbia di carta
 per vedere il testo dei versetti, viene visualizzato nella stessa finestra dell\'editor. Dato che questa applicazione è in grado di
 mostrare tutti i versetti sotto i link in modalità di visualizzazione, potrebbe essere utilizzata anche per i discorsi dal podio e altre
-partiti durante le adunanze. Questa app ha anche l\'opzione di condivisione, quindi puoi usarla anche per prendere appunti
-durante il ministero e inviarli ad altri proclamatori.</p>
+partiti durante le adunanze. Questa applicazione ha anche la condivisione di opzione, in modo da poter essere utilizzato anche per prendere appunti
+e inviarli ad altri. Ci sono anche i pulsanti per l\'esportazione e l\'importazione di note per mantenere la vostra copia di note su più
+di un dispositivo e di avere backup sicuro di loro.</p>
 <h3>Funzionalità</h3>
 <p>Questa applicazione consiste di due attività:
 <br><b>Notes Manager</b>e <b>Editor del blocco note</b>.
@@ -186,4 +187,8 @@ Significa che puoi copiarli su PC, rinominare, eliminare, spostare, aggiungere n
     <string name="Coffee_explaination">Questa applicazione è gratuita e senza pubblicità. Se apprezzate i mesi di duro lavoro che ho speso su di esso, puoi comprare un caffè simbolica ☕</string>
     <string name="Yes">Sì, certo 🙂</string>
     <string name="No">No, io non voglio 🙁</string>
+    <string name="Recommend_to_a_friend">Segnalare ad un amico</string>
+    <string name="Share_app">"Ciao! Vorrei raccomandare un ottimo app, che è utile per prendere appunti durante le congresso e le riunioni, perché mostra versi della Bibbia subito dopo aver digitato il loro riferimento. Controllare da soli: "</string>
+    <string name="Recommend_alternative">Va tutto bene, non ti preoccupare. Forse si desidera raccomandare questa applicazione per il vostro amico, invece?</string>
+    <string name="Recommend_explanation">Consiglieresti questa applicazione ad un amico?</string>
 </resources>
