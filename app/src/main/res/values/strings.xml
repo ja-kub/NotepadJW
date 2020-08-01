@@ -216,10 +216,10 @@ You can then copy them to PC, rename, delete, move, add new from your computer e
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• Added Bible in Swedish language.\n\n
+• New translation (2020) of the Bible in Romanian.\n\n
     </string>
     <string name="whats_new_message_last">
-• New translation (2020) of the Bible in Romanian.\n\n
+• Fixed location of buttons that appear when you select text.\n\n
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>

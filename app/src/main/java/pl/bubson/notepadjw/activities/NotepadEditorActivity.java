@@ -102,6 +102,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     private Context activityContext = this;
     private RichSelectableEditText noteEditText;
     private MenuItem viewModeButton, editModeButton, saveButton, boldTextButton, italicTextButton, underlineTextButton, bulletTextButton, undoButton, redoButton, formatClearButton, printButton;
+    private MenuItem textRedButton, textBlueButton, textGreenButton, markerYellowButton, markerBlueButton, markerGreenButton;
     private ActionMenuView bottomBar;
     private TextView versePreviewTextInEditMode, versePreviewTextInViewMode;
     private final TextWatcher mTextEditorWatcher = new TextWatcher() {
@@ -292,7 +293,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
                         italicTextButton.setVisible(true);
                         underlineTextButton.setVisible(true);
                         formatClearButton.setVisible(true);
-                        bottomBar.setVisibility(View.VISIBLE);
+                        setColorButtonsVisible(true);
                         bulletTextButton.setVisible(false);
                         undoButton.setVisible(false);
                         redoButton.setVisible(false);
@@ -302,7 +303,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
                         italicTextButton.setVisible(false);
                         underlineTextButton.setVisible(false);
                         formatClearButton.setVisible(false);
-                        bottomBar.setVisibility(View.GONE);
+                        setColorButtonsVisible(false);
                         bulletTextButton.setVisible(true);
                         undoButton.setVisible(true);
                         redoButton.setVisible(true);
@@ -313,6 +314,36 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void setColorButtonsVisible(boolean visible) {
+        if (isThereAPlaceOnTopForColorsButtons()) {
+            bottomBar.setVisibility(View.GONE);
+            if (visible) {
+                textRedButton.setVisible(true);
+                textBlueButton.setVisible(true);
+                textGreenButton.setVisible(true);
+                markerYellowButton.setVisible(true);
+                markerBlueButton.setVisible(true);
+                markerGreenButton.setVisible(true);
+            } else {
+                textRedButton.setVisible(false);
+                textBlueButton.setVisible(false);
+                textGreenButton.setVisible(false);
+                markerYellowButton.setVisible(false);
+                markerBlueButton.setVisible(false);
+                markerGreenButton.setVisible(false);
+            }
+        } else {
+            textRedButton.setVisible(false);
+            textBlueButton.setVisible(false);
+            textGreenButton.setVisible(false);
+            markerYellowButton.setVisible(false);
+            markerBlueButton.setVisible(false);
+            markerGreenButton.setVisible(false);
+            if (visible) bottomBar.setVisibility(View.VISIBLE);
+            else bottomBar.setVisibility(View.GONE);
+        }
     }
 
     private void forceVisibilityOfThreeDotsInMenuBar() {
@@ -421,6 +452,10 @@ public class NotepadEditorActivity extends AppCompatActivity {
         Log.v(TAG, "Set verseLanguage: " + versesLanguage);
     }
 
+    private boolean isThereAPlaceOnTopForColorsButtons() {
+        return getResources().getBoolean(R.bool.isThereAPlaceOnTopForColorsButtons);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_notepad, menu);
@@ -455,6 +490,12 @@ public class NotepadEditorActivity extends AppCompatActivity {
         undoButton = menu.findItem(R.id.action_undo);
         redoButton = menu.findItem(R.id.action_redo);
         printButton = menu.findItem(R.id.action_print);
+        textRedButton = menu.findItem(R.id.action_text_foreground_color_red);
+        textBlueButton = menu.findItem(R.id.action_text_foreground_color_blue);
+        textGreenButton = menu.findItem(R.id.action_text_foreground_color_green);
+        markerYellowButton = menu.findItem(R.id.action_text_background_color_yellow);
+        markerBlueButton = menu.findItem(R.id.action_text_background_color_blue);
+        markerGreenButton = menu.findItem(R.id.action_text_background_color_green);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -467,7 +508,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
             italicTextButton.setVisible(false);
             underlineTextButton.setVisible(false);
             formatClearButton.setVisible(false);
-            bottomBar.setVisibility(View.GONE);
+            setColorButtonsVisible(false);
             bulletTextButton.setVisible(true);
             undoButton.setVisible(true);
             redoButton.setVisible(true);
@@ -478,7 +519,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
             italicTextButton.setVisible(false);
             underlineTextButton.setVisible(false);
             formatClearButton.setVisible(false);
-            bottomBar.setVisibility(View.GONE);
+            setColorButtonsVisible(false);
             bulletTextButton.setVisible(false);
             undoButton.setVisible(false);
             redoButton.setVisible(false);

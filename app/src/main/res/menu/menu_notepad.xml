@@ -4,6 +4,43 @@
     tools:context=".activities.NotepadEditorActivity">
 
     <item
+        android:id="@+id/action_text_foreground_color_red"
+        android:icon="@drawable/ic_format_color_text_red"
+        android:title="@string/button_text_color"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_text_foreground_color_blue"
+        android:icon="@drawable/ic_format_color_text_blue"
+        android:title="@string/button_text_color"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_text_foreground_color_green"
+        android:icon="@drawable/ic_format_color_text_green"
+        android:title="@string/button_text_color"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_text_background_color_yellow"
+        android:icon="@drawable/ic_format_color_marker_yellow"
+        android:title="@string/button_marker_color"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_text_background_color_blue"
+        android:icon="@drawable/ic_format_color_marker_blue"
+        android:title="@string/button_marker_color"
+        app:showAsAction="always">
+    </item>
+
+    <item
+        android:id="@+id/action_text_background_color_green"
+        android:icon="@drawable/ic_format_color_marker_green"
+        android:title="@string/button_marker_color"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/action_text_bold"
         android:icon="@drawable/ic_format_bold_white_48dp"
         android:title="@string/button_bold"

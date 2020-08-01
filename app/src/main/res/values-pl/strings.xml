@@ -88,28 +88,18 @@ są również kropki. Rozdziały od wersetów można oddzielać dwukropkiem lub 
 wiele wersetów z jednego rozdziału. Przykłady, które zostaną poprawnie obsłużone: Mat. 24:14,15; wyjscia 4,12;
 Powt pr 2:2, 3, 6-8, 11.
 <br>Przykład, które nie zostanie poprawnie obsłużony: Fil. 1:2 (niejednoznaczność: chodzi o Filipian czy Filemona?).
-<h3>Kopia zapasowa i lokalizacja notatek</h3>
-<b>Jeżeli twoje urządzenie ma system Android 6.0 lub nowszy:</b> kopia zapasowa notatek i ustawień
-jest dokonywana, gdy:
-<br>- Masz włączoną opcję tworzenia kopii zapasowej na urządzeniu w Ustawienia -> Kopia zapasowa
-<br>- Minęły min. 24 godziny od ostatniej kopii zapasowej
-<br>- Urządzenie jest bezczynne i ładuje się
-<br>- Urządzenie jest połączone z siecią Wi-Fi
-<br>Przy zmianie urządzenia lub reinstalacji aplikacji Notepad JW, notatki i ustawienia zostaną automatycznie przywrócone.
-Notatki nie są dostępne dla innych aplikacji ani po podłączeniu urządzenia do komputera (jest to wymóg do działania tej funkcjonalności).
-Oczywiście nadal można korzystać z opcji wysyłania tych plików mailem, komunikatorami bądź przesyłania na swój Dysk Google.
-Aby sprawdzić czy kopia zapasowa została wykonana otwórz Dysk Google -> Menu -> Kopie zapasowe -> ostatnia kopia
--> Dane aplikacji -> znajdź Notepad JW. Jeżeli nie ma takiej pozycji, a powyższe warunki były spełnione, możesz na własną odpowiedzialność
-usunąć i dodać ponownie konto Google (Uwaga! Wyczyści to bieżące kopie zapasowe zarówno poprawne i niepoprawne):
-Ustawienia -> Konta -> Google -> Usuń konto, następnie Dodaj konto -> Google.
+<h3>Automatyczna kopia zapasowa</h3>
+Kopia zapasowa notatek i ustawień jest powinna być tworzona automatycznie, ale niestety,
+opiera się to na zewnętrznej bibliotece Google, która jest zawodna.
+<br>Przy zmianie urządzenia lub reinstalacji aplikacji Notepad JT, notatki i ustawienia powinny zostać automatycznie przywrócone,
+jednak nie zawsze to działa.
 <br><br><b>Ręczna kopia zapasowa</b>
-Oprócz powyższego, warto od czasu do czasu ręcznie robić kopię zapasową notatek.
-W tym celu należy wybrać z górnego menu po prawej stronie przycisk Eksport Notatek.
+Wobec powyższego, warto od czasu do czasu ręcznie robić kopię zapasową notatek.
+W tym celu należy wybrać z górnego menu po prawej stronie przycisk Eksport Notatek (jeżeli nie udzielono wcześniej
+zezwolenia na dostęp do pamięci, należy udzielić dostępu i powtórzyć eksport).
 Wówczas notatki zostaną zapisane w folderze: Documents/NotepadJW na twoim urządzeniu.
 Masz do nich dostęp po podłączeniu swojego urządzenia do komputera. Można je wówczas skopiować na komputer celem
 dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki itp.
-<h3>Autor aplikacji</h3>
-<p>Jakub Tomala.
     ]]>
     </string>
     <string name="current_dir_is_null">Folder nie istnieje</string>
@@ -180,11 +170,11 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Dodana Biblia w języku Słoweńskim.\n\n
 • Program kongresu w roku 2020.\n\n
+• Nowy przekład (2020) Biblii w języku Rumuńskim.\n\n
     </string>
     <string name="whats_new_message_last">
-• Nowy przekład (2020) Biblii w języku Rumuńskim.\n\n
+• Poprawiono rozmieszczenie przycisków pojawiających się po zaznaczeniu tekstu.\n\n
     </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>

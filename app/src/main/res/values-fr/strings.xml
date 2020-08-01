@@ -177,7 +177,9 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
    <string name="whats_new_message_previous">
 • Programme de l’assemblée 2020. \n\n
    </string>
-   <string name="whats_new_message_last">• Option: Achetez-moi un coffe</string>
+   <string name="whats_new_message_last">
+• Correction de l\'emplacement des boutons qui apparaissent lorsque vous sélectionnez du texte.
+   </string>
     <string name="import_title">Importation des notes</string>
     <string name="import_notes_question">Voulez-vous importer toutes les notes du dossier \\Documents\\NotepadJW?</string>
     <string name="export_title">Exportation des notes</string>

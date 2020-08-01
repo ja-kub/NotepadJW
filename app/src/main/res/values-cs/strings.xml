@@ -176,7 +176,9 @@ To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohová
     <string name="whats_new_message_previous">
 • Program sjezdu 2020. \n\n
     </string>
-    <string name="whats_new_message_last">• Možnost: Kup mi káva</string>
+    <string name="whats_new_message_last">
+• Fixní umístění tlačítek, které se objevují při výběru textu.
+    </string>
     <string name="import_title">Import poznámek</string>
     <string name="import_notes_question">Import poznámek z \\Documents\\NotepadJW folder?</string>
     <string name="export_title">Export poznámek</string>

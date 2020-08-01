@@ -177,7 +177,9 @@ Significa che puoi copiarli su PC, rinominare, eliminare, spostare, aggiungere n
     <string name="whats_new_message_previous">
 • Programma del congresso del 2020.\n\n
    </string>
-    <string name="whats_new_message_last">• Opzione: comprarmi un caffè</string>
+    <string name="whats_new_message_last">
+• Postazione fissa di pulsanti che appaiono quando si seleziona il testo.
+    </string>
     <string name="import_title">Importazione di note</string>
     <string name="import_notes_question">Vuoi importare tutte le note dalla cartella \\Documents\\NotepadJW?</string>
     <string name="export_title">Esportazione di note</string>

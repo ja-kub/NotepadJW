@@ -175,7 +175,9 @@ Significa que puede copiarlos a la PC (como una copia de seguridad manual), camb
     <string name="whats_new_message_previous">
 • Programa de la asamblea del 2020. \n\n
     </string>
-    <string name="whats_new_message_last">• Opción: Comprar mí un café</string>
+    <string name="whats_new_message_last">
+• Ubicación fija de botones que aparecen cuando se selecciona texto.
+    </string>
     <string name="import_title">La importación de notas</string>
     <string name="import_notes_question">¿Le gustaría importar todas las notas de la carpeta \\Documents\\NotepadJW?</string>
     <string name="export_title">Exportación de notas</string>

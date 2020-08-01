@@ -169,7 +169,9 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
     <string name="whats_new_message_previous">
 • Programme de l’assemblée 2020. \n\n
     </string>
-    <string name="whats_new_message_last">• Opció: Vásárlás nekem egy kávé</string>
+    <string name="whats_new_message_last">
+• Helyhez kötött gombok jelennek meg, amikor kiválasztja a szöveget.
+    </string>
     <string name="import_title">Importálása jegyzetek</string>
     <string name="import_notes_question">Szeretné importálni az összes jegyzeteket a mappát \\Documents\\NotepadJW ?</string>
     <string name="export_title">Exportálása jegyzetek</string>

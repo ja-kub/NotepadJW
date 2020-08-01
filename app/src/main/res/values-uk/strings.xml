@@ -177,7 +177,9 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
     <string name="whats_new_message_previous">
 • Програма конгресу 2020. \n\n
     </string>
-    <string name="whats_new_message_last">• Опція: купи мені кави</string>
+    <string name="whats_new_message_last">
+• Виправлено розташування кнопок, які з\'являються при виборі тексту.
+    </string>
     <string name="import_title">імпорт заміток</string>
     <string name="import_notes_question">Ви хочете імпортувати всі записи з папки \\Documents\\NotepadJW?</string>
     <string name="export_title">експорт заміток</string>
