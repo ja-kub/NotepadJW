@@ -163,8 +163,6 @@ Dacă nu există un astfel de element și condițiile de mai sus au fost îndepl
 <br> <br> <b> Dacă aveți Android mai vechi decât 6.0: </ b> Notele nu sunt copiate automat în siguranță. Sunt
 salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Puteți să le accesați de pe PC-ul nostru.
 Înseamnă că le poți copia pe PC, le poți redenumi, șterge, muta, adăuga altele de pe computer etc.
-<h3>Autor</h3>
-<p>Jakub Tomala (coding, layouts).
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">

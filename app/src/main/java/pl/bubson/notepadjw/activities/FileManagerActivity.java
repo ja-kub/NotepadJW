@@ -175,8 +175,8 @@ public class FileManagerActivity extends AppCompatActivity {
         loadAppOpenings();
         appOpenings++;
         saveAppOpenings();
-        if (appOpenings % 20 == 5) buyMeACoffeeReminder();
-        if (appOpenings % 20 == 10) recommendToFriendReminder();
+        if (appOpenings % 100 == 10) buyMeACoffeeReminder();
+        if (appOpenings % 100 == 20) recommendToFriendReminder();
     }
 
     private void prepareSearchView() {

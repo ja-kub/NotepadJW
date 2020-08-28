@@ -157,8 +157,6 @@ Ha ellenőrizni akarja a mentést, nyissa meg a Google Drive-ot -> Menü -> Bizt
 <br><br><b>Ha van régebbi Androidja, mint 6.0:</b> A jegyzeteket nem készítik automatikusan biztonsági mentés. Ők
 mentett eszközön a nyilvános helyen: Documents / NotepadJW. A számítógépről elérheti őket.
 Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként), átnevezheti, törölheti, áthelyezheti, újonnan hozzáadhatja a számítógépről, stb.
-<h3>Fejlesztő</h3>
-<p>Jakub Tomala (programozás, tervezés).
     ]]></string>
     <string name="permission_explanation_dialog_message">
         Nemsokára megjelenik egy ablak, ami engedélyt fog kérni a külső tároló eléréséhez. Ha ezt engedélyezed, a

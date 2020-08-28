@@ -453,6 +453,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     }
 
     private boolean isThereAPlaceOnTopForColorsButtons() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return false;
         return getResources().getBoolean(R.bool.isThereAPlaceOnTopForColorsButtons);
     }
 

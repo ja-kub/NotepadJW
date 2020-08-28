@@ -168,8 +168,6 @@ Google bajo su responsabilidad (Nota: esto limpiará las copias de seguridad act
 <br><br><b>Si tiene Android anterior a la versión 6.0:</b> las notas no se respaldan automáticamente. Ellos son
 guardado en su dispositivo en una ubicación pública: Documents / NotepadJW. Puede acceder a ellos desde nuestra PC.
 Significa que puede copiarlos a la PC (como una copia de seguridad manual), cambiar el nombre, eliminar, mover, agregar nuevos desde su computadora, etc.</p>
-    <h3>Autor</h3>
-    <p>Jakub Tomala (codificación, diseños).
     ]]>
     </string>
     <string name="whats_new_message_previous">

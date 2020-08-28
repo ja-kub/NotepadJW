@@ -161,8 +161,6 @@ Wenn es keinen solchen Artikel gibt und die oben genannten Bedingungen erfüllt 
 <br><br><b>Wenn Sie älter als Android 6.0 sind:</b> Notepad werden nicht automatisch gesichert. Sie sind
 gespeichert auf Ihrem Gerät an einem öffentlichen Ort: Dokumente / NotepadJW. Sie können von unserem PC aus darauf zugreifen.
 Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), umbenennen, löschen, verschieben, neu von Ihrem Computer hinzufügen usw. </p>
-    <h3>Autor</h3>
-    <p>Jakub Tomala (Codierung, Layouts).
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">

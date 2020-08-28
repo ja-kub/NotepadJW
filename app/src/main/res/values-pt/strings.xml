@@ -168,8 +168,6 @@ condições acima tiverem sido cumpridas, você poderá excluir e adicionar nova
 <br> <br> <b> Se você tiver Android mais antigo que 6.0: </ b> o backup não será feito automaticamente. Eles são
 salvo em seu dispositivo em local público: Documents / NotepadJW. Você pode acessá-los em nosso PC.
 Isso significa que você pode copiá-los para o PC, renomear, excluir, mover, adicionar novos a partir do seu computador, etc.
-<h3>Autor</h3>
-Jakub Tomala (codificação, modelos).
     ]]>
     </string>
     <string name="whats_new_message_previous">

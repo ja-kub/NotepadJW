@@ -161,8 +161,6 @@ If there is no such item, and the above conditions have been met, you can delete
 <br><br><b>If you have older Android than 6.0:</b> notes are not automatically backed up. They are
 saved on your device in public location: Documents/NotepadJW. You can access them from our PC.
 It means that you can copy them to PC (as a manual backup), rename, delete, move, add new from your computer etc.
-<h3>App author</h3>
-<p>Jakub Tomala.
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">

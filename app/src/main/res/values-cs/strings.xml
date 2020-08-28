@@ -161,8 +161,6 @@ Pokud taková položka neexistuje a výše uvedené podmínky byly splněny, mů
 <br><br><b>Pokud máš starší Android než 6.0:</b> poznámky nejsou automaticky zálohovány, ale jsou
 uloženy ve tvém zařízení ve složce: Documents/NotepadJW. Můžeš k nim přistupovat z tvého počítače.
 To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohování), přejmenovat, mazat, přesunout nebo přidat nové z počítače, atd.
-<h3>Autor aplikace</h3>
-<p>Jakub Tomala.
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">

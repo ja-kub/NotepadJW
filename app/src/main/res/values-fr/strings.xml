@@ -161,8 +161,6 @@ les sauvegardes actuelles, correctes et incorrectes): Paramètres -> Comptes - >
 <br><br><b>Si vous avez plus d\'Android que 6.0:</b> Les notes ne sont pas automatiquement sauvegardées. Ils sont
 enregistré sur votre appareil dans un lieu public: Documents / NotepadJW. Vous pouvez y accéder depuis notre PC.
 Cela signifie que vous pouvez les copier sur PC (en tant que sauvegarde manuelle), renommer, supprimer, déplacer, ajouter de nouvelles à partir de votre ordinateur, etc.</p>
-<h3>Auteur</h3>
-<p>Jakub Tomala (codage, mises en page).
     ]]>
    </string>
    <string name="permission_explanation_dialog_message">

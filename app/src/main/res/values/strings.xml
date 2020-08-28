@@ -202,8 +202,6 @@ If there is no such item, and the above conditions have been met, you can delete
 You are advised to also make manual backup of your notes from time to time. Do do so, tap Export Notes button in top right corner.
 Notes will be saved on your device in location: Documents/NotepadJW.
 You can then copy them to PC, rename, delete, move, add new from your computer etc.
-<h3>App author</h3>
-<p>Jakub Tomala.
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
