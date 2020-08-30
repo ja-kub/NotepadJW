@@ -453,7 +453,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
     }
 
     private boolean isThereAPlaceOnTopForColorsButtons() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return false;
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) return false; // there is an issue with Android < 6.0 - Copy, Cut etc. buttons are placed on top of the top app bar, so we cannot place color buttons there (they would be hidden)
         return getResources().getBoolean(R.bool.isThereAPlaceOnTopForColorsButtons);
     }
 
