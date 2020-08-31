@@ -165,10 +165,10 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
         Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-• Programme de l’assemblée 2020. \n\n
+• Helyhez kötött gombok jelennek meg, amikor kiválasztja a szöveget. \n\n
     </string>
     <string name="whats_new_message_last">
-• Helyhez kötött gombok jelennek meg, amikor kiválasztja a szöveget.
+• Hibajavítás.
     </string>
     <string name="import_title">Importálása jegyzetek</string>
     <string name="import_notes_question">Szeretné importálni az összes jegyzeteket a mappát \\Documents\\NotepadJW ?</string>

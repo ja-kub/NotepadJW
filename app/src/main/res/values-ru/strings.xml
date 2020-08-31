@@ -171,10 +171,10 @@
     к которым другие приложения и ваш компьютер не имеют доступа.
    </string>
     <string name="whats_new_message_previous">
-• Программа регионального конгресса 2020 года. \n\n
+• Исправлено расположение кнопок, которые появляются при выборе текста. \n\n
    </string>
     <string name="whats_new_message_last">
-• Исправлено расположение кнопок, которые появляются при выборе текста.
+• Исправлена ​​ошибка.
     </string>
     <string name="import_title">Импорт заметок</string>
     <string name="import_notes_question">Вы хотите импортировать все записи из папки \\Documents\\NotepadJW?</string>

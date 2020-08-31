@@ -901,7 +901,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
             MenuInflater inflater = mode.getMenuInflater();
             inflater.inflate(R.menu.menu_for_compatibility, menu);
             menu.findItem(R.id.action_text_bold).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-            menu.findItem(R.id.action_text_italic).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            menu.findItem(R.id.action_text_italic).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS); // it was SHOW_AS_ACTION_IF_ROOM previously
             menu.findItem(R.id.action_text_underline).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
             if (menu.findItem(android.R.id.cut) != null) {
                 menu.findItem(android.R.id.cut).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);

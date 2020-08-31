@@ -172,10 +172,10 @@ To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohová
         přístup z jiných aplikací nebo z počítače.
     </string>
     <string name="whats_new_message_previous">
-• Program sjezdu 2020. \n\n
+• Fixní umístění tlačítek, které se objevují při výběru textu. \n\n
     </string>
     <string name="whats_new_message_last">
-• Fixní umístění tlačítek, které se objevují při výběru textu.
+• Oprava chyby.
     </string>
     <string name="import_title">Import poznámek</string>
     <string name="import_notes_question">Import poznámek z \\Documents\\NotepadJW folder?</string>
