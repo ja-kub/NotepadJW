@@ -170,10 +170,10 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Poprawiono rozmieszczenie przycisków pojawiających się po zaznaczeniu tekstu.\n\n
+• Poprawki błędów.\n\n
     </string>
     <string name="whats_new_message_last">
-• Poprawki błędów.\n\n
+• Program zgromadzeń 2020-2021.\n\n
     </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>
