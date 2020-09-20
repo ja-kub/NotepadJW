@@ -3,7 +3,6 @@ package pl.bubson.notepadjw.fileManagerHelpers;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import androidx.recyclerview.widget.RecyclerView;
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.activities.FileManagerActivity;
 

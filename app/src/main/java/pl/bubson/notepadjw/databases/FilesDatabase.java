@@ -7,13 +7,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.os.Build;
-import android.support.annotation.NonNull;
 import android.text.Html;
 import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by Kuba on 2017-07-18.

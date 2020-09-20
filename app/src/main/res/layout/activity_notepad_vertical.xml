@@ -56,7 +56,7 @@
                     app:historySize="99" />
             </ScrollView>
 
-            <android.support.v7.widget.ActionMenuView
+            <androidx.appcompat.widget.ActionMenuView
                 android:id="@+id/notepad_bottom_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/bottom_toolbar_height"

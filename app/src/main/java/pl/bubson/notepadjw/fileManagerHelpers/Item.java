@@ -1,9 +1,9 @@
 package pl.bubson.notepadjw.fileManagerHelpers;
 
-import android.support.annotation.NonNull;
-
 import java.io.Serializable;
 import java.util.Date;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by Kuba on 2016-03-26.

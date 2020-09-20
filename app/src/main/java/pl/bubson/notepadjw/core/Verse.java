@@ -1,7 +1,6 @@
 package pl.bubson.notepadjw.core;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import org.jsoup.Jsoup;
@@ -12,6 +11,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import androidx.annotation.NonNull;
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.databases.BiblesDatabase;
 import pl.bubson.notepadjw.utils.Language;

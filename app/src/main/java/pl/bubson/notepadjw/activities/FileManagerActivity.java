@@ -18,16 +18,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.FileProvider;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.InputType;
 import android.util.Log;
@@ -41,6 +31,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.apache.commons.io.FileUtils;
 
@@ -62,6 +53,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.FileProvider;
+import androidx.core.view.MenuItemCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.databases.BiblesDatabase;
 import pl.bubson.notepadjw.databases.FilesDatabase;
@@ -925,7 +925,12 @@ public class FileManagerActivity extends AppCompatActivity {
                 } else if (packageName.contains("android.email") || (packageName.contains("android.apps.docs") && ri.activityInfo.name.contains("UploadMenuActivity"))) { // Native Email, Google Drive
                     intent = prepareSendFilesIntent(intent, fileUris, true);
                     intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
-                } else if (packageName.contains("mms") || packageName.contains("messaging") || packageName.contains("facebook.orca")) { // SMS, MMS and Messenger - apps which cannot send files, only text
+                }
+//                else if (packageName.contains("mms") || packageName.contains("messaging") || packageName.contains("facebook.orca")) { // SMS, MMS and Messenger - apps which cannot send files, only text
+                else if (packageName.contains("mms") || packageName.contains("facebook.orca") || (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q && packageName.contains("messaging"))) {
+                    // about above line - from Android 10 EXTRA_INITIAL_INTENTS does not work properly, only 2-5 selected apps are shown, so we need to remove some, like "messaging" :(
+                    // https://stackoverflow.com/questions/59786777/why-intent-extra-initial-intents-not-working-in-android-10 and
+                    // https://stackoverflow.com/questions/57846229/for-the-intent-chooser-is-it-possible-to-set-which-sharing-items-to-show-and-i
                     intent.setAction(Intent.ACTION_SEND);
                     intent.setType("text/plain");
                     intent.putExtra(Intent.EXTRA_TEXT, text);
@@ -933,7 +938,7 @@ public class FileManagerActivity extends AppCompatActivity {
                 }
             }
             LabeledIntent[] extraIntents = intentList.toArray(new LabeledIntent[intentList.size()]);
-            mainIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents); // add list of selected apps to chooser
+            mainIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents); // add list of selected apps to chooser (from Android 10 EXTRA_INITIAL_INTENTS does not work properly, see above)
 
             // Verify that the intent will resolve to an activity
             if (mainIntent.resolveActivity(getPackageManager()) != null) {

@@ -8,13 +8,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import net.lingala.zip4j.ZipFile;
 
 import java.io.File;
 
+import androidx.core.app.NotificationCompat;
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.activities.FileManagerActivity;
 import pl.bubson.notepadjw.databases.BiblesDatabase;

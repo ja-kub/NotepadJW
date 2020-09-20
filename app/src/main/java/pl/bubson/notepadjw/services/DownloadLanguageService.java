@@ -10,11 +10,11 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import java.io.File;
 
+import androidx.annotation.Nullable;
 import pl.bubson.notepadjw.R;
 import pl.bubson.notepadjw.utils.Language;
 
@@ -28,7 +28,8 @@ import static pl.bubson.notepadjw.core.BookNamesMapping.languageUriMap;
  */
 public class DownloadLanguageService extends Service {
 
-    private static final String APP_TEMP_FOLDER_NAME = "Notepad JW temporary files";
+    private static final String APP_TEMP_FOLDER_NAME = Environment.DIRECTORY_DOWNLOADS; // previously it was "Notepad JW temporary files", but:
+    // "For applications targeting Build.VERSION_CODES.Q or above, WRITE_EXTERNAL_STORAGE permission is not needed and the dirType must be one of the known public directories like Environment#DIRECTORY_DOWNLOADS"
     BroadcastReceiver broadcastReceiver;
     private long enqueue;
     private DownloadManager downloadManager;
