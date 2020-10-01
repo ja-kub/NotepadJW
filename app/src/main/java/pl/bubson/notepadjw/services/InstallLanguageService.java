@@ -89,17 +89,18 @@ public class InstallLanguageService extends IntentService {
     }
 
     private static File unpackFileToFolder(File downloadedFile) {
-        Log.v("InstallLanguageService", "unpackFileToFolder start");
         String targetDirectoryPath = FileManagerActivity.fileWithoutExtension(downloadedFile.getPath());
+        Log.v("InstallLanguageService", "Start unpacking File To Folder: " + targetDirectoryPath);
         File targetDirectory = new File(targetDirectoryPath);
-        targetDirectory.mkdirs();
+        boolean result = targetDirectory.mkdirs();
+        Log.v("InstallLanguageService", "mkdirs(): " + result);
         try {
             new ZipFile(downloadedFile).extractAll(targetDirectoryPath);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        Log.v("InstallLanguageService", "unpackFileToFolder end");
+        Log.v("InstallLanguageService", "End of unpacking File To Folder");
         return targetDirectory;
     }
 
