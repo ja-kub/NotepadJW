@@ -173,7 +173,8 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
 • Program zgromadzeń 2020-2021.\n\n
     </string>
     <string name="whats_new_message_last">
-• Poprawki błędów.\n\n
+• Program kongresu 2021.\n\n
+• Dodano częste zapisywanie notatek, aby uniknąć ich utraty, gdy wyczerpie się bateria itp.\n\n
     </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>

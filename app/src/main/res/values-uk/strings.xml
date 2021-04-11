@@ -176,7 +176,8 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
 • Виправлено розташування кнопок, які з\'являються при виборі тексту. \n\n
     </string>
     <string name="whats_new_message_last">
-• Конгреси 2020-2021.
+• Програма конгресу 2021 \n\n
+• Додано: часте збереження нотаток (щоб уникнути їх втрати під час роботи акумулятора тощо)
     </string>
     <string name="import_title">імпорт заміток</string>
     <string name="import_notes_question">Ви хочете імпортувати всі записи з папки \\Documents\\NotepadJW?</string>

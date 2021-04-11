@@ -97,7 +97,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
             return true;
         }
     };
-    private int cursorPosition;
+    private int cursorPosition, textModifications;
     private Language versesLanguage;
     private Context activityContext = this;
     private RichSelectableEditText noteEditText;
@@ -130,6 +130,14 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 if (Verse.isTextContainingVerseAtTheEnd(text, versesLanguage)) {
                     versePreviewTextInEditMode.setText(Html.fromHtml(Verse.getTextOfLastVerse(getApplicationContext(), text, versesLanguage)));
                     versePreviewTextInEditMode.scrollTo(0, 0);
+                }
+                textModifications++;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // arbitrarily chosen to distinguish newer and older devices. M = Android 6.0
+                    if (textModifications % 20 == 0)
+                        saveDocumentIfChanged(); // saving note after every 20 changes in the text, which are 3-4 words (on newer devices)
+                } else {
+                    if (textModifications % 100 == 0)
+                        saveDocumentIfChanged(); // saving note after every 100 changes in the text, which are 15-20 words (on older devices)
                 }
             } catch (Exception e) {
                 Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
@@ -756,13 +764,15 @@ public class NotepadEditorActivity extends AppCompatActivity {
     }
 
     private void saveDocumentIfChanged() {
+        Log.d(TAG, "Start of saveDocumentIfChanged");
         noteEditText.clearComposingText();
         final String currentHtml = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
         if (currentFile != null && !currentHtml.equals(htmlTextInFile)) {
             noteEditText.correctBullets();
             saveStringToFile(SpanToHtmlConverter.toHtml(noteEditText.getEditableText()), currentFile);
-            Log.d(TAG, "saveStringToFile: " + SpanToHtmlConverter.toHtml(noteEditText.getEditableText()));
+//            Log.d(TAG, "saveStringToFile: " + SpanToHtmlConverter.toHtml(noteEditText.getEditableText())); // now this method is frequent, so avoid wasting time on conversions in logs
         }
+        Log.d(TAG, "End of saveDocumentIfChanged");
     }
 
     private void printCurrentDocument() {

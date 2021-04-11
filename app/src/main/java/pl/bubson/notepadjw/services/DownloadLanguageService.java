@@ -30,6 +30,8 @@ public class DownloadLanguageService extends Service {
 
     private static final String APP_TEMP_FOLDER_NAME = Environment.DIRECTORY_DOWNLOADS; // previously it was "Notepad JW temporary files", but:
     // "For applications targeting Build.VERSION_CODES.Q or above, WRITE_EXTERNAL_STORAGE permission is not needed and the dirType must be one of the known public directories like Environment#DIRECTORY_DOWNLOADS"
+    // It also requires using requestLegacyExternalStorage in the manifest. Unfortunately, this is just a temporary solution - see this: https://stackoverflow.com/questions/56821095/android-q-file-mkdirs-returns-false
+    // Google sucks so much!
     BroadcastReceiver broadcastReceiver;
     private long enqueue;
     private DownloadManager downloadManager;

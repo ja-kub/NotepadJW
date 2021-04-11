@@ -176,7 +176,8 @@ Significa che puoi copiarli su PC, rinominare, eliminare, spostare, aggiungere n
 • Postazione fissa di pulsanti che appaiono quando si seleziona il testo.\n\n
    </string>
     <string name="whats_new_message_last">
-• Assemblee 2020-2021.
+• Programma del congresso del 2021\n\n
+• Aggiunto: risparmio note frequenti (per evitare di perderle quando la batteria si esaurisce, ecc)
     </string>
     <string name="import_title">Importazione di note</string>
     <string name="import_notes_question">Vuoi importare tutte le note dalla cartella \\Documents\\NotepadJW?</string>

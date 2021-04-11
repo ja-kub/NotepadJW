@@ -168,7 +168,8 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
 • Helyhez kötött gombok jelennek meg, amikor kiválasztja a szöveget. \n\n
     </string>
     <string name="whats_new_message_last">
-• Kongresszusok 2020-2021.
+• 2021-es kongresszusi program \n\n
+• Hozzáadott: a jegyzeteket gyakran menti (elvesztését megelőzendő, ha az akkumulátor lemerül, stb)
     </string>
     <string name="import_title">Importálása jegyzetek</string>
     <string name="import_notes_question">Szeretné importálni az összes jegyzeteket a mappát \\Documents\\NotepadJW ?</string>

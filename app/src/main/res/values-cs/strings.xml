@@ -175,7 +175,8 @@ To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohová
 • Fixní umístění tlačítek, které se objevují při výběru textu. \n\n
     </string>
     <string name="whats_new_message_last">
-• Sjezdy 2020-2021.
+• Program sjezdu 2021. \n\n
+• Přidané časté poznámky ukládání (aby nedošlo k jejich ztrátě, když se vybije etc)
     </string>
     <string name="import_title">Import poznámek</string>
     <string name="import_notes_question">Import poznámek z \\Documents\\NotepadJW folder?</string>

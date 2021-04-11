@@ -214,10 +214,11 @@ You can then copy them to PC, rename, delete, move, add new from your computer e
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• Conventions 2020-2021
+• Conventions 2020-2021.\n\n
     </string>
     <string name="whats_new_message_last">
-• Fixed minor bugs.\n\n
+• 2021 Convention Program.\n\n
+• Frequent notes saving has been added to avoid losing them when the battery runs out.
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>

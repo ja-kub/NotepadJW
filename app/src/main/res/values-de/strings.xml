@@ -176,7 +176,8 @@ Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), 
 • Feste Position der Tasten, die angezeigt werden, wenn Sie Text auswählen. \n\n
     </string>
     <string name="whats_new_message_last">
-• Kongresse 2020-2021.
+• Kongressprogramm 2021 \n\n
+• Hinzugefügt: häufiges Speichern von Notizen (zu vermeiden, dass sie, wenn der Akku leer ist etc zu verlieren)
     </string>
     <string name="import_title">Importieren von Notizen</string>
     <string name="import_notes_question">Möchten Sie alle Notizen aus dem Ordner importieren \\Documents\\NotepadJW?</string>
