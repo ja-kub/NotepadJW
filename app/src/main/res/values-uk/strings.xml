@@ -92,7 +92,7 @@
     <string name="verse_position_dialog_title">Розташування вірша</string>
     <string name="missing_language_dialog_title">Відсутня мова</string>
     <string name="missing_language_message">Завантажити та встановити Біблію на вибраній мові?</string>
-    <string name="download_description">Завантажити Біблію на новій мові для Notepad JW</string>
+    <string name="download_description">Завантажити Біблію на новій мові для Notepad JT</string>
     <string name="download_language">Завантаження Біблії мовою</string>
     <string name="install_language">Встановлення Біблії мовою</string>
     <string name="in_progress">В процесі</string>
@@ -116,68 +116,50 @@
     <string name="conventions_program">Програма конгресів</string>
     <string name="conventions">Конгреси</string>
     <string name="provide_conventions_program_question">Стоврити папку з програмою конгерсу?</string>
-    <string name="main_dir_is_null">Будь ласка, запустіть NotepadJW зі своїх додатків, а потім поверніться до цієї операції</string>
+    <string name="main_dir_is_null">Будь ласка, запустіть Notepad JT зі своїх додатків, а потім поверніться до цієї операції</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
-    <p>Notes sent from <B>Notepad JW</B> - notes manager and editor with live view of entered verses.</p>
+    <p>Notes sent from <B>Notepad JT</B> - notes manager and editor with live view of entered verses.</p>
     <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
         ]]>
     </string>
     <string name="help_text_html">
     <![CDATA[
-<h3>Information</h3>
-<p>Text of all verses are from New World Translation of the Holy Scriptures
-(Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
-<h3>Why use NotepadJW?</h3>
-<p>This application was created, because no other app was found, which would be able to show
-verses in the real time while editing some note. So it is useful for making notes during
-meetings and congresses - you don\'t need anymore to switch applications or search paper Bible
-to see the verse text, it is displayed in the same window as editor. As this application is able to
-show all verses under links in view mode, it could be also used for speeches at the podium and other
-tasks during meetings. This app also has sharing option, so you can also use it for making notes
-and send them to others. There are also buttons for Export and Import of notes to keep your copy of notes on more
-than one device and to have safe backup of them.</p>
-<h3>Abilities</h3>
-<p>This application consists of two activities:
-<br><b>Notes Manager</b> and <b>Notepad Editor</b>.
-<br>In <b>Notes Manager</b> you can create new notes, open them and create new folders.
-<br>You can select items by long-click and then: rename, delete or send (cut, copy and paste options will be added soon).
-<br>In <b>Notepad Editor</b> you can switch between <i>Edit Mode</i> and <i>View Mode</i>. In the first one,
-last entered verse will be displayed and in the second one you can click on links created from verses
-to see selected one.
-<h3>Auto backup and notes location</h3>
-<b> If your device has Android 6.0 or newer: </ b> Backup your notes and settings
-it is carried out when:
-<br> - You have enabled the backup option on your device in Settings -> Backup
-<br> - It\'s been min. 24 hours from the last backup
-<br> - The device is idle and charging
-<br> - The device is connected to a Wi-Fi network
-<br> When the device is changed or the Notepad JW application is reinstalled, notes and settings will be automatically restored.
-Notes are not available for other applications or after connecting the device to a computer (this is a requirement for this functionality to work).
-Of course, you can still use the option of sending these files by email, instant messengers or uploading to your Google Drive.
-To check if the backup has been done, open Google Drive -> Menu -> Backups -> last copy -> Application data -> find Notepad JW.
-If there is no such item, and the above conditions have been met, you can delete and re-add your Google Account at your own risk
-(Note: this will clean up the current backups both correct and incorrect): Settings -> Accounts -> Google -> Delete account, then Add account -> Google.
-<br><br><b>If you have older Android than 6.0:</b> notes are not automatically backed up. They are
-saved on your device in public location: Documents/NotepadJW. You can access them from our PC.
-It means that you can copy them to PC (as a manual backup), rename, delete, move, add new from your computer etc.
+<h3> Інформація </h3>
+<p> Тексти всіх віршів взяті з Перекладу Святого Письма Нового Світу
+(Авторське право: (Товариство Біблії та урочища сторожової вежі Пенсільванії)). </p>
+<h3> Навіщо використовувати Notepad JT? </h3>
+<p> Цю програму було створено, оскільки не знайдено жодної іншої програми, яку можна було б показати
+вірші в реальному часі під час редагування якоїсь ноти. Тож корисно робити записи під час
+наради та конгреси - вам більше не потрібно міняти програми чи шукати паперову Біблію
+щоб побачити текст вірша, він відображається в тому ж вікні, що і редактор. Оскільки ця програма здатна
+показати всі вірші за посиланнями в режимі перегляду, він також може бути використаний для виступів на подіумі та інших
+завдання під час зустрічей. Цей додаток також має опцію спільного доступу, тому ви також можете використовувати його для створення нотаток
+і надіслати їх іншим. Також є кнопки для експорту та імпорту нотаток, щоб зберегти копію нотаток
+ніж один пристрій і мати безпечне резервне копіювання їх.</p>
+<h3>Резервне копіювання вручну </h3>
+Вам рекомендується час від часу робити резервні копії своїх нотаток. Для цього натисніть кнопку Експорт приміток у меню у верхньому правому куті.
+Якщо у вас Android 4.4 або новіша версія, нотатки будуть упаковані у zip-файл, який ви можете зберегти на своєму пристрої, на Google Drive, ПК тощо.
+Потім ви можете імпортувати їх на будь-який мобільний пристрій із Notepad JT та Android 4.4 або новішої версії (наприклад, коли ви змінюєте пристрій або скидаєте заводські налаштування).
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
-        In the next screen you will be asked about access to external storage. If you Allow,
-        Notepad JW will save notes to external storage (in folder Documents -> NotepadJW).
-        Thereby you would have access to these notes from other apps and from PC for your
-        convenience (Notepad JW app does not read or modify any files outside of
-        NotepadJW folder).
-        If you Deny, Notepad JW will save notes to internal storage, to which other apps and your PC
-        don\'t have access.
+На наступному екрані вас запитають про доступ до зовнішнього сховища. Якщо ви дозволяєте,
+         Notepad JT зберігатиме нотатки у зовнішньому сховищі (у папці Documents -> NotepadJW).
+         Тим самим ви отримаєте доступ до цих приміток з інших програм та з ПК для свого
+         зручність (додаток Notepad JT не читає та не змінює будь-які файли поза
+         Папка NotepadJW).
+         Якщо Ви відмовите, Notepad JT буде зберігати нотатки у внутрішній пам’яті, до якої додаються інші програми та ваш ПК
+         не мають доступу.
     </string>
     <string name="whats_new_message_previous">
-• Виправлено розташування кнопок, які з\'являються при виборі тексту. \n\n
+• Програма конгресу 2021 \n\n
+• Додано: часте збереження нотаток (щоб уникнути їх втрати під час роботи акумулятора тощо) \n\n
     </string>
     <string name="whats_new_message_last">
-• Програма конгресу 2021 \n\n
-• Додано: часте збереження нотаток (щоб уникнути їх втрати під час роботи акумулятора тощо)
+• Нова піктограма програми.\n\n
+• Виправлена​помилка із завантаженням та встановленням Біблії на Android 11\n\n
+• Експорт та імпорт нотаток модернізовано (найкраще зробити резервну копію зараз: натисніть меню у верхньому правому куті -> Експортувати нотатки)
     </string>
     <string name="import_title">імпорт заміток</string>
     <string name="import_notes_question">Ви хочете імпортувати всі записи з папки \\Documents\\NotepadJW?</string>
@@ -192,4 +174,6 @@ It means that you can copy them to PC (as a manual backup), rename, delete, move
     <string name="Share_app">"Привіт! Я хотів би рекомендувати вам дуже хороший додаток, яке корисне робити нотатки під час зборів і нарад, оскільки він відображає вірші Біблії відразу після введення їх посилання. Перевірте самі: "</string>
     <string name="Recommend_alternative">Це нормально, не хвилюйтеся. Може бути, ви хотіли б рекомендувати цей додаток до одного замість цього?</string>
     <string name="Recommend_explanation">Ви б рекомендувати цей додаток до одного?</string>
+    <string name="exported_successfully">Примітки були експортовані</string>
+    <string name="imported_successfully">Примітки були імпортовані</string>
 </resources>

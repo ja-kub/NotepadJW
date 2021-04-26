@@ -16,7 +16,7 @@
     <string name="changes_not_saved">Zmiany nie zapisane</string>
     <string name="create_new_folder_dialog_title">Utwórz nowy folder</string>
     <string name="create_new_note_dialog_title">Utwórz nową notatkę</string>
-    <string name="create_new_note_from_this_file_dialog_title">Czy zaimportować ten plik do notatek NotepadJW?</string>
+    <string name="create_new_note_from_this_file_dialog_title">Czy zaimportować ten plik do notatek Notepad JT?</string>
     <string name="creation_failed">Utworzenie nie powiodło się</string>
     <string name="creation_of_new_folder_succesful">Folder utworzony</string>
     <string name="creation_of_new_note_cancelled">Notatka nie została utworzona</string>
@@ -52,7 +52,7 @@
     <string name="sent_by_notepadjw">
         <![CDATA[
         <html><body>
-    <p>Wysłano z aplikacji <b>Notepad JW</b> - edytora notatek z podglądem treści wersetów na bieżąco.</p>
+    <p>Wysłano z aplikacji <b>Notepad JT</b> - edytora notatek z podglądem treści wersetów na bieżąco.</p>
     <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
     <\body><\html>
         ]]>
@@ -73,7 +73,7 @@
 <h3>Informacje</h3>
 <p>Tekst wszystkich wersetów pochodzi z Pisma Świętego w Przekładzie Nowego Świata
 (Prawa autorskie: Towarzystwo Strażnica)</p>
-<h3>Do czego można użyć notatnika Notepad JW?</h3>
+<h3>Do czego można użyć notatnika Notepad JT?</h3>
 <p><b>- Do notowania na zebraniach lub zgromadzeniach.</b> Nie trzeba wówczas przełączać się na JW Library lub otwierać
 papierowej Biblii, aby śledzić treść odczytywanego z mównicy wersetu, ponieważ jest on od razu
 wyświetlany u góry w trakcie pisania notatek.
@@ -88,18 +88,10 @@ są również kropki. Rozdziały od wersetów można oddzielać dwukropkiem lub 
 wiele wersetów z jednego rozdziału. Przykłady, które zostaną poprawnie obsłużone: Mat. 24:14,15; wyjscia 4,12;
 Powt pr 2:2, 3, 6-8, 11.
 <br>Przykład, które nie zostanie poprawnie obsłużony: Fil. 1:2 (niejednoznaczność: chodzi o Filipian czy Filemona?).
-<h3>Automatyczna kopia zapasowa</h3>
-Kopia zapasowa notatek i ustawień jest powinna być tworzona automatycznie, ale niestety,
-opiera się to na zewnętrznej bibliotece Google, która jest zawodna.
-<br>Przy zmianie urządzenia lub reinstalacji aplikacji Notepad JT, notatki i ustawienia powinny zostać automatycznie przywrócone,
-jednak nie zawsze to działa.
-<br><br><b>Ręczna kopia zapasowa</b>
-Wobec powyższego, warto od czasu do czasu ręcznie robić kopię zapasową notatek.
-W tym celu należy wybrać z górnego menu po prawej stronie przycisk Eksport Notatek (jeżeli nie udzielono wcześniej
-zezwolenia na dostęp do pamięci, należy udzielić dostępu i powtórzyć eksport).
-Wówczas notatki zostaną zapisane w folderze: Documents/NotepadJW na twoim urządzeniu.
-Masz do nich dostęp po podłączeniu swojego urządzenia do komputera. Można je wówczas skopiować na komputer celem
-dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki itp.
+<h3>Ręczna kopia zapasowa</h3>
+Zaleca się od czasu do czasu ręczne tworzenie kopii zapasowych notatek. Aby to zrobić, dotknij przycisku Eksportuj notatki z menu w prawym górnym rogu.
+Jeśli masz Androida 4.4 lub nowszego, notatki zostaną spakowane do pliku zip, który możesz zapisać na swoim urządzeniu, na Dysku Google, komputerze itp.
+Następnie możesz zaimportować je na dowolne urządzenie mobilne z Notatnikiem JT i Androidem 4.4 lub nowszym (na przykład podczas zmiany urządzenia lub przywracania ustawień fabrycznych).
     ]]>
     </string>
     <string name="current_dir_is_null">Folder nie istnieje</string>
@@ -136,7 +128,7 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_position_dialog_title">Pozycja wersetu</string>
     <string name="missing_language_dialog_title">Brak Biblii w wybranym języku</string>
     <string name="missing_language_message">Czy ściągnąć i zainstalować tę Biblię?</string>
-    <string name="download_description">Notepad JW - pobieranie Biblii w nowym języku</string>
+    <string name="download_description">Notepad JT - pobieranie Biblii w nowym języku</string>
     <string name="download_language">Pobieranie Biblii w języku</string>
     <string name="install_language">Instalowanie Biblii w języku</string>
     <string name="in_progress">W trakcie</string>
@@ -154,11 +146,11 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="provide_conventions_program_question">Czy utworzyć folder z programami zgromadzeń?</string>
     <string name="permission_explanation_dialog_message">
         Zostaniesz teraz zapytany o dostęp do pamięci urządzenia.
-        Jeśli się zgodzisz, Notepad JW będzie zapisywał notatki w tzw. pamięci zewnętrznej
+        Jeśli się zgodzisz, Notepad JT będzie zapisywał notatki w tzw. pamięci zewnętrznej
         (w folderze Documents -> NotepadJW). Dzięki temu uzyskasz dostęp do
-        nich z innych aplikacji oraz z komputera (Notepad JW nie przegląda ani nie modyfikuje
+        nich z innych aplikacji oraz z komputera (Notepad JT nie przegląda ani nie modyfikuje
         żadnych plików poza wymienionym folderem).
-        Jeśli się nie zgodzisz, Notepad JW będzie zapisywał notatki w tzw. pamięci wewnętrznej,
+        Jeśli się nie zgodzisz, Notepad JT będzie zapisywał notatki w tzw. pamięci wewnętrznej,
         do której nie będziesz miał dostępu z innych aplikacji ani z komputera.
     </string>
     <string name="button_undo">Cofnij</string>
@@ -170,11 +162,13 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Program zgromadzeń 2020-2021.\n\n
-    </string>
-    <string name="whats_new_message_last">
 • Program kongresu 2021.\n\n
 • Dodano częste zapisywanie notatek, aby uniknąć ich utraty, gdy wyczerpie się bateria itp.\n\n
+    </string>
+    <string name="whats_new_message_last">
+• Nowa ikona aplikacji.\n\n
+• Naprawiono błąd przy instalacji Biblii na Androidzie 11 \n\n
+• Unowocześniono eksport i import notatek (najlepiej zrobić kopię zapasową już teraz: kliknij menu w górnym prawym rogu -> Eksport notatek)
     </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>
@@ -189,4 +183,6 @@ dokonania ręcznej kopii zapasowej, kasować, przenosić, dodawać nowe pliki it
     <string name="Share_app">"Cześć! Chciałbym polecić Ci świetną aplikację przydatną do robienia notatek podczas zgromadzeń i zebrań, ponieważ wyświetla wersety natychmiast po wpisaniu ich odnośników. Sprawdź sam: "</string>
     <string name="Recommend_alternative">To nic, nie martw się. Może za to chciałbyś polecić tę aplikację swojemu znajomemu?</string>
     <string name="Recommend_explanation">"Czy zechciałbyś polecić tę aplikację znajomemu? "</string>
+    <string name="exported_successfully">Notatki zostały wyeksportowane</string>
+    <string name="imported_successfully">Notatki zostały zaimportowane</string>
 </resources>

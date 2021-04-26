@@ -117,7 +117,7 @@
     <string name="conventions_program">Programa do Congresso</string>
     <string name="conventions">Assembléias</string>
     <string name="provide_conventions_program_question">Criar pasta com os programas de assembléias?</string>
-    <string name="main_dir_is_null">Por favor, inicie o NotepadJW a partir de seus aplicativos e, em seguida, retorne a esta operação</string>
+    <string name="main_dir_is_null">Por favor, inicie o Notepad JT a partir de seus aplicativos e, em seguida, retorne a esta operação</string>
     <string name="sent_by_notepadjw">
    <![CDATA[
     <p>Notas enviadas a partir de<B>Bloco de Notas JW</B>- Notas gerente e editor com exibição ao vivo dos versos introduzidas</p>
@@ -126,7 +126,7 @@
    </string>
     <string name="permission_explanation_dialog_message">
     Na próxima tela você será perguntado sobre o acesso a armazenamento externo. Se você permitir,
-    Notepad JW guardar notas para o armazenamento externo (na pasta Documentos ->NotepadJW).
+    Notepad JT guardar notas para o armazenamento externo (na pasta Documentos ->NotepadJW).
     Desta forma, você terá acesso a essas notas de outros aplicativos e para o seu PC (a aplicação JW bloco de notas não ler ou modificar os arquivos fora
     NotepadJW pasta).
     Se Negar, Notepad observa JW salvo no armazenamento interno, que outras aplicações e seu PC não tem acesso.
@@ -135,7 +135,7 @@
    <![CDATA[
 <h3>Informação</h3>
 O texto de todos os versos vem da Tradução do Novo Mundo das Escrituras Sagradas.
-<h3>Por que usar NotepadJW?</h3>
+<h3>Por que usar Notepad JT?</h3>
 Esta aplicação foi criada porque não encontraram nenhuma outra aplicação que pode mostrar
 Versos em tempo real durante a edição de uma nota. Por isso, é útil para tomar notas durante
 Reuniões e conferências - não precisa mais mudar de aplicações ou procurar papel Bíblia
@@ -152,30 +152,20 @@ Esta aplicação consiste em duas atividades:
 <br>Bloco de Notas do Editor pode alternar entre <i>Editar Modo</i> e <i>Modo</i>. Na primeira,
 O último verso inserido será exibido e no segundo você pode clicar nos versos links criados
 A vista seleccionada.
-<h3> Backup automático e localização de anotações </ h3>
-<b> Se o seu dispositivo tiver o Android 6.0 ou posterior: </ b> faça backup de suas anotações e configurações
-é realizado quando:
-<br> - Você ativou a opção de backup em seu dispositivo em Configurações -> Backup
-<br> - Tem sido min. 24 horas a partir do último backup
-<br> - O dispositivo está ocioso e carregando
-<br> - O dispositivo está conectado a uma rede Wi-Fi.
-<br> Quando o dispositivo é alterado ou o aplicativo JW do Bloco de notas é reinstalado, as anotações e as configurações serão restauradas automaticamente.
-As notas não estão disponíveis para outros aplicativos ou depois de conectar o dispositivo a um computador (esse é um requisito para que essa funcionalidade funcione).
-Claro, você ainda pode usar a opção de enviar esses arquivos por e-mail, mensagens instantâneas ou fazer o upload para o seu Google Drive.
-Para verificar se o backup foi feito, abra o Google Drive -> Menu -> Backups -> última cópia -> Dados do aplicativo -> encontre o Notepad JW. Se não houver tal item e as
-condições acima tiverem sido cumpridas, você poderá excluir e adicionar novamente sua Conta do Google por sua conta e risco
-(Observação: isso limpará os backups atuais corretos e incorretos): Configurações -> Contas - > Google -> Excluir conta e Adicionar conta -> Google.
-<br> <br> <b> Se você tiver Android mais antigo que 6.0: </ b> o backup não será feito automaticamente. Eles são
-salvo em seu dispositivo em local público: Documents / NotepadJW. Você pode acessá-los em nosso PC.
-Isso significa que você pode copiá-los para o PC, renomear, excluir, mover, adicionar novos a partir do seu computador, etc.
+<h3>Backup manual </h3>
+É aconselhável fazer backup manual de suas anotações de vez em quando. Para fazer isso, toque no botão Exportar notas no menu no canto superior direito.
+Se você tiver o Android 4.4 ou mais recente, as notas serão compactadas em um arquivo zip, que pode ser salvo em seu dispositivo, no Google Drive, PC etc.
+Você pode então importá-los para qualquer dispositivo móvel com o Bloco de Notas JT e Android 4.4 ou mais recente (como quando você altera o seu dispositivo ou faz uma redefinição de fábrica).
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Local fixo de botões que aparecem quando você seleciona o texto. \n\n
+• Programa do Congresso de 2021 \n\n
+• Adicionado: as notas são salvas de vez em quando (para evitar perdê-las quando a bateria acabar, etc.)\n\n
     </string>
     <string name="whats_new_message_last">
-• Programa do Congresso de 2021 \n\n
-• Adicionado: as notas são salvas de vez em quando (para evitar perdê-las quando a bateria acabar, etc.)
+• Novo ícone do aplicativo.\n\n
+• Corrigido um bug com o download e instalação da Bíblia no Android 11\n\n
+• A exportação e importação de notas foram modernizadas (é melhor fazer um backup agora: clique no menu no canto superior direito -> Exportar notas)
    </string>
     <string name="import_title">Importação de notas</string>
     <string name="import_notes_question">Gostaria de importar todas as notas da pasta \\Documents\\NotepadJW?</string>
@@ -190,4 +180,6 @@ Isso significa que você pode copiá-los para o PC, renomear, excluir, mover, ad
     <string name="Share_app">"Oi! Gostaria de recomendar-lhe um aplicativo muito bom, o que é útil para tomar notas durante assembléias e reuniões, porque ele exibe versículos da Bíblia imediatamente depois de digitar sua referência. Verificá-lo por si mesmo: "</string>
     <string name="Recommend_alternative">Está tudo bem, não se preocupe. Talvez você gostaria de recomendar este aplicativo para seu amigo em vez disso?</string>
     <string name="Recommend_explanation">Você recomendaria este aplicativo a um amigo?</string>
+    <string name="exported_successfully">Notas foram exportadas</string>
+    <string name="imported_successfully">Notas foram importados</string>
 </resources>

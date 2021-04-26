@@ -18,6 +18,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.provider.DocumentsContract;
 import android.text.Html;
 import android.text.InputType;
 import android.util.Log;
@@ -33,6 +34,8 @@ import android.widget.Toast;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.google.android.material.snackbar.Snackbar;
 
+import net.lingala.zip4j.ZipFile;
+
 import org.apache.commons.io.FileUtils;
 
 import java.io.BufferedReader;
@@ -45,6 +48,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -60,6 +64,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 import androidx.core.view.MenuItemCompat;
+import androidx.documentfile.provider.DocumentFile;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import pl.bubson.notepadjw.R;
@@ -85,6 +90,10 @@ public class FileManagerActivity extends AppCompatActivity {
     public static final String SETTINGS_APP_OPENINGS = "settings_app_openings";
     private static final String TAG = "FileManagerActivity";
     private static final String appFolderName = "NotepadJW"; // don't change it, as user have their notes there from some time
+    private static final String EXPORT_FOLDER_NAME_OLD = "NotepadJW";
+    public static final int REQUEST_CODE_EXPORT_ZIPPED_NOTES = 64321;
+    public static final int REQUEST_CODE_IMPORT_ZIPPED_NOTES = 64322;
+    public static final String EXPORT_FILE_NAME = "Notepad_JT_Export.zip";
     private static File mainDirectory;
     private static FilesDatabase filesDatabase;
     private final Context activityContext = this;
@@ -339,10 +348,10 @@ public class FileManagerActivity extends AppCompatActivity {
                 provideConventionsProgram();
                 return true;
             case R.id.action_import:
-                importNotesDialog();
+                importNotes();
                 return true;
             case R.id.action_export:
-                exportNotesDialog();
+                exportNotes();
                 return true;
             case R.id.action_coffee:
                 startCoffeeIntent();
@@ -413,6 +422,7 @@ public class FileManagerActivity extends AppCompatActivity {
 
     @Override
     protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
         setIntent(intent);
         handleIntent(intent);
     }
@@ -473,8 +483,8 @@ public class FileManagerActivity extends AppCompatActivity {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activityContext);
         int userAnswer = prefs.getInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
         int filesMoved = prefs.getInt(MOVED_FILES_KEY, SUCCESSFUL);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && filesMoved == SUCCESSFUL) { // AutoBackup works from Android 6.0...
-            mainDirectory = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), appFolderName); // ...and it works only for files in getExternalFilesDir() and getFilesDir(). But that way these files are not accessible from PC
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && filesMoved == SUCCESSFUL) { // AutoBackup works from Android 6.0 and it works only for files in getExternalFilesDir() (external, can be accessed from PC or other apps (!)) and getFilesDir() (internal)
+            mainDirectory = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), appFolderName); // But files in these paths are deleted when app is uninstalled (!)
         } else if (isExternalStorageWritable() && isStoragePermissionGranted(this) && userAnswer == Permissions.ACCEPTED) { // for Androids < 6.0 let's stay with old version with access to files from PC
             File publicDirectory;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -1124,10 +1134,49 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     private void importNotes() {
+        if (Build.VERSION.SDK_INT >= 19) { // Storage Access Framework (SAF) was implemented in Android 4.4 (API level 19)
+            // use SAF, so user can pick the folder to import notes there
+            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("application/zip");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                URI uriToLoad = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).toURI();
+                intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, uriToLoad);
+            }
+            startActivityForResult(intent, REQUEST_CODE_IMPORT_ZIPPED_NOTES); // can be also REQUEST_CODE_IMPORT_NOTES but is much slower
+        } else {
+            importNotesDialogOld(); // old method with hardcoded path on External Public Storage (cannot be used from Android 11)
+        }
+    }
+
+    private void exportNotes() {
+        if (Build.VERSION.SDK_INT >= 19) { // Storage Access Framework (SAF) was implemented in Android 4.4 (API level 19)
+            // use SAF, so user can pick the folder to export notes there
+            Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("application/zip");
+            intent.putExtra(Intent.EXTRA_TITLE, EXPORT_FILE_NAME);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                URI uriToLoad = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).toURI();
+                intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, uriToLoad);
+            }
+            startActivityForResult(intent, REQUEST_CODE_EXPORT_ZIPPED_NOTES); // can be also REQUEST_CODE_EXPORT_NOTES but is much slower
+        } else {
+            exportNotesDialogOld(); // old method with hardcoded path on External Public Storage (cannot be used from Android 11)
+        }
+    }
+
+    private File getImportExportDirOld() {
+        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 31) {
+            return new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), EXPORT_FOLDER_NAME_OLD);
+        } else {
+            return new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), EXPORT_FOLDER_NAME_OLD);
+        }
+    }
+
+    private void importNotesOld() {
         FileManagerActivity.askForPermissionsIfNotGranted(this);
-
-        File fromDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName);
-
+        File fromDir = getImportExportDirOld();
         if (fromDir.isDirectory()) {
             try {
                 String pathFrom = fromDir.getAbsolutePath();
@@ -1144,18 +1193,18 @@ public class FileManagerActivity extends AppCompatActivity {
             MediaScannerConnection.scanFile(activityContext, new String[]{fromDir.getAbsolutePath()}, null, null);
             filesDatabase.refreshData();
             fillListWithItemsFromDir(currentDirectory);
+        } else {
+            Log.i(TAG, "There is no directory with exported notes");
         }
     }
 
-    private void exportNotes() {
+    private void exportNotesOld() {
         FileManagerActivity.askForPermissionsIfNotGranted(this);
-
-        File toDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), appFolderName);
-
+        File toDir = getImportExportDirOld();
         if (!toDir.isDirectory()) {
             boolean created = false;
             try {
-                toDir.mkdir();
+                created = toDir.mkdir();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -1163,25 +1212,73 @@ public class FileManagerActivity extends AppCompatActivity {
                 Snackbar.make(recyclerView, R.string.creation_failed, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
         }
-
         try {
-            String pathFrom = mainDirectory.getAbsolutePath();
             String pathTo = toDir.getAbsolutePath();
+            String pathFrom = mainDirectory.getAbsolutePath();
             FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
             fc.copy(pathFrom, pathTo, true);
-            Snackbar.make(recyclerView, R.string.creation_of_new_folder_succesful, Snackbar.LENGTH_SHORT)
-                    .setAction("Action", null).show();
+            String message = getString(R.string.creation_of_new_folder_succesful) + ": " + pathTo.replaceAll("/storage/emulated/0", "");
+            Snackbar.make(recyclerView, message, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            Log.i(TAG, "Files were exported from folder: " + pathFrom + " to folder: " + pathTo);
+            MediaScannerConnection.scanFile(activityContext, new String[]{pathTo}, null, null);
+            filesDatabase.refreshData();
         } catch (Exception e) {
             e.printStackTrace();
             Snackbar.make(recyclerView, R.string.error_while_saving, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         }
-        MediaScannerConnection.scanFile(activityContext, new String[]{toDir.getAbsolutePath()}, null, null);
-        filesDatabase.refreshData();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
+        super.onActivityResult(requestCode, resultCode, resultData);
+        try {
+            if (requestCode == REQUEST_CODE_EXPORT_ZIPPED_NOTES && resultCode == Activity.RESULT_OK) {
+                Uri singleUri = null;
+                if (resultData != null) {
+                    singleUri = resultData.getData();
+                    if (singleUri != null && singleUri.getPath() != null) {
+                        File zippedExport = new File(getFilesDir(), EXPORT_FILE_NAME);
+                        Log.d(TAG, "Temporary Export file path = " + zippedExport.getAbsolutePath());
+                        new ZipFile(zippedExport.getAbsolutePath()).addFolder(mainDirectory);
+                        Log.d(TAG, "Temporary Export file was zipped.");
+                        DocumentFile dcFrom = DocumentFile.fromFile(zippedExport);
+                        DocumentFile dcTo = DocumentFile.fromSingleUri(this, singleUri);
+                        FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
+                        fc.copyFile(dcFrom, dcTo);
+                        Log.i(TAG, "Temporary Export file was copied to the destination selected by the user.");
+                        Snackbar.make(recyclerView, R.string.exported_successfully, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                        boolean deleted = zippedExport.delete();
+                        if (deleted) Log.d(TAG, "Temporary Export file was deleted.");
+                    }
+                }
+            } else if (requestCode == REQUEST_CODE_IMPORT_ZIPPED_NOTES && resultCode == Activity.RESULT_OK) {
+                Uri singleUri = null;
+                if (resultData != null) {
+                    singleUri = resultData.getData();
+                    if (singleUri != null && singleUri.getPath() != null) {
+                        File zippedImport = new File(getFilesDir(), EXPORT_FILE_NAME);
+                        if (zippedImport.exists()) zippedImport.delete();
+                        DocumentFile dcFrom = DocumentFile.fromSingleUri(this, singleUri);
+                        DocumentFile dcTo = DocumentFile.fromFile(zippedImport);
+                        FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
+                        fc.copyFile(dcFrom, dcTo);
+                        Log.d(TAG, "Import file was copied to temporary destination: " + zippedImport.getAbsolutePath());
+                        new ZipFile(zippedImport).extractAll(mainDirectory.getParent());
+                        Log.i(TAG, "Temporary Import file was unzipped.");
+                        Snackbar.make(recyclerView, R.string.imported_successfully, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                        boolean deleted = zippedImport.delete();
+                        if (deleted) Log.d(TAG, "Temporary Import file was deleted.");
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void askForPermissionsIfNotYetAnswered(final Activity activity) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) { // permissions are not needed in this app from Android 6.0
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) { // permissions are not needed in this app from Android 6.0 / API Level 23
             final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
             int userAnswer = prefs.getInt(Permissions.WRITE_EXTERNAL_STORAGE, Permissions.NOT_ANSWERED_YET);
             if (userAnswer == Permissions.NOT_ANSWERED_YET && !isStoragePermissionGranted(this)) {
@@ -1260,7 +1357,7 @@ public class FileManagerActivity extends AppCompatActivity {
         builder.show();
     }
 
-    public void importNotesDialog() {
+    public void importNotesDialogOld() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activityContext);
         builder.setTitle(R.string.import_title);
         builder.setMessage(getString(R.string.import_notes_question));
@@ -1268,7 +1365,7 @@ public class FileManagerActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button
-                importNotes();
+                importNotesOld();
             }
         });
 
@@ -1281,7 +1378,7 @@ public class FileManagerActivity extends AppCompatActivity {
         builder.show();
     }
 
-    public void exportNotesDialog() {
+    public void exportNotesDialogOld() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activityContext);
         builder.setTitle(R.string.export_title);
         builder.setMessage(getString(R.string.export_notes_question));
@@ -1289,7 +1386,7 @@ public class FileManagerActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button
-                exportNotes();
+                exportNotesOld();
             }
         });
 

@@ -87,7 +87,8 @@ public class DownloadLanguageService extends Service {
             request.setDescription(getString(R.string.download_description));
             request.setTitle(getString(R.string.download_language) + ": " + language.name());
             request.allowScanningByMediaScanner();
-            request.setDestinationInExternalPublicDir(APP_TEMP_FOLDER_NAME, uri.getLastPathSegment());
+//            request.setDestinationInExternalPublicDir(APP_TEMP_FOLDER_NAME, uri.getLastPathSegment()); // that was previously, but it requires WRITE_EXTERNAL_STORAGE which is not available from Android 11
+            request.setDestinationInExternalFilesDir(this, APP_TEMP_FOLDER_NAME, uri.getLastPathSegment()); // This requires no permissions on Android 4.4 or newer! I don't know why I didn't use from the beginning this method instead above one...
 
             downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
             enqueue = downloadManager.enqueue(request);

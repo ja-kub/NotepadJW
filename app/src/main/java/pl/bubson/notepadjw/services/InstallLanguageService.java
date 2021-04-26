@@ -1,12 +1,15 @@
 package pl.bubson.notepadjw.services;
 
 import android.app.IntentService;
+import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
@@ -28,6 +31,9 @@ import static pl.bubson.notepadjw.activities.FileManagerActivity.deleteRecursive
  * IntentService to install given language.
  */
 public class InstallLanguageService extends IntentService {
+
+    public static final String CHANNEL_ID = "Install";
+
     /**
      * Creates an IntentService.  Invoked by your subclass's constructor.
      *
@@ -147,18 +153,31 @@ public class InstallLanguageService extends IntentService {
     }
 
     private NotificationCompat.Builder prepareNotificationBuilder(String bibleLanguage) {
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this)
-                        .setContentTitle(getString(R.string.install_language) + ": " + bibleLanguage)
-                        .setContentText(getString(R.string.in_progress))
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setAutoCancel(true);
+        // Create the NotificationChannel, but only on API 26+ because the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            int importance = NotificationManager.IMPORTANCE_LOW;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Notifications", importance);
+            channel.setDescription("Desc");
+            channel.enableVibration(false);
+            NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(channel);
+        }
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID);
+
+        builder.setAutoCancel(true)
+                .setDefaults(Notification.DEFAULT_ALL)
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setTicker("Ticker")
+                .setContentTitle(getString(R.string.install_language) + ": " + bibleLanguage)
+                .setContentText(getString(R.string.in_progress))
+                .setContentInfo("Info");
 
         PendingIntent notifyPIntent =
                 PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), 0);
-        mBuilder.setContentIntent(notifyPIntent);
+        builder.setContentIntent(notifyPIntent);
 
-        return mBuilder;
+        return builder;
     }
 
     private void notifyUserAboutProgress(NotificationCompat.Builder builder, int id, int progressInPercentage) {

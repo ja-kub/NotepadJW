@@ -116,10 +116,10 @@
     <string name="conventions_program">Kongresszusi program</string>
     <string name="conventions">Kongresszusok</string>
     <string name="provide_conventions_program_question">Szeretné létrehozni egy mappát kongresszusi programokkal?</string>
-    <string name="main_dir_is_null">Indítsa el a NotepadJW alkalmazásokból, majd térjen vissza erre a műveletre</string>
+    <string name="main_dir_is_null">Indítsa el a Notepad JT alkalmazásokból, majd térjen vissza erre a műveletre</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
-    <p>A jegyzetek a <B>Notepad JW</B> alkalmazással készültek - ez egy testvéreknek készült jegyzetelő, ami írás közben megjeleníti a szövegben szereplő  bibliaidézeteket.</p>
+    <p>A jegyzetek a <B>Notepad JT</B> alkalmazással készültek - ez egy testvéreknek készült jegyzetelő, ami írás közben megjeleníti a szövegben szereplő  bibliaidézeteket.</p>
     <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
         ]]>
     </string>
@@ -127,7 +127,7 @@
 <h3>Információ</h3>
 <p>Minden bibliaidézet a Szentírás Új Világ fordításából van.
 (Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
-<h3>Miért érdemes használni a NotepadJW alkalmazást?</h3>
+<h3>Miért érdemes használni a Notepad JT alkalmazást?</h3>
 <p>Ez az alkalmazás egyedülálló módon a jegyzeteléssel egyidőben megjeleníti a jegyzetben szereplő bibliaverseket.
 Emiatt különösen hasznos lehet összejöveteleken, vagy kongresszusokon - nem kell alkalmazások közt ugrálnod,
 vagy a nyomtatott Bibliából keresgélni az idézeteket, mivel ezek a jegyzeteid mellett, ugyanabban az ablakban jelnnek meg.
@@ -142,34 +142,25 @@ mint egy eszközt, és ahhoz, hogy biztonságos mentési őket.</p>
 <br>A <b>Jegyzetkezelő</b> segítségével új jegyzeteket hozhatsz létre és nyithatsz meg, valamint mappákba rendezheted őket.
 <br>Hosszú érintéssel több elemet is kijelölhetsz, amiket aztán átnevezhetsz, törölhetsz, vagy elküldhetsz másoknak (Hamarosan a másolás, kivágás, beillesztés funkciók is elérhetők lesznek).
 <br>A <b>Jegyzet Szerkesztő</b>n belül választhatsz a <i>Szerkesztői Mód</i> és a  <i>Megtekintési Mód</i> között. Az szerkesztői módban mindig a legutóbb leírt bibliaverset jeleníti meg, míg a megtekintési módban mindig azt az idézetet olvashatod, amelyikre éppen rákoppintasz a jegyzetben.
-<h3>Automatikus mentés és jegyzetek helye</h3>
-<b> Ha a készülék Android 6.0-s vagy újabb: </ b> A jegyzetek és beállítások biztonsági mentése
-akkor kerül sor, ha:
-<br> - Engedélyezte a mentési lehetőséget az eszközön a Beállítások -> Biztonsági mentés alatt
-<br> - Min. 24 órával az utolsó mentés után
-<br> - A készülék készenléti állapotban van, és töltődik
-<br> - Az eszköz Wi-Fi hálózathoz csatlakozik.
-<br> A készülék cseréje vagy a Notepad JW alkalmazás újratelepítése esetén a jegyzetek és beállítások automatikusan visszaállnak.
-A jegyzetek nem érhetők el más alkalmazásokhoz vagy az eszköz számítógéphez való csatlakoztatását követően (ez a követelmény a működéshez szükséges).
-Természetesen továbbra is használhatja azt a lehetőséget, hogy e fájlokat e-mailben, azonnali üzenetküldőkben vagy feltöltéssel töltse le a Google Drive-ba.
-Ha ellenőrizni akarja a mentést, nyissa meg a Google Drive-ot -> Menü -> Biztonsági mentések -> Utolsó másolat -> Alkalmazásadatok -> Jegyzettömb keresése. Ha nincs ilyen elem, és a fenti feltételek teljesültek, akkor saját felelősségére törölheti és újra hozzáadhatja Google Fiókját
-(Megjegyzés: ez a jelenlegi és a helytelen biztonsági másolatokat megtisztítja): Beállítások -> Fiókok - > Google -> Fiók törlése, majd Fiók hozzáadása -> Google.
-<br><br><b>Ha van régebbi Androidja, mint 6.0:</b> A jegyzeteket nem készítik automatikusan biztonsági mentés. Ők
-mentett eszközön a nyilvános helyen: Documents / NotepadJW. A számítógépről elérheti őket.
-Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként), átnevezheti, törölheti, áthelyezheti, újonnan hozzáadhatja a számítógépről, stb.
+<h3>Kézi biztonsági mentés </h3>
+Javasoljuk, hogy időről időre manuálisan készítsen jegyzeteket. Ehhez koppintson a Jegyzetek exportálása gombra a jobb felső sarokban található menüből.
+Ha Android 4.4-es vagy újabb, a jegyzetek ZIP-fájlba lesznek csomagolva, amelyet menthet eszközére, a Google Drive-ra, a PC-re stb.
+Ezután importálhatja őket bármilyen Notepad JT és Android 4.4 vagy újabb operációs rendszerű mobileszközre (például amikor készüléket cserél vagy gyári beállításokat állít vissza).
     ]]></string>
     <string name="permission_explanation_dialog_message">
         Nemsokára megjelenik egy ablak, ami engedélyt fog kérni a külső tároló eléréséhez. Ha ezt engedélyezed, a
-        Notepad JW a külső tárolóra fogja menteni a jegyzeteidet (a documents/NotepadJW mappában).
-        Ez előnyös megoldás, mivel így a jegyzeteidet később más alkalmazásokból, vagy akár számítógépről is elérheted (A Notepad JW alkalmazás egyetlen fájlt sem fog módosítani a NotepadJW mappán kívül).
-        Ha megtagadod az engedélyt, a Notepad JW a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
+        Notepad JT a külső tárolóra fogja menteni a jegyzeteidet (a documents/NotepadJW mappában).
+        Ez előnyös megoldás, mivel így a jegyzeteidet később más alkalmazásokból, vagy akár számítógépről is elérheted (A Notepad JT alkalmazás egyetlen fájlt sem fog módosítani a NotepadJW mappán kívül).
+        Ha megtagadod az engedélyt, a Notepad JT a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-• Helyhez kötött gombok jelennek meg, amikor kiválasztja a szöveget. \n\n
+• 2021-es kongresszusi program \n\n
+• Hozzáadott: a jegyzeteket gyakran menti (elvesztését megelőzendő, ha az akkumulátor lemerül, stb)\n\n
     </string>
     <string name="whats_new_message_last">
-• 2021-es kongresszusi program \n\n
-• Hozzáadott: a jegyzeteket gyakran menti (elvesztését megelőzendő, ha az akkumulátor lemerül, stb)
+• Új alkalmazás ikon.\n\n
+• Javítottunk egy hibát a Biblia letöltésével és telepítésével az Android 11-re\n\n
+• Korszerűsítették a jegyzetek exportálását és importálását (a legjobb, ha most biztonsági másolatot készít: kattintson a jobb felső sarokban található menüre -> Jegyzetek exportálása)
     </string>
     <string name="import_title">Importálása jegyzetek</string>
     <string name="import_notes_question">Szeretné importálni az összes jegyzeteket a mappát \\Documents\\NotepadJW ?</string>
@@ -184,4 +175,6 @@ Ez azt jelenti, hogy átmásolhatja őket a számítógépre (kézi mentésként
     <string name="Share_app">"Szia! Szeretnék ajánlani egy nagyon jó app, ami hasznos, hogy tudomásul veszi során Kongresszusát és Összejövetelek, mert megjeleníti bibliaversekkel után azonnal beírja a referencia. Nézd meg magad: "</string>
     <string name="Recommend_alternative">Ez rendben van, ne aggódj. Talán szeretne ajánlani ezt az alkalmazást a barátja helyett?</string>
     <string name="Recommend_explanation">Ajánlaná ezt az alkalmazást egy barát?</string>
+    <string name="exported_successfully">Megjegyzések kivitték</string>
+    <string name="imported_successfully">Megjegyzések importálták</string>
 </resources>

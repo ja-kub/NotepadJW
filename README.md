@@ -11,7 +11,7 @@ App is available on Play Store:
 
 Click picture below to start a presentation.
 
-[![Notepad JW](http://img.youtube.com/vi/NDm3OqG__ag/0.jpg)](https://youtu.be/NDm3OqG__ag "Notepad JT")
+[![Notepad JT](http://img.youtube.com/vi/NDm3OqG__ag/0.jpg)](https://youtu.be/NDm3OqG__ag "Notepad JT")
 
 ## Screenshots
 

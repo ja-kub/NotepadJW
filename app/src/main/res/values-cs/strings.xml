@@ -92,7 +92,7 @@
     <string name="verse_position_dialog_title">Pozice veršů</string>
     <string name="missing_language_dialog_title">Chybí jazyk</string>
     <string name="missing_language_message">Stáhnout a nainstalovat Bibli ve vybraném jazyce?</string>
-    <string name="download_description">Stáhnout Bibli v novém jazyce pro Notepad JW</string>
+    <string name="download_description">Stáhnout Bibli v novém jazyce pro Notepad JT</string>
     <string name="download_language">Stahování Bible v jazyce</string>
     <string name="install_language">Instalování Bible v jazyce</string>
     <string name="in_progress">Probíhá</string>
@@ -116,10 +116,10 @@
     <string name="conventions_program">Programy sjezdů</string>
     <string name="conventions">Sjezdy</string>
     <string name="provide_conventions_program_question">Vytvořit složku s programy sjezdů?</string>
-    <string name="main_dir_is_null">Spusť NotepadJW ze tvých aplikací a pak se sem vrať pro dokončení této operace.</string>
+    <string name="main_dir_is_null">Spusť Notepad JT ze tvých aplikací a pak se sem vrať pro dokončení této operace.</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
-    <p>Poznámka odeslána z <B>Notepad JW</B> - správce a editoru poznámek se zobrazením veršů.</p>
+    <p>Poznámka odeslána z <B>Notepad JT</B> - správce a editoru poznámek se zobrazením veršů.</p>
     <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
         ]]>
     </string>
@@ -128,7 +128,7 @@
 <h3>Informace</h3>
 <p>Text všech veršů pochází ze Svatého Písma - Překladu nového světa
 (Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
-<h3>Proč používat NotepadJW?</h3>
+<h3>Proč používat Notepad JT?</h3>
 <p>Tato aplikace byla vytvořena protože nebyla nalezena žádná jiná aplikace, která by uměla zobrazit
 verše v reálném čase při psaní poznámek. Takže je užitečná pro vytváření poznámek během shromáždění
 a sjezdů - už nebudeš potřebovat přepínat mezi aplikacemi nebo hledat v Bibli.
@@ -145,38 +145,28 @@ než jednoho zařízení a mít bezpečnou zálohu z nich.</p>
 <br>V <b>Poznámkovém editoru</b> můžeš přepínat mezi <i>Editováním (psaním)</i> a <i>Prohlížením (čtením)</i>. V první případě,
 bude zobrazen naposledy zadaný verš a v druhém případě můžeš kliknout na odkazy vytvořené z veršů
 pro jejich okamžité zobrazení.
-<h3>Automatické zálohování poznámek</h3>
-<b> Pokud má tvoje zařízení Android 6.0 nebo novější: </ b> Zálohuje poznámky a nastavení
-když:
-<br> - Je povolená možnost zálohování v zařízení v části Nastavení -> Zálohování
-<br> - Uběhlo min. 24 hodin od poslední zálohy
-<br> - Přístroj je v nečinnosti a nabíjí se
-<br> - Zařízení je připojeno k síti Wi-Fi
-<br> Po změně zařízení nebo po přeinstalaci aplikace Notepad JW se poznámky a nastavení automaticky obnoví.
-Poznámky nejsou dostupné pro jiné aplikace nebo po připojení zařízení k počítači (je to požadavek, aby tato funkce fungovala).
-Samozřejmě můžeš stále používat možnost odesílání těchto souborů e-mailem, chatovacími aplikacemi nebo nahráním do Disku Google.
-Chceš-li zkontrolovat, zda byla záloha provedena, otevři Google Drive -> Menu -> Backups -> poslední kopie -> Application data -> hledej Notepad JW.
-Pokud taková položka neexistuje a výše uvedené podmínky byly splněny, můžeš na vlastní riziko svůj účet Google odebrat a znovu přidat
-(Poznámka: tím se vymažou aktuální a správné zálohy): Settings -> Accounts -> Google -> odeber účet, pak přidej účet -> Google.
-<br><br><b>Pokud máš starší Android než 6.0:</b> poznámky nejsou automaticky zálohovány, ale jsou
-uloženy ve tvém zařízení ve složce: Documents/NotepadJW. Můžeš k nim přistupovat z tvého počítače.
-To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohování), přejmenovat, mazat, přesunout nebo přidat nové z počítače, atd.
+<h3>Ruční zálohování </h3>
+Doporučujeme, abyste si své poznámky občas zálohovali. Chcete-li to provést, klepněte na tlačítko Exportovat poznámky z nabídky v pravém horním rohu.
+Pokud máte Android 4.4 nebo novější, poznámky budou zabaleny do souboru zip, který můžete uložit do zařízení, na Disk Google, PC atd.
+Poté je můžete importovat do libovolného mobilního zařízení s Poznámkovým blokem JT a Androidem 4.4 nebo novějším (například když změníte zařízení nebo obnovíte tovární nastavení).
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
         Na další obrazovce budeš požádán o povolení pro přístup k externímu úložišti. Pokud tuto možnost
-        povolíš, Notepad JW uloží poznámky do externího úložiště (v adresáři Dokumenty -> NotepadJW).
+        povolíš, Notepad JT uloží poznámky do externího úložiště (v adresáři Dokumenty -> NotepadJW).
         Tímto způsobem budeš mít přístup k poznámkám z jiných aplikací a z počítače
         (aplikace JW Notepad nečte ani neupravuje žádné soubory mimo adresář NotepadJW).
-        Pokud odmítneš, aplikace Notepad JW uloží poznámky do vnitřní paměti, do které nebudeš mít 
+        Pokud odmítneš, aplikace Notepad JT uloží poznámky do vnitřní paměti, do které nebudeš mít
         přístup z jiných aplikací nebo z počítače.
     </string>
     <string name="whats_new_message_previous">
-• Fixní umístění tlačítek, které se objevují při výběru textu. \n\n
+• Program sjezdu 2021. \n\n
+• Přidané časté poznámky ukládání (aby nedošlo k jejich ztrátě, když se vybije etc) \n\n
     </string>
     <string name="whats_new_message_last">
-• Program sjezdu 2021. \n\n
-• Přidané časté poznámky ukládání (aby nedošlo k jejich ztrátě, když se vybije etc)
+• Ikona nové aplikace.\n\n
+• Opravená chyba při stahování a instalaci Bible v systému Android 11\n\n
+• Export a import poznámek byl modernizován (nejlépe je provést zálohu nyní: klikněte na nabídku v pravém horním rohu -> Exportovat poznámky)
     </string>
     <string name="import_title">Import poznámek</string>
     <string name="import_notes_question">Import poznámek z \\Documents\\NotepadJW folder?</string>
@@ -191,4 +181,6 @@ To znamená, že je můžeš zkopírovat do počítače (jako ruční zálohová
     <string name="Share_app">"Ahoj! Chtěl bych vám doporučit velmi dobrou aplikaci, což je užitečné, aby si poznámky během shromáždění a setkání, protože zobrazuje biblické verše okamžitě po zadání jejich reference. Ověřte si to sami: "</string>
     <string name="Recommend_alternative">To je v pořádku, neboj se. Možná byste chtěli doporučit tuto aplikaci do svého přítele místo?</string>
     <string name="Recommend_explanation">Doporučili byste tuto aplikaci svým známým?</string>
+    <string name="exported_successfully">Poznámky byly vyvezeny</string>
+    <string name="imported_successfully">Poznámky byly importovány</string>
 </resources>

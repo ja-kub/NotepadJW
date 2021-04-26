@@ -117,16 +117,16 @@
     <string name="conventions_program">Programa de la asamblea</string>
     <string name="conventions">Asambleas</string>
     <string name="provide_conventions_program_question">Crear carpeta con los programas de asambleas?</string>
-    <string name="main_dir_is_null">Inicie NotepadJW desde sus aplicaciones, luego vuelva a esta operación</string>
+    <string name="main_dir_is_null">Inicie Notepad JT desde sus aplicaciones, luego vuelva a esta operación</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
-    <p>Notas enviadas desde <B>Notepad JW</B>- administrador de notas y editor con vista en directo de los versos introducidos.</p>
+    <p>Notas enviadas desde <B>Notepad JT</B>- administrador de notas y editor con vista en directo de los versos introducidos.</p>
     <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
         ]]>
     </string>
     <string name="permission_explanation_dialog_message">
         En la siguiente pantalla se le preguntará sobre el acceso al almacenamiento externo. Si usted permite,
-        El Bloc de notas JW guardará notas en el almacenamiento externo (en la carpeta Documents ->NotepadJW).
+        El Bloc de notas JW guardará notas en el almacenamiento externo (en la carpeta Documents -> NotepadJW).
         De este modo tendrás acceso a estas notas desde otras aplicaciones y desde tu PC  (la aplicación JW de Notepad no lee ni modifica ningún archivo fuera de
         Carpeta de NotepadJW).
         Si Deny, el Bloc de notas JW guardará notas en el almacenamiento interno, a las que otras aplicaciones y su PC no tienen acceso.
@@ -135,7 +135,7 @@
     <![CDATA[
     <h3>Información</h3>
     <p>El texto de todos los versos proviene de la Traducción del Nuevo Mundo de las Sagradas Escrituras.</p>
-    <h3>¿Por qué utilizar NotepadJW?</h3>
+    <h3>¿Por qué utilizar Notepad JT?</h3>
     <p>Esta aplicación fue creada porque no se encontró ninguna otra aplicación que pudiera mostrar
     Versos en tiempo real mientras se edita alguna nota. Así que es útil para tomar notas durante
     Reuniones y congresos - ya no necesitas cambiar aplicaciones o buscar en papel Biblia
@@ -152,30 +152,20 @@ de un dispositivo y tener copia de seguridad segura de ellos.</p>
     <br>En <b>Editor de Bloc de notas</b> puede cambiar entre <i>Modo de edición</i> y <i>Modo de visualización</i>. En la primera,
     El último verso introducido será exhibido y en el segundo usted puede chascar encendido los acoplamientos creados de versos
     Para ver seleccionado.
-<h3>Ubicación de copia de seguridad automática y notas</h3>
-<b> Si su dispositivo tiene Android 6.0 o posterior: </ b> haga una copia de seguridad de sus notas y configuraciones
-se lleva a cabo cuando:
-<br> - Ha habilitado la opción de copia de seguridad en su dispositivo en Configuración -> Copia de seguridad
-<br> - Ha sido min. 24 horas desde la última copia de seguridad
-<br> - El dispositivo está inactivo y cargando
-<br> - El dispositivo está conectado a una red Wi-Fi.
-<br> Cuando se cambia el dispositivo o se reinstala la aplicación JW del Bloc de notas, las notas y configuraciones se restaurarán automáticamente.
-Las notas no están disponibles para otras aplicaciones o después de conectar el dispositivo a una computadora (este es un requisito para que esta funcionalidad funcione).
-Por supuesto, aún puede usar la opción de enviar estos archivos por correo electrónico, mensajería instantánea o cargando en su Google Drive.
-Para verificar si la copia de seguridad se ha realizado, abra Google Drive -> Menú -> Copias de seguridad -> última copia -> Datos de la aplicación ->
-busque el JW del Bloc de notas. Si no existe tal artículo, y se cumplen las condiciones anteriores, puede eliminar y volver a agregar su Cuenta de
-Google bajo su responsabilidad (Nota: esto limpiará las copias de seguridad actuales tanto correctas como incorrectas): Configuración -> Cuentas - > Google -> Eliminar cuenta, luego Agregar cuenta -> Google.
-<br><br><b>Si tiene Android anterior a la versión 6.0:</b> las notas no se respaldan automáticamente. Ellos son
-guardado en su dispositivo en una ubicación pública: Documents / NotepadJW. Puede acceder a ellos desde nuestra PC.
-Significa que puede copiarlos a la PC (como una copia de seguridad manual), cambiar el nombre, eliminar, mover, agregar nuevos desde su computadora, etc.</p>
+<h3>Copia de seguridad manual </h3>
+Se recomienda realizar una copia de seguridad manual de sus notas de vez en cuando. Para hacer esto, toque el botón Exportar notas del menú en la esquina superior derecha.
+Si tiene Android 4.4 o una versión más reciente, las notas se empaquetarán en un archivo zip, que puede guardar en su dispositivo, en Google Drive, PC, etc.
+Luego, puede importarlos a cualquier dispositivo móvil con Notepad JT y Android 4.4 o más reciente (como cuando cambia su dispositivo o realiza un restablecimiento de fábrica).
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Ubicación fija de botones que aparecen cuando se selecciona texto. \n\n
+• Programa de la asamblea del 2021 \n\n
+• Añadido: notas frecuentes de ahorro (para evitar la pérdida de ellos cuando se agota la batería, etc.)\n\n
     </string>
     <string name="whats_new_message_last">
-• Programa de la asamblea del 2021 \n\n
-• Añadido: notas frecuentes de ahorro (para evitar la pérdida de ellos cuando se agota la batería, etc.)
+• Icono de nueva aplicación.\n\n
+• Se corrigió un error con la descarga e instalación de la Biblia en Android 11.\n\n
+• Se ha modernizado la exportación e importación de notas (es mejor hacer una copia de seguridad ahora: haga clic en el menú en la esquina superior derecha -> Exportar notas)
     </string>
     <string name="import_title">La importación de notas</string>
     <string name="import_notes_question">¿Le gustaría importar todas las notas de la carpeta \\Documents\\NotepadJW?</string>
@@ -190,4 +180,6 @@ Significa que puede copiarlos a la PC (como una copia de seguridad manual), camb
     <string name="Share_app">"¡Hola! Me gustaría recomendar una muy buena aplicación, que es útil para tomar notas durante las asambleas y reuniones, ya que muestra versículos inmediatamente después de escribir su referencia. Comprobarlo usted mismo: "</string>
     <string name="Recommend_alternative">Está bien, no se preocupe. Tal vez le gustaría recomendar esta aplicación a su amigo en su lugar?</string>
     <string name="Recommend_explanation">¿Recomendaría esta aplicación a un amigo?</string>
+    <string name="exported_successfully">Notas se exportaron</string>
+    <string name="imported_successfully">Notas fueron importados</string>
 </resources>

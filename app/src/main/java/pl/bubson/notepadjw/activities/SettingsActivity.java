@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -146,7 +147,7 @@ public class SettingsActivity extends AppCompatActivity {
                 builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // User clicked OK button
-                        FileManagerActivity.askForPermissionsIfNotGranted(getActivity());
+                        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT) FileManagerActivity.askForPermissionsIfNotGranted(getActivity()); // Bibles are now saved to External Files for which permission needed only on < KITKAT (Android 4.4)
                         Intent downloadServiceIntent = new Intent(getActivity(), DownloadLanguageService.class);
                         downloadServiceIntent.putExtra("Language",  chosenLanguage);
                         getActivity().startService(downloadServiceIntent);

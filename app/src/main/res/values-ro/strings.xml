@@ -92,7 +92,7 @@
     <string name="verse_position_dialog_title">Pozitia versetului</string>
     <string name="missing_language_dialog_title">Limba indisponibila</string>
     <string name="missing_language_message">Descarca si instaleaza Biblia in aceasta limba acum?</string>
-    <string name="download_description">Descarca Biblia pentru Notepad JW</string>
+    <string name="download_description">Descarca Biblia pentru Notepad JT</string>
     <string name="download_language">Descarca Biblia in limba </string>
     <string name="install_language">Instaleaza Biblia in limba</string>
     <string name="in_progress">In desfasurare</string>
@@ -116,10 +116,10 @@
     <string name="conventions_program">Programul congresului</string>
     <string name="conventions">Congres</string>
     <string name="provide_conventions_program_question">Creați dosar cu programe de congresului?</string>
-    <string name="main_dir_is_null">Porniți NotepadJW din aplicațiile dvs., apoi reveniți la această operație</string>
+    <string name="main_dir_is_null">Porniți Notepad JT din aplicațiile dvs., apoi reveniți la această operație</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
-    <p>Notele trimise de la Notepad JW - note manager și editor cu vizualizare live a versurilor introduse.</p>
+    <p>Notele trimise de la Notepad JT - note manager și editor cu vizualizare live a versurilor introduse.</p>
     <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
         ]]>
     </string>
@@ -128,7 +128,7 @@
 <h3>Informație</h3>
 <p>Textul tuturor versetelor este din Traducerea Lumii Noi din Sfintele Scripturi
 (Copyright: (Watch Tower Biblia și Tract Society din Pennsylvania)).</p>
-<h3>De ce să folosiți NotepadJW?</h3>
+<h3>De ce să folosiți Notepad JT?</h3>
 <p>
 Această aplicație a fost creată, deoarece nu a fost găsită nicio altă aplicație, care ar putea fi afișată
 versuri în timp real în timp ce editați unele note. Deci, este util pentru a face note în timpul
@@ -147,39 +147,29 @@ mult de un dispozitiv și să aibă de rezervă în siguranță a acestora.
 <br> În <b> Editorul Notepad </b> puteți comuta între <i> Modul de editare </i> și <i> Modul de vizualizare </i>. În primul,
 ultimul verset introdus va fi afișat, iar în cel de-al doilea poți să dai clic pe link-urile create de versuri
 pentru a vedea unul selectat.
-<h3> De rezervă automată </h3>
-<b> Dacă dispozitivul dvs. are versiunea Android 6.0 sau o versiune ulterioară: </b> Creați copii de rezervă pentru note și setări
-se efectuează atunci când:
-<br> - Ați activat opțiunea de backup pe dispozitiv în Setări -> Copiere de rezervă
-<br> - A fost min. 24 de ore de la ultima copie de rezervă
-<br> - Dispozitivul este inactiv și se încarcă
-<br> - Dispozitivul este conectat la o rețea Wi-Fi.
-<br> Când dispozitivul este schimbat sau aplicația JW Notepad este reinstalată, notele și setările vor fi restabilite automat.
-Notele nu sunt disponibile pentru alte aplicații sau după conectarea dispozitivului la un computer (aceasta este o cerință pentru ca această funcție să funcționeze).
-Desigur, puteți utiliza opțiunea de a trimite aceste fișiere prin e-mail, mesageri instantanee sau încărcarea pe Google Drive.
-Pentru a verifica dacă sa efectuat copierea de rezervă, deschideți Disc Google -> Meniu -> Copii de rezervă -> ultima copie -> Date despre aplicație -> găsiți Notepad JW.
-Dacă nu există un astfel de element și condițiile de mai sus au fost îndeplinite, puteți să ștergeți și să vă adăugați din nou Contul Google pe propriul risc
-(Notă: acest lucru va curăța backup-urile curente atât corect, cât și incorecte): Setări -> Conturi - > Google -> Ștergeți contul, apoi adăugați cont -> Google.
-<br> <br> <b> Dacă aveți Android mai vechi decât 6.0: </ b> Notele nu sunt copiate automat în siguranță. Sunt
-salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Puteți să le accesați de pe PC-ul nostru.
-Înseamnă că le poți copia pe PC, le poți redenumi, șterge, muta, adăuga altele de pe computer etc.
+<h3>Backup manual </h3>
+Vă sfătuim să faceți copii de rezervă manuale ale notelor dvs. din când în când. Pentru a face acest lucru, atingeți butonul Exportați note din meniul din colțul din dreapta sus.
+Dacă aveți Android 4.4 sau mai recent, notele vor fi împachetate în fișier zip, pe care îl puteți salva pe dispozitiv, pe Google Drive, PC etc.
+Apoi le puteți importa pe orice dispozitiv mobil cu Notepad JT și Android 4.4 sau mai nou (cum ar fi când vă schimbați dispozitivul sau efectuați resetarea din fabrică).
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
          În ecranul următor veți fi întrebat despre accesul la spațiul de stocare extern. Dacă permiteți,
-         Notepad JW va salva notițele în memoria externă (în folderul Documents -> NotepadJW).
+         Notepad JT va salva notițele în memoria externă (în folderul Documents -> NotepadJW).
          Prin urmare, veți avea acces la aceste note din alte aplicații și din PC pentru dvs
-         comoditate (aplicația Notepad JW nu citește sau modifică niciun fișier în afara
+         comoditate (aplicația Notepad JT nu citește sau modifică niciun fișier în afara
          Dosarul NotepadJW).
-         Dacă dați, Notepad JW va salva notițele la spațiul de stocare intern, la alte aplicații și PC-ul dvs
+         Dacă dați, Notepad JT va salva notițele la spațiul de stocare intern, la alte aplicații și PC-ul dvs
          nu au acces.
     </string>
     <string name="whats_new_message_previous">
-• Locul de amplasare fix de butoane care apar atunci când selectați textul. \n\n
+• Programul congresului – 2021 \n\n
+• Adăugat: notele sunt salvate frecvent (pentru a evita pierderea lor când bateria este descărcată etc.)\n\n
     </string>
     <string name="whats_new_message_last">
-• Programul congresului – 2021 \n\n
-• Adăugat: notele sunt salvate frecvent (pentru a evita pierderea lor când bateria este descărcată etc.)
+• Pictogramă aplicație nouă.\n\n
+• S-a remediat o eroare cu descărcarea și instalarea Bibliei pe Android 11\n\n
+• Exportul și importul notelor au fost modernizate (cel mai bine este să faceți o copie de rezervă acum: faceți clic pe meniul din colțul din dreapta sus -> Exportați note)
     </string>
     <string name="import_title">Importul note</string>
     <string name="import_notes_question">Doriți să importați toate notele de la dosar \\Documents\\NotepadJW?</string>
@@ -194,4 +184,6 @@ salvate pe dispozitivul dvs. în locație publică: Documente / NotepadJW. Pute�
     <string name="Share_app">"Bună! Aș dori să vă recomand o aplicație foarte bună, ceea ce este util pentru a lua notițe în timpul congresului și întâlnirilor, deoarece afișează versete din Biblie, imediat după introducerea lor de referință. Verificați-l de unul singur: "</string>
     <string name="Recommend_alternative">E în regulă, nu-ți face griji. Poate v-ar dori să recomande această aplicație pentru prietenul tău în schimb?</string>
     <string name="Recommend_explanation">Ați recomanda această aplicație unui prieten?</string>
+    <string name="exported_successfully">Note au fost exportate</string>
+    <string name="imported_successfully">Note au fost importate</string>
 </resources>

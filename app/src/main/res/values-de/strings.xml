@@ -92,7 +92,7 @@
     <string name="verse_position_dialog_title">Verse Position</string>
     <string name="missing_language_dialog_title">Fehlende Sprache</string>
     <string name="missing_language_message">Laden und installieren Sie Bibel in dieser Sprache jetzt?</string>
-    <string name="download_description">Download Bibel in neuer Sprache für Notepad JW</string>
+    <string name="download_description">Download Bibel in neuer Sprache für Notepad JT</string>
     <string name="download_language">Bibel in Sprache herunterladen</string>
     <string name="install_language">Installationsbibel in Sprache</string>
     <string name="in_progress">In Bearbeitung</string>
@@ -116,10 +116,10 @@
     <string name="conventions_program">Kongressprogramm</string>
     <string name="conventions">Kongresse</string>
     <string name="provide_conventions_program_question">Ordner erstellen mit Kongresse Programme?</string>
-    <string name="main_dir_is_null">Bitte starten Sie NotepadJW von Ihren Apps und kehren Sie dann zu diesem Vorgang zurück</string>
+    <string name="main_dir_is_null">Bitte starten Sie Notepad JT von Ihren Apps und kehren Sie dann zu diesem Vorgang zurück</string>
     <string name="sent_by_notepadjw">
     <![CDATA[
-    <p>Notizen von <B>Notepad JW</b> - Notizen Manager und Editor mit Live-Ansicht der eingegebenen Verse.</p>
+    <p>Notizen von <B>Notepad JT</b> - Notizen Manager und Editor mit Live-Ansicht der eingegebenen Verse.</p>
     <p>https://play.google.com/store/apps/details?id=pl.bubson.notepadjw</p>
     ]]>
     </string>
@@ -128,7 +128,7 @@
     <h3>Information</h3>
     <p>Text aller Verse sind aus der Neuen Welt Übersetzung der Heiligen Schriften
         (Copyright: (Watch Tower Bibel und Tract Society of Pennsylvania)).</p>
-    <h3>Warum NotepadJW verwenden? </h3>
+    <h3>Warum Notepad JT verwenden? </h3>
     <p>Diese Anwendung wurde erstellt, da keine andere App gefunden wurde, die in der Lage sein würde zu zeigen
         Verse in der Realzeit beim Bearbeiten einer Note. So ist es sinnvoll, Notizen zu machen
         Treffen und Kongresse - Sie brauchen nicht mehr, um Anwendungen zu wechseln oder Bibel zu durchsuchen
@@ -144,40 +144,30 @@ als ein Gerät und sichere Backup von ihnen zu haben.</p>
         <br>Sie können Artikel per Langklick auswählen und dann umbenennen, löschen oder senden (schneiden, kopieren und Einfügen von Optionen wird in Kürze hinzugefügt).
         <br>In <b>Notepad Editor</b> können Sie zwischen <i>Edit Mode</i>und <i>View Mode</i>wechseln. In der ersten,
         Der zuletzt eingegebene Vers wird angezeigt und in der zweiten können Sie auf Links klicken, die aus Versen erstellt wurden
-        Um eine ausgewählte zu sehen.
-<h3>Automatisches Backup und Speicherort der Notizen</h3>
-<b> Wenn Ihr Gerät über Android 6.0 oder neuer verfügt: </ b> Sichern Sie Ihre Notizen und Einstellungen
-es wird durchgeführt, wenn:
-<br> - Sie haben die Backup-Option auf Ihrem Gerät unter Einstellungen -> Backup aktiviert
-<br> - Es war min. 24 Stunden nach dem letzten Backup
-<br> - Das Gerät ist im Leerlauf und lädt
-<br> - Das Gerät ist mit einem Wi-Fi-Netzwerk verbunden.
-<br> Wenn das Gerät geändert oder die Anwendung "Editor JW" neu installiert wird, werden Notizen und Einstellungen automatisch wiederhergestellt.
-Hinweise sind für andere Anwendungen oder nach dem Verbinden des Geräts mit einem Computer nicht verfügbar (dies ist Voraussetzung für das Funktionieren dieser Funktion).
-Selbstverständlich können Sie diese Dateien weiterhin per E-Mail, Instant Messenger oder Upload auf Google Drive versenden.
-Um zu überprüfen, ob die Sicherung durchgeführt wurde, öffnen Sie Google Drive -> Menü -> Sicherungen -> letzte Kopie -> Anwendungsdaten -> Editor JW finden.
-Wenn es keinen solchen Artikel gibt und die oben genannten Bedingungen erfüllt sind, können Sie Ihr Google-Konto auf eigenes Risiko löschen und erneut hinzufügen
-(Hinweis: Dadurch werden die aktuellen Sicherungen sowohl korrekt als auch inkorrekt bereinigt): Einstellungen -> Konten - > Google -> Konto löschen, dann Konto hinzufügen -> Google.
-<br><br><b>Wenn Sie älter als Android 6.0 sind:</b> Notepad werden nicht automatisch gesichert. Sie sind
-gespeichert auf Ihrem Gerät an einem öffentlichen Ort: Dokumente / NotepadJW. Sie können von unserem PC aus darauf zugreifen.
-Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), umbenennen, löschen, verschieben, neu von Ihrem Computer hinzufügen usw. </p>
+        Um eine ausgewählte zu sehen.</p>
+<h3>Manuelle Sicherung </h3>
+Es wird empfohlen, Ihre Notizen von Zeit zu Zeit manuell zu sichern. Tippen Sie dazu im Menü oben rechts auf die Schaltfläche Notizen exportieren.
+Wenn Sie Android 4.4 oder neuere Notizen haben, werden diese in eine Zip-Datei gepackt, die Sie auf Ihrem Gerät, auf Google Drive, PC usw. speichern können.
+Sie können sie dann mit Notepad JT und Android 4.4 oder neuer auf jedes mobile Gerät importieren (z. B. wenn Sie Ihr Gerät wechseln oder die Werkseinstellungen zurücksetzen).
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
         Im nächsten Bildschirm werden Sie nach dem Zugriff auf den externen Speicher gefragt. Wenn du erlaubst,
-        Notepad JW speichert Notizen zum externen Speicher (im Ordner Dokumente ->NotepadJW).
+        Notepad JT speichert Notizen zum externen Speicher (im Ordner Dokumente ->NotepadJW).
         Dabei hättest du Zugang zu diesen Notizen von anderen Apps und vom PC für dein
-        Bequemlichkeit (Notepad JW App liest oder ändert keine Dateien außerhalb von
+        Bequemlichkeit (Notepad JT App liest oder ändert keine Dateien außerhalb von
         NotepadJW-Ordner).
-        Wenn Sie verweigern, wird Notepad JW Notizen zum internen Speicher speichern, zu denen andere Apps und Ihr PC
+        Wenn Sie verweigern, wird Notepad JT Notizen zum internen Speicher speichern, zu denen andere Apps und Ihr PC
         Ich habe keinen Zugang.
     </string>
     <string name="whats_new_message_previous">
-• Feste Position der Tasten, die angezeigt werden, wenn Sie Text auswählen. \n\n
+• Kongressprogramm 2021 \n\n
+• Hinzugefügt: häufiges Speichern von Notizen (zu vermeiden, dass sie, wenn der Akku leer ist etc zu verlieren)\n\n
     </string>
     <string name="whats_new_message_last">
-• Kongressprogramm 2021 \n\n
-• Hinzugefügt: häufiges Speichern von Notizen (zu vermeiden, dass sie, wenn der Akku leer ist etc zu verlieren)
+• Neues Anwendungssymbol.\n\n
+• Ein Fehler beim Herunterladen und Installieren der Bibel auf Android 11 wurde behoben\n\n
+• Der Export und Import von Notizen wurde modernisiert (am besten erstellen Sie jetzt ein Backup: Klicken Sie auf das Menü in der oberen rechten Ecke -> Notizen exportieren).
     </string>
     <string name="import_title">Importieren von Notizen</string>
     <string name="import_notes_question">Möchten Sie alle Notizen aus dem Ordner importieren \\Documents\\NotepadJW?</string>
@@ -192,4 +182,6 @@ Es bedeutet, dass Sie sie auf den PC kopieren können (als manuelle Sicherung), 
     <string name="Share_app">"Hallo! Ich möchte Ihnen eine sehr gute App empfehlen, was nützlich ist, sich Notizen während Kongress und Zusammenkünfte zu nehmen, weil es Bibel zeigt Verse unmittelbar nach ihrer Referenz eingeben. Prüfen Sie es selbst: "</string>
     <string name="Recommend_alternative">Es ist okay, mach dir keine Sorgen. Vielleicht möchten Sie diese Anwendung Ihrem Freund empfehlen?</string>
     <string name="Recommend_explanation">Möchten Sie diese App zu einem Freund empfehlen?</string>
+    <string name="exported_successfully">Hinweise wurden exportiert</string>
+    <string name="imported_successfully">Hinweise wurden importiert</string>
 </resources>

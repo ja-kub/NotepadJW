@@ -13,8 +13,8 @@
         <item>@string/font_size_xlarge</item>
     </string-array>
     <string-array name="verse_position_entries">
-        <item>Сверху▲</item>
-        <item>Справа►</item>
+        <item>Сверху▽</item>
+        <item>Справа◁</item>
     </string-array>
     <string-array name="verse_position_values">
         <item>@string/verse_position_top</item>
