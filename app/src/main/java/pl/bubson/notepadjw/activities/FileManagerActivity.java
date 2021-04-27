@@ -1166,6 +1166,58 @@ public class FileManagerActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
+        super.onActivityResult(requestCode, resultCode, resultData);
+        try {
+            if (requestCode == REQUEST_CODE_EXPORT_ZIPPED_NOTES && resultCode == Activity.RESULT_OK) {
+                Uri singleUri = null;
+                if (resultData != null) {
+                    singleUri = resultData.getData();
+                    if (singleUri != null && singleUri.getPath() != null) {
+                        File zippedExport = new File(getFilesDir(), EXPORT_FILE_NAME);
+                        if (zippedExport.exists()) zippedExport.delete();
+                        if (zippedExport.exists()) Log.e(TAG, "Temporary Export file still exist! This may produce ZipException: Central Directory Entry not found");
+                        Log.d(TAG, "Temporary Export file path = " + zippedExport.getAbsolutePath());
+                        Log.d(TAG, "Folder to be included in Zip file = " + mainDirectory.getAbsolutePath());
+                        new ZipFile(zippedExport.getAbsolutePath()).addFolder(mainDirectory);
+                        Log.d(TAG, "Temporary Export file was zipped.");
+                        DocumentFile dcFrom = DocumentFile.fromFile(zippedExport);
+                        DocumentFile dcTo = DocumentFile.fromSingleUri(this, singleUri);
+                        FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
+                        fc.copyFile(dcFrom, dcTo);
+                        Log.i(TAG, "Temporary Export file was copied to the destination selected by the user.");
+                        Snackbar.make(recyclerView, R.string.exported_successfully, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                        boolean deleted = zippedExport.delete();
+                        if (deleted) Log.d(TAG, "Temporary Export file was deleted.");
+                    }
+                }
+            } else if (requestCode == REQUEST_CODE_IMPORT_ZIPPED_NOTES && resultCode == Activity.RESULT_OK) {
+                Uri singleUri = null;
+                if (resultData != null) {
+                    singleUri = resultData.getData();
+                    if (singleUri != null && singleUri.getPath() != null) {
+                        File zippedImport = new File(getFilesDir(), EXPORT_FILE_NAME);
+                        if (zippedImport.exists()) zippedImport.delete();
+                        if (zippedImport.exists()) Log.e(TAG, "Temporary Import file still exist! This may produce ZipException: Central Directory Entry not found");
+                        DocumentFile dcFrom = DocumentFile.fromSingleUri(this, singleUri);
+                        DocumentFile dcTo = DocumentFile.fromFile(zippedImport);
+                        FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
+                        fc.copyFile(dcFrom, dcTo);
+                        Log.d(TAG, "Import file was copied to temporary destination: " + zippedImport.getAbsolutePath());
+                        new ZipFile(zippedImport).extractAll(mainDirectory.getParent());
+                        Log.i(TAG, "Temporary Import file was unzipped.");
+                        Snackbar.make(recyclerView, R.string.imported_successfully, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                        boolean deleted = zippedImport.delete();
+                        if (deleted) Log.d(TAG, "Temporary Import file was deleted.");
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     private File getImportExportDirOld() {
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 31) {
             return new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), EXPORT_FOLDER_NAME_OLD);
@@ -1226,54 +1278,6 @@ public class FileManagerActivity extends AppCompatActivity {
             e.printStackTrace();
             Snackbar.make(recyclerView, R.string.error_while_saving, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
-        }
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
-        super.onActivityResult(requestCode, resultCode, resultData);
-        try {
-            if (requestCode == REQUEST_CODE_EXPORT_ZIPPED_NOTES && resultCode == Activity.RESULT_OK) {
-                Uri singleUri = null;
-                if (resultData != null) {
-                    singleUri = resultData.getData();
-                    if (singleUri != null && singleUri.getPath() != null) {
-                        File zippedExport = new File(getFilesDir(), EXPORT_FILE_NAME);
-                        Log.d(TAG, "Temporary Export file path = " + zippedExport.getAbsolutePath());
-                        new ZipFile(zippedExport.getAbsolutePath()).addFolder(mainDirectory);
-                        Log.d(TAG, "Temporary Export file was zipped.");
-                        DocumentFile dcFrom = DocumentFile.fromFile(zippedExport);
-                        DocumentFile dcTo = DocumentFile.fromSingleUri(this, singleUri);
-                        FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
-                        fc.copyFile(dcFrom, dcTo);
-                        Log.i(TAG, "Temporary Export file was copied to the destination selected by the user.");
-                        Snackbar.make(recyclerView, R.string.exported_successfully, Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                        boolean deleted = zippedExport.delete();
-                        if (deleted) Log.d(TAG, "Temporary Export file was deleted.");
-                    }
-                }
-            } else if (requestCode == REQUEST_CODE_IMPORT_ZIPPED_NOTES && resultCode == Activity.RESULT_OK) {
-                Uri singleUri = null;
-                if (resultData != null) {
-                    singleUri = resultData.getData();
-                    if (singleUri != null && singleUri.getPath() != null) {
-                        File zippedImport = new File(getFilesDir(), EXPORT_FILE_NAME);
-                        if (zippedImport.exists()) zippedImport.delete();
-                        DocumentFile dcFrom = DocumentFile.fromSingleUri(this, singleUri);
-                        DocumentFile dcTo = DocumentFile.fromFile(zippedImport);
-                        FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);
-                        fc.copyFile(dcFrom, dcTo);
-                        Log.d(TAG, "Import file was copied to temporary destination: " + zippedImport.getAbsolutePath());
-                        new ZipFile(zippedImport).extractAll(mainDirectory.getParent());
-                        Log.i(TAG, "Temporary Import file was unzipped.");
-                        Snackbar.make(recyclerView, R.string.imported_successfully, Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                        boolean deleted = zippedImport.delete();
-                        if (deleted) Log.d(TAG, "Temporary Import file was deleted.");
-                    }
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
