@@ -132,13 +132,13 @@ public class NotepadEditorActivity extends AppCompatActivity {
                     versePreviewTextInEditMode.scrollTo(0, 0);
                 }
                 textModifications++;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // arbitrarily chosen to distinguish newer and older devices. M = Android 6.0
-                    if (textModifications % 20 == 0)
-                        saveDocumentIfChanged(); // saving note after every 20 changes in the text, which are 3-4 words (on newer devices)
-                } else {
-                    if (textModifications % 100 == 0)
-                        saveDocumentIfChanged(); // saving note after every 100 changes in the text, which are 15-20 words (on older devices)
-                }
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // arbitrarily chosen to distinguish newer and older devices. M = Android 6.0
+//                    if (textModifications % 20 == 0)
+//                        saveDocumentIfChanged(); // saving note after every 20 changes in the text, which are 3-4 words (on newer devices)
+//                } else {
+//                    if (textModifications % 100 == 0)
+//                        saveDocumentIfChanged(); // saving note after every 100 changes in the text, which are 15-20 words (on older devices)
+//                }
             } catch (Exception e) {
                 Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
                 e.printStackTrace();
@@ -765,7 +765,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
     private void saveDocumentIfChanged() {
         Log.d(TAG, "Start of saveDocumentIfChanged");
-        noteEditText.clearComposingText();
+        noteEditText.clearComposingText(); // not sure why, but if we use this method during editing note, last word is doubled in the editor. So reverting such saving
         final String currentHtml = SpanToHtmlConverter.toHtml(noteEditText.getEditableText());
         if (currentFile != null && !currentHtml.equals(htmlTextInFile)) {
             noteEditText.correctBullets();
