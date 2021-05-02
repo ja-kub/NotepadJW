@@ -162,12 +162,12 @@ Następnie możesz zaimportować je na dowolne urządzenie mobilne z Notatnikiem
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Program kongresu 2021.\n\n
-    </string>
-    <string name="whats_new_message_last">
 • Nowa ikona aplikacji.\n\n
 • Naprawiono błąd przy instalacji Biblii na Androidzie 11 \n\n
-• Unowocześniono eksport i import notatek (najlepiej zrobić kopię zapasową już teraz: kliknij menu w górnym prawym rogu -> Eksport notatek)
+• Unowocześniono eksport i import notatek (najlepiej zrobić kopię zapasową już teraz: kliknij menu w górnym prawym rogu -> Eksport notatek)\n\n
+    </string>
+    <string name="whats_new_message_last">
+• Poprawa błędów.
     </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>
@@ -184,4 +184,5 @@ Następnie możesz zaimportować je na dowolne urządzenie mobilne z Notatnikiem
     <string name="Recommend_explanation">"Czy zechciałbyś polecić tę aplikację znajomemu? "</string>
     <string name="exported_successfully">Notatki zostały wyeksportowane</string>
     <string name="imported_successfully">Notatki zostały zaimportowane</string>
+    <string name="name_cannot_contain_slash">Nazwa nie może zawierać ukośników (/)</string>
 </resources>

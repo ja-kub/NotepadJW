@@ -160,11 +160,12 @@ Você pode então importá-los para qualquer dispositivo móvel com o Bloco de N
     </string>
     <string name="whats_new_message_previous">
 • Programa do Congresso de 2021 \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Novo ícone do aplicativo.\n\n
 • Corrigido um bug com o download e instalação da Bíblia no Android 11\n\n
-• A exportação e importação de notas foram modernizadas (é melhor fazer um backup agora: clique no menu no canto superior direito -> Exportar notas)
+• A exportação e importação de notas foram modernizadas (é melhor fazer um backup agora: clique no menu no canto superior direito -> Exportar notas)\n\n
+    </string>
+    <string name="whats_new_message_last">
+• Correções de bugs.
    </string>
     <string name="import_title">Importação de notas</string>
     <string name="import_notes_question">Gostaria de importar todas as notas da pasta \\Documents\\NotepadJW?</string>
@@ -181,4 +182,5 @@ Você pode então importá-los para qualquer dispositivo móvel com o Bloco de N
     <string name="Recommend_explanation">Você recomendaria este aplicativo a um amigo?</string>
     <string name="exported_successfully">Notas foram exportadas</string>
     <string name="imported_successfully">Notas foram importados</string>
+    <string name="name_cannot_contain_slash">O nome não pode conter barras (/)</string>
 </resources>

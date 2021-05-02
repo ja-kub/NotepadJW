@@ -161,12 +161,12 @@ Sie können sie dann mit Notepad JT und Android 4.4 oder neuer auf jedes mobile 
         Ich habe keinen Zugang.
     </string>
     <string name="whats_new_message_previous">
-• Kongressprogramm 2021 \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Neues Anwendungssymbol.\n\n
 • Ein Fehler beim Herunterladen und Installieren der Bibel auf Android 11 wurde behoben\n\n
-• Der Export und Import von Notizen wurde modernisiert (am besten erstellen Sie jetzt ein Backup: Klicken Sie auf das Menü in der oberen rechten Ecke -> Notizen exportieren).
+• Der Export und Import von Notizen wurde modernisiert (am besten erstellen Sie jetzt ein Backup: Klicken Sie auf das Menü in der oberen rechten Ecke -> Notizen exportieren). \n\n
+    </string>
+    <string name="whats_new_message_last">
+• Fehlerbehebung.
     </string>
     <string name="import_title">Importieren von Notizen</string>
     <string name="import_notes_question">Möchten Sie alle Notizen aus dem Ordner importieren \\Documents\\NotepadJW?</string>
@@ -183,4 +183,5 @@ Sie können sie dann mit Notepad JT und Android 4.4 oder neuer auf jedes mobile 
     <string name="Recommend_explanation">Möchten Sie diese App zu einem Freund empfehlen?</string>
     <string name="exported_successfully">Hinweise wurden exportiert</string>
     <string name="imported_successfully">Hinweise wurden importiert</string>
+    <string name="name_cannot_contain_slash">Name darf keine Schrägstriche enthalten (/)</string>
 </resources>

@@ -201,12 +201,12 @@ You can then import them to any mobile device with Notepad JT and Android 4.4 or
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• 2021 Convention Program.\n\n
-    </string>
-    <string name="whats_new_message_last">
 • New application icon.\n\n
 • Fixed a bug with the download and installation of the Bible on Android 11\n\n
-• The export and import of notes has been modernized (it\'s best to make a backup now: click the menu in the upper right corner -> Export notes)
+• The export and import of notes has been modernized (it\'s best to make a backup now: click the menu in the upper right corner -> Export notes)\n\n
+    </string>
+    <string name="whats_new_message_last">
+• Bug fixes
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
@@ -223,4 +223,5 @@ You can then import them to any mobile device with Notepad JT and Android 4.4 or
     <string name="Recommend_explanation">Would you recommend this app to a friend?</string>
     <string name="exported_successfully">Notes were exported</string>
     <string name="imported_successfully">Notes were imported</string>
+    <string name="name_cannot_contain_slash">Name cannot contain slashes (/)</string>
 </resources>

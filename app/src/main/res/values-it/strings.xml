@@ -161,12 +161,12 @@ Puoi quindi importarli su qualsiasi dispositivo mobile con Blocco note JT e Andr
    non hanno accesso
    </string>
     <string name="whats_new_message_previous">
-• Programma del congresso del 2021\n\n
-   </string>
-    <string name="whats_new_message_last">
 • Nuova icona dell\'applicazione.\n\n
 • Risolto un bug con il download e l\'installazione della Bibbia su Android 11\n\n
-• L\'esportazione e l\'importazione delle note è stata modernizzata (è meglio fare un backup ora: fare clic sul menu nell\'angolo in alto a destra -> Esporta note)
+• L\'esportazione e l\'importazione delle note è stata modernizzata (è meglio fare un backup ora: fare clic sul menu nell\'angolo in alto a destra -> Esporta note)\n\n
+   </string>
+    <string name="whats_new_message_last">
+• Correzioni di bug.
     </string>
     <string name="import_title">Importazione di note</string>
     <string name="import_notes_question">Vuoi importare tutte le note dalla cartella \\Documents\\NotepadJW?</string>
@@ -183,4 +183,5 @@ Puoi quindi importarli su qualsiasi dispositivo mobile con Blocco note JT e Andr
     <string name="Recommend_explanation">Consiglieresti questa applicazione ad un amico?</string>
     <string name="exported_successfully">Note sono stati esportati</string>
     <string name="imported_successfully">Note sono stati importati</string>
+    <string name="name_cannot_contain_slash">Il nome non può contenere barre (/)</string>
 </resources>

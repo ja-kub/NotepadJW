@@ -161,12 +161,12 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
          ne pas avoir accès.
    </string>
    <string name="whats_new_message_previous">
-• Programme de l\’assemblée 2021 \n\n
+• Nouvelle icône d\'application.\n\n
+• Correction d\'un bug avec le téléchargement et l\'installation de la Bible sur Android 11.\n\n
+• L\'exportation et l\'importation des notes ont été modernisées (il est préférable de faire une sauvegarde maintenant: cliquez sur le menu dans le coin supérieur droit -> Exporter les notes).\n\n
    </string>
    <string name="whats_new_message_last">
-• Nouvelle icône d\'application.\n\n
-• Correction d\'un bug avec le téléchargement et l\'installation de la Bible sur Android 11\n\n
-• L\'exportation et l\'importation des notes ont été modernisées (il est préférable de faire une sauvegarde maintenant: cliquez sur le menu dans le coin supérieur droit -> Exporter les notes)
+• Corrections de bogues.
    </string>
     <string name="import_title">Importation des notes</string>
     <string name="import_notes_question">Voulez-vous importer toutes les notes du dossier \\Documents\\NotepadJW?</string>
@@ -183,4 +183,5 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
     <string name="Recommend_explanation">Recommanderiez-vous cette application à un ami?</string>
     <string name="exported_successfully">Des notes ont été exportées</string>
     <string name="imported_successfully">Des notes ont été importées</string>
+    <string name="name_cannot_contain_slash">Le nom ne peut pas contenir de barres obliques (/)</string>
 </resources>

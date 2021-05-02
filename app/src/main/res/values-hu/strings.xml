@@ -154,12 +154,12 @@ Ezután importálhatja őket bármilyen Notepad JT és Android 4.4 vagy újabb o
         Ha megtagadod az engedélyt, a Notepad JT a belső tárhelyre fogja menteni a jegyzeteket, ahol viszont más alkalmazások és a PC nem érik el azokat.
     </string>
     <string name="whats_new_message_previous">
-• 2021-es kongresszusi program \n\n
+• Új alkalmazás ikon.\n\n
+• Javítottunk egy hibát a Biblia letöltésével és telepítésével az Android 11-re.\n\n
+• Korszerűsítették a jegyzetek exportálását és importálását (a legjobb, ha most biztonsági másolatot készít: kattintson a jobb felső sarokban található menüre -> Jegyzetek exportálása). \n\n
     </string>
     <string name="whats_new_message_last">
-• Új alkalmazás ikon.\n\n
-• Javítottunk egy hibát a Biblia letöltésével és telepítésével az Android 11-re\n\n
-• Korszerűsítették a jegyzetek exportálását és importálását (a legjobb, ha most biztonsági másolatot készít: kattintson a jobb felső sarokban található menüre -> Jegyzetek exportálása)
+• Hibajavítások.
     </string>
     <string name="import_title">Importálása jegyzetek</string>
     <string name="import_notes_question">Szeretné importálni az összes jegyzeteket a mappát \\Documents\\NotepadJW ?</string>
@@ -176,4 +176,5 @@ Ezután importálhatja őket bármilyen Notepad JT és Android 4.4 vagy újabb o
     <string name="Recommend_explanation">Ajánlaná ezt az alkalmazást egy barát?</string>
     <string name="exported_successfully">Megjegyzések kivitték</string>
     <string name="imported_successfully">Megjegyzések importálták</string>
+    <string name="name_cannot_contain_slash">A név nem tartalmazhat perjelet (/)</string>
 </resources>

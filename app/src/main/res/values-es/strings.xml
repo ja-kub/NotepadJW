@@ -159,12 +159,12 @@ Luego, puede importarlos a cualquier dispositivo móvil con Notepad JT y Android
     ]]>
     </string>
     <string name="whats_new_message_previous">
-• Programa de la asamblea del 2021 \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Icono de nueva aplicación.\n\n
 • Se corrigió un error con la descarga e instalación de la Biblia en Android 11.\n\n
-• Se ha modernizado la exportación e importación de notas (es mejor hacer una copia de seguridad ahora: haga clic en el menú en la esquina superior derecha -> Exportar notas)
+• Se ha modernizado la exportación e importación de notas (es mejor hacer una copia de seguridad ahora: haga clic en el menú en la esquina superior derecha -> Exportar notas). \n\n
+    </string>
+    <string name="whats_new_message_last">
+• Corrección de errores.
     </string>
     <string name="import_title">La importación de notas</string>
     <string name="import_notes_question">¿Le gustaría importar todas las notas de la carpeta \\Documents\\NotepadJW?</string>
@@ -181,4 +181,5 @@ Luego, puede importarlos a cualquier dispositivo móvil con Notepad JT y Android
     <string name="Recommend_explanation">¿Recomendaría esta aplicación a un amigo?</string>
     <string name="exported_successfully">Notas se exportaron</string>
     <string name="imported_successfully">Notas fueron importados</string>
+    <string name="name_cannot_contain_slash">El nombre no puede contener barras (/)</string>
 </resources>

@@ -164,11 +164,12 @@ Apoi le puteți importa pe orice dispozitiv mobil cu Notepad JT și Android 4.4 
     </string>
     <string name="whats_new_message_previous">
 • Programul congresului – 2021 \n\n
-    </string>
-    <string name="whats_new_message_last">
 • Pictogramă aplicație nouă.\n\n
 • S-a remediat o eroare cu descărcarea și instalarea Bibliei pe Android 11\n\n
-• Exportul și importul notelor au fost modernizate (cel mai bine este să faceți o copie de rezervă acum: faceți clic pe meniul din colțul din dreapta sus -> Exportați note)
+• Exportul și importul notelor au fost modernizate (cel mai bine este să faceți o copie de rezervă acum: faceți clic pe meniul din colțul din dreapta sus -> Exportați note).\n\n
+    </string>
+    <string name="whats_new_message_last">
+• Corectarea erorilor.
     </string>
     <string name="import_title">Importul note</string>
     <string name="import_notes_question">Doriți să importați toate notele de la dosar \\Documents\\NotepadJW?</string>
@@ -185,4 +186,5 @@ Apoi le puteți importa pe orice dispozitiv mobil cu Notepad JT și Android 4.4 
     <string name="Recommend_explanation">Ați recomanda această aplicație unui prieten?</string>
     <string name="exported_successfully">Note au fost exportate</string>
     <string name="imported_successfully">Note au fost importate</string>
+    <string name="name_cannot_contain_slash">Numele nu poate conține bare (/)</string>
 </resources>

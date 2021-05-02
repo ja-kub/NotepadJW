@@ -666,6 +666,9 @@ public class FileManagerActivity extends AppCompatActivity {
                 if (newFileName.equals("")) {
                     isFileNameCorrect = false;
                     Toast.makeText(activityContext, R.string.name_cannot_be_empty, Toast.LENGTH_SHORT).show();
+                } else if (newFileName.contains("/")) {
+                    isFileNameCorrect = false;
+                    Toast.makeText(activityContext, R.string.name_cannot_contain_slash, Toast.LENGTH_SHORT).show();
                 } else {
                     for (File file : currentFilesAndDirectories) {
                         if (fileWithoutExtension(file.getName()).equalsIgnoreCase(newFileName)) {
@@ -723,6 +726,9 @@ public class FileManagerActivity extends AppCompatActivity {
                 if (newDirectoryName.equals("")) {
                     isDirectoryNameCorrect = false;
                     Toast.makeText(activityContext, R.string.name_cannot_be_empty, Toast.LENGTH_SHORT).show();
+                } else if (newDirectoryName.contains("/")) {
+                    isDirectoryNameCorrect = false;
+                    Toast.makeText(activityContext, R.string.name_cannot_contain_slash, Toast.LENGTH_SHORT).show();
                 } else {
                     for (File file : currentFilesAndDirectories) {
                         if (file.getName().equalsIgnoreCase(newDirectoryName)) {
@@ -787,6 +793,9 @@ public class FileManagerActivity extends AppCompatActivity {
                     if (input.getText().toString().equals("")) {
                         isFileNameCorrect = false;
                         Toast.makeText(activityContext, R.string.name_cannot_be_empty, Toast.LENGTH_SHORT).show();
+                    } else if (input.getText().toString().contains("/")) {
+                        isFileNameCorrect = false;
+                        Toast.makeText(activityContext, R.string.name_cannot_contain_slash, Toast.LENGTH_SHORT).show();
                     } else {
                         for (File file : fileDirectory.listFiles()) {
                             if (file.getName().equalsIgnoreCase(newFileName)) {

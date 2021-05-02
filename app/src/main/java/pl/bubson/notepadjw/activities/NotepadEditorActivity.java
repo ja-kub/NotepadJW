@@ -829,6 +829,9 @@ public class NotepadEditorActivity extends AppCompatActivity {
                     if (newFileName.equals("")) {
                         isFileNameCorrect = false;
                         Toast.makeText(activityContext, R.string.name_cannot_be_empty, Toast.LENGTH_SHORT).show();
+                    } else if (newFileName.contains("/")) {
+                        isFileNameCorrect = false;
+                        Toast.makeText(activityContext, R.string.name_cannot_contain_slash, Toast.LENGTH_SHORT).show();
                     } else {
                         newFileName = newFileName + "." + FileManagerActivity.NOTE_FILE_EXTENSION;
                         File[] filesAndDirectoriesInDownloadsDirectory = importsDirectory.listFiles();
