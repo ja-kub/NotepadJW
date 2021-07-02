@@ -182,4 +182,6 @@ Luego, puede importarlos a cualquier dispositivo móvil con Notepad JT y Android
     <string name="exported_successfully">Notas se exportaron</string>
     <string name="imported_successfully">Notas fueron importados</string>
     <string name="name_cannot_contain_slash">El nombre no puede contener barras (/)</string>
+    <string name="Backup">Backup</string>
+    <string name="Backup_reminder">Recuerde hacer una copia de seguridad de sus notas con regularidad. ¿Le gustaría hacer una copia de seguridad de ellos ahora?</string>
 </resources>

@@ -162,12 +162,10 @@ Następnie możesz zaimportować je na dowolne urządzenie mobilne z Notatnikiem
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Nowa ikona aplikacji.\n\n
-• Naprawiono błąd przy instalacji Biblii na Androidzie 11 \n\n
-• Unowocześniono eksport i import notatek (najlepiej zrobić kopię zapasową już teraz: kliknij menu w górnym prawym rogu -> Eksport notatek)\n\n
+• Poprawa błędów\n\n
     </string>
     <string name="whats_new_message_last">
-• Poprawa błędów.
+• Nowy rosyjski przekład Biblii (2021).
     </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>
@@ -185,4 +183,6 @@ Następnie możesz zaimportować je na dowolne urządzenie mobilne z Notatnikiem
     <string name="exported_successfully">Notatki zostały wyeksportowane</string>
     <string name="imported_successfully">Notatki zostały zaimportowane</string>
     <string name="name_cannot_contain_slash">Nazwa nie może zawierać ukośników (/)</string>
+    <string name="Backup">Kopia zapasowa</string>
+    <string name="Backup_reminder">Pamiętaj, aby regularnie tworzyć kopię zapasową swoich notatek. Czy chcesz to zrobić teraz?</string>
 </resources>

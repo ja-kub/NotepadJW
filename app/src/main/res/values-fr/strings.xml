@@ -184,4 +184,6 @@ Dans l\'écran suivant, vous serez interrogé sur l\'accès au stockage externe.
     <string name="exported_successfully">Des notes ont été exportées</string>
     <string name="imported_successfully">Des notes ont été importées</string>
     <string name="name_cannot_contain_slash">Le nom ne peut pas contenir de barres obliques (/)</string>
+    <string name="Backup">Backup</string>
+    <string name="Backup_reminder">N\'oubliez pas de sauvegarder vos notes régulièrement. Souhaitez-vous les sauvegarder maintenant?</string>
 </resources>

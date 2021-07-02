@@ -183,4 +183,6 @@ Poté je můžete importovat do libovolného mobilního zařízení s Poznámkov
     <string name="exported_successfully">Poznámky byly vyvezeny</string>
     <string name="imported_successfully">Poznámky byly importovány</string>
     <string name="name_cannot_contain_slash">Název nesmí obsahovat lomítka (/)</string>
+    <string name="Backup">Záloha</string>
+    <string name="Backup_reminder">Nezapomeňte si poznámky pravidelně zálohovat. Chcete je nyní zálohovat?</string>
 </resources>

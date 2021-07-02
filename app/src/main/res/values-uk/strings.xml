@@ -177,4 +177,6 @@
     <string name="exported_successfully">Примітки були експортовані</string>
     <string name="imported_successfully">Примітки були імпортовані</string>
     <string name="name_cannot_contain_slash">Ім\'я не може містити скісні риски (/)</string>
+    <string name="Backup">Резервне копіювання</string>
+    <string name="Backup_reminder">Не забувайте регулярно робити резервні копії своїх нотаток. Хочете зробити їх резервну копію зараз?</string>
 </resources>

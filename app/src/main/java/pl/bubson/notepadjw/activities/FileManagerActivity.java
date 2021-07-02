@@ -174,18 +174,18 @@ public class FileManagerActivity extends AppCompatActivity {
         prepareMainDirectory();
         prepareFilesDatabase(mainDirectory); // to be able to search them
 
-        coffeeChecker();
+        remindersChecker();
 
         // Show the "What's New" screen once for each new release of the application
         new WhatsNewScreen(this).show();
     }
 
-    private void coffeeChecker() {
+    private void remindersChecker() {
         loadAppOpenings();
         appOpenings++;
         saveAppOpenings();
-        if (appOpenings % 100 == 10) buyMeACoffeeReminder();
-        if (appOpenings % 100 == 20) recommendToFriendReminder();
+        if (appOpenings % 20 == 10) backupReminder();
+        if (appOpenings % 100 == 25) recommendToFriendReminder();
     }
 
     private void prepareSearchView() {
@@ -1115,9 +1115,13 @@ public class FileManagerActivity extends AppCompatActivity {
 //            Log.i(TAG, "Old Czech Bible found, removing.");
 //            biblesDatabase.deleteLanguage(Language.cs); // This method was needed only just after version 55 (released 13.09.2019), you can comment it out after some time
 //        }
-        if (biblesDatabase.getFile(Language.ro, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
-            Log.i(TAG, "Old Romanian Bible found, removing.");
-            biblesDatabase.deleteLanguage(Language.ro); // This method was needed only just after version 64 (released 11.07.2020), you can comment it out after some time
+//        if (biblesDatabase.getFile(Language.ro, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+//            Log.i(TAG, "Old Romanian Bible found, removing.");
+//            biblesDatabase.deleteLanguage(Language.ro); // This method was needed only just after version 64 (released 11.07.2020), you can comment it out after some time
+//        }
+        if (biblesDatabase.getFile(Language.ru, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+            Log.i(TAG, "Old Russian Bible found, removing.");
+            biblesDatabase.deleteLanguage(Language.ru); // This method was needed only just after version 78 (released 02.07.2021), you can comment it out after some time
         }
     }
 
@@ -1424,6 +1428,27 @@ public class FileManagerActivity extends AppCompatActivity {
         afc.copy(pathFrom, pathTo);
         filesDatabase.refreshData();
         fillListWithItemsFromDir(currentDirectory);
+    }
+
+    public void backupReminder() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.Backup);
+        builder.setMessage(getString(R.string.Backup_reminder));
+
+        builder.setPositiveButton(R.string.Yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                exportNotes();
+            }
+        });
+
+        builder.setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+
+        builder.show();
     }
 
     public void buyMeACoffeeReminder() {

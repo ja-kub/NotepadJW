@@ -184,4 +184,6 @@ Puoi quindi importarli su qualsiasi dispositivo mobile con Blocco note JT e Andr
     <string name="exported_successfully">Note sono stati esportati</string>
     <string name="imported_successfully">Note sono stati importati</string>
     <string name="name_cannot_contain_slash">Il nome non può contenere barre (/)</string>
+    <string name="Backup">Backup</string>
+    <string name="Backup_reminder">Ricorda di eseguire regolarmente il backup delle tue note. Vuoi eseguirne il backup ora?</string>
 </resources>

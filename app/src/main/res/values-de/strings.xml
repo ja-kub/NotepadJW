@@ -184,4 +184,6 @@ Sie können sie dann mit Notepad JT und Android 4.4 oder neuer auf jedes mobile 
     <string name="exported_successfully">Hinweise wurden exportiert</string>
     <string name="imported_successfully">Hinweise wurden importiert</string>
     <string name="name_cannot_contain_slash">Name darf keine Schrägstriche enthalten (/)</string>
+    <string name="Backup">Backup</string>
+    <string name="Backup_reminder">Denken Sie daran, Ihre Notizen regelmäßig zu sichern. Möchten Sie sie jetzt sichern?</string>
 </resources>

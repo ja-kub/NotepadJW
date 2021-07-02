@@ -187,4 +187,6 @@ Apoi le puteți importa pe orice dispozitiv mobil cu Notepad JT și Android 4.4 
     <string name="exported_successfully">Note au fost exportate</string>
     <string name="imported_successfully">Note au fost importate</string>
     <string name="name_cannot_contain_slash">Numele nu poate conține bare (/)</string>
+    <string name="Backup">Backup</string>
+    <string name="Backup_reminder">Nu uitați să faceți backup notelor în mod regulat. Doriți să le faceți backup acum?</string>
 </resources>

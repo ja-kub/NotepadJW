@@ -183,4 +183,6 @@ Você pode então importá-los para qualquer dispositivo móvel com o Bloco de N
     <string name="exported_successfully">Notas foram exportadas</string>
     <string name="imported_successfully">Notas foram importados</string>
     <string name="name_cannot_contain_slash">O nome não pode conter barras (/)</string>
+    <string name="Backup">Backup</string>
+    <string name="Backup_reminder">Lembre-se de fazer backup de suas anotações regularmente. Você gostaria de fazer backup deles agora?</string>
 </resources>

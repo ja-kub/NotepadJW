@@ -201,12 +201,10 @@ You can then import them to any mobile device with Notepad JT and Android 4.4 or
         don\'t have access.
     </string>
     <string name="whats_new_message_previous">
-• New application icon.\n\n
-• Fixed a bug with the download and installation of the Bible on Android 11\n\n
-• The export and import of notes has been modernized (it\'s best to make a backup now: click the menu in the upper right corner -> Export notes)\n\n
+• Bug fixes\n\n
     </string>
     <string name="whats_new_message_last">
-• Bug fixes
+• New Russian Bible translation (2021)
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
@@ -224,4 +222,6 @@ You can then import them to any mobile device with Notepad JT and Android 4.4 or
     <string name="exported_successfully">Notes were exported</string>
     <string name="imported_successfully">Notes were imported</string>
     <string name="name_cannot_contain_slash">Name cannot contain slashes (/)</string>
+    <string name="Backup">Backup</string>
+    <string name="Backup_reminder">Remember to backup your notes regularly. Would you like to backup them now?</string>
 </resources>

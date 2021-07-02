@@ -177,4 +177,6 @@ Ezután importálhatja őket bármilyen Notepad JT és Android 4.4 vagy újabb o
     <string name="exported_successfully">Megjegyzések kivitték</string>
     <string name="imported_successfully">Megjegyzések importálták</string>
     <string name="name_cannot_contain_slash">A név nem tartalmazhat perjelet (/)</string>
+    <string name="Backup">Backup</string>
+    <string name="Backup_reminder">Ne felejtsen el rendszeresen biztonsági másolatot készíteni a jegyzetekről. Szeretne most biztonsági másolatot készíteni róluk?</string>
 </resources>

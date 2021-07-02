@@ -146,14 +146,10 @@
     к которым другие приложения и ваш компьютер не имеют доступа.
    </string>
     <string name="whats_new_message_previous">
-• Программа регионального конгресса 2021 года \n\n
-• Улучшен перевод на русский язык (спасибо Игорю Топорову)\n\n
-• Значок нового приложения.\n\n
-• Исправлена ошибка с загрузкой и установкой Библии на Android 11.\n\n
-• Модернизирован экспорт и импорт заметок (лучше всего сделать резервную копию сейчас: нажмите меню в правом верхнем углу -> Экспорт заметок).\n\n
+• Исправление ошибок.\n\n
     </string>
     <string name="whats_new_message_last">
-• Исправление ошибок.
+• Новый перевод Библии на русский язык (2021 г.).
     </string>
     <string name="import_title">Импорт заметок</string>
     <string name="import_notes_question">Вы хотите импортировать все записи из папки \\Documents\\NotepadJW?</string>
@@ -171,4 +167,6 @@
     <string name="exported_successfully">Примечания были экспортированы</string>
     <string name="imported_successfully">Примечания были импортированы</string>
     <string name="name_cannot_contain_slash">Имя не может содержать косую черту (/)</string>
+    <string name="Backup">Резервное копирование</string>
+    <string name="Backup_reminder">Не забывайте регулярно делать резервные копии своих заметок. Хотите сделать резервную копию сейчас?</string>
 </resources>
