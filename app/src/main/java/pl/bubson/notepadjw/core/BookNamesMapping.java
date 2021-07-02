@@ -1632,6 +1632,11 @@ public class BookNamesMapping {
                 multipleChapterBooksMap.put("песнп", "26");
                 multipleChapterBooksMap.put("псн", "26");
                 multipleChapterBooksMap.put("пн", "26");
+                multipleChapterBooksMap.put("песнясоломона", "26");
+                multipleChapterBooksMap.put("песнясолом", "26");
+                multipleChapterBooksMap.put("песнясол", "26");
+                multipleChapterBooksMap.put("песняс", "26");
+                multipleChapterBooksMap.put("песня", "26");
                 multipleChapterBooksMap.put("исаия", "27");
                 multipleChapterBooksMap.put("исайи", "27");
                 multipleChapterBooksMap.put("исаи", "27");
