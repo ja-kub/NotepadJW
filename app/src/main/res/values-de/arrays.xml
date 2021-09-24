@@ -28,6 +28,7 @@
         <item>Englisch</item>
         <item>Französisch</item>
         <item>Iloko</item>
+        <item>Indonesische</item>
         <item>Italienisch</item>
         <item>Polnisch</item>
         <item>Portugiesisch (Brasilien)</item>
@@ -47,6 +48,7 @@
         <item>@string/english_language</item>
         <item>@string/french_language</item>
         <item>@string/iloko_language</item>
+        <item>@string/indonesian_language</item>
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>
         <item>@string/portuguese_language</item>

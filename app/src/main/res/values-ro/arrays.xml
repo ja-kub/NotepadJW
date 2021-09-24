@@ -29,6 +29,7 @@
         <item>Franceză</item>
         <item>Germană</item>
         <item>Iloko</item>
+        <item>Indoneziană</item>
         <item>Italiană</item>
         <item>Maghiară</item>
         <item>Polonez</item>
@@ -48,6 +49,7 @@
         <item>@string/french_language</item>
         <item>@string/german_language</item>
         <item>@string/iloko_language</item>
+        <item>@string/indonesian_language</item>
         <item>@string/italian_language</item>
         <item>@string/hungarian_language</item>
         <item>@string/polish_language</item>

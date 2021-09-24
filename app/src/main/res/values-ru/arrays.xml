@@ -38,6 +38,7 @@
         <item>Шведский</item>
         <item>Украинец</item>
         <item>Чешский</item>
+        <item>индонезийский</item>
     </string-array>
     <string-array name="verse_language_values">
         <item>@string/english_language</item>
@@ -57,6 +58,7 @@
         <item>@string/swedish_language</item>
         <item>@string/ukrainian_language</item>
         <item>@string/czech_language</item>
+        <item>@string/indonesian_language</item>
     </string-array>
     <string-array name="verse_area_size_entries">
         <item>Авто</item>

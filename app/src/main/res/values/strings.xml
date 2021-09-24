@@ -22,6 +22,7 @@
     <string name="swedish_language" translatable="false">se</string>
     <string name="tagalog_language" translatable="false">tl</string>
     <string name="iloko_language" translatable="false">il</string>
+    <string name="indonesian_language" translatable="false">id</string>
     <string name="romanian_language" translatable="false">ro</string>
     <string name="russian_language" translatable="false">ru</string>
     <string name="german_language" translatable="false">de</string>

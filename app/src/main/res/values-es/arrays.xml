@@ -31,6 +31,7 @@
         <item>Francés</item>
         <item>Húngaro</item>
         <item>Iloko</item>
+        <item>Indonesio</item>
         <item>Inglés</item>
         <item>Italiano</item>
         <item>Polaco</item>
@@ -50,6 +51,7 @@
         <item>@string/french_language</item>
         <item>@string/hungarian_language</item>
         <item>@string/iloko_language</item>
+        <item>@string/indonesian_language</item>
         <item>@string/english_language</item>
         <item>@string/italian_language</item>
         <item>@string/polish_language</item>
