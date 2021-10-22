@@ -17,6 +17,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.provider.DocumentsContract;
 import android.text.Html;
@@ -27,6 +28,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -110,6 +112,8 @@ public class FileManagerActivity extends AppCompatActivity {
     private FloatingActionsMenu famCreateNew;
     private com.getbase.floatingactionbutton.FloatingActionButton fabNewFolder, fabNewNote;
     private int appOpenings = 0;
+    private Parcelable layoutManagerState;
+    private LinearLayoutManager layoutManager;
 
     public static FilesDatabase getFilesDatabase() {
         return filesDatabase;
@@ -198,6 +202,7 @@ public class FileManagerActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
                 buttonsOnStartSearch();
+                showSoftInput();
                 isSearchMenuExpanded = true;
                 searchView.requestFocus();
                 return true;  // Return true to expand action view
@@ -212,6 +217,11 @@ public class FileManagerActivity extends AppCompatActivity {
                 return true;  // Return true to collapse action view
             }
         });
+    }
+
+    public void showSoftInput() {
+        InputMethodManager imm = (InputMethodManager) activityContext.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, InputMethodManager.HIDE_IMPLICIT_ONLY);
     }
 
     private void prepareFilesDatabase(File directory) {
@@ -292,8 +302,14 @@ public class FileManagerActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (!isSearchMenuExpanded)
-            fillListWithItemsFromDir(currentDirectory); // this is also to reload file bytes after back from editor
+        // below line is to reload file bytes after back from editor and to apply Settings changes
+        if (!isSearchMenuExpanded) fillListWithItemsFromDir(currentDirectory);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        layoutManagerState = layoutManager.onSaveInstanceState();
     }
 
     @Override
@@ -582,7 +598,9 @@ public class FileManagerActivity extends AppCompatActivity {
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         if (mRecyclerView != null) {
             try {
-                mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+                layoutManager = new LinearLayoutManager(this);
+                layoutManager.onRestoreInstanceState(layoutManagerState); // to restore the previous scroll position
+                mRecyclerView.setLayoutManager(layoutManager);
                 mRecyclerView.setAdapter(adapter);
             } catch (Exception e) {
                 Toast.makeText(getApplicationContext(), R.string.unexpected_exception, Toast.LENGTH_LONG).show();
@@ -1190,7 +1208,8 @@ public class FileManagerActivity extends AppCompatActivity {
                     if (singleUri != null && singleUri.getPath() != null) {
                         File zippedExport = new File(getFilesDir(), EXPORT_FILE_NAME);
                         if (zippedExport.exists()) zippedExport.delete();
-                        if (zippedExport.exists()) Log.e(TAG, "Temporary Export file still exist! This may produce ZipException: Central Directory Entry not found");
+                        if (zippedExport.exists())
+                            Log.e(TAG, "Temporary Export file still exist! This may produce ZipException: Central Directory Entry not found");
                         Log.d(TAG, "Temporary Export file path = " + zippedExport.getAbsolutePath());
                         Log.d(TAG, "Folder to be included in Zip file = " + mainDirectory.getAbsolutePath());
                         new ZipFile(zippedExport.getAbsolutePath()).addFolder(mainDirectory);
@@ -1212,7 +1231,8 @@ public class FileManagerActivity extends AppCompatActivity {
                     if (singleUri != null && singleUri.getPath() != null) {
                         File zippedImport = new File(getFilesDir(), EXPORT_FILE_NAME);
                         if (zippedImport.exists()) zippedImport.delete();
-                        if (zippedImport.exists()) Log.e(TAG, "Temporary Import file still exist! This may produce ZipException: Central Directory Entry not found");
+                        if (zippedImport.exists())
+                            Log.e(TAG, "Temporary Import file still exist! This may produce ZipException: Central Directory Entry not found");
                         DocumentFile dcFrom = DocumentFile.fromSingleUri(this, singleUri);
                         DocumentFile dcTo = DocumentFile.fromFile(zippedImport);
                         FilesCopier fc = new FilesCopier(this, FilesCopier.Type.EXTERNAL_STORAGE);

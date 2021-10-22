@@ -130,18 +130,8 @@ public class RichSelectableEditText extends KnifeText {
     @Override
     public void showSoftInput() {
         this.requestFocus();
-        final RichSelectableEditText editText = this;
-        try {
-            this.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    InputMethodManager keyboard = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-                    keyboard.showSoftInput(editText, InputMethodManager.SHOW_FORCED);
-                }
-            }, 50);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
     }
 
     public interface OnSelectionChangedListener {
