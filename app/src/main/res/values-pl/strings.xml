@@ -166,6 +166,7 @@ Następnie możesz zaimportować je na dowolne urządzenie mobilne z Notatnikiem
     </string>
     <string name="whats_new_message_last">
 • Usprawnienie: Zapamiętywanie ostatniej pozycji na liście notatek.\n\n
+• Usprawnienie: Zapamiętywanie pozycji kursora po użyciu przycisków Cofnij i Powtórz.\n\n
 • Usprawnienie: Pokazywanie klawiatury po załączeniu ekranu podczas edycji notatki.
     </string>
     <string name="import_title">Import notatek</string>

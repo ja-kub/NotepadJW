@@ -205,7 +205,8 @@ You can then import them to any mobile device with Notepad JT and Android 4.4 or
 • Bug fixes\n\n
     </string>
     <string name="whats_new_message_last">
-• Improvement: Remembering the previous position in the notes list. \n\n
+• Improvement: Memorizing the previous position in the notes list. \n\n
+• Improvement: Memorizing cursor position after using Undo and Redo buttons. \n\n
 • Improvement: Showing keyboard when screen is switched on while editing a note.
     </string>
     <string name="import_title">Import notes</string>

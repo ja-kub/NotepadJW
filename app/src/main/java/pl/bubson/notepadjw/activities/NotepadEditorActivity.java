@@ -550,6 +550,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        int sizePre, sizePost;
         // Handle item selection
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -564,10 +565,26 @@ public class NotepadEditorActivity extends AppCompatActivity {
                 switchToMode(EDIT, false);
                 return true;
             case R.id.action_undo:
+                cursorPosition = noteEditText.getSelectionStart();
+                sizePre = noteEditText.getEditableText().length();
                 noteEditText.undo();
+                sizePost = noteEditText.getEditableText().length();
+                try {
+                    noteEditText.setSelection(cursorPosition + (sizePost - sizePre));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 return true;
             case R.id.action_redo:
+                cursorPosition = noteEditText.getSelectionStart();
+                sizePre = noteEditText.getEditableText().length();
                 noteEditText.redo();
+                sizePost = noteEditText.getEditableText().length();
+                try {
+                    noteEditText.setSelection(cursorPosition + (sizePost - sizePre));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 //                closeVerse(versePreviewTextInEditMode);
                 return true;
             case R.id.action_text_bold:

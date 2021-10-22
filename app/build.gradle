@@ -9,8 +9,8 @@ android {
         applicationId "pl.bubson.notepadjw2"
         minSdkVersion 15
         targetSdkVersion 31
-        versionCode 82
-        versionName "2.36"
+        versionCode 83
+        versionName "2.37"
     }
     buildTypes {
         release {
@@ -26,7 +26,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.1'
     implementation "androidx.recyclerview:recyclerview:1.3.0-alpha01"
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'org.jsoup:jsoup:1.8.3'
