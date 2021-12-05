@@ -162,12 +162,12 @@ Następnie możesz zaimportować je na dowolne urządzenie mobilne z Notatnikiem
     <string name="verse_area_size_title">Rozmiar obszaru wersetu</string>
     <string name="verse_area_size_dialog_title">Rozmiar obszaru wersetu</string>
     <string name="whats_new_message_previous">
-• Programy zgromadzeń na lata 2021-2022.\n\n
-    </string>
-    <string name="whats_new_message_last">
 • Usprawnienie: Zapamiętywanie ostatniej pozycji na liście notatek.\n\n
 • Usprawnienie: Zapamiętywanie pozycji kursora po użyciu przycisków Cofnij i Powtórz.\n\n
-• Usprawnienie: Pokazywanie klawiatury po załączeniu ekranu podczas edycji notatki.
+• Usprawnienie: Pokazywanie klawiatury po załączeniu ekranu podczas edycji notatki.\n\n
+    </string>
+    <string name="whats_new_message_last">
+• Poprawka błędu z instalowaniem Biblii na Androidach 11 i 12.
     </string>
     <string name="import_title">Import notatek</string>
     <string name="import_notes_question">Czy zaimportować notatki z folderu \\Documents\\NotepadJW ?</string>

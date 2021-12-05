@@ -96,17 +96,17 @@ public class InstallLanguageService extends IntentService {
 
     private static File unpackFileToFolder(File downloadedFile) {
         String targetDirectoryPath = FileManagerActivity.fileWithoutExtension(downloadedFile.getPath());
-        Log.v("InstallLanguageService", "Start unpacking File To Folder: " + targetDirectoryPath);
+        Log.d("InstallLanguageService", "Start unpacking File To Folder: " + targetDirectoryPath);
         File targetDirectory = new File(targetDirectoryPath);
         boolean result = targetDirectory.mkdirs();
-        Log.v("InstallLanguageService", "mkdirs(): " + result);
+        Log.d("InstallLanguageService", "mkdirs(): " + result);
         try {
             new ZipFile(downloadedFile).extractAll(targetDirectoryPath);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        Log.v("InstallLanguageService", "End of unpacking File To Folder");
+        Log.d("InstallLanguageService", "End of unpacking File To Folder");
         return targetDirectory;
     }
 
@@ -174,7 +174,12 @@ public class InstallLanguageService extends IntentService {
                 .setContentInfo("Info");
 
         PendingIntent notifyPIntent =
-                PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), 0);
+                null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            notifyPIntent = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            notifyPIntent = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), 0);
+        }
         builder.setContentIntent(notifyPIntent);
 
         return builder;
