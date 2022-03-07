@@ -41,6 +41,7 @@
         <item>Ruso</item>
         <item>Sueco</item>
         <item>Tagalo</item>
+        <item>Tamil</item>
         <item>Ucranio</item>
     </string-array>
     <string-array name="verse_language_values">
@@ -61,6 +62,7 @@
         <item>@string/russian_language</item>
         <item>@string/swedish_language</item>
         <item>@string/tagalog_language</item>
+        <item>@string/tamil_language</item>
         <item>@string/ukrainian_language</item>
     </string-array>
 

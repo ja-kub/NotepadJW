@@ -40,6 +40,7 @@
         <item>Шведський</item>
         <item>Тагальська мова</item>
         <item>Українська</item>
+        <item>тамільська</item>
         <item>Чеська</item>
         <item>Індонезійська</item>
     </string-array>
@@ -60,6 +61,7 @@
         <item>@string/swedish_language</item>
         <item>@string/tagalog_language</item>
         <item>@string/ukrainian_language</item>
+        <item>@string/tamil_language</item>
         <item>@string/czech_language</item>
         <item>@string/indonesian_language</item>
     </string-array>

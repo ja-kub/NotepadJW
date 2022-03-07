@@ -38,6 +38,7 @@
         <item>Španělština</item>
         <item>Švédský</item>
         <item>Tagalština</item>
+        <item>tamilština</item>
         <item>Ukrajinština</item>
     </string-array>
     <string-array name="verse_language_values">
@@ -58,6 +59,7 @@
         <item>@string/spanish_language</item>
         <item>@string/swedish_language</item>
         <item>@string/tagalog_language</item>
+        <item>@string/tamil_language</item>
         <item>@string/ukrainian_language</item>
     </string-array>
     <string-array name="verse_area_size_entries">

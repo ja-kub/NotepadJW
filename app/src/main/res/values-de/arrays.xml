@@ -39,6 +39,7 @@
         <item>Spanisch</item>
         <item>Schwedisch</item>
         <item>Tagalog</item>
+        <item>Tamil</item>
         <item>Tschechisch</item>
         <item>Ukrainisch</item>
         <item>Ungarisch</item>
@@ -59,6 +60,7 @@
         <item>@string/spanish_language</item>
         <item>@string/swedish_language</item>
         <item>@string/tagalog_language</item>
+        <item>@string/tamil_language</item>
         <item>@string/czech_language</item>
         <item>@string/ukrainian_language</item>
         <item>@string/hungarian_language</item>
