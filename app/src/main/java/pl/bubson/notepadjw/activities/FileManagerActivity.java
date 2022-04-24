@@ -44,6 +44,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -56,8 +57,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -96,6 +101,7 @@ public class FileManagerActivity extends AppCompatActivity {
     public static final int REQUEST_CODE_EXPORT_ZIPPED_NOTES = 64321;
     public static final int REQUEST_CODE_IMPORT_ZIPPED_NOTES = 64322;
     public static final String EXPORT_FILE_NAME = "Notepad_JT_Export.zip";
+    public static final String SETTINGS_FILE_NAME = "settings.jtn";
     private static File mainDirectory;
     private static FilesDatabase filesDatabase;
     private final Context activityContext = this;
@@ -1181,6 +1187,7 @@ public class FileManagerActivity extends AppCompatActivity {
     }
 
     private void exportNotes() {
+        saveSharedPreferencesToFile();
         if (Build.VERSION.SDK_INT >= 19) { // Storage Access Framework (SAF) was implemented in Android 4.4 (API level 19)
             // use SAF, so user can pick the folder to export notes there
             Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
@@ -1194,6 +1201,76 @@ public class FileManagerActivity extends AppCompatActivity {
             startActivityForResult(intent, REQUEST_CODE_EXPORT_ZIPPED_NOTES); // can be also REQUEST_CODE_EXPORT_NOTES but is much slower
         } else {
             exportNotesDialogOld(); // old method with hardcoded path on External Public Storage (cannot be used from Android 11)
+        }
+    }
+
+    private void saveSharedPreferencesToFile() {
+        ObjectOutputStream output = null;
+        try {
+            File myFile = new File(mainDirectory, SETTINGS_FILE_NAME);
+            myFile.createNewFile();
+            GZIPOutputStream outputGZIP = new GZIPOutputStream(new FileOutputStream(myFile));
+            output = new ObjectOutputStream(outputGZIP);
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(activityContext);
+            Map<String, Object> shallowCopy = new HashMap<>(pref.getAll());
+            shallowCopy.remove("extendedlog");
+            output.writeObject(shallowCopy); // write everything but not the log
+            Log.i(TAG, "Path to saved SharedPreferences file = " + myFile.getAbsolutePath());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (output != null) {
+                    output.flush();
+                    output.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    private void loadSharedPreferencesFromFile() {
+        ObjectInputStream input = null;
+        File src = new File(mainDirectory, SETTINGS_FILE_NAME);
+        try {
+            GZIPInputStream inputGZIP = new GZIPInputStream(new FileInputStream(src));
+            input = new ObjectInputStream(inputGZIP);
+            SharedPreferences.Editor prefEdit = PreferenceManager.getDefaultSharedPreferences(activityContext).edit();
+            prefEdit.clear();
+            Map<String, Object> entries = (Map<String, Object>) input.readObject();
+            for (Map.Entry<String, ?> entry : entries.entrySet()) {
+                Object v = entry.getValue();
+                String key = entry.getKey();
+                if (v instanceof Boolean)
+                    prefEdit.putBoolean(key, (Boolean) v);
+                else if (v instanceof Float)
+                    prefEdit.putFloat(key, (Float) v);
+                else if (v instanceof Integer)
+                    prefEdit.putInt(key, (Integer) v);
+                else if (v instanceof Long)
+                    prefEdit.putLong(key, (Long) v);
+                else if (v instanceof String)
+                    prefEdit.putString(key, ((String) v));
+            }
+            prefEdit.commit();
+            Log.i(TAG, "loadSharedPreferencesFromFile was successful.");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (input != null) {
+                    input.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
@@ -1243,6 +1320,7 @@ public class FileManagerActivity extends AppCompatActivity {
                         Snackbar.make(recyclerView, R.string.imported_successfully, Snackbar.LENGTH_LONG).setAction("Action", null).show();
                         boolean deleted = zippedImport.delete();
                         if (deleted) Log.d(TAG, "Temporary Import file was deleted.");
+                        loadSharedPreferencesFromFile();
                     }
                 }
             }

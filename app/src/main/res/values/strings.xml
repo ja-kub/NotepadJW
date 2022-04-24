@@ -207,7 +207,8 @@ You can then import them to any mobile device with Notepad JT and Android 4.4 or
 • Improvement: Showing keyboard when screen is switched on while editing a note.\n\n
     </string>
     <string name="whats_new_message_last">
-• Bug fixes
+• Link to Russian Bible translation changed due to blocked jw.org website in Russia.\n\n
+• Improvement: Saving / loading settings together with exporting / importing notes.
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>

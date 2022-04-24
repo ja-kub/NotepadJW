@@ -149,7 +149,8 @@
 • Исправление ошибок.\n\n
     </string>
     <string name="whats_new_message_last">
-• Программы сборки на 2021-2022 годы.
+• Ссылка на русский перевод Библии изменена из-за блокировки веб-сайта jw.org в России.\n\n
+• Улучшено: Сохранение/загрузка настроек вместе с экспортом/импортом заметок.
     </string>
     <string name="import_title">Импорт заметок</string>
     <string name="import_notes_question">Вы хотите импортировать все записи из папки \\Documents\\NotepadJW?</string>

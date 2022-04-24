@@ -4433,7 +4433,7 @@ public class BookNamesMapping {
             put(Language.ro, "https://download-a.akamaihd.net/files/media_publication/f5/nwt_M.epub");
             put(Language.de, "https://download-a.akamaihd.net/files/media_publication/3d/nwt_X.epub");
             put(Language.pt, "https://download-a.akamaihd.net/files/media_publication/b5/nwt_T.epub");
-            put(Language.ru, "https://download-a.akamaihd.net/files/media_publication/4a/nwt_U.epub");
+            put(Language.ru, "https://akdl1.isa357.com/files/media_publication/4a/nwt_U.epub");
             put(Language.hu, "https://download-a.akamaihd.net/files/media_publication/de/nwt_H.epub");
             put(Language.tl, "https://download-a.akamaihd.net/files/media_publication/b2/nwt_TG.epub");
             put(Language.fr, "https://download-a.akamaihd.net/files/media_publication/ec/nwt_F.epub");
