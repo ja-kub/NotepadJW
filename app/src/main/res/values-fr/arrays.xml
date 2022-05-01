@@ -40,6 +40,7 @@
         <item>Slovène</item>
         <item>Suédois</item>
         <item>Tagalog</item>
+        <item>Tamil</item>
         <item>Tchèque</item>
         <item>Ukrainien</item>
     </string-array>
@@ -60,6 +61,7 @@
         <item>@string/slovenian_language</item>
         <item>@string/swedish_language</item>
         <item>@string/tagalog_language</item>
+        <item>@string/tamil_language</item>
         <item>@string/czech_language</item>
         <item>@string/ukrainian_language</item>
     </string-array>

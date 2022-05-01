@@ -351,6 +351,7 @@ public class BookNamesMapping {
                 multiplePartNameBookWithoutLastWordPattern = "[Pp]owt\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Pp]ie[\\p{Lu}\\p{Ll}]*[^\\S\\n]*[Nn]ad[^\\S\\n]*|[Dd]z\\.?\\w*[^\\S\\n]*";
                 break;
 
+            case ta:
             case en:
                 multipleChapterBooksMap.put("genesis", "05");
                 multipleChapterBooksMap.put("genes", "05");
@@ -4446,6 +4447,7 @@ public class BookNamesMapping {
             put(Language.se, "https://download-a.akamaihd.net/files/media_publication/12/nwt_Z.epub");
             put(Language.sv, "https://download-a.akamaihd.net/files/media_publication/1e/bi12_SV.epub");
             put(Language.id, "https://download-a.akamaihd.net/files/media_publication/f5/nwt_IN.epub");
+            put(Language.ta, "https://download-a.akamaihd.net/files/media_publication/15/nwt_TL.epub");
         }
     };
 
@@ -4469,6 +4471,7 @@ public class BookNamesMapping {
             put(Language.se, "10010611");
             put(Language.sv, "10010604");
             put(Language.id, "10010611");
+            put(Language.ta, "10010611");
         }
     };
 
@@ -4492,6 +4495,7 @@ public class BookNamesMapping {
             put(Language.se, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.sv, "^10010604(0[2-9]|[1-5][0-9]|6[0-7])(-split\\d+\\.|\\.)xhtml$");
             put(Language.id, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
+            put(Language.ta, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
         }
     };
 
@@ -4564,6 +4568,7 @@ public class BookNamesMapping {
             case il:
             case ru:
             case id:
+            case ta:
             default: // en
                 return book.toLowerCase().replace(".", "").replaceAll("[^\\S\\n]", ""); 
         }

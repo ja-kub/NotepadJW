@@ -37,6 +37,7 @@
         <item>Венгерский</item>
         <item>Шведский</item>
         <item>Украинец</item>
+        <item>тамильский</item>
         <item>Чешский</item>
         <item>индонезийский</item>
     </string-array>
@@ -57,6 +58,7 @@
         <item>@string/hungarian_language</item>
         <item>@string/swedish_language</item>
         <item>@string/ukrainian_language</item>
+        <item>@string/tamil_language</item>
         <item>@string/czech_language</item>
         <item>@string/indonesian_language</item>
     </string-array>
