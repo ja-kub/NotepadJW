@@ -205,10 +205,11 @@ You can then import them to any mobile device with Notepad JT and Android 4.4 or
 • Improvement: Memorizing the previous position in the notes list. \n\n
 • Improvement: Memorizing cursor position after using Undo and Redo buttons. \n\n
 • Improvement: Showing keyboard when screen is switched on while editing a note.\n\n
+• Link to Russian Bible translation changed due to blocked jw.org website in Russia.\n\n
+• Improvement: Saving / loading settings together with exporting / importing notes.\n\n
     </string>
     <string name="whats_new_message_last">
-• Link to Russian Bible translation changed due to blocked jw.org website in Russia.\n\n
-• Improvement: Saving / loading settings together with exporting / importing notes.
+• 2022 Convention Program
     </string>
     <string name="import_title">Import notes</string>
     <string name="import_notes_question">Import notes from \\Documents\\NotepadJW folder?</string>
