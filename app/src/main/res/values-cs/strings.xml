@@ -29,7 +29,7 @@
     <string name="file_rename_failed">Přejmenování se nezdařilo</string>
     <string name="on_remove_dialog_title">Odstranit vybranou položku(y)?</string>
     <string name="remove">Odstranit</string>
-    <string name="files_removed_successfully">Položka(y) odstraněna</string>
+    <string name="files_removed_successfully">Položka(y) odstraněna(y)</string>
     <string name="files_not_removed_successfully">Některé poznámky nebyly odstraněny</string>
     <string name="button_new_folder">Vytvořit novou složku</string>
     <string name="create_new_folder_dialog_title">Vytvořit novou složku</string>
@@ -43,7 +43,7 @@
     <string name="error_while_saving">Chyba při ukládání souboru</string>
     <string name="file_saved">Soubor byl uložen</string>
     <string name="create_new_note_from_this_file_dialog_title">Vytvořit novou poznámku z tohoto souboru?</string>
-    <string name="file_will_be_created_in">Poznámka bude vytvořena ve složce: NotepadJW/</string>
+    <string name="file_will_be_created_in">Poznámka bude vytvořena ve složce: NotepadJT/</string>
     <string name="downloads_folder_name">Stáhnout</string>
     <string name="file_is_too_big">Soubor je příliš velký!</string>
     <string name="language_na">tento jazyk ještě není podporován</string>
@@ -79,7 +79,7 @@
     <string name="copied_to_clipboard">Kopírovat do schránky</string>
     <string name="pasted_from_clipboard">Vložit ze schránky</string>
     <string name="not_all_elements_pasted">Nebylo vloženo vše</string>
-    <string name="unexpected_exception">Neočekávaná výjimka - pošlete mi prosím e-mail s popisem</string>
+    <string name="unexpected_exception">Neočekávaná výjimka - pošli mi prosím email s popisem</string>
     <string name="button_sort_files">Změnit řazení</string>
     <string name="files_sorted_by_date">Poznámky seřazeny podle data</string>
     <string name="files_sorted_alphabetically">Poznámky seřazeny podle abecedy</string>
@@ -129,14 +129,14 @@
 <p>Text všech veršů pochází ze Svatého Písma - Překladu nového světa
 (Copyright: (Watch Tower Bible and Tract Society of Pennsylvania)).</p>
 <h3>Proč používat Notepad JT?</h3>
-<p>Tato aplikace byla vytvořena protože nebyla nalezena žádná jiná aplikace, která by uměla zobrazit
+<p>Tato aplikace byla vytvořena protože jsme nenalezli jinou aplikaci, která by uměla zobrazit
 verše v reálném čase při psaní poznámek. Takže je užitečná pro vytváření poznámek během shromáždění
 a sjezdů - už nebudeš potřebovat přepínat mezi aplikacemi nebo hledat v Bibli.
 Text verše je zobrazen ve stejném okně jako editor psaní poznámek. Tato aplikace je schopna
 zobrazit všechny verše v režimu zobrazení. To může být užitečné také při proslovech na pódiu a dalších
-úkolech na shromáždění. Tato aplikace má také možnost sdílení, takže můžete také použít pro psaní poznámek
-a poslat je ostatním. K dispozici jsou také tlačítka pro export a import poznámek, aby se vaše kopie bankovek na více
-než jednoho zařízení a mít bezpečnou zálohu z nich.</p>
+úkolech na shromáždění. Tato aplikace má také možnost sdílení, takže ji můžeš použít pro psaní poznámek
+a poslat je ostatním. K dispozici jsou tlačítka pro export a import poznámek, aby si mohl použít kopie poznámek na více
+než jednoho zařízení a mít z nich bezpečnou zálohu.</p>
 <h3>Vlastnosti</h3>
 <p>Tato aplikace se skládá ze dvou částí:
 <br><b>Správce poznámek</b> a <b>Poznámkového editoru</b>.
@@ -146,43 +146,43 @@ než jednoho zařízení a mít bezpečnou zálohu z nich.</p>
 bude zobrazen naposledy zadaný verš a v druhém případě můžeš kliknout na odkazy vytvořené z veršů
 pro jejich okamžité zobrazení.
 <h3>Ruční zálohování </h3>
-Doporučujeme, abyste si své poznámky občas zálohovali. Chcete-li to provést, klepněte na tlačítko Exportovat poznámky z nabídky v pravém horním rohu.
-Pokud máte Android 4.4 nebo novější, poznámky budou zabaleny do souboru zip, který můžete uložit do zařízení, na Disk Google, PC atd.
-Poté je můžete importovat do libovolného mobilního zařízení s Poznámkovým blokem JT a Androidem 4.4 nebo novějším (například když změníte zařízení nebo obnovíte tovární nastavení).
+Doporučujeme, aby sis své poznámky občas zálohoval. Chceš-li to provést, klepni na tlačítko Exportovat poznámky z nabídky v pravém horním rohu.
+Pokud máš Android 4.4 nebo novější, poznámky budou zabaleny do souboru zip, který můžeš uložit do zařízení, na Disk Google, PC atd.
+Poté je můžeš importovat do libovolného mobilního zařízení s Poznámkovým blokem JT a Androidem 4.4 nebo novějším (například když změníš zařízení nebo obnovíš tovární nastavení).
     ]]>
     </string>
     <string name="permission_explanation_dialog_message">
         Na další obrazovce budeš požádán o povolení pro přístup k externímu úložišti. Pokud tuto možnost
-        povolíš, Notepad JT uloží poznámky do externího úložiště (v adresáři Dokumenty -> NotepadJW).
+        povolíš, Notepad JT uloží poznámky do externího úložiště (v adresáři Dokumenty -> NotepadJT).
         Tímto způsobem budeš mít přístup k poznámkám z jiných aplikací a z počítače
-        (aplikace JW Notepad nečte ani neupravuje žádné soubory mimo adresář NotepadJW).
+        (aplikace Notepad JT nečte ani neupravuje žádné soubory mimo adresář NotepadJT).
         Pokud odmítneš, aplikace Notepad JT uloží poznámky do vnitřní paměti, do které nebudeš mít
         přístup z jiných aplikací nebo z počítače.
     </string>
     <string name="whats_new_message_previous">
 • Ikona nové aplikace\n\n
 • Opravená chyba při stahování a instalaci Bible v systému Android 11\n\n
-• Export a import poznámek byl modernizován (nejlépe je provést zálohu nyní: klikněte na nabídku v pravém horním rohu -> Exportovat poznámky)\n\n
+• Export a import poznámek byl modernizován (nejlépe je provést zálohu nyní: klikni na nabídku v pravém horním rohu -> Exportovat poznámky)\n\n
     </string>
     <string name="whats_new_message_last">
 • Program sjezdu 2022.
     </string>
     <string name="import_title">Import poznámek</string>
-    <string name="import_notes_question">Import poznámek z \\Documents\\NotepadJW folder?</string>
+    <string name="import_notes_question">Importovat poznámky z \\Documents\\NotepadJT adresáře?</string>
     <string name="export_title">Export poznámek</string>
-    <string name="export_notes_question">Chtěli byste exportovat všechny poznámky do složky \\Documents\\NotepadJW?</string>
+    <string name="export_notes_question">Chtěl bys exportovat všechny poznámky do složky \\Documents\\NotepadJT?</string>
     <string name="Buy_me_a_coffee">Kup mi kávu</string>
     <string name="Coffee">Káva?</string>
-    <string name="Coffee_explaination">Tato aplikace je zdarma a bez reklam. Máte-li ocenit měsících tvrdé práce, které jsem strávil na to, můžete mi koupit symbolický kávu ☕</string>
+    <string name="Coffee_explaination">Tato aplikace je zdarma a bez reklam. Chceš-li ocenit měsíce tvrdé práce, které jsem tím strávil, můžeš mi koupit symbolickou kávu ☕</string>
     <string name="Yes">Ano, jistě 🙂</string>
     <string name="No">Ne, nechci 🙁</string>
-    <string name="Recommend_to_a_friend">Doporučit známému</string>
-    <string name="Share_app">"Ahoj! Chtěl bych vám doporučit velmi dobrou aplikaci, což je užitečné, aby si poznámky během shromáždění a setkání, protože zobrazuje biblické verše okamžitě po zadání jejich reference. Ověřte si to sami: "</string>
-    <string name="Recommend_alternative">To je v pořádku, neboj se. Možná byste chtěli doporučit tuto aplikaci do svého přítele místo?</string>
-    <string name="Recommend_explanation">Doporučili byste tuto aplikaci svým známým?</string>
-    <string name="exported_successfully">Poznámky byly vyvezeny</string>
+    <string name="Recommend_to_a_friend">Doporučit přátelům</string>
+    <string name="Share_app">"Ahoj! Chtěl bych ti doporučit velmi dobrou aplikaci, která je užitečná pro psaní poznámek během shromáždění a sjezdů, protože zobrazuje biblické verše okamžitě po jejich zadání. Ověř si to: "</string>
+    <string name="Recommend_alternative">To je v pořádku, neboj se. Chtěl bys doporučit tuto aplikaci svým přátelům?</string>
+    <string name="Recommend_explanation">Doporučil bys tuto aplikaci svým přátelům?</string>
+    <string name="exported_successfully">Poznámky byly exportovány</string>
     <string name="imported_successfully">Poznámky byly importovány</string>
     <string name="name_cannot_contain_slash">Název nesmí obsahovat lomítka (/)</string>
     <string name="Backup">Záloha</string>
-    <string name="Backup_reminder">Nezapomeňte si poznámky pravidelně zálohovat. Chcete je nyní zálohovat?</string>
+    <string name="Backup_reminder">Nezapomeň si poznámky pravidelně zálohovat. Chceš je zálohovat nyní?</string>
 </resources>
