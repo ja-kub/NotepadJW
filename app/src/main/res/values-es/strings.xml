@@ -164,7 +164,7 @@ Luego, puede importarlos a cualquier dispositivo móvil con Notepad JT y Android
 • Se ha modernizado la exportación e importación de notas (es mejor hacer una copia de seguridad ahora: haga clic en el menú en la esquina superior derecha -> Exportar notas). \n\n
     </string>
     <string name="whats_new_message_last">
-• Programa de la asamblea del 2022.
+• Mejora: recordar la posición de desplazamiento de la nota en el modo de vista.
     </string>
     <string name="import_title">La importación de notas</string>
     <string name="import_notes_question">¿Le gustaría importar todas las notas de la carpeta \\Documents\\NotepadJW?</string>

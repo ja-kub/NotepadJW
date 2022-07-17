@@ -34,6 +34,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -161,6 +162,7 @@ public class NotepadEditorActivity extends AppCompatActivity {
         }
     };
     private boolean verseClosed = false;
+    private int scrollTextViewFirstVisibleCharacterOffset; // to remember scroll position of the note in view mode
 
     private static void hideSoftKeyboard(Activity activity) {
         InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -245,6 +247,8 @@ public class NotepadEditorActivity extends AppCompatActivity {
         if (currentMode.equals(EDIT)) {
             restoreCursorPositionAndVerseInEditMode();
             noteEditText.showSoftInput();
+        } else {
+            restoreTextViewScrollPosition();
         }
     }
 
@@ -257,6 +261,34 @@ public class NotepadEditorActivity extends AppCompatActivity {
         savedVersePreview = versePreviewTextInEditMode.getText();
         saveDocumentIfChanged();
         saveVerseAreaSizeIfItsChangeable();
+        saveTextViewPosition();
+    }
+
+    protected void saveTextViewPosition() {
+        try {
+            final ScrollView scrollView = findViewById(R.id.scroll_view);
+            final int firstVisibleLineOffset = noteTextView.getLayout().getLineForVertical(scrollView.getScrollY());
+            scrollTextViewFirstVisibleCharacterOffset = noteTextView.getLayout().getLineStart(firstVisibleLineOffset);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected void restoreTextViewScrollPosition() {
+        try {
+            final int firstVisibleCharacterOffset = scrollTextViewFirstVisibleCharacterOffset;
+
+            final ScrollView scrollView = findViewById(R.id.scroll_view);
+            scrollView.post(new Runnable() {
+                public void run() {
+                    final int firstVisibleLineOffset = noteTextView.getLayout().getLineForOffset(firstVisibleCharacterOffset);
+                    final int pixelOffset = noteTextView.getLayout().getLineTop(firstVisibleLineOffset);
+                    scrollView.scrollTo(0, pixelOffset);
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void prepareDatabase() {

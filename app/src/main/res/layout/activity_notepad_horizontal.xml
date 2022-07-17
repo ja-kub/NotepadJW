@@ -78,6 +78,7 @@
             tools:context="pl.bubson.notepadjw.activities.NotepadEditorActivity">
 
             <ScrollView
+                android:id="@+id/scroll_view"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.65">
