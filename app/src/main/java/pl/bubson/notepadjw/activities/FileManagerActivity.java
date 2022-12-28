@@ -1151,6 +1151,7 @@ public class FileManagerActivity extends AppCompatActivity {
 
     private void moveUpOneLevel() {
         if (!currentDirectory.getName().equalsIgnoreCase(mainDirectory.getName())) {
+            layoutManagerState = layoutManager.onSaveInstanceState();
             fillListWithItemsFromDir(new File(currentDirectory.getParent()));
         } else {
             finish();
