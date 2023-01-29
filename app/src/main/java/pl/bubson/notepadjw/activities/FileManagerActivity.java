@@ -1143,9 +1143,13 @@ public class FileManagerActivity extends AppCompatActivity {
 //            Log.i(TAG, "Old Romanian Bible found, removing.");
 //            biblesDatabase.deleteLanguage(Language.ro); // This method was needed only just after version 64 (released 11.07.2020), you can comment it out after some time
 //        }
-        if (biblesDatabase.getFile(Language.ru, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
-            Log.i(TAG, "Old Russian Bible found, removing.");
-            biblesDatabase.deleteLanguage(Language.ru); // This method was needed only just after version 78 (released 02.07.2021), you can comment it out after some time
+//        if (biblesDatabase.getFile(Language.ru, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+//            Log.i(TAG, "Old Russian Bible found, removing.");
+//            biblesDatabase.deleteLanguage(Language.ru); // This method was needed only just after version 78 (released 02.07.2021), you can comment it out after some time
+//        }
+        if (biblesDatabase.getFile(Language.sv, "1001060402-split10.xhtml") != null) { // example file which exists in old Bible, but not in new Bible
+            Log.i(TAG, "Old Slovenian Bible found, removing.");
+            biblesDatabase.deleteLanguage(Language.sv); // This method was needed only just after version 78 (released 29.01.2023), you can comment it out after some time
         }
     }
 

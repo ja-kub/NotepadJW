@@ -4439,12 +4439,11 @@ public class BookNamesMapping {
             put(Language.fr, "https://download-a.akamaihd.net/files/media_publication/ec/nwt_F.epub");
             put(Language.it, "https://download-a.akamaihd.net/files/media_publication/f3/nwt_I.epub");
             put(Language.pte, "https://download-a.akamaihd.net/files/media_publication/6c/nwt_TPO.epub");
-            put(Language.mg, "https://download-a.akamaihd.net/files/media_publication/b1/bi12_MG.epub");
             put(Language.uk, "https://download-a.akamaihd.net/files/media_publication/9c/nwt_K.epub");
             put(Language.cs, "https://download-a.akamaihd.net/files/media_publication/b6/nwt_B.epub");
             put(Language.il, "https://download-a.akamaihd.net/files/media_publication/f5/nwt_IL.epub");
             put(Language.se, "https://download-a.akamaihd.net/files/media_publication/12/nwt_Z.epub");
-            put(Language.sv, "https://download-a.akamaihd.net/files/media_publication/1e/bi12_SV.epub");
+            put(Language.sv, "https://download-a.akamaihd.net/files/media_publication/e7/nwt_SV.epub");
             put(Language.id, "https://download-a.akamaihd.net/files/media_publication/f5/nwt_IN.epub");
         }
     };
@@ -4467,7 +4466,7 @@ public class BookNamesMapping {
             put(Language.cs, "10010611");
             put(Language.il, "10010611");
             put(Language.se, "10010611");
-            put(Language.sv, "10010604");
+            put(Language.sv, "10010611");
             put(Language.id, "10010611");
         }
     };
@@ -4490,7 +4489,7 @@ public class BookNamesMapping {
             put(Language.cs, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.il, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.se, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
-            put(Language.sv, "^10010604(0[2-9]|[1-5][0-9]|6[0-7])(-split\\d+\\.|\\.)xhtml$");
+            put(Language.sv, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
             put(Language.id, "^10010611(0[5-9]|[1-6][0-9]|70)(-split\\d+\\.|\\.)xhtml$");
         }
     };
