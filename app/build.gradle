@@ -19,8 +19,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     namespace 'pl.bubson.notepadjw'
 }
@@ -37,5 +37,5 @@ dependencies {
     implementation 'org.apache.commons:commons-collections4:4.1'
     implementation 'com.github.mthli:Knife:v1.1'
     implementation 'net.lingala.zip4j:zip4j:2.6.1'
-    implementation (name:'getbase-floatingactionbutton', ext:'aar')
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
 }
