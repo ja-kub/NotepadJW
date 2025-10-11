@@ -55,6 +55,67 @@ public class BookNamesMapping {
         BookNamesMapping.language = language;
         switch (language) {
             case pl:
+                initPolish();
+                break;
+            case en:
+                initEnglish();
+                break;
+            case es:
+                initSpanish();
+                break;
+            case ro:
+                initRomanian();
+                break;
+            case de:
+                initGerman();
+                break;
+            case pt:
+                initPortuguese();
+                break;
+            case ru:
+                initRussian();
+                break;
+            case hu:
+                initHungarian();
+                break;
+            case tl:
+                initTagalog();
+                break;
+            case il:
+                initItaliano();
+                break;
+            case fr:
+                initFrench();
+                break;
+            case it:
+                initItalian();
+                break;
+            case pte:
+                initPortugueseEasy();
+                break;
+            case uk:
+                initUkrainian();
+                break;
+            case cs:
+                initCzech();
+                break;
+            case sv:
+                initSlovenian();
+                break;
+            case se:
+                initSwedish();
+                break;
+            case id:
+                initIndonesian();
+                break;
+            default:
+                initEnglish();
+                break;
+        }
+        Log.v(TAG, "BookNamesMapping instance creation finished");
+    }
+
+    private void initPolish() {
                 multipleChapterBooksMap.put("rodz", "05");
                 multipleChapterBooksMap.put("rdz", "05");
                 multipleChapterBooksMap.put("rodzaju", "05");
@@ -349,9 +410,9 @@ public class BookNamesMapping {
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
                 multiplePartNameBookWithoutLastWordPattern = "[Pp]owt\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Pp]ie[\\p{Lu}\\p{Ll}]*[^\\S\\n]*[Nn]ad[^\\S\\n]*|[Dd]z\\.?\\w*[^\\S\\n]*";
-                break;
+    }
 
-            case en:
+    private void initEnglish() {
                 multipleChapterBooksMap.put("genesis", "05");
                 multipleChapterBooksMap.put("genes", "05");
                 multipleChapterBooksMap.put("gen", "05");
@@ -569,9 +630,9 @@ public class BookNamesMapping {
 //                singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hil\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]oh[\\.n]?|[Jj]ude"; // before switching phil to be philippians association
                 singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hile\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]oh[\\.n]?|[Jj]ude";
                 multiplePartNameBookWithoutLastWordPattern = "[Ss]ong[^\\S\\n]*[Oo]f[^\\S\\n]*";
-                break;
+    }
 
-            case es:
+    private void initSpanish() {
                 multipleChapterBooksMap.put("genesis", "05");
                 multipleChapterBooksMap.put("genes", "05");
                 multipleChapterBooksMap.put("gen", "05");
@@ -782,9 +843,9 @@ public class BookNamesMapping {
 
                 singleChapterBooksPattern = "[Aa]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23][^\\S\\n]*[Jj]n\\.?|[23][^\\S\\n]*[Jj]ua[\\.n]?|[Jj]ud\\.?|[Jj]udas";
                 multiplePartNameBookWithoutLastWordPattern = "[Ee]l[^\\S\\n]*[Cc]antar[^\\S\\n]*de[^\\S\\n]*los[^\\S\\n]*";
-                break;
+    }
 
-            case ro:
+    private void initRomanian() {
                 multipleChapterBooksMap.put("geneza", "05");
                 multipleChapterBooksMap.put("gen", "05");
                 multipleChapterBooksMap.put("ge", "05");
@@ -996,9 +1057,9 @@ public class BookNamesMapping {
 
                 // matches: "Pieśni Nad", "piesn nad"
                 multiplePartNameBookWithoutLastWordPattern = "[Cc][\\p{Lu}\\p{Ll}]n\\.?[a-z]*[^\\S\\n]*";
-                break;
+    }
 
-            case de:
+    private void initGerman() {
                 multipleChapterBooksMap.put("genesis", "05");
                 multipleChapterBooksMap.put("genes", "05");
                 multipleChapterBooksMap.put("gen", "05");
@@ -1305,9 +1366,9 @@ public class BookNamesMapping {
 
                 singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Pp]hm\\.?|[Pp]hilem\\w*\\.?|[23]\\.?[^\\S\\n]*[Jj]o\\.?|[23]\\.?[^\\S\\n]*[Jj]oh\\w*\\.?|[Jj]ud\\.?|[Jj]udas";
                 multiplePartNameBookWithoutLastWordPattern = "[Dd]as|[Dd]as[^\\S\\n]*[Ll]ied[^\\S\\n]*";
-                break;
+    }
 
-            case pt:
+    private void initPortuguese() {
                 multipleChapterBooksMap.put("genesis", "05");
                 multipleChapterBooksMap.put("genes", "05");
                 multipleChapterBooksMap.put("gen", "05");
@@ -1521,9 +1582,9 @@ public class BookNamesMapping {
 
                 singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]il[eêé]m\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]o[aã]o|[Jj]u\\w*\\.?";
                 multiplePartNameBookWithoutLastWordPattern = "[Cc]antico[^\\S\\n]*[Dd]e[^\\S\\n]*";
-                break;
+    }
 
-            case ru:
+    private void initRussian() {
                 multipleChapterBooksMap.put("бытие", "05");
                 multipleChapterBooksMap.put("быти", "05");
                 multipleChapterBooksMap.put("быт", "05");
@@ -1918,9 +1979,9 @@ public class BookNamesMapping {
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
                 multiplePartNameBookWithoutLastWordPattern = "[Ии]ис\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Пп]ес[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Пп]л\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*";
-                break;
+    }
 
-            case hu:
+    private void initHungarian() {
                 multipleChapterBooksMap.put("1mozes", "05");
                 multipleChapterBooksMap.put("1moz", "05");
                 multipleChapterBooksMap.put("1mo", "05");
@@ -2187,9 +2248,9 @@ public class BookNamesMapping {
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
                 multiplePartNameBookWithoutLastWordPattern = "[\\p{Lu}\\p{Ll}]nekek[^\\S\\n]*|[\\p{Lu}\\p{Ll}]n\\.?[^\\S\\n]*";
-                break;
+    }
 
-            case tl:
+    private void initTagalog() {
                 multipleChapterBooksMap.put("genesis", "05");
                 multipleChapterBooksMap.put("gen", "05");
                 multipleChapterBooksMap.put("exodo", "06");
@@ -2383,9 +2444,9 @@ public class BookNamesMapping {
 
                 // matches: "Awit ni"
                 multiplePartNameBookWithoutLastWordPattern = "[Aa]wit[^\\S\\n]*[Nn]i[^\\S\\n]*";
-                break;
+    }
 
-            case il:
+    private void initItaliano() {
                 multipleChapterBooksMap.put("genesis", "05");
                 multipleChapterBooksMap.put("gen", "05");
                 multipleChapterBooksMap.put("exodo", "06");
@@ -2574,9 +2635,9 @@ public class BookNamesMapping {
 
                 // matches: "Kanta ni"
                 multiplePartNameBookWithoutLastWordPattern = "[Kk]anta[^\\S\\n]*[Nn]i[^\\S\\n]*";
-                break;
+    }
 
-            case fr:
+    private void initFrench() {
                 multipleChapterBooksMap.put("genese", "05");
                 multipleChapterBooksMap.put("gen", "05");
                 multipleChapterBooksMap.put("gn", "05");
@@ -2854,9 +2915,9 @@ public class BookNamesMapping {
 
                 // matches: "Chant de"
                 multiplePartNameBookWithoutLastWordPattern = "[Cc]hant[^\\S\\n]*[Dd]e[^\\S\\n]*";
-                break;
+    }
 
-            case it:
+    private void initItalian() {
                 multipleChapterBooksMap.put("genesi", "05");
                 multipleChapterBooksMap.put("genes", "05");
                 multipleChapterBooksMap.put("gen", "05");
@@ -3097,9 +3158,9 @@ public class BookNamesMapping {
 
                 singleChapterBooksPattern = "[Aa]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23][^\\S\\n]*[Gg]v\\.?|[23][^\\S\\n]*[Gg]iov[\\.n]?|[Gg]iuda|[Gg]da";
                 multiplePartNameBookWithoutLastWordPattern = "[Cc]antico[^\\S\\n]*[Dd]ei[^\\S\\n]*";
-                break;
+    }
 
-            case pte:
+    private void initPortugueseEasy() {
                 multipleChapterBooksMap.put("genesis", "05");
                 multipleChapterBooksMap.put("genes", "05");
                 multipleChapterBooksMap.put("gen", "05");
@@ -3313,9 +3374,9 @@ public class BookNamesMapping {
 
                 singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]il[eêé]m\\w*\\.?|[23][^\\S\\n]*[Jj]o\\.?|[23][^\\S\\n]*[Jj]o[aã]o|[Jj]u\\w*\\.?";
                 multiplePartNameBookWithoutLastWordPattern = "[Cc]antico[^\\S\\n]*[Dd]e[^\\S\\n]*";
-                break;
+    }
 
-            case uk:
+    private void initUkrainian() {
                 multipleChapterBooksMap.put("буття", "05");
                 multipleChapterBooksMap.put("бут", "05");
                 multipleChapterBooksMap.put("бт", "05");
@@ -3526,9 +3587,9 @@ public class BookNamesMapping {
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
                 multiplePartNameBookWithoutLastWordPattern = "[Пп]овт\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Іі]с\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*|[Пп]існя над[^\\S\\n]*|[Пп]лач[^\\S\\n]*";
-                break;
+    }
 
-            case cs:
+    private void initCzech() {
                 multipleChapterBooksMap.put("1mojzisova", "05");
                 multipleChapterBooksMap.put("1mojzis", "05");
                 multipleChapterBooksMap.put("1mojz", "05");
@@ -3791,10 +3852,9 @@ public class BookNamesMapping {
 
                 singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]m\\.?|[Ff]ilem\\w*\\.?|[23]\\.?[^\\S\\n]*[Jj]a\\w*\\.?|[Jj]uda";
                 multiplePartNameBookWithoutLastWordPattern = "[\\p{Lu}\\p{Ll}]al\\w*\\.?[^\\S\\n]*|[Ss]k\\w*\\.?[^\\S\\n]*";
-                break;
+    }
 
-
-            case sv:
+    private void initSlovenian() {
                 multipleChapterBooksMap.put("1mojzesova", "05");
                 multipleChapterBooksMap.put("1mojz", "05");
                 multipleChapterBooksMap.put("1moj", "05");
@@ -4015,9 +4075,9 @@ public class BookNamesMapping {
 
                 // matches: "Vis.", "visoka", "Ap.", "apost"
                 multiplePartNameBookWithoutLastWordPattern = "[Vv]is\\.?\\w*[^\\S\\n]*|[Aa]p\\.?\\w*[^\\S\\n]*";
-                break;
+    }
 
-            case se:
+    private void initSwedish() {
                 multipleChapterBooksMap.put("1moseboken", "05");
                 multipleChapterBooksMap.put("1mose", "05");
                 multipleChapterBooksMap.put("1mos", "05");
@@ -4266,9 +4326,9 @@ public class BookNamesMapping {
 
                 singleChapterBooksPattern = "[Oo]b\\w*\\.?|[Ff]lm\\.?|[Ff]ilem\\w*\\.?|[23]\\.?[^\\S\\n]*[Jj]o\\w*\\.?|[Jj]ud\\w*\\.?";
                 multiplePartNameBookWithoutLastWordPattern = "[Hh][\\p{Lu}\\p{Ll}]ga[^\\S\\n]*"; // hoga visan
-                break;
+    }
 
-            case id:
+    private void initIndonesian() {
                 multipleChapterBooksMap.put("kejadian", "05");
                 multipleChapterBooksMap.put("kej", "05");
                 multipleChapterBooksMap.put("keluaran", "06");
@@ -4421,8 +4481,6 @@ public class BookNamesMapping {
 
                 // matches: "Powt", "powt.", "Powtórzonego", "powtórka", "Pieśni Nad", "piesn nad"
                 multiplePartNameBookWithoutLastWordPattern = "[Kk]id\\.?[\\p{Lu}\\p{Ll}]*[^\\S\\n]*";
-                break;
-        }
     }
 
     final public static BidiMap<Language, String> languageUriMap = new DualHashBidiMap<Language, String>() {
