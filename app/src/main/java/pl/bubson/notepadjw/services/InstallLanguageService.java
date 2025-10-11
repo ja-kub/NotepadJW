@@ -173,13 +173,7 @@ public class InstallLanguageService extends IntentService {
                 .setContentText(getString(R.string.in_progress))
                 .setContentInfo("Info");
 
-        PendingIntent notifyPIntent =
-                null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-            notifyPIntent = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), PendingIntent.FLAG_IMMUTABLE);
-        } else {
-            notifyPIntent = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), 0);
-        }
+        PendingIntent notifyPIntent = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), PendingIntent.FLAG_IMMUTABLE);
         builder.setContentIntent(notifyPIntent);
 
         return builder;
